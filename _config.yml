@@ -22,12 +22,12 @@ repository               : "verumkey/verumkey.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Verumkeys"
-  pronouns         : # example: "she/her"  
-  bio              : "Share knowledge"
+  name             : "Verumkey"
+  pronouns         :  He/His  
+  bio              : "Learn and communicate together"
   location         : "Earth"
-  employer         : "Earth"
-  uri              : # URL
+#  employer         : "myself"
+  uri              : https://verumkey.github.io
   email            : "verumkeys@gmail.com" 
 
   # Academic websites
