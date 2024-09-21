@@ -8,7 +8,7 @@
 
 Basic Site Settings
 locale                   : "en-US"
-title                    : "Blog"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Verumkey"
 description              : &description "personal description"
