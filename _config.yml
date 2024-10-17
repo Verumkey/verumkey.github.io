@@ -23,7 +23,7 @@ email: verumkeys@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   在此保存我学习的笔记，希望能帮到需要的人
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.verumkey.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.verumkey.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: finn lynn
 github_username:  Verumkey
 
