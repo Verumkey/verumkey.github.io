@@ -34,3 +34,15 @@ excerpt: "本篇文章演示如何获得一个静态网站"
 ![](\images\Jekyll-images\jekyll.4.png)
 ![](\images\Jekyll-images\jekyll.5.png)
 ![](\images\Jekyll-images\jekyll.6.png)
+### 2.5.编辑脚本快速打开
+每次浏览Jekyll网站时，都需要重新运行budle exec jekyll serve命令，以此启动一个本地的开发服务器，使你能够在浏览器中访问你的网站
+
+	D:
+	cd "D:\Work\My-Website\my-website"
+	bundle exec jekyll serve
+
+![](\images\Jekyll-images\jekyll.7.png)
+# 三.在GitHub上配置静态网站
+## 1.创建仓库
+## 2.配置Jekyll
+## 3.将Jekyll项目push到仓库
