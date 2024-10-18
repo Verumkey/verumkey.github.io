@@ -33,6 +33,7 @@ bundle exec jeky11 serve
 ![](\images\Jekyll-images\jekyll.6.png)
 ### 2.5.编辑脚本快速打开
 每次浏览Jekyll网站时，都需要重新运行budle exec jekyll serve命令，以此启动一个本地的开发服务器，使你能够在浏览器中访问你的网站
+可以编辑一个简单的bat脚本快速打开
 D:
 cd "D:\Work\My-Website\my-website"
 bundle exec jekyll serve
