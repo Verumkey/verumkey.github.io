@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>VS Code 使用教程 | 水镜的博客</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="VS Code 使用教程" />
+<meta name="author" content="secrecy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="本篇文章演示如何从0开始使用VS Code" />
+<meta property="og:description" content="本篇文章演示如何从0开始使用VS Code" />
+<link rel="canonical" href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
+<meta property="og:url" content="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
+<meta property="og:site_name" content="水镜的博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-17T22:05:01+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VS Code 使用教程" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"secrecy"},"dateModified":"2024-10-17T22:05:01+08:00","datePublished":"2024-10-17T22:05:01+08:00","description":"本篇文章演示如何从0开始使用VS Code","headline":"VS Code 使用教程","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"},"url":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="水镜的博客" /></head>
+<body><header>
+    <nav>
+      <ul>
+        <li><a href="https://www.verumkey.com" target="_blank">Home</a></li>
+        <!-- 你可以根据需求添加其他链接 -->
+      </ul>
+    </nav>
+  </header>
+  
+  <style>
+    header {
+      background-color: #f8f9fa;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+    nav ul li a:hover {
+      color: #007bff;
+    }
+  </style><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">VS Code 使用教程</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-10-17T22:05:01+08:00" itemprop="datePublished">Oct 17, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="一下载">一.下载</h1>
+<h2 id="1下载vs-code">1.下载VS Code</h2>
+<p>网址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+<img src="\images\vscode-images\vscode.1.png" alt="" /></p>
+
+<h1 id="二配置环境">二.配置环境</h1>
+<h2 id="1打开扩展">1.打开扩展</h2>
+<p><img src="\images\vscode-images\vscode.2.png" alt="" /></p>
+<h2 id="2安装中文包">2.安装中文包</h2>
+<h3 id="21在搜索栏中搜索chinese">2.1.在搜索栏中搜索Chinese</h3>
+<h3 id="22选择简体中文安装">2.2.选择简体中文安装</h3>
+<h3 id="23重启">2.3.重启</h3>
+<p><img src="\images\vscode-images\vscode.3.png" alt="" /></p>
+<h2 id="3-根据所需语言配置环境cc">3. 根据所需语言配置环境（C/C++）</h2>
+<h3 id="31安装插件">3.1安装插件</h3>
+<h4 id="311-cc-插件">3.1.1. <strong>C/C++ 插件</strong></h4>
+
+<ul>
+  <li><strong>用途</strong>：这是由微软官方提供的插件，主要用于在 VSCode 上开发和调试 C/C++ 代码。它提供了丰富的功能来增强 C/C++ 开发的体验。</li>
+  <li><strong>功能</strong>：
+    <ul>
+      <li>代码自动补全：帮助你快速编写代码，并提示函数、变量和类型。</li>
+      <li>语法高亮：为 C/C++ 代码提供清晰的语法高亮显示。</li>
+      <li>调试支持：通过 VSCode 内置的调试功能，可以使用 GDB、LLDB 或 Visual Studio 调试器来调试 C/C++ 程序。</li>
+      <li>IntelliSense：通过提供自动补全、悬停信息和参数提示等功能，提高代码编写的效率。</li>
+      <li>多平台支持：该插件支持在 Windows、Linux 和 macOS 平台上工作。
+<img src="\images\vscode-images\vscode.4.png" alt="" />
+        <h4 id="312-cc-compile-run-插件">3.1.2. <strong>C/C++ Compile Run 插件</strong></h4>
+      </li>
+    </ul>
+  </li>
+  <li><strong>用途</strong>：该插件简化了在 VSCode 上编译和运行 C/C++ 程序的过程，特别适合需要快速测试代码的开发者。</li>
+  <li><strong>功能</strong>：
+    <ul>
+      <li>一键编译和运行：你只需按一个快捷键（通常是 F6），就可以编译并立即运行代码，而不必手动编写终端命令。</li>
+      <li>灵活的配置：你可以通过配置文件自定义编译和运行命令。</li>
+      <li>适合小型项目：这个插件更适合快速测试小型 C/C++ 项目，因为它不提供完整的调试功能。
+<img src="\images\vscode-images\vscode.5.png" alt="" />
+        <h4 id="313-better-c-syntax-插件">3.1.3. <strong>Better C++ Syntax 插件</strong></h4>
+      </li>
+    </ul>
+  </li>
+  <li><strong>用途</strong>：这个插件专注于改进 C++ 代码的语法高亮显示和格式化，提供比默认的 C++ 高亮显示更丰富的特性。</li>
+  <li><strong>功能</strong>：
+    <ul>
+      <li>改进的语法高亮：为 C++ 提供更精确的语法高亮，特别是模板和更复杂的语言特性。</li>
+      <li>支持现代 C++：该插件支持 C++11、C++14、C++17 等现代 C++ 标准，确保新的语言特性也能得到良好的高亮。</li>
+      <li>自定义语法高亮：你可以根据自己的需求自定义 C++ 的高亮规则。
+<img src="\images\vscode-images\vscode.6.png" alt="" />
+        <h4 id="314cc插件总结">3.1.4.C/C++插件总结：</h4>
+      </li>
+    </ul>
+  </li>
+  <li><strong>C/C++ 插件</strong> 是一个功能全面的开发和调试工具，适合需要全功能开发环境的开发者。</li>
+  <li><strong>C/C++ Compile Run 插件</strong> 更适合那些希望简单快速编译和运行程序的人，特别是用于测试和练习。</li>
+  <li><strong>Better C++ Syntax 插件</strong> 则专注于提供更好的语法高亮和代码美观性，特别适合对代码显示有较高要求的用户。
+    <h3 id="34配置开发者工具集mingw获得ucrt">3.4.配置开发者工具集MinGW，获得UCRT</h3>
+    <p>注意：UCRT是为C和C++设计的标准运行时库，通过MSYS2安装ucrt64工具链时，实际上安装了一个基于UCRT的GCC工具链(这个工具链中包括编译器(gcc,c++),链接器，库文件等)</p>
+    <h4 id="341下载msys2">3.4.1.下载MSYS2</h4>
+    <p>网址：<a href="[Get Started with C++ and MinGW-w64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw)">[Get Started with C++ and MinGW-w64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw)</a>
+注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
+<img src="\images\vscode-images\vscode.7.png" alt="" /></p>
+    <h4 id="342安装后复制网站中的命令输入">3.4.2.安装后复制网站中的命令输入</h4>
+    <p>注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
+<img src="\images\vscode-images\vscode.8.png" alt="" /></p>
+    <h4 id="343在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">3.4.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</h4>
+    <p><img src="\images\vscode-images\vscode.9.png" alt="" /></p>
+    <h4 id="344将ucrt64的bin文件地址到-windows环境变量的path路径中">3.4.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</h4>
+    <h5 id="3441在搜索栏中搜索系统环境变量并打开">3.4.4.1.在搜索栏中搜索系统环境变量并打开</h5>
+    <p><img src="\images\vscode-images\vscode.10.png" alt="" /></p>
+    <h5 id="3442-点击环境变量在用户系统变量中选择path变量然后选择编辑">3.4.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</h5>
+    <h5 id="3443-点击新建将复制的文件地址复制进去最后点击确定退出">3.4.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</h5>
+    <h5 id="3444图片演示">3.4.4.4.图片演示</h5>
+    <p><img src="\images\vscode-images\vscode.11.png" alt="" />
+<img src="\images\vscode-images\vscode.12.png" alt="" />
+<img src="\images\vscode-images\vscode.13.png" alt="" /></p>
+    <h3 id="34编写cc程序">3.4.编写C/C++程序</h3>
+    <h4 id="341创建一个文件">3.4.1.创建一个文件</h4>
+    <p><img src="\images\vscode-images\vscode.15.png" alt="" /></p>
+    <h4 id="342通过vscode打开你上面创建的文件">3.4.2.通过VScode打开你上面创建的文件</h4>
+    <p><img src="\images\vscode-images\vscode.16.png" alt="" /></p>
+    <h4 id="343创建文本文件后缀需为c或cpp再在弹出的语言选择中选择c">3.4.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++</h4>
+    <p><img src="\images\vscode-images\vscode.17.png" alt="" /></p>
+    <h4 id="344编写代码并运行可以在终端看到输出结果">3.4.4.编写代码并运行，可以在终端看到输出结果</h4>
+    <p><img src="\images\vscode-images\vscode.18.png" alt="" /></p>
+    <h4 id="345设置在控制台中输出结果">3.4.5.设置在控制台中输出结果</h4>
+    <h5 id="3451打开cc-compile-run的设置">3.4.5.1.打开C/C++ Compile Run的设置</h5>
+    <p><img src="\images\vscode-images\vscode.19.png" alt="" /></p>
+    <h5 id="3452下滑勾选选项run-in-external-terminal">3.4.5.2.下滑勾选选项Run-in-external-terminal</h5>
+    <p><img src="\images\vscode-images\vscode.20.png" alt="" /></p>
+    <h5 id="3453配置环境完成">3.4.5.3.配置环境完成</h5>
+    <p><img src="\images\vscode-images\vscode.21.png" alt="" /></p>
+    <h2 id="4-根据所需语言配置环境python">4. 根据所需语言配置环境（Python）</h2>
+    <h3 id="41下载python解释器">4.1下载Python解释器</h3>
+    <p>网址：<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
+<img src="\images\vscode-images\vscode.22.png" alt="" />
+<img src="\images\vscode-images\vscode.23.png" alt="" />(下面两个选项要勾上，第一个就是运行Python程序时会调用它，第二个是把它添加到系统路径，让系统可以直接调用它)</p>
+    <h3 id="42安装插件">4.2.安装插件</h3>
+    <h4 id="421python-插件">4.2.1.<strong>python</strong> 插件</h4>
+    <p><img src="\images\vscode-images\vscode.24.png" alt="" /></p>
+    <h4 id="422python的主要功能">4.2.2.python的主要功能</h4>
+  </li>
+  <li><strong>代码智能提示</strong>：提供 Python 代码的自动补全、函数参数提示、变量/函数定义跳转等功能。</li>
+  <li><strong>调试支持</strong>：集成调试器，可以直接在 VS Code 中进行 Python 代码的调试，设置断点、变量监视和调用堆栈查看等。</li>
+  <li><strong>代码检查</strong>：支持代码静态分析工具，如 Pylint 和 Flake8，帮助你发现代码中的潜在错误和格式问题。</li>
+  <li><strong>虚拟环境和 Conda 支持</strong>：可以轻松选择和管理不同的 Python 解释器、虚拟环境或 Conda 环境。</li>
+  <li><strong>Jupyter 支持</strong>：可以在 VS Code 中直接运行 Jupyter Notebooks，进行交互式的 Python 开发，特别适合数据科学工作流。</li>
+  <li><strong>测试集成</strong>：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
+这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。
+    <h4 id="421python-extension-pack-插件">4.2.1.<strong>Python Extension Pack</strong> 插件</h4>
+    <p><img src="\images\vscode-images\vscode.26.png" alt="" /></p>
+  </li>
+</ul>
+
+<h4 id="421python-extension-pack-的主要功能">4.2.1.Python Extension Pack 的主要功能：</h4>
+<p><strong>Python Extension Pack</strong> 是为 Visual Studio Code 的 Python 开发者设计的一组插件包，包含了多个非常有用的扩展，主要包括：</p>
+<ol>
+  <li><strong>Python</strong> - 提供核心功能，如代码检查（linting）、调试（包括多线程和远程调试）、智能感知（IntelliSense）、代码格式化、重构、单元测试，以及用于数据科学任务的 Jupyter Notebook 支持。</li>
+  <li><strong>Jinja</strong> - 提供 Jinja 模板语言的语法高亮和代码片段。</li>
+  <li><strong>Django</strong> - 为 Django Web 开发添加了特定的语法和代码片段。</li>
+  <li><strong>Visual Studio IntelliCode</strong> - 基于机器学习的 AI 辅助工具，帮助提供智能代码补全和建议。</li>
+  <li><strong>Python Environment Manager</strong> - 帮助你在 VS Code 中查看和管理 Python 环境及其依赖包。</li>
+  <li><strong>Python Docstring Generator</strong> - 辅助自动生成 Python 函数和类的文档注释。</li>
+  <li><strong>Python Indent</strong> - 自动纠正 Python 代码的缩进。</li>
+  <li><strong>Jupyter</strong> - 提供对 Jupyter Notebook 的支持，适用于数据科学、机器学习和科学计算等任务。
+    <h3 id="43编写python程序">4.3.编写Python程序</h3>
+    <h4 id="431创建一个文件">4.3.1创建一个文件</h4>
+    <p><img src="\images\vscode-images\vscode.15.png" alt="" /></p>
+    <h4 id="432通过vscode打开你上面创建的文件">4.3.2.通过VScode打开你上面创建的文件</h4>
+    <p><img src="\images\vscode-images\vscode.16.png" alt="" /></p>
+    <h4 id="433创建文本文件后缀需为py再在弹出的语言选择中选择python">4.3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python</h4>
+    <p><img src="\images\vscode-images\vscode.17.png" alt="" /></p>
+    <h4 id="434编写代码并运行可以在终端看到输出结果">4.3.4.编写代码并运行，可以在终端看到输出结果</h4>
+    <p><img src="\images\vscode-images\vscode.25.png" alt="" /></p>
+    <h2 id="5-根据所需语言配置环境htmlcssjs">5. 根据所需语言配置环境（HTML+CSS+JS）</h2>
+    <h3 id="51安装插件">5.1.安装插件</h3>
+    <h4 id="511html-css-support-插件">5.1.1.<strong>HTML CSS Support</strong> 插件</h4>
+    <p><img src="\images\vscode-images\vscode.27.png" alt="" /></p>
+    <h4 id="512html-css-support的主要功能">5.1.2.HTML CSS Support的主要功能</h4>
+    <ul>
+      <li>为 HTML 文件中的元素提供 CSS 类名的自动补全。你在 HTML 文件中编辑时，输入 <code class="language-plaintext highlighter-rouge">class</code> 属性时，插件会自动从项目中的 CSS 文件中获取可用的类名并建议补全。</li>
+      <li>支持从链接的 CSS 文件中提取类名，还包括嵌入在 HTML 中的 <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> 标签内的样式。</li>
+      <li>这有助于提高开发效率，避免拼写错误，并且能更轻松地管理和使用样式表中的 CSS 类。
+这个插件非常适合在 HTML 和 CSS 开发中频繁切换的开发者。
+        <h4 id="513-live-server-插件">5.1.3. <strong>Live Server</strong> 插件</h4>
+        <p><img src="\images\vscode-images\vscode.28.png" alt="" /></p>
+        <h4 id="514live-server的主要功能">5.1.4.Live Server的主要功能</h4>
+      </li>
+      <li>启动一个本地开发服务器，让你可以实时预览 HTML、CSS 和 JavaScript 文件的更改。</li>
+      <li>每次保存文件时，浏览器会自动刷新页面，立即反映所做的更改（即所谓的 “热重载” 功能）。</li>
+      <li>支持自定义端口、根目录等配置，适合多种开发场景。</li>
+      <li>提高了开发效率，无需手动刷新浏览器，特别适合前端开发。
+对于那些进行网页设计和前端开发的用户来说，这个插件非常实用。
+        <h4 id="515auto-rename-tag-插件">5.1.5.<strong>Auto Rename Tag</strong> 插件</h4>
+        <p><img src="\images\vscode-images\vscode.29.png" alt="" /></p>
+        <h4 id="515auto-rename-tag的主要功能">5.1.5.Auto Rename Tag的主要功能</h4>
+      </li>
+      <li>自动同步重命名 HTML/XML 标签。当你修改或重命名一个标签时，插件会自动更新相应的闭合标签。</li>
+      <li>支持所有 HTML、XML 和相关语言中的标签。</li>
+      <li>减少了手动修改闭合标签的麻烦，提高了开发效率，尤其是对嵌套标签较多的代码片段非常有用。
+这个插件对写 HTML 和 XML 时特别有帮助，能有效避免遗漏或错误的闭合标签。
+        <h3 id="52编写html程序">5.2.编写HTML程序</h3>
+        <h4 id="521创建一个文件">5.2.1.创建一个文件</h4>
+        <h4 id="522通过vscode打开你上面创建的文件">5.2.2.通过VScode打开你上面创建的文件</h4>
+        <h4 id="523创建文本文件后缀需为html">5.2.3.创建文本文件，后缀需为.html</h4>
+        <h4 id="524编写代码鼠标右键再点击open-with-live-server">5.2.4.编写代码，鼠标右键再点击Open with Live Server</h4>
+        <p><img src="\images\vscode-images\vscode.30.png" alt="" /></p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="\images\vscode-images\vscode.31.png" alt="" /></p>
+<h2 id="6熟悉操作">6.熟悉操作</h2>
+<h3 id="61使用编辑器操场">6.1.使用编辑器操场</h3>
+<p>编辑器操场会提供许多快捷键的使用
+<img src="\images\vscode-images\vscode.32.png" alt="" /></p>
+<h4 id="611multi-cursor-editing多光标编辑">6.1.1.Multi-Cursor Editing（多光标编辑）</h4>
+<p>注意：DownArrow就是键盘上的向下箭头，其它同理</p>
+<h5 id="6111box-selection选择矩形块">6.1.1.1.Box Selection（选择矩形块）</h5>
+<p><strong>Shift+Alt再拖动鼠标</strong>，实现选择一个矩形块
+<img src="\images\vscode-images\vscode.33.png" alt="" /></p>
+<h5 id="6112add-a-cursor添加光标">6.1.1.2.Add a cursor（添加光标）</h5>
+<p><strong>Crtl+Alt+上/下箭头</strong>，将向上/向下额外添加一个光标；<strong>Alt再点击鼠标</strong>，可以在点击位置额外添加一个光标</p>
+<h5 id="6113creat-curosrs-on-all-occurences-of-a-string选择光标所在字符串并在字符串的所有出现处创建光标">6.1.1.3.Creat curosrs on all occurences of a string（选择光标所在字符串，并在字符串的所有出现处创建光标）</h5>
+<p><strong>Crtl+Shift+L</strong>,选中光标所在单词的所有单词，并创建一个光标到单词尾
+注意：截图不显示光标，实际上每个backgroud的末尾都有一个光标，可以对这个单词进行批量操作
+<img src="\images\vscode-images\vscode.34.png" alt="" /></p>
+<h4 id="612line-actions行操作">6.1.2.Line Actions（行操作）</h4>
+<h5 id="6121copy-a-line-and-insert-it-above-or-below-the-current-postion复制一行到上下一行">6.1.2.1.Copy a line and insert it above or below the current postion（复制一行到上/下一行）</h5>
+<p><strong>Shift+Alt+UpArrow/DownArrow(上/下箭头)</strong>，会将光标所在行向上/下复制一行</p>
+<h5 id="6122move-an-entire-line-or-selection-of-lines-up-or-down将所在行与上下行将换位置">6.1.2.2.Move an entire line or selection of lines up or down（将所在行与上/下行将换位置)</h5>
+<p><strong>Alt+UpArrow/DownArrow</strong></p>
+<h5 id="6123delete-the-entire-line删除选中或所在行">6.1.2.3.Delete the entire line（删除选中或所在行）</h5>
+<p><strong>Ctrl+Shift+K</strong></p>
+<h4 id="613rename-refactoring重命名一个类或函数名的所有字符串">6.1.3.Rename Refactoring（重命名一个类或函数名的所有字符串）</h4>
+<p><strong>F2</strong>，先选中需要重命名的函数或类的名称，再点击<strong>F2</strong>进行重命名，注意：这对不是类或函数名的字符串不起作用</p>
+<h4 id="614formatting格式化代码">6.1.4.Formatting（格式化代码）</h4>
+<p><strong>Shift+Alt+F</strong>,将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思</p>
+<h4 id="615code-folding代码折叠">6.1.5.Code Folding（代码折叠）</h4>
+<p><strong>Ctrl+Shift+左中括号/右中括号</strong>，(中括号在这个软件里是特殊字符，我就没打出了)，将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来</p>
+<h3 id="61使用命令">6.1.使用命令</h3>
+<p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令的搜索栏，也可以直接使用快捷键<strong>Ctrl+Shift+P</strong>进入</p>
+<h4 id="611更改语言">6.1.1.更改语言</h4>
+<p>先<strong>Ctrl+Shift+P</strong>进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
+<img src="\images\vscode-images\vscode.35.png" alt="" /></p>
+<h4 id="611更改字体">6.1.1.更改字体</h4>
+<p><img src="\images\vscode-images\vscode.36.png" alt="" /></p>
+<h2 id="7完结">7.完结</h2>
+<p>根据上述操作，就能正常使用VS Code，更多的操作就需要自己去探索了</p>
+
+  </div><a class="u-url" href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" hidden></a>
+</article>
+
+      </div>
+    </main><footer>
+    <p>Contact me via email: verumkeys@gmail.com</p >
+    <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
+    <p>This website is a personal blog where I share my thoughts on technology, programming, and more. Stay tuned for interesting insights!</p >
+  </footer>
+  
+  <style>
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #e7e7e7;
+    }
+    footer p {
+      margin: 10px 0;
+    }
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style></body>
+
+</html>
