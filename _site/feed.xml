@@ -1,16 +1,625 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-18T10:09:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一下载">一.下载</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-20T12:04:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述">一.Git概述</h1>
+
+<p>Git 是一个分布式版本控制系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
+
+<ol>
+  <li>
+    <p><strong>版本控制</strong>：Git 可以记录代码的每一次变动，使你可以查看、比较并恢复到之前的任意版本。</p>
+  </li>
+  <li>
+    <p><strong>分支和合并</strong>：Git 允许创建分支以开发不同的功能或修复问题。分支上的改动可以独立进行，最后再将它们合并到主分支。</p>
+  </li>
+  <li>
+    <p><strong>分布式</strong>：与传统的版本控制系统不同，Git 是分布式的。每个开发者都有完整的项目历史，可以离线进行代码管理和提交。</p>
+  </li>
+  <li>
+    <p><strong>协作开发</strong>：Git 很适合团队合作，支持多人并行开发。当开发者提交代码后，可以通过 pull request 合并到主项目中，确保代码的连续性和质量。</p>
+  </li>
+</ol>
+
+<h3 id="git-的一些核心概念">Git 的一些核心概念：</h3>
+
+<ul>
+  <li><strong>Repository (仓库)</strong>：存储项目的文件和其历史记录的地方。可以是本地仓库或远程仓库（如 GitHub 上的仓库）。</li>
+  <li><strong>Commit (提交)</strong>：一次代码变动的快照，包括改动的具体内容和提交说明。</li>
+  <li><strong>Branch (分支)</strong>：并行开发的通道。每个分支都是代码历史的独立线条，可以独立于其他分支工作。</li>
+  <li><strong>Merge (合并)</strong>：将一个分支上的改动合并到另一个分支。</li>
+  <li><strong>Pull (拉取)</strong>：从远程仓库获取最新的更改并合并到本地分支。</li>
+  <li><strong>Push (推送)</strong>：将本地仓库的更改上传到远程仓库。
+    <h3 id="常用命令">常用命令：</h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。</li>
+  <li><code class="language-plaintext highlighter-rouge">git clone</code>：克隆远程仓库到本地。</li>
+  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前工作区的状态（有哪些改动）。</li>
+  <li><code class="language-plaintext highlighter-rouge">git add</code>：将改动添加到暂存区。</li>
+  <li><code class="language-plaintext highlighter-rouge">git commit -m "消息"</code>：提交暂存区的改动，并添加描述信息。</li>
+  <li><code class="language-plaintext highlighter-rouge">git push</code>：将本地提交推送到远程仓库。</li>
+  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取更新并合并到本地分支。</li>
+  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看所有分支，或创建、删除分支。</li>
+  <li><code class="language-plaintext highlighter-rouge">git checkout</code>：切换到另一个分支。
+通过 Git，开发者能够更好地管理代码版本，尤其是在复杂项目中，它可以极大地提高效率并减少冲突。
+    <h1 id="二配置git环境">二.配置Git环境</h1>
+    <h2 id="1下载git">1.下载Git</h2>
+    <p>网址：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
+<img src="/images/git-images/git.1.png" alt="" />
+<img src="/images/git-images/git.2.png" alt="" /></p>
+    <h2 id="2安装git">2.安装Git</h2>
+  </li>
+</ul>
+
+<p>安装过程有<strong>许多</strong>步骤，<strong>一般来说</strong>全部默认即可，一路<strong>next</strong>直到<strong>install</strong>结束
+(不一般的是我配置的是<strong>VS Code编译器</strong>，不是默认的<strong>Vim编译器</strong>，在下面可以看看两者比较)</p>
+
+<p>下面的图是对安装过程各个步骤的解释
+1.可自选<strong>路径</strong>
+<img src="/images/git-images/git.3.png" alt="" />
+2.图中标注了选项的<strong>含义</strong>
+<img src="/images/git-images/git.4.png" alt="" />
+3.这个页面是询问是否希望在Windows的开始菜单，创建一个名为“Git”的文件夹，存放Git的快捷方式
+<img src="/images/git-images/git.5.png" alt="" /></p>
+<h3 id="21vim编辑器和vs-code编辑器对比">2.1.Vim编辑器和VS Code编辑器对比</h3>
+<h4 id="1-vim-编辑器">1. <strong>Vim 编辑器</strong>：</h4>
+<ul>
+  <li>
+    <p><strong>特点</strong>：</p>
+
+    <ul>
+      <li><strong>轻量级</strong>：Vim 是一个非常轻量级的文本编辑器，速度快且占用资源少。</li>
+      <li><strong>命令行界面</strong>：运行在终端中，非常适合那些喜欢使用键盘操作的人。</li>
+      <li><strong>键盘驱动</strong>：Vim 的操作主要依赖于快捷键，不使用鼠标。这使得它在熟练使用后非常高效，但初学者需要一定的学习成本。</li>
+      <li><strong>跨平台</strong>：可以在任何系统上使用，包括 Windows、Linux、macOS。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>适用人群</strong>：</p>
+
+    <ul>
+      <li>熟悉命令行操作，喜欢使用键盘而不依赖鼠标的用户。</li>
+      <li>需要快速轻量的编辑器来编辑简单的文件（如 Git 提交消息）。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>适合场景</strong>：</p>
+
+    <ul>
+      <li>如果你在终端环境下工作较多，并且已经习惯或愿意学习 Vim 的快捷键，Vim 是一个非常高效的工具。</li>
+      <li>你只需要一个简洁、快速的编辑器来修改 Git 的提交信息或进行简单的代码编辑。
+        <h4 id="2-vs-code">2. <strong>VS Code</strong>：</h4>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>特点</strong>：</p>
+
+    <ul>
+      <li><strong>图形界面</strong>：VS Code 是一个现代化的图形化编辑器，提供了丰富的界面和强大的功能。</li>
+      <li><strong>插件丰富</strong>：VS Code 有大量的插件可供安装，支持多种编程语言、Git 集成、调试工具等。</li>
+      <li><strong>直观易用</strong>：对于初学者和熟悉图形界面操作的用户，VS Code 更加直观，使用起来更方便。</li>
+      <li><strong>集成 Git</strong>：VS Code 有内置的 Git 支持，提供了友好的界面来处理 Git 操作（如提交、查看历史、冲突解决等）。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>适用人群</strong>：</p>
+
+    <ul>
+      <li>喜欢使用功能丰富的 IDE 或 GUI 编辑器的用户。</li>
+      <li>需要更强大的代码编辑、调试和扩展功能。</li>
+      <li>喜欢鼠标操作或者还不太熟悉命令行操作的用户。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>适合场景</strong>：</p>
+
+    <ul>
+      <li>你更注重编程效率，喜欢通过扩展插件和图形化界面处理 Git。</li>
+      <li>你需要更多的工具支持，如代码自动补全、调试、扩展库等功能。</li>
+    </ul>
+  </li>
+  <li>如果你<strong>熟悉命令行</strong>，需要一个轻量级、高效的编辑器，<strong>Vim</strong> 是不错的选择。</li>
+  <li>如果你更喜欢<strong>图形化界面</strong>，希望使用一个功能丰富、易于扩展的编辑器，<strong>VS Code</strong> 可能更适合你，尤其是如果你在 Git 操作中经常需要进行代码修改或调试。
+    <h4 id="1-vim-是一个独立的编辑器">1. <strong>Vim 是一个独立的编辑器</strong></h4>
+  </li>
+  <li><strong>VS Code</strong> 和 <strong>Vim</strong> 是两个独立的编辑器，它们的安装和使用互不影响。你在 Git 中选择 VS Code 作为编辑器，只是 Git 需要编辑提交信息等内容时，默认会调用 VS Code。
+    <h4 id="2-git-编辑器的设置仅影响-git-操作">2. <strong>Git 编辑器的设置仅影响 Git 操作</strong></h4>
+  </li>
+  <li>当你在 Git 配置时选择 VS Code 或 Vim，实际上只是指定了当 Git 需要你编写提交消息（如 <code class="language-plaintext highlighter-rouge">git commit</code>）或进行其他文本输入时调用哪个编辑器。这不会影响你在命令行使用 <code class="language-plaintext highlighter-rouge">vim</code> 或 <code class="language-plaintext highlighter-rouge">code</code> 命令去手动编辑其他文件。</li>
+  <li>换句话说，<strong>Git 的编辑器设置</strong>只影响 Git 自身的工作流，不会限制你在其他环境中选择使用的编辑器。</li>
+</ul>
+
+<h4 id="3-灵活性">3. <strong>灵活性</strong></h4>
+
+<ul>
+  <li>你可以根据需要自由选择不同的编辑器。例如，有时候你可能需要使用轻量的 <strong>Vim</strong> 来快速编辑一个小文件，而在进行复杂开发时使用功能强大的 <strong>VS Code</strong>。
+    <h4 id="补充">补充</h4>
+    <p>虽然在 Git 中配置使用 <strong>VS Code</strong> 作为编辑器，但你仍需要<strong>独立安装</strong> VS Code。Git 只是调用你安装的 VS Code 编辑器来执行操作，如编写提交信息、处理合并冲突等。如果<strong>没有安装 VS Code</strong>，Git <strong>无法使用</strong>它作为<strong>编辑器</strong>。
+4.<strong>这里需要选择一个默认编辑器，第一张图是默认的Vim编辑器</strong>
+<img src="/images/git-images/git.6.png" alt="" />
+<strong>我选择使用VS Code编辑器，根据你的需求选择
+(如果你选择了默认的Vim或其它，后续操作可能有少许不同)
+(有一个VS Code Insiders,就是预览版，更新快，能体验到最新功能，但是稳定性差点)</strong>
+<img src="/images/git-images/git.7.png" alt="" />
+<img src="/images/git-images/git.8.png" alt="" />
+<img src="/images/git-images/git.9.png" alt="" /></p>
+    <h3 id="22ssh介绍">2.2.SSH介绍</h3>
+    <p>SSH（<strong>Secure Shell</strong>）是一种用于通过不安全的网络安全登录到远程计算机的协议。它主要用于在两个系统之间建立加密的连接，以便安全地执行命令行、传输文件和进行系统管理等操作。SSH 通过加密技术，保证了传输的数据不被窃听或篡改，通常用于服务器管理和远程开发工作。</p>
+  </li>
+</ul>
+
+<h4 id="ssh-的主要功能">SSH 的主要功能：</h4>
+
+<ul>
+  <li><strong>远程登录</strong>：可以在本地计算机上通过终端控制远程服务器。</li>
+  <li><strong>文件传输</strong>：通过 <code class="language-plaintext highlighter-rouge">scp</code> 或 <code class="language-plaintext highlighter-rouge">sftp</code> 等方式在本地和远程机器之间安全地传输文件。</li>
+  <li><strong>端口转发</strong>：通过 SSH 隧道实现的端口转发功能，可以把本地端口重定向到远程机器上的端口，用于保护其他通信协议的安全。</li>
+</ul>
+
+<h4 id="openssh-是什么">OpenSSH 是什么？</h4>
+
+<p><strong>OpenSSH</strong> 是 SSH 协议的一个开源实现，广泛应用于各类操作系统中（特别是类 Unix 系统，如 Linux 和 macOS）。它不仅支持 SSH 协议本身，还包括一些相关的工具，例如：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ssh</code>：用于远程登录。</li>
+  <li><code class="language-plaintext highlighter-rouge">scp</code> 和 <code class="language-plaintext highlighter-rouge">sftp</code>：用于安全地传输文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">ssh-agent</code> 和 <code class="language-plaintext highlighter-rouge">ssh-add</code>：用于管理 SSH 密钥和自动登录。</li>
+  <li><code class="language-plaintext highlighter-rouge">sshd</code>：SSH 服务器程序，允许远程登录到本地系统。</li>
+</ul>
+
+<p>OpenSSH 是目前最常用的 SSH 实现之一，由于其开源和安全性，它在服务器管理和远程开发中被广泛使用。</p>
+
+<p>在你的 Git 安装过程中，选择使用 <strong>OpenSSH</strong> 意味着 Git 将使用 SSH 协议来执行安全的远程操作，比如在 Git 仓库中通过 SSH 进行拉取或推送操作。</p>
+
+<p>图中有两个选择：</p>
+<ol>
+  <li>
+    <p><strong>Use bundled OpenSSH</strong>（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。</p>
+  </li>
+  <li>
+    <p><strong>Use external OpenSSH</strong>（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
+一般选择<strong>默认</strong>即可
+7.<img src="/images/git-images/git.10.png" alt="" />8.<img src="/images/git-images/git.11.png" alt="" />
+9.<img src="/images/git-images/git.12.png" alt="" />10.<img src="/images/git-images/git.14.png" alt="" />
+11.<img src="/images/git-images/git.15.png" alt="" />12.<img src="/images/git-images/git.16.png" alt="" />
+13.
+<img src="/images/git-images/git.13.png" alt="" />
+<img src="/images/git-images/git.18.png" alt="" />
+15..<strong>安装完成</strong><img src="/images/git-images/git.19.png" alt="" /></p>
+    <h2 id="3设置用户签名">3.设置用户签名</h2>
+    <p><strong>Git首次安装必须设置用户签名，否则无法提交代码</strong>
+鼠标<strong>右键</strong>点击桌面，打开<strong>Open Git Bash Here</strong>（<strong>没看到就是在更多选项</strong>）
+<img src="/images/git-images/git.20.png" alt="" />
+可以用命令查看版本：</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+</code></pre></div>    </div>
+    <p>如果觉得字体小，可以<strong>Ctrl+鼠标滚轮</strong>放大</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name 
+git config --global user.email 
+</code></pre></div>    </div>
+    <p>(用户名和邮箱任意设置即可，不会去查验邮箱是否真实)
+<img src="/images/git-images/git.21.png" alt="" />
+上述操作后，C盘的用户的用户下会生成一个.gitconfig文件，里面有你设置的用户名和邮箱
+<img src="/images/git-images/git.22.png" alt="" /></p>
+  </li>
+</ol>
+
+<h1 id="四编辑器常用命令">四.编辑器常用命令</h1>
+<h2 id="vim-编辑器常用命令"><strong>Vim 编辑器常用命令</strong></h2>
+
+<h3 id="1-模式切换">1. <strong>模式切换</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">i</code>：进入插入模式（开始编辑文本）。</li>
+  <li><code class="language-plaintext highlighter-rouge">Esc</code>：退出插入模式，回到普通模式。</li>
+  <li><code class="language-plaintext highlighter-rouge">:q</code>：退出 Vim。</li>
+  <li><code class="language-plaintext highlighter-rouge">:w</code>：保存文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">:wq</code>：保存并退出。</li>
+  <li><code class="language-plaintext highlighter-rouge">:q!</code>：强制退出（不保存修改）。</li>
+  <li><code class="language-plaintext highlighter-rouge">:x</code>：保存并退出（与 <code class="language-plaintext highlighter-rouge">:wq</code> 类似）。</li>
+</ul>
+
+<h3 id="2-文件操作">2. <strong>文件操作</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vim filename</code>：打开文件，若文件不存在则新建文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">:e filename</code>：打开其他文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">:w filename</code>：另存为指定文件名。</li>
+</ul>
+
+<h3 id="3-移动光标">3. <strong>移动光标</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">h</code>：向左移动一个字符。</li>
+  <li><code class="language-plaintext highlighter-rouge">j</code>：向下移动一行。</li>
+  <li><code class="language-plaintext highlighter-rouge">k</code>：向上移动一行。</li>
+  <li><code class="language-plaintext highlighter-rouge">l</code>：向右移动一个字符。</li>
+  <li><code class="language-plaintext highlighter-rouge">gg</code>：移动到文件开头。</li>
+  <li><code class="language-plaintext highlighter-rouge">G</code>：移动到文件末尾。</li>
+  <li><code class="language-plaintext highlighter-rouge">w</code>：移动到下一个单词的开头。</li>
+  <li><code class="language-plaintext highlighter-rouge">b</code>：移动到上一个单词的开头。</li>
+</ul>
+
+<h3 id="4-文本编辑">4. <strong>文本编辑</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">x</code>：删除光标下的字符。</li>
+  <li><code class="language-plaintext highlighter-rouge">dd</code>：删除当前行。</li>
+  <li><code class="language-plaintext highlighter-rouge">yy</code>：复制当前行。</li>
+  <li><code class="language-plaintext highlighter-rouge">p</code>：粘贴。</li>
+  <li><code class="language-plaintext highlighter-rouge">u</code>：撤销上一步操作。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + r</code>：重做上一步操作。</li>
+</ul>
+
+<h3 id="5-查找和替换">5. <strong>查找和替换</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/keyword</code>：查找 <code class="language-plaintext highlighter-rouge">keyword</code>。</li>
+  <li><code class="language-plaintext highlighter-rouge">n</code>：跳到下一个匹配项。</li>
+  <li><code class="language-plaintext highlighter-rouge">N</code>：跳到上一个匹配项。</li>
+  <li><code class="language-plaintext highlighter-rouge">:%s/old/new/g</code>：全局替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
+  <li><code class="language-plaintext highlighter-rouge">:n,m s/old/new/g</code>：从第 <code class="language-plaintext highlighter-rouge">n</code> 行到第 <code class="language-plaintext highlighter-rouge">m</code> 行替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
+</ul>
+
+<hr />
+
+<h2 id="vs-code-编辑器常用命令"><strong>VS Code 编辑器常用命令</strong></h2>
+
+<h3 id="1-基础命令">1. <strong>基础命令</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + P</code>：快速打开文件（输入文件名）。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + N</code> / <code class="language-plaintext highlighter-rouge">Cmd + N</code>：新建文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + S</code>：保存文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + S</code>：另存为。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + W</code> / <code class="language-plaintext highlighter-rouge">Cmd + W</code>：关闭当前文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + P</code>：打开命令面板。</li>
+</ul>
+
+<h3 id="2-导航">2. <strong>导航</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Tab</code> / <code class="language-plaintext highlighter-rouge">Cmd + Tab</code>：切换打开的文件。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + G</code> / <code class="language-plaintext highlighter-rouge">Cmd + G</code>：跳转到指定行号。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + O</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + O</code>：按符号（函数/类名）跳转。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + T</code> / <code class="language-plaintext highlighter-rouge">Cmd + T</code>：搜索并跳转到符号。</li>
+</ul>
+
+<h3 id="3-编辑">3. <strong>编辑</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Z</code>：撤销。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + Z</code>：重做。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + X</code> / <code class="language-plaintext highlighter-rouge">Cmd + X</code>：剪切。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + C</code> / <code class="language-plaintext highlighter-rouge">Cmd + C</code>：复制。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + V</code> / <code class="language-plaintext highlighter-rouge">Cmd + V</code>：粘贴。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + /</code> / <code class="language-plaintext highlighter-rouge">Cmd + /</code>：注释/取消注释当前行。</li>
+  <li><code class="language-plaintext highlighter-rouge">Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Option + Up</code>：上移当前行。</li>
+  <li><code class="language-plaintext highlighter-rouge">Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Option + Down</code>：下移当前行。</li>
+</ul>
+
+<h3 id="4-多光标编辑">4. <strong>多光标编辑</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Alt + Click</code> / <code class="language-plaintext highlighter-rouge">Option + Click</code>：添加光标。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Down</code>：向下添加光标。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Up</code>：向上添加光标。</li>
+</ul>
+
+<h3 id="5-代码格式化和调试">5. <strong>代码格式化和调试</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Shift + Alt + F</code> / <code class="language-plaintext highlighter-rouge">Shift + Option + F</code>：格式化代码。</li>
+  <li><code class="language-plaintext highlighter-rouge">F5</code>：启动/继续调试。</li>
+  <li><code class="language-plaintext highlighter-rouge">F9</code>：设置/取消断点。</li>
+  <li><code class="language-plaintext highlighter-rouge">F10</code>：逐过程调试。</li>
+  <li><code class="language-plaintext highlighter-rouge">F11</code>：逐语句调试。</li>
+</ul>
+
+<h3 id="6-搜索和替换">6. <strong>搜索和替换</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + F</code>：查找。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + H</code> / <code class="language-plaintext highlighter-rouge">Cmd + H</code>：替换。</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + F</code>：全局搜索。</li>
+</ul>
+
+<hr />
+
+<h2 id="总结">总结</h2>
+
+<ul>
+  <li><strong>Vim</strong> 的命令主要围绕键盘快捷键，操作高效但学习曲线较陡。</li>
+  <li><strong>VS Code</strong> 则更偏向图形化操作，并提供命令面板，既支持鼠标操作也支持丰富的键盘快捷键，更加适合现代开发者的多任务操作。
+    <h1 id="五git常用命令">五.Git常用命令</h1>
+    <h2 id="1-基本-git-操作"><strong>1. 基本 Git 操作</strong></h2>
+  </li>
+</ul>
+
+<h3 id="11-初始化仓库">1.1. <strong>初始化仓库</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。
+    <h3 id="12-克隆仓库">1.2. <strong>克隆仓库</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git clone [url]</code>：从远程仓库克隆项目。
+    <h3 id="13-查看状态">1.3. <strong>查看状态</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
+    <h3 id="14-添加文件到暂存区">1.4. <strong>添加文件到暂存区</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git add [filename]</code>：将单个文件添加到暂存区。</li>
+  <li><code class="language-plaintext highlighter-rouge">git add .</code>：将当前目录下所有更改添加到暂存区。
+    <h3 id="15-提交更改">1.5. <strong>提交更改</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git commit -m "[message]"</code>：提交暂存区中的更改，并附加提交信息。</li>
+  <li><code class="language-plaintext highlighter-rouge">git commit -a -m "[message]"</code>：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
+    <h3 id="16-查看提交历史">1.6. <strong>查看提交历史</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git log</code>：查看提交历史。</li>
+  <li><code class="language-plaintext highlighter-rouge">git log --oneline</code>：以简短的形式查看提交历史。
+    <h3 id="17-查看差异">1.7. <strong>查看差异</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git diff</code>：查看工作区和暂存区的文件差异。</li>
+  <li><code class="language-plaintext highlighter-rouge">git diff --staged</code>：查看已暂存文件的差异。</li>
+</ul>
+
+<hr />
+
+<h2 id="2-分支操作"><strong>2. 分支操作</strong></h2>
+
+<h3 id="21-查看分支">2.1. <strong>查看分支</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看本地分支列表。
+    <h3 id="22-创建新分支">2.2. <strong>创建新分支</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git branch [branch-name]</code>：创建一个新的分支。
+    <h3 id="23-切换分支">2.3. <strong>切换分支</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git checkout [branch-name]</code>：切换到指定分支。</li>
+  <li><code class="language-plaintext highlighter-rouge">git switch [branch-name]</code>：切换分支的更现代命令。
+    <h3 id="24-创建并切换分支">2.4. <strong>创建并切换分支</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git checkout -b [branch-name]</code>：创建并切换到新分支。</li>
+  <li><code class="language-plaintext highlighter-rouge">git switch -c [branch-name]</code>：新版本的等效命令。
+    <h3 id="25-合并分支">2.5. <strong>合并分支</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git merge [branch-name]</code>：将指定分支合并到当前分支。
+    <h3 id="26-删除分支">2.6. <strong>删除分支</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git branch -d [branch-name]</code>：删除分支（若该分支的更改已被合并）。</li>
+  <li>
+    <h2 id="git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</h2>
+  </li>
+</ul>
+
+<h2 id="3-远程操作"><strong>3. 远程操作</strong></h2>
+
+<h3 id="31-查看远程仓库">3.1. <strong>查看远程仓库</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git remote -v</code>：查看远程仓库地址。
+    <h3 id="32-添加远程仓库">3.2. <strong>添加远程仓库</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git remote add [name] [url]</code>：添加远程仓库。
+    <h3 id="33-推送到远程仓库">3.3. <strong>推送到远程仓库</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git push [remote] [branch]</code>：将本地分支推送到远程仓库。</li>
+  <li><code class="language-plaintext highlighter-rouge">git push -u [remote] [branch]</code>：设置默认推送的上游分支，并推送。
+    <h3 id="34-拉取远程仓库的更改">3.4. <strong>拉取远程仓库的更改</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取并合并更改。
+    <h3 id="35-从远程仓库获取更新">3.5. <strong>从远程仓库获取更新</strong></h3>
+  </li>
+  <li>
+    <h2 id="git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</h2>
+  </li>
+</ul>
+
+<h2 id="4-撤销更改"><strong>4. 撤销更改</strong></h2>
+
+<h3 id="41-取消文件暂存">4.1. <strong>取消文件暂存</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git reset HEAD [filename]</code>：将文件从暂存区移除，但保留工作区的更改。
+    <h3 id="42-撤销文件修改">4.2. <strong>撤销文件修改</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git checkout -- [filename]</code>：撤销工作区的修改，恢复到上一次提交的状态。
+    <h3 id="43-重置到特定提交">4.3. <strong>重置到特定提交</strong></h3>
+  </li>
+  <li>
+    <h2 id="git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</h2>
+  </li>
+</ul>
+
+<h2 id="5-标签操作"><strong>5. 标签操作</strong></h2>
+
+<h3 id="51-创建标签">5.1. <strong>创建标签</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git tag [tag-name]</code>：创建一个轻量标签。</li>
+  <li><code class="language-plaintext highlighter-rouge">git tag -a [tag-name] -m "[message]"</code>：创建带注释的标签。
+    <h3 id="52-查看标签">5.2. <strong>查看标签</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git tag</code>：列出所有标签。
+    <h3 id="53-推送标签到远程仓库">5.3. <strong>推送标签到远程仓库</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git push origin [tag-name]</code>：推送单个标签。</li>
+  <li>
+    <h2 id="git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</h2>
+  </li>
+</ul>
+
+<h2 id="6-其他有用命令"><strong>6. 其他有用命令</strong></h2>
+
+<h3 id="61-清理未跟踪的文件">6.1. <strong>清理未跟踪的文件</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git clean -f</code>：删除未跟踪的文件。
+    <h3 id="62-查看全局配置">6.2. <strong>查看全局配置</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git config --list</code>：查看所有 Git 配置信息。
+    <h3 id="63-设置全局用户名和邮箱">6.3. <strong>设置全局用户名和邮箱</strong></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">git config --global user.name "[name]"</code>：设置用户名。</li>
+  <li><code class="language-plaintext highlighter-rouge">git config --global user.email "[email]"</code>：设置邮箱。
+    <h1 id="六git-bash使用示范">六.Git Bash使用示范</h1>
+    <h2 id="1初始化本地库">1.初始化本地库</h2>
+    <h3 id="11创建文件打开git-bash">1.1.创建文件，打开Git Bash</h3>
+    <p><img src="/images/git-images/git.23.png" alt="" /></p>
+    <h3 id="12使用命令git-init">1.2.使用命令git init</h3>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div>    </div>
+    <p><img src="/images/git-images/git.24.png" alt="" /></p>
+    <h2 id="2查看本地库状态">2.查看本地库状态</h2>
+    <p>使用命令：</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div>    </div>
+    <p><img src="/images/git-images/git.25.png" alt="" /></p>
+    <h2 id="3创建项目">3.创建项目</h2>
+    <h3 id="31使用vim创建文件">3.1.使用vim创建文件</h3>
+    <p><img src="/images/git-images/git.26.png" alt="" />
+<img src="/images/git-images/git.27.png" alt="" />
+<img src="/images/git-images/git.28.png" alt="" />
+<strong>其实直接用VS Code打开文件，在终端使用命令与在Git Bash中使用命令没什么区别
+后面使用Git的方式我都在VS Code中去介绍，如果你喜欢使用Git Bsh，恕我精力有限，后面不再用到Git Bash了，但会演示在VS Code终端运行相同的命令，其实是一样的</strong></p>
+    <h1 id="七vs-code中使用git">七.VS Code中使用Git</h1>
+    <h2 id="1安装插件">1.安装插件</h2>
+    <h3 id="1markdownlint-插件">1.markdownlint 插件</h3>
+    <p><img src="/images/git-images/git.29.png" alt="" /></p>
+    <h4 id="功能介绍">功能介绍</h4>
+  </li>
+  <li><strong>自动检测格式问题</strong>：Markdownlint 可以自动检查 Markdown 文件中的格式问题，确保文档符合标准规范。它会提供即时反馈，帮助你在编辑时快速识别和修复潜在的错误。</li>
+  <li><strong>自定义规则</strong>：你可以根据项目需求配置自定义的检查规则，以适应不同的文档风格和要求。</li>
+  <li><strong>集成到工作流中</strong>：Markdownlint 与 VS Code 紧密集成，提供实时反馈，让你在撰写文档时无缝管理格式，提升文档质量。
+    <h3 id="2git-graph-插件">2.Git Graph 插件</h3>
+    <p><img src="/images/git-images/git.30.png" alt="" /></p>
+    <h4 id="功能介绍-1">功能介绍</h4>
+  </li>
+  <li><strong>可视化 Git 历史</strong>：Git Graph 提供直观的图形界面，展示 Git 仓库的提交历史、分支、合并情况，帮助你快速理解代码的演变和分支结构。</li>
+  <li><strong>便捷操作</strong>：通过图形化界面，你可以方便地创建和切换分支、提交更改、查看提交差异、解决冲突等，无需输入命令行。</li>
+  <li><strong>增强的代码审查体验</strong>：通过可视化展示，Git Graph 使得团队成员可以更轻松地进行代码审查和协作，提高团队开发效率。
+    <h2 id="2使用vs-code创建项目">2.使用VS Code创建项目</h2>
+    <h3 id="21打开终端">2.1.打开终端</h3>
+    <p><strong>快捷键：Crtl+反引号
+(反引号是在此是特殊符号，我就不打出了)</strong>
+使用命令初始化仓库：</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div>    </div>
+    <p><img src="/images/git-images/git.31.png" alt="" /></p>
+    <h3 id="22新建文件">2.2.新建文件</h3>
+    <p><img src="/images/git-images/git.32.png" alt="" /></p>
+    <h3 id="23提交到暂存区并添加到本地库">2.3.提交到暂存区并添加到本地库</h3>
+    <h4 id="方法一使用终端操作">方法一(使用终端操作)</h4>
+    <h5 id="1提交到暂存区">1.提交到暂存区</h5>
+    <p>在<strong>终端</strong>输入命令</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add hello.txt # 添加单个文件 
+git add .         # 添加当前目录下所有文件
+</code></pre></div>    </div>
+    <h5 id="1添加到本地库">1.添加到本地库</h5>
+    <p>在<strong>终端</strong>输入命令</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "first commit" hello.txt
+</code></pre></div>    </div>
+    <p><img src="/images/git-images/git.33.png" alt="" /></p>
+    <h4 id="方法二使用源代码管理">方法二(使用源代码管理)</h4>
+    <p><strong>快捷键:Ctrl Shitf G G</strong>
+也可在左侧栏点击打开
+<img src="/images/git-images/git.34.png" alt="" />
+<img src="/images/git-images/git.35.png" alt="" /></p>
+    <h3 id="24修改文件">2.4.修改文件</h3>
+    <p><strong>直接修改对应的文件就行了，修改完再暂存提交</strong>
+<img src="/images/git-images/git.36.png" alt="" /><img src="/images/git-images/git.37.png" alt="" /></p>
+    <h3 id="25切换到不同的提交">2.5.切换到不同的提交</h3>
+    <p>你每提交一次，都会生成一个哈希值，也可以理解为一个版本对应一个版本号</p>
+    <h4 id="2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></h4>
+  </li>
+  <li><strong>作用</strong>：<code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</li>
+  <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 <code class="language-plaintext highlighter-rouge">--soft</code>、<code class="language-plaintext highlighter-rouge">--mixed</code> 或 <code class="language-plaintext highlighter-rouge">--hard</code>），会影响索引和工作目录的状态：
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">--soft</code></strong>：仅重置 HEAD，索引和工作目录保持不变。</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">--mixed</code></strong>（默认）：重置 HEAD 和索引，工作目录保持不变。</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">--hard</code></strong>：重置 HEAD、索引和工作目录，将所有更改丢弃。
+<img src="/images/git-images/git.38.png" alt="" />
+<img src="/images/git-images/git.39.png" alt="" />
+        <h3 id="26使用分支">2.6.使用分支</h3>
+        <p>接下来的操作可以使用在<strong>终端</strong>使用<strong>命令</strong>创建，也可以使用<strong>源代码管理</strong>里的图形界面
+使用的相关命令可见上文 <strong>五.Git常用命令</strong> 的 <strong>2.分支操作</strong> 
+<img src="/images/git-images/git.40.png" alt="" /></p>
+        <h3 id="27合并分支">2.7.合并分支</h3>
+        <h4 id="271在新建的分支里的文件做出修改并提交">2.7.1.在新建的分支里的文件做出修改并提交</h4>
+        <p><strong>注意：合并时要到你想合并到的那个分支下，而不是在你修改内容的分支下
+如图上面搜索栏，点master合并并没有效果</strong>
+<img src="/images/git-images/git.41.png" alt="" /></p>
+        <h4 id="271返回需要合并到的分支进行合并">2.7.1.返回需要合并到的分支进行合并</h4>
+        <p>可以使用命令</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout 分支名
+</code></pre></div>        </div>
+        <p><img src="/images/git-images/git.42.png" alt="" />
+选择你需要的合并的分支就能完成合并了
+<img src="/images/git-images/git.43.png" alt="" /></p>
+        <h2 id="3使用代码托管平台github">3.使用代码托管平台（GitHub）</h2>
+        <p>GitHub官网：<a href="https://github.com/">https://github.com/</a></p>
+        <h3 id="31创建远程仓库">3.1.创建远程仓库</h3>
+        <p><img src="/images/git-images/git.44.png" alt="" />
+<img src="/images/git-images/git.45.png" alt="" /></p>
+        <h3 id="32添加文件到远程存储库">3.2.添加文件到远程存储库</h3>
+        <p><strong>注意：在VS Code中的源代码管理中的图形界面拉取或推送需要先添加远程存储库，这需要你登陆你的GitHub账号，点击添加远程存储库，会自动提示你登录</strong>
+<strong>当然在终端使用命令克隆不用存储库，接下来我会演示图形界面推送，和终端中用命令拉取</strong>
+<img src="/images/git-images/git.46.png" alt="" />
+在上图拉取、推送里选择推送，然后选择你的仓库，就能推送成功
+<img src="/images/git-images/git.47.png" alt="" />
+<img src="/images/git-images/git.48.png" alt="" /></p>
+        <h3 id="33从远程存储库库下载文件到本地">3.3.从远程存储库库下载文件到本地</h3>
+        <p><strong>注意：下载文件不需要登陆</strong>
+<strong>先创建一个存储项目的文件，再到仓库中复制Https地址</strong>
+<img src="/images/git-images/git.49.png" alt="" />
+<strong>使用命令克隆</strong></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone 地址
+</code></pre></div>        </div>
+        <p><img src="/images/git-images/git.50.png" alt="" /><img src="/images/git-images/git.51.png" alt="" /></p>
+        <h2 id="4团队内协作">4.团队内协作</h2>
+        <h3 id="41邀请协作的人">4.1.邀请协作的人</h3>
+        <p>点击add people后，输入你需要邀请的人的<strong>用户名</strong>，就会生成一个<strong>邀请函(网址)</strong>
+<img src="/images/git-images/git.52.png" alt="" />
+将这个邀请函复制，发给你需要邀请的人
+<img src="/images/git-images/git.53.png" alt="" />
+然后被邀请的人把你给的邀请函输入到浏览器中，就有一个需要确认的是否加入这个项目</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/git-images/git.54.png" alt="" />
+被邀请人同意后，就能直接修改这个仓库，push不再需要权限
+<img src="/images/git-images/git.55.png" alt="" /></p>
+<h2 id="4跨团队协作">4.跨团队协作</h2>
+<h3 id="41fork项目">4.1.fork项目</h3>
+<p>就是把别人的仓库复制一份到自己账号下
+<img src="/images/git-images/git.56.png" alt="" /></p>
+<h3 id="42做出修改">4.2.做出修改</h3>
+<h3 id="43发出pull请求">4.3.发出pull请求</h3>
+<p>就是让别人合并你修改的部分
+<img src="/images/git-images/git.57.png" alt="" />
+<img src="/images/git-images/git.58.png" alt="" />
+<img src="/images/git-images/git.59.png" alt="" /></p>
+<h3 id="44仓库管理者同意pull请求">4.4.仓库管理者同意pull请求</h3>
+<p>仓库管理者会看到一个pull request
+<img src="/images/git-images/git.60.png" alt="" />
+点击Merge pull request就能成功合并
+<img src="/images/git-images/git.61.png" alt="" />
+合并成功后内容做出修改，并且贡献者中会多出你的用户名
+<img src="/images/git-images/git.62.png" alt="" /></p>
+<h1 id="八完结">八.完结</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Git" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Git]]></summary></entry><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一下载">一.下载</h1>
 <h2 id="1下载vs-code">1.下载VS Code</h2>
 <p>网址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
-<img src="\images\vscode-images\vscode.1.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.1.png" alt="" /></p>
 
 <h1 id="二配置环境">二.配置环境</h1>
 <h2 id="1打开扩展">1.打开扩展</h2>
-<p><img src="\images\vscode-images\vscode.2.png" alt="" /></p>
+<p><img src="/images/vscode-images/vscode.2.png" alt="" /></p>
 <h2 id="2安装中文包">2.安装中文包</h2>
 <h3 id="21在搜索栏中搜索chinese">2.1.在搜索栏中搜索Chinese</h3>
 <h3 id="22选择简体中文安装">2.2.选择简体中文安装</h3>
 <h3 id="23重启">2.3.重启</h3>
-<p><img src="\images\vscode-images\vscode.3.png" alt="" /></p>
+<p><img src="/images/vscode-images/vscode.3.png" alt="" /></p>
 <h2 id="3-根据所需语言配置环境cc">3. 根据所需语言配置环境（C/C++）</h2>
 <h3 id="31安装插件">3.1安装插件</h3>
 <h4 id="311-cc-插件">3.1.1. <strong>C/C++ 插件</strong></h4>
@@ -24,7 +633,7 @@
       <li>调试支持：通过 VSCode 内置的调试功能，可以使用 GDB、LLDB 或 Visual Studio 调试器来调试 C/C++ 程序。</li>
       <li>IntelliSense：通过提供自动补全、悬停信息和参数提示等功能，提高代码编写的效率。</li>
       <li>多平台支持：该插件支持在 Windows、Linux 和 macOS 平台上工作。
-<img src="\images\vscode-images\vscode.4.png" alt="" />
+<img src="/images/vscode-images/vscode.4.png" alt="" />
         <h4 id="312-cc-compile-run-插件">3.1.2. <strong>C/C++ Compile Run 插件</strong></h4>
       </li>
     </ul>
@@ -35,7 +644,7 @@
       <li>一键编译和运行：你只需按一个快捷键（通常是 F6），就可以编译并立即运行代码，而不必手动编写终端命令。</li>
       <li>灵活的配置：你可以通过配置文件自定义编译和运行命令。</li>
       <li>适合小型项目：这个插件更适合快速测试小型 C/C++ 项目，因为它不提供完整的调试功能。
-<img src="\images\vscode-images\vscode.5.png" alt="" />
+<img src="/images/vscode-images/vscode.5.png" alt="" />
         <h4 id="313-better-c-syntax-插件">3.1.3. <strong>Better C++ Syntax 插件</strong></h4>
       </li>
     </ul>
@@ -46,7 +655,7 @@
       <li>改进的语法高亮：为 C++ 提供更精确的语法高亮，特别是模板和更复杂的语言特性。</li>
       <li>支持现代 C++：该插件支持 C++11、C++14、C++17 等现代 C++ 标准，确保新的语言特性也能得到良好的高亮。</li>
       <li>自定义语法高亮：你可以根据自己的需求自定义 C++ 的高亮规则。
-<img src="\images\vscode-images\vscode.6.png" alt="" />
+<img src="/images/vscode-images/vscode.6.png" alt="" />
         <h4 id="314cc插件总结">3.1.4.C/C++插件总结：</h4>
       </li>
     </ul>
@@ -59,45 +668,45 @@
     <h4 id="341下载msys2">3.4.1.下载MSYS2</h4>
     <p>网址：<a href="[Get Started with C++ and MinGW-w64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw)">[Get Started with C++ and MinGW-w64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw)</a>
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
-<img src="\images\vscode-images\vscode.7.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.7.png" alt="" /></p>
     <h4 id="342安装后复制网站中的命令输入">3.4.2.安装后复制网站中的命令输入</h4>
     <p>注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
-<img src="\images\vscode-images\vscode.8.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.8.png" alt="" /></p>
     <h4 id="343在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">3.4.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</h4>
-    <p><img src="\images\vscode-images\vscode.9.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.9.png" alt="" /></p>
     <h4 id="344将ucrt64的bin文件地址到-windows环境变量的path路径中">3.4.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</h4>
     <h5 id="3441在搜索栏中搜索系统环境变量并打开">3.4.4.1.在搜索栏中搜索系统环境变量并打开</h5>
-    <p><img src="\images\vscode-images\vscode.10.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.10.png" alt="" /></p>
     <h5 id="3442-点击环境变量在用户系统变量中选择path变量然后选择编辑">3.4.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</h5>
     <h5 id="3443-点击新建将复制的文件地址复制进去最后点击确定退出">3.4.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</h5>
     <h5 id="3444图片演示">3.4.4.4.图片演示</h5>
-    <p><img src="\images\vscode-images\vscode.11.png" alt="" />
-<img src="\images\vscode-images\vscode.12.png" alt="" />
-<img src="\images\vscode-images\vscode.13.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.11.png" alt="" />
+<img src="/images/vscode-images/vscode.12.png" alt="" />
+<img src="/images/vscode-images/vscode.13.png" alt="" /></p>
     <h3 id="34编写cc程序">3.4.编写C/C++程序</h3>
     <h4 id="341创建一个文件">3.4.1.创建一个文件</h4>
-    <p><img src="\images\vscode-images\vscode.15.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.15.png" alt="" /></p>
     <h4 id="342通过vscode打开你上面创建的文件">3.4.2.通过VScode打开你上面创建的文件</h4>
-    <p><img src="\images\vscode-images\vscode.16.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.16.png" alt="" /></p>
     <h4 id="343创建文本文件后缀需为c或cpp再在弹出的语言选择中选择c">3.4.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++</h4>
-    <p><img src="\images\vscode-images\vscode.17.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.17.png" alt="" /></p>
     <h4 id="344编写代码并运行可以在终端看到输出结果">3.4.4.编写代码并运行，可以在终端看到输出结果</h4>
-    <p><img src="\images\vscode-images\vscode.18.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.18.png" alt="" /></p>
     <h4 id="345设置在控制台中输出结果">3.4.5.设置在控制台中输出结果</h4>
     <h5 id="3451打开cc-compile-run的设置">3.4.5.1.打开C/C++ Compile Run的设置</h5>
-    <p><img src="\images\vscode-images\vscode.19.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.19.png" alt="" /></p>
     <h5 id="3452下滑勾选选项run-in-external-terminal">3.4.5.2.下滑勾选选项Run-in-external-terminal</h5>
-    <p><img src="\images\vscode-images\vscode.20.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.20.png" alt="" /></p>
     <h5 id="3453配置环境完成">3.4.5.3.配置环境完成</h5>
-    <p><img src="\images\vscode-images\vscode.21.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.21.png" alt="" /></p>
     <h2 id="4-根据所需语言配置环境python">4. 根据所需语言配置环境（Python）</h2>
     <h3 id="41下载python解释器">4.1下载Python解释器</h3>
     <p>网址：<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
-<img src="\images\vscode-images\vscode.22.png" alt="" />
-<img src="\images\vscode-images\vscode.23.png" alt="" />(下面两个选项要勾上，第一个就是运行Python程序时会调用它，第二个是把它添加到系统路径，让系统可以直接调用它)</p>
+<img src="/images/vscode-images/vscode.22.png" alt="" />
+<img src="/images/vscode-images/vscode.23.png" alt="" />(下面两个选项要勾上，第一个就是运行Python程序时会调用它，第二个是把它添加到系统路径，让系统可以直接调用它)</p>
     <h3 id="42安装插件">4.2.安装插件</h3>
     <h4 id="421python-插件">4.2.1.<strong>python</strong> 插件</h4>
-    <p><img src="\images\vscode-images\vscode.24.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.24.png" alt="" /></p>
     <h4 id="422python的主要功能">4.2.2.python的主要功能</h4>
   </li>
   <li><strong>代码智能提示</strong>：提供 Python 代码的自动补全、函数参数提示、变量/函数定义跳转等功能。</li>
@@ -108,7 +717,7 @@
   <li><strong>测试集成</strong>：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
 这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。
     <h4 id="421python-extension-pack-插件">4.2.1.<strong>Python Extension Pack</strong> 插件</h4>
-    <p><img src="\images\vscode-images\vscode.26.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.26.png" alt="" /></p>
   </li>
 </ul>
 
@@ -125,17 +734,17 @@
   <li><strong>Jupyter</strong> - 提供对 Jupyter Notebook 的支持，适用于数据科学、机器学习和科学计算等任务。
     <h3 id="43编写python程序">4.3.编写Python程序</h3>
     <h4 id="431创建一个文件">4.3.1创建一个文件</h4>
-    <p><img src="\images\vscode-images\vscode.15.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.15.png" alt="" /></p>
     <h4 id="432通过vscode打开你上面创建的文件">4.3.2.通过VScode打开你上面创建的文件</h4>
-    <p><img src="\images\vscode-images\vscode.16.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.16.png" alt="" /></p>
     <h4 id="433创建文本文件后缀需为py再在弹出的语言选择中选择python">4.3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python</h4>
-    <p><img src="\images\vscode-images\vscode.17.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.17.png" alt="" /></p>
     <h4 id="434编写代码并运行可以在终端看到输出结果">4.3.4.编写代码并运行，可以在终端看到输出结果</h4>
-    <p><img src="\images\vscode-images\vscode.25.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.25.png" alt="" /></p>
     <h2 id="5-根据所需语言配置环境htmlcssjs">5. 根据所需语言配置环境（HTML+CSS+JS）</h2>
     <h3 id="51安装插件">5.1.安装插件</h3>
     <h4 id="511html-css-support-插件">5.1.1.<strong>HTML CSS Support</strong> 插件</h4>
-    <p><img src="\images\vscode-images\vscode.27.png" alt="" /></p>
+    <p><img src="/images/vscode-images/vscode.27.png" alt="" /></p>
     <h4 id="512html-css-support的主要功能">5.1.2.HTML CSS Support的主要功能</h4>
     <ul>
       <li>为 HTML 文件中的元素提供 CSS 类名的自动补全。你在 HTML 文件中编辑时，输入 <code class="language-plaintext highlighter-rouge">class</code> 属性时，插件会自动从项目中的 CSS 文件中获取可用的类名并建议补全。</li>
@@ -143,7 +752,7 @@
       <li>这有助于提高开发效率，避免拼写错误，并且能更轻松地管理和使用样式表中的 CSS 类。
 这个插件非常适合在 HTML 和 CSS 开发中频繁切换的开发者。
         <h4 id="513-live-server-插件">5.1.3. <strong>Live Server</strong> 插件</h4>
-        <p><img src="\images\vscode-images\vscode.28.png" alt="" /></p>
+        <p><img src="/images/vscode-images/vscode.28.png" alt="" /></p>
         <h4 id="514live-server的主要功能">5.1.4.Live Server的主要功能</h4>
       </li>
       <li>启动一个本地开发服务器，让你可以实时预览 HTML、CSS 和 JavaScript 文件的更改。</li>
@@ -152,7 +761,7 @@
       <li>提高了开发效率，无需手动刷新浏览器，特别适合前端开发。
 对于那些进行网页设计和前端开发的用户来说，这个插件非常实用。
         <h4 id="515auto-rename-tag-插件">5.1.5.<strong>Auto Rename Tag</strong> 插件</h4>
-        <p><img src="\images\vscode-images\vscode.29.png" alt="" /></p>
+        <p><img src="/images/vscode-images/vscode.29.png" alt="" /></p>
         <h4 id="515auto-rename-tag的主要功能">5.1.5.Auto Rename Tag的主要功能</h4>
       </li>
       <li>自动同步重命名 HTML/XML 标签。当你修改或重命名一个标签时，插件会自动更新相应的闭合标签。</li>
@@ -164,28 +773,28 @@
         <h4 id="522通过vscode打开你上面创建的文件">5.2.2.通过VScode打开你上面创建的文件</h4>
         <h4 id="523创建文本文件后缀需为html">5.2.3.创建文本文件，后缀需为.html</h4>
         <h4 id="524编写代码鼠标右键再点击open-with-live-server">5.2.4.编写代码，鼠标右键再点击Open with Live Server</h4>
-        <p><img src="\images\vscode-images\vscode.30.png" alt="" /></p>
+        <p><img src="/images/vscode-images/vscode.30.png" alt="" /></p>
       </li>
     </ul>
   </li>
 </ol>
 
-<p><img src="\images\vscode-images\vscode.31.png" alt="" /></p>
+<p><img src="/images/vscode-images/vscode.31.png" alt="" /></p>
 <h2 id="6熟悉操作">6.熟悉操作</h2>
 <h3 id="61使用编辑器操场">6.1.使用编辑器操场</h3>
 <p>编辑器操场会提供许多快捷键的使用
-<img src="\images\vscode-images\vscode.32.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.32.png" alt="" /></p>
 <h4 id="611multi-cursor-editing多光标编辑">6.1.1.Multi-Cursor Editing（多光标编辑）</h4>
 <p>注意：DownArrow就是键盘上的向下箭头，其它同理</p>
 <h5 id="6111box-selection选择矩形块">6.1.1.1.Box Selection（选择矩形块）</h5>
 <p><strong>Shift+Alt再拖动鼠标</strong>，实现选择一个矩形块
-<img src="\images\vscode-images\vscode.33.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.33.png" alt="" /></p>
 <h5 id="6112add-a-cursor添加光标">6.1.1.2.Add a cursor（添加光标）</h5>
 <p><strong>Crtl+Alt+上/下箭头</strong>，将向上/向下额外添加一个光标；<strong>Alt再点击鼠标</strong>，可以在点击位置额外添加一个光标</p>
 <h5 id="6113creat-curosrs-on-all-occurences-of-a-string选择光标所在字符串并在字符串的所有出现处创建光标">6.1.1.3.Creat curosrs on all occurences of a string（选择光标所在字符串，并在字符串的所有出现处创建光标）</h5>
 <p><strong>Crtl+Shift+L</strong>,选中光标所在单词的所有单词，并创建一个光标到单词尾
 注意：截图不显示光标，实际上每个backgroud的末尾都有一个光标，可以对这个单词进行批量操作
-<img src="\images\vscode-images\vscode.34.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.34.png" alt="" /></p>
 <h4 id="612line-actions行操作">6.1.2.Line Actions（行操作）</h4>
 <h5 id="6121copy-a-line-and-insert-it-above-or-below-the-current-postion复制一行到上下一行">6.1.2.1.Copy a line and insert it above or below the current postion（复制一行到上/下一行）</h5>
 <p><strong>Shift+Alt+UpArrow/DownArrow(上/下箭头)</strong>，会将光标所在行向上/下复制一行</p>
@@ -203,39 +812,604 @@
 <p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令的搜索栏，也可以直接使用快捷键<strong>Ctrl+Shift+P</strong>进入</p>
 <h4 id="611更改语言">6.1.1.更改语言</h4>
 <p>先<strong>Ctrl+Shift+P</strong>进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
-<img src="\images\vscode-images\vscode.35.png" alt="" /></p>
+<img src="/images/vscode-images/vscode.35.png" alt="" /></p>
 <h4 id="611更改字体">6.1.1.更改字体</h4>
-<p><img src="\images\vscode-images\vscode.36.png" alt="" /></p>
+<p><img src="/images/vscode-images/vscode.36.png" alt="" /></p>
 <h2 id="7完结">7.完结</h2>
-<p>根据上述操作，就能正常使用VS Code，更多的操作就需要自己去探索了</p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一在windows上配置jekyll">一.在Windows上配置Jekyll</h1>
+<p>根据上述操作，就能正常使用VS Code，更多的操作就需要自己去探索了</p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<p>本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问<br />
+作者实现的静态网站：<a href="https://verumkey.github.io">verumkey.github.io</a><br />
+项目仓库：<a href="https://github.com/Verumkey/verumkey.github.io">https://github.com/Verumkey/verumkey.github.io</a><br />
+Jekyll官方文档：<a href="https://jekyllrb.com/docs/">https://jekyllrb.com/docs/</a></p>
+<h1 id="jekyll概述">Jekyll概述</h1>
+
+<p>Jekyll 是一个静态网站生成器，专为博客和文档类网站设计，广泛用于 GitHub Pages。它的主要特点是将 Markdown、Liquid 模板和静态文件（如 CSS、JavaScript、图片等）转化为完整的 HTML 静态页面。因为生成的是静态页面，Jekyll 网站速度快、安全性高，且不需要数据库支持。</p>
+
+<h2 id="jekyll-的工作原理">Jekyll 的工作原理：</h2>
+
+<ol>
+  <li><strong>Markdown 文件</strong>：你撰写的内容通常以 Markdown 格式保存，它是一种简单的标记语言，易于编写和阅读。</li>
+  <li><strong>模板（Layout）和组件（Includes）</strong>：Jekyll 使用 Liquid 模板引擎（由 Shopify 开发），允许你创建可复用的 HTML 模板和组件来组织页面结构，比如头部、脚部等。</li>
+  <li><strong>静态文件</strong>：除了内容和模板，Jekyll 还会处理所有静态资源，比如 CSS、JS 和图片。</li>
+  <li><strong>生成 HTML</strong>：运行 Jekyll 时，它会读取这些内容并结合模板生成静态 HTML 文件，最终输出一个可直接部署的网站。</li>
+</ol>
+
+<h2 id="jekyll-的特点">Jekyll 的特点：</h2>
+
+<ul>
+  <li><strong>易于部署</strong>：你可以将 Jekyll 站点托管在 GitHub Pages 上，GitHub 会自动帮你运行 Jekyll，并生成你的网站。</li>
+  <li><strong>支持 Markdown</strong>：方便编写内容，尤其是对于写作博客或技术文档。</li>
+  <li><strong>无数据库需求</strong>：Jekyll 不需要数据库支持，所有内容都以文件形式存储，速度更快，适合小型或中型网站。</li>
+  <li><strong>插件支持</strong>：Jekyll 允许用户通过插件扩展功能，比如添加搜索、自动标签生成等。</li>
+</ul>
+
+<h2 id="基本使用步骤">基本使用步骤：</h2>
+
+<ol>
+  <li><strong>安装 Jekyll</strong>：通过 Ruby 安装。命令是 <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code>。</li>
+  <li><strong>创建新站点</strong>：运行命令 <code class="language-plaintext highlighter-rouge">jekyll new my-site</code> 创建一个新项目。</li>
+  <li><strong>启动开发服务器</strong>：进入站点文件夹后，运行 <code class="language-plaintext highlighter-rouge">jekyll serve</code> 启动本地服务器，Jekyll 会自动编译文件并提供本地预览。</li>
+  <li><strong>配置 <code class="language-plaintext highlighter-rouge">_config.yml</code></strong>：通过配置文件定制站点，比如设置站点标题、描述、URL、主题等/</li>
+  <li><strong>添加内容</strong>：在 <code class="language-plaintext highlighter-rouge">_posts</code> 文件夹中添加新的 Markdown 文件，即可发布新的博客文章或页面。</li>
+</ol>
+
+<h1 id="一在windows上配置jekyll">一.在Windows上配置Jekyll</h1>
 <h2 id="1安装ruby和devkit">1.安装Ruby和DevKit</h2>
 <p>网址：<a href="https://rubyinstaller.org/downloads/">https://rubyinstaller.org/downloads/</a>
-<img src="\images\Jekyll-images\jekyll.1.png" alt="" /></p>
+<img src="/images/Jekyll-images/jekyll.1.png" alt="" /></p>
 <h2 id="2安装bundler和jekyll">2.安装Bundler和Jekyll</h2>
-<p>在命令行或终端输入：gem install bundler jekyll
-<img src="\images\Jekyll-images\jekyll.2.png" alt="" /></p>
+<p>在命令行或终端输入：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler jekyll
+</code></pre></div></div>
+<p><img src="/images/Jekyll-images/jekyll.2.png" alt="" /></p>
 <h1 id="二创建jekyll网站项目">二.创建Jekyll网站项目</h1>
 <h2 id="1创建一个存放项目的文件">1.创建一个存放项目的文件</h2>
-<p><img src="\images\Jekyll-images\jekyll.3.png" alt="" /></p>
+<p><img src="/images/Jekyll-images/jekyll.3.png" alt="" /></p>
 <h2 id="2创建一个jekyll网站项目">2.创建一个Jekyll网站项目</h2>
 <h3 id="21使用cd命令进入你上面创建的文件的目录下">2.1.使用cd命令进入你上面创建的文件的目录下</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd "D:\Work\My-Website" ### 2.2.输入命令：jekyll new 文件名（你想设置的名字）
-
-jekyll new my-website ### 2.3.进入创建的文件安装项目依赖
-
-cd my-website
-bundle install ### 2.4.运行本地服务器以预览网站
-
-bundle exec jeky11 serve ### 2.5.图片演示 ![](\images\Jekyll-images\jekyll.4.png) ![](\images\Jekyll-images\jekyll.5.png) ![](\images\Jekyll-images\jekyll.6.png) ### 2.5.编辑脚本快速打开 每次浏览Jekyll网站时，都需要重新运行budle exec jekyll serve命令，以此启动一个本地的开发服务器，使你能够在浏览器中访问你的网站
-
-D:
+<p><strong>注意：如果你使用的是cmd,要先切换盘符</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D：
+cd "D:\Work\My-Website"
+</code></pre></div></div>
+<h3 id="22输入命令jekyll-new-文件名">2.2.输入命令：jekyll new 文件名</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new my-website
+</code></pre></div></div>
+<h3 id="23进入创建的文件安装项目依赖">2.3.进入创建的文件安装项目依赖</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd my-website
+bundle install
+</code></pre></div></div>
+<h3 id="24运行本地服务器以预览网站">2.4.运行本地服务器以预览网站</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+<h3 id="25图片演示">2.5.图片演示</h3>
+<p><img src="/images/Jekyll-images/jekyll.4.png" alt="" />
+<img src="/images/Jekyll-images/jekyll.5.png" alt="" />
+<strong>这就是一个静态网站</strong>
+<img src="/images/Jekyll-images/jekyll.6.png" alt="" /></p>
+<h3 id="25编辑脚本快速打开">2.5.编辑脚本快速打开</h3>
+<p>每次浏览Jekyll网站时，都需要<strong>重新运行</strong>budle exec jekyll serve命令，以此启动一个本地的<strong>开发服务器</strong>，使你能够在浏览器中访问你的<strong>网站</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D:
 cd "D:\Work\My-Website\my-website"
 bundle exec jekyll serve
 </code></pre></div></div>
-
-<p><img src="\images\Jekyll-images\jekyll.7.png" alt="" /></p>
+<p><img src="/images/Jekyll-images/jekyll.7.png" alt="" /></p>
 <h1 id="三在github上配置静态网站">三.在GitHub上配置静态网站</h1>
 <h2 id="1创建仓库">1.创建仓库</h2>
+<p><img src="/images/Jekyll-images/jekyll.8.png" alt="" />
+<strong>GitHub 对静态网页托管的特殊规则决定了你的个人或组织站点的仓库名必须为</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>用户名.github.io
+</code></pre></div></div>
+<p><img src="/images/Jekyll-images/jekyll.9.png" alt="" /></p>
+<h3 id="规定由来">规定由来</h3>
+<p>GitHub 对静态网页托管的特殊规则决定了你的个人或组织站点的仓库名必须为 <code class="language-plaintext highlighter-rouge">用户名.github.io</code>。这是因为 GitHub Pages 在为个人或组织提供顶级域名托管时，需要使用固定的命名约定。具体原因如下：</p>
+
+<h4 id="1-唯一识别的顶级域名">1. <strong>唯一识别的顶级域名</strong>：</h4>
+
+<p>个人或组织级的 GitHub Pages 网站会使用特定的顶级域名，形式为 <code class="language-plaintext highlighter-rouge">https://用户名.github.io</code>。GitHub 通过仓库名匹配该域名来提供唯一的托管地址。</p>
+
+<ul>
+  <li>例如，如果你的 GitHub 用户名是 <code class="language-plaintext highlighter-rouge">exampleuser</code>，那么 GitHub Pages 会自动把 <code class="language-plaintext highlighter-rouge">exampleuser.github.io</code> 解析为你 <code class="language-plaintext highlighter-rouge">exampleuser.github.io</code> 仓库中的内容。这个仓库名直接与该域名绑定，便于 GitHub 自动识别和生成网站。</li>
+</ul>
+
+<h4 id="2-自动部署机制">2. <strong>自动部署机制</strong>：</h4>
+
+<p>GitHub Pages 自动识别带有 <code class="language-plaintext highlighter-rouge">.github.io</code> 后缀的仓库名，并将其视为用户的顶级个人或组织站点。当你提交代码到这个仓库时，GitHub Pages 的服务会立即自动触发站点的构建和部署过程。</p>
+
+<p>如果你的仓库名是其他的，比如 <code class="language-plaintext highlighter-rouge">my-website</code>，虽然它也可以用来生成 GitHub Pages 网站，但它只能通过二级域名访问，例如 <code class="language-plaintext highlighter-rouge">https://用户名.github.io/my-website/</code>，而不是直接的 <code class="language-plaintext highlighter-rouge">用户名.github.io</code>。</p>
+
+<h4 id="3-区别于项目页面">3. <strong>区别于项目页面</strong>：</h4>
+
+<p>GitHub Pages 支持两种类型的站点：</p>
+
+<ul>
+  <li><strong>用户/组织页面</strong>：这种站点与 GitHub 用户名直接相关，域名是 <code class="language-plaintext highlighter-rouge">用户名.github.io</code>，并且仓库名必须为 <code class="language-plaintext highlighter-rouge">用户名.github.io</code>。</li>
+  <li><strong>项目页面</strong>：你可以为 GitHub 中的任何项目创建页面，域名格式为 <code class="language-plaintext highlighter-rouge">https://用户名.github.io/项目名</code>。项目页面的仓库名没有强制要求。</li>
+</ul>
+
+<p>通过强制 <code class="language-plaintext highlighter-rouge">用户名.github.io</code> 这样的仓库命名规则，GitHub Pages 可以清楚区分个人/组织站点与项目站点，并将它们映射到不同的 URL 上。</p>
+
+<p>因此，要求个人或组织网站的仓库名必须是 <code class="language-plaintext highlighter-rouge">用户名.github.io</code>，是为了确保每个用户或组织都有一个唯一且固定的顶级域名来展示其内容，并简化自动部署和解析流程。</p>
 <h2 id="2配置jekyll">2.配置Jekyll</h2>
-<h2 id="3将jekyll项目push到仓库">3.将Jekyll项目push到仓库</h2>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Jekyll" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何获得一个静态网站]]></summary></entry></feed>
+<h3 id="21启用github-action">2.1.启用GitHub Action</h3>
+<p><img src="/images/Jekyll-images/jekyll.10.png" alt="" /></p>
+<h3 id="22github-action介绍">2.2.GitHub Action介绍</h3>
+
+<p>GitHub Actions 是 GitHub 提供的一项持续集成（CI）和持续交付（CD）服务，允许你在 GitHub 仓库中自动执行各种任务和工作流。它让你能够编写、共享和执行自动化流程，以便在代码提交时执行测试、构建、部署等操作。</p>
+
+<h4 id="核心功能">核心功能：</h4>
+
+<ol>
+  <li>
+    <p><strong>自动化工作流</strong>：GitHub Actions 允许你定义一系列自动化任务（称为 “工作流”），这些工作流可以在特定事件（如代码推送、Pull Request、Issue 创建等）发生时触发。</p>
+  </li>
+  <li>
+    <p><strong>持续集成和持续交付</strong>：它可以用来自动化测试、构建和发布代码。例如，每当你推送代码到 GitHub 时，GitHub Actions 可以自动运行单元测试、构建项目，甚至将应用部署到服务器上。</p>
+  </li>
+  <li>
+    <p><strong>灵活性与可扩展性</strong>：GitHub Actions 允许你根据自己的需求，灵活地定义自定义工作流。工作流是通过 YAML 文件定义的，存储在仓库的 <code class="language-plaintext highlighter-rouge">.github/workflows/</code> 目录中。你可以使用 GitHub 自带的动作（Actions）或创建自定义的动作。</p>
+  </li>
+</ol>
+
+<h4 id="github-actions-的基本概念">GitHub Actions 的基本概念：</h4>
+
+<ol>
+  <li>
+    <p><strong>工作流（Workflow）</strong>：</p>
+
+    <ul>
+      <li>工作流是由一系列自动化任务组成的。它们是 GitHub Actions 的核心，用来定义你想自动化的过程。工作流文件使用 YAML 语法编写，放置在 <code class="language-plaintext highlighter-rouge">.github/workflows/</code> 目录下。</li>
+      <li>每个工作流可以根据事件（如代码提交、Pull Request 等）被触发。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>事件（Event）</strong>：</p>
+
+    <ul>
+      <li>事件是触发工作流的特定动作，比如代码的 <code class="language-plaintext highlighter-rouge">push</code>、<code class="language-plaintext highlighter-rouge">pull_request</code>，创建 Issue，或者手动触发。</li>
+      <li>例如，当你推送代码时，可以触发一个测试工作流，确保新代码不会破坏现有功能。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>任务（Job）</strong>：</p>
+
+    <ul>
+      <li>工作流由一个或多个任务组成。每个任务可以在不同的虚拟机环境（例如 Ubuntu、macOS 或 Windows）上运行，并且任务可以并行或按顺序执行。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>步骤（Step）</strong>：</p>
+
+    <ul>
+      <li>每个任务由多个步骤组成。步骤是在运行环境中执行的单个命令或操作。可以使用现有的 Actions 或者在步骤中编写自定义的 Shell 脚本。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>动作（Action）</strong>：</p>
+
+    <ul>
+      <li>动作是 GitHub Actions 中的可复用组件，你可以在步骤中调用它们。GitHub 提供了很多官方的 Actions（如 <code class="language-plaintext highlighter-rouge">actions/checkout</code> 用于检出代码），并且社区中也有许多开源的 Actions 可以使用。</li>
+      <li>你也可以编写自己的动作，来实现自定义需求。
+        <h4 id="github-actions-的用途">GitHub Actions 的用途：</h4>
+      </li>
+    </ul>
+  </li>
+  <li><strong>自动化测试</strong>：每当代码变更时自动运行测试，确保代码的质量。</li>
+  <li><strong>持续集成</strong>：合并代码时自动构建和测试项目，避免引入错误。</li>
+  <li><strong>自动部署</strong>：在代码推送到某个分支时，自动将项目部署到服务器或云端。</li>
+  <li><strong>代码审查</strong>：自动检查代码格式、代码覆盖率等问题，帮助维护代码质量。</li>
+  <li><strong>发布管理</strong>：自动生成版本、打包应用，甚至发布到包管理平台（如 npm、Docker 等）。</li>
+</ol>
+
+<p>使用 GitHub Actions 对于 Jekyll 项目的帮助主要体现在自动化、灵活性和自定义能力方面。以下是一些具体的优点和场景，说明 GitHub Actions 如何提升你的 Jekyll 项目体验：</p>
+
+<h4 id="1-自动化构建和部署">1. <strong>自动化构建和部署</strong>：</h4>
+
+<ul>
+  <li><strong>自动化构建</strong>：通过 GitHub Actions，你可以设置在每次提交代码时自动构建 Jekyll 网站。这样可以确保每次更新后网站的最新版本都会被生成并可用。</li>
+  <li><strong>定期部署</strong>：可以配置定期触发的工作流，自动生成和部署 Jekyll 网站，无需手动操作。</li>
+</ul>
+
+<h4 id="2-自定义构建过程">2. <strong>自定义构建过程</strong>：</h4>
+
+<ul>
+  <li><strong>使用特定版本的 Ruby 和 Jekyll</strong>：可以在工作流中指定使用的 Ruby 和 Jekyll 版本，确保在构建过程中的一致性，避免因环境差异导致的问题。</li>
+  <li><strong>预处理和后处理步骤</strong>：在构建前后执行特定的命令，比如优化图片、清理文件、运行自定义脚本等，以确保生成的站点符合你的需求。</li>
+</ul>
+
+<h4 id="3-集成其他工具">3. <strong>集成其他工具</strong>：</h4>
+
+<ul>
+  <li><strong>测试和验证</strong>：可以在构建过程中添加自动化测试，确保 Jekyll 生成的内容符合特定标准，比如 Markdown 语法、链接有效性等。</li>
+  <li><strong>部署到其他平台</strong>：除了 GitHub Pages，你还可以通过 GitHub Actions 将生成的 Jekyll 网站部署到其他平台（如 Netlify、AWS S3、Vercel 等），增强灵活性。</li>
+</ul>
+
+<h4 id="4-使用自定义插件">4. <strong>使用自定义插件</strong>：</h4>
+
+<ul>
+  <li><strong>支持更多 Jekyll 插件</strong>：GitHub Pages 默认只支持一部分 Jekyll 插件。如果你使用了自定义或不在默认列表中的插件，GitHub Actions 允许你在自己的工作流中设置环境，支持这些插件的使用。</li>
+</ul>
+
+<h4 id="5-持续集成和持续交付cicd">5. <strong>持续集成和持续交付（CI/CD）</strong>：</h4>
+
+<ul>
+  <li><strong>实现 CI/CD 流程</strong>：通过 GitHub Actions，可以实现完整的 CI/CD 流程，在代码更新时自动进行构建、测试和部署。这使得团队协作时更容易保证代码的质量。</li>
+</ul>
+
+<h4 id="6-简化复杂的部署需求">6. <strong>简化复杂的部署需求</strong>：</h4>
+
+<ul>
+  <li><strong>配置和管理更复杂的部署需求</strong>：如果你的项目需要处理多个分支、子模块或复杂的文件结构，GitHub Actions 可以提供更强大的控制能力，帮助你管理这些需求。
+    <h3 id="23安装jekyll依赖">2.3.安装Jekyll依赖</h3>
+    <p><img src="/images/Jekyll-images/jekyll.11.png" alt="" /></p>
+    <h3 id="24jekyll依赖作用">2.4.Jekyll依赖作用</h3>
+    <h3 id="1-自动构建-jekyll-网站">1. <strong>自动构建 Jekyll 网站</strong>：</h3>
+  </li>
+  <li>选择这个选项后，GitHub Actions 会自动帮你构建 Jekyll 网站，而不需要你手动运行构建命令。你只需要提交内容更新（比如新的 Markdown 文件），GitHub Actions 就会自动生成静态网页。</li>
+</ul>
+
+<h3 id="2-预安装-github-pages-依赖">2. <strong>预安装 GitHub Pages 依赖</strong>：</h3>
+
+<ul>
+  <li>这个选项会确保 GitHub Pages 构建过程中所需的 Jekyll 依赖（例如 <code class="language-plaintext highlighter-rouge">github-pages</code> Gem 和其他插件）已经预先安装好。这样你就不需要自己去担心依赖的安装和配置问题。</li>
+</ul>
+
+<h3 id="3-简化部署流程">3. <strong>简化部署流程</strong>：</h3>
+
+<ul>
+  <li>通过使用 GitHub Actions，整个构建和发布的流程变得自动化且透明。每次你向仓库提交代码或文章时，GitHub Actions 会自动运行，安装依赖、生成 HTML 文件，并将其部署到你的 GitHub Pages 网站。</li>
+</ul>
+
+<h3 id="4-确保版本一致性">4. <strong>确保版本一致性</strong>：</h3>
+
+<ul>
+  <li>当你选择这个选项时，GitHub Pages 使用的 Jekyll 及其插件的版本会和你在本地或其他地方使用的保持一致。这避免了因为版本差异带来的潜在问题，保证你的 Jekyll 网站能够正常生成。</li>
+</ul>
+
+<h4 id="总结"><strong>总结</strong>：</h4>
+
+<ul>
+  <li>选择这个选项意味着每次你更新仓库内容时，GitHub Actions 会自动构建你的 Jekyll 网站，并确保所需的依赖已经预先安装好，从而简化了整个网站的生成和部署过程。如果你不选择这个，依然可以用手动配置的方式，但使用 GitHub Actions 自动化这一过程会更加方便。</li>
+</ul>
+
+<p><strong>直接提交即可</strong>
+<img src="/images/Jekyll-images/jekyll.12.png" alt="" /></p>
+<h3 id="25查看网站">2.5.查看网站</h3>
+<p><strong>直接在浏览器中输入你的仓库名即可</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>用户名.github.io
+</code></pre></div></div>
+<p><img src="/images/Jekyll-images/jekyll.13.png" alt="" />
+当然现在什么都没有
+<img src="/images/Jekyll-images/jekyll.14.png" alt="" /></p>
+<h2 id="3将jekyll项目push到仓库">3.将Jekyll项目push到仓库</h2>
+<h3 id="31打开上传">3.1.打开上传</h3>
+<p><img src="/images/Jekyll-images/jekyll.15.png" alt="" /></p>
+<h3 id="32复制粘贴">3.2.复制粘贴</h3>
+<p>打开你创建的Jekyll项目，<strong>将所有文件全选拖动复制进去</strong>
+<img src="/images/Jekyll-images/jekyll.16.png" alt="" /></p>
+<h3 id="33提交">3.3.提交</h3>
+<p><img src="/images/Jekyll-images/jekyll.17.png" alt="" /></p>
+<h3 id="35查看网站">3.5.查看网站</h3>
+<p>等待Action自动部署完成，然后点击进去
+<img src="/images/Jekyll-images/jekyll.18.png" alt="" />
+成功部署后，点击链接，就是你的静态网站网址
+<img src="/images/Jekyll-images/jekyll.19.png" alt="" />
+<strong>静态网站成功搭建</strong>
+<img src="/images/Jekyll-images/jekyll.20.png" alt="" /></p>
+<h1 id="四修改jekyll项目">四.修改Jekyll项目</h1>
+<p><strong>介绍：这里演示使用VS Code管理我们的项目</strong></p>
+<h2 id="1将远程仓库克隆到本地">1.将远程仓库克隆到本地</h2>
+<p>打开用来保存项目的文件夹，然后克隆远程仓库
+其实不用初始化，直接克隆就行了
+<img src="/images/Jekyll-images/jekyll.21.png" alt="" /></p>
+<h2 id="2进入克隆的目录下修改文件">2.进入克隆的目录下修改文件</h2>
+<p>示例：我对index.markdown做出了更改
+<img src="/images/Jekyll-images/jekyll.22.png" alt="" /></p>
+<h2 id="3本地运行">3.本地运行</h2>
+<p>本地修改一些文件运行后会根据规则生成一些文件，而在GitHub仓库里修改不会显示
+<img src="/images/Jekyll-images/jekyll.23.png" alt="" />
+<img src="/images/Jekyll-images/jekyll.24.png" alt="" /></p>
+<h2 id="4push到远程仓库">4.push到远程仓库</h2>
+<h3 id="41提交更改">4.1.提交更改</h3>
+<p><strong>注意：要打开克隆的这个目录，原来的目录</strong>
+<img src="/images/Jekyll-images/jekyll.25.png" alt="" /></p>
+<h3 id="42推送">4.2.推送</h3>
+<p><img src="/images/Jekyll-images/jekyll.26.png" alt="" />
+可以在仓库中看到正在push
+<img src="/images/Jekyll-images/jekyll.27.png" alt="" /></p>
+<h3 id="43查看网站">4.3.查看网站</h3>
+<p><strong>可以看出，我们本地打开后是一个样，原封不动push上去竟然还有些差别<br />
+这是为什么？<del>我也不知道</del> <br />
+我们添加一些文件代替默认的配置，就不会出现这种情况了</strong>
+<img src="/images/Jekyll-images/jekyll.28.png" alt="" /></p>
+<h1 id="五jekyll-项目文件结构及作用">五.Jekyll 项目文件结构及作用</h1>
+
+<ol>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_config.yml</code></strong></p>
+
+    <ul>
+      <li>这是 Jekyll 项目的配置文件，定义站点的基本信息和行为，例如站点标题、作者、URL、插件、主题等。</li>
+      <li>常见配置项：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">title</code>: 网站的名称</li>
+          <li><code class="language-plaintext highlighter-rouge">author</code>: 作者名称</li>
+          <li><code class="language-plaintext highlighter-rouge">baseurl</code>: 网站的基本 URL（如果不在根目录下托管）</li>
+          <li><code class="language-plaintext highlighter-rouge">permalink</code>: 定义文章 URL 的格式</li>
+          <li><code class="language-plaintext highlighter-rouge">theme</code>: 使用的 Jekyll 主题</li>
+          <li><code class="language-plaintext highlighter-rouge">markdown</code>: 指定 Markdown 解析器（通常是 <code class="language-plaintext highlighter-rouge">kramdown</code>）</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">index.html</code></strong></p>
+
+    <ul>
+      <li>这是网站的主页文件，通常是一个静态 HTML 文件或包含 Jekyll 模板标记的文件。</li>
+      <li>它会根据 <code class="language-plaintext highlighter-rouge">_config.yml</code> 中的配置渲染成主页。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_posts/</code></strong></p>
+
+    <ul>
+      <li>存放所有博客文章的目录，所有文章都以 <code class="language-plaintext highlighter-rouge">.md</code> 或 <code class="language-plaintext highlighter-rouge">.html</code> 格式编写。</li>
+      <li>文章文件命名格式：<code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code>（年-月-日-文章标题），这个命名方式用于生成文章的 URL 和时间归档。</li>
+      <li>每篇文章都需要设置 <strong>Front Matter</strong>（前置信息），用于指定元数据。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_layouts/</code></strong></p>
+
+    <ul>
+      <li>存放网站布局文件的目录，Jekyll 用这些布局文件来包裹内容页面。</li>
+      <li>常见的布局文件：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">default.html</code>: 网站的默认布局</li>
+          <li><code class="language-plaintext highlighter-rouge">post.html</code>: 单篇文章的布局</li>
+          <li><code class="language-plaintext highlighter-rouge">page.html</code>: 普通页面的布局</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_includes/</code></strong></p>
+
+    <ul>
+      <li>
+        <p>存放可重用的部分或片段的目录，这些片段可以在其他模板文件中通过(有些问题，无法打出)引用</p>
+      </li>
+      <li>
+        <p>常见的包括导航栏、页脚、头部、或其他重复的 HTML 片段。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_sass/</code></strong></p>
+
+    <ul>
+      <li>存放 SASS（CSS 预处理器）文件的目录，用于自定义样式。</li>
+      <li>这些文件通常通过主样式文件导入，并编译成单个 CSS 文件。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">_site/</code></strong></p>
+
+    <ul>
+      <li>Jekyll 将项目编译生成的静态网站文件都会存储在这个目录中，生成的 HTML 文件可以直接部署到服务器上。</li>
+      <li>注意：该文件夹在生成时自动创建，不需要手动修改。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">assets/</code></strong></p>
+
+    <ul>
+      <li>存放项目的静态资源文件，比如图片、CSS、JavaScript 等。</li>
+      <li>通常开发者会把自定义的样式或脚本放在这个目录中。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">Gemfile</code></strong></p>
+
+    <ul>
+      <li>用于 Ruby 环境的依赖管理，包含 Jekyll 和其他插件的安装信息。</li>
+      <li><code class="language-plaintext highlighter-rouge">bundle install</code> 命令会依据该文件安装必要的依赖。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">pages/</code></strong>（可选）</p>
+
+    <ul>
+      <li>通常用于存放自定义的页面，比如关于页面、联系页面等。</li>
+      <li>这些页面的布局可以与博客文章不同。</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="发文章的规则">发文章的规则</h2>
+
+<ol>
+  <li>
+    <p><strong>文章文件命名</strong>：</p>
+
+    <ul>
+      <li>格式为 <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code> 或 <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.html</code>，其中 <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> 是发布日期，<code class="language-plaintext highlighter-rouge">title</code> 是文章的简短描述，通常以短横线 <code class="language-plaintext highlighter-rouge">-</code> 分隔单词。</li>
+      <li>例如：<code class="language-plaintext highlighter-rouge">2024-10-19-my-first-post.md</code>。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Front Matter（前置信息）</strong>：</p>
+
+    <ul>
+      <li>文章必须在文件的顶部包含 Front Matter，这是用 YAML 格式定义的元数据，用三条短横线包裹。</li>
+      <li>例子：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post 
+title: "My First Post" date: 2024-10-19 10:00:00 +0800 
+categories: [blog, update] 
+tags: [jekyll, blog, tutorial] 
+---
+</code></pre></div>        </div>
+      </li>
+      <li>常用字段：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">layout</code>: 指定使用哪个布局文件（通常是 <code class="language-plaintext highlighter-rouge">post</code>）</li>
+          <li><code class="language-plaintext highlighter-rouge">title</code>: 文章标题</li>
+          <li><code class="language-plaintext highlighter-rouge">date</code>: 文章发布日期</li>
+          <li><code class="language-plaintext highlighter-rouge">categories</code>: 文章分类，可以用于按分类归档</li>
+          <li><code class="language-plaintext highlighter-rouge">tags</code>: 文章标签，用于更细的分类或标签云展示</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>使用 Markdown 或 HTML 编写</strong>：</p>
+
+    <ul>
+      <li>文章主体可以使用 Markdown（通常是 <code class="language-plaintext highlighter-rouge">.md</code> 文件）编写，Jekyll 会自动将其转换为 HTML。</li>
+      <li>也可以直接使用 <code class="language-plaintext highlighter-rouge">.html</code> 文件，编写自定义的 HTML 内容。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>URL 生成规则</strong>：</p>
+
+    <ul>
+      <li>根据文件名的日期和 <code class="language-plaintext highlighter-rouge">_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">permalink</code> 配置，Jekyll 会自动生成每篇文章的 URL。</li>
+      <li>默认的 URL 规则通常是：<code class="language-plaintext highlighter-rouge">/year/month/day/title/</code>。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Drafts（草稿）</strong>：</p>
+
+    <ul>
+      <li>如果文章存放在 <code class="language-plaintext highlighter-rouge">_drafts/</code> 目录下，并没有指定发布日期，Jekyll 默认不会发布这些草稿文章。</li>
+      <li>如果要预览草稿，可以使用 <code class="language-plaintext highlighter-rouge">jekyll serve --drafts</code> 命令运行。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>发布文章时的注意事项</strong>：</p>
+
+    <ul>
+      <li>确保 Front Matter 的日期是当前或过去的日期，否则 Jekyll 不会将其作为已发布的文章显示。</li>
+      <li>若设置了 <code class="language-plaintext highlighter-rouge">future: true</code> 配置项，Jekyll 可以显示未来的文章（即发布日期在未来）。</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="总结-1">总结</h2>
+
+<p>Jekyll 的文件结构和规则简单而清晰，每个目录和文件都各司其职。通过合理使用 Front Matter 和布局文件，你可以灵活地创建和管理博客文章，同时根据需要自定义网站的外观和功能。</p>
+<h1 id="六markdown基本语法">六.Markdown基本语法</h1>
+<p>在Jekyll中，提交在_post中特定格式的markdown文件会自动转换问html文件<br />
+所以需要熟悉它的用法，用来写文章<br />
+Markdown 是一种轻量级的标记语言，常用于格式化文本。它的语法简单易懂，适合用于写作和排  版。以下是 Markdown 常用语法的总结：</p>
+
+<h2 id="1-标题">1. 标题</h2>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">#</code> 来表示标题。<code class="language-plaintext highlighter-rouge">#</code> 的数量决定了标题的级别（1-6级）。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题
+</code></pre></div></div>
+<h2 id="2-段落和换行">2. 段落和换行</h2>
+
+<p>段落通过一个或多个空行分隔。要在段落中插入换行，可以在行尾添加两个空格，然后按 <code class="language-plaintext highlighter-rouge">Enter</code>。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这是一个段落。  这是另一个段落。  这是一个段落的第一行。   这是第二行。
+</code></pre></div></div>
+<h2 id="3-强调">3. 强调</h2>
+
+<ul>
+  <li><strong>加粗</strong>：使用 <code class="language-plaintext highlighter-rouge">**</code> 或 <code class="language-plaintext highlighter-rouge">__</code> 包围文本。</li>
+  <li><em>斜体</em>：使用 <code class="language-plaintext highlighter-rouge">*</code> 或 <code class="language-plaintext highlighter-rouge">_</code> 包围文本。</li>
+  <li><del>删除线</del>：使用 <code class="language-plaintext highlighter-rouge">~~</code> 包围文本。</li>
+</ul>
+
+<p><strong>加粗文本</strong>   <em>斜体文本</em>   <del>删除线文本</del></p>
+
+<h2 id="4-列表">4. 列表</h2>
+
+<ul>
+  <li><strong>无序列表</strong>：使用 <code class="language-plaintext highlighter-rouge">*</code>、<code class="language-plaintext highlighter-rouge">+</code> 或 <code class="language-plaintext highlighter-rouge">-</code> 开始每个列表项。</li>
+  <li><strong>有序列表</strong>：使用数字和点号（如 <code class="language-plaintext highlighter-rouge">1.</code>、<code class="language-plaintext highlighter-rouge">2.</code>）表示。</li>
+</ul>
+
+<p>无序列表：</p>
+<ul>
+  <li>项目一 * 项目二   * 子项目一   * 子项目二</li>
+  <li>有序列表： 1. 第一项 2. 第二项    1. 子项一    2. 子项二`</li>
+</ul>
+
+<h2 id="5-链接">5. 链接</h2>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">[链接文本](URL)</code> 创建链接。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[OpenAI](https://www.openai.com)
+</code></pre></div></div>
+<p><a href="https://www.openai.com">OpenAI</a></p>
+<h2 id="6-图片">6. 图片</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![示例图片](https://example.com/image.jpg)
+</code></pre></div></div>
+<h2 id="7-引用">7. 引用</h2>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">&gt;</code> 来创建引用。</p>
+
+<blockquote>
+  <p>这是一段引用文本。</p>
+</blockquote>
+
+<h2 id="8-代码">8. 代码</h2>
+
+<ul>
+  <li><strong>行内代码</strong>：使用反引号 <code class="language-plaintext highlighter-rouge">`</code> 包围代码。</li>
+  <li><strong>代码块</strong>：使用三个反引号 包围多行代码，可以指定语言。</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">这是行内代码</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这是一个代码块。
+</code></pre></div></div>
+<h2 id="9-水平线">9. 水平线</h2>
+
+<p>使用三个或更多的 <code class="language-plaintext highlighter-rouge">*</code>、<code class="language-plaintext highlighter-rouge">-</code> 或 <code class="language-plaintext highlighter-rouge">_</code> 创建水平线。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+</code></pre></div></div>
+<hr />
+<h2 id="10-表格">10. 表格</h2>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">|</code> 分隔列，并使用 <code class="language-plaintext highlighter-rouge">-</code> 创建表头。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 列1 | 列2 | 列3 | 
+|-----|-----|-----| 
+| 数据1 | 数据2 | 数据3 | 
+| 数据4 | 数据5 | 数据6 |
+</code></pre></div></div>
+<h2 id="11-任务列表">11. 任务列表</h2>
+<p>使用 <code class="language-plaintext highlighter-rouge">- [ ]</code> 创建任务列表项。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [ ] 待办事项1 
+- [x] 已完成事项
+</code></pre></div></div>
+<h1 id="七fork别人的静态网站仓库">七.fork别人的静态网站仓库</h1>
+<p>上文都是介绍怎么自己做静态网站，可能要花费不少时间精力<br />
+我们可以fork别人的项目，做出更改</p>
+<h2 id="1找到一个合适的静态网站仓库并fork">1.找到一个合适的静态网站仓库并fork</h2>
+<p>仓库名是用户名+.github.io的都是<br />
+这里我以自己的仓库为例：<a href="https://github.com/Verumkey/verumkey.github.io">https://github.com/Verumkey/verumkey.github.io</a>
+<img src="/images/Jekyll-images/jekyll.29.png" alt="" />
+仓库名必须是：<strong>用户名.github.io</strong>
+<img src="/images/Jekyll-images/jekyll.30.png" alt="" /></p>
+<h2 id="2启用github-action">2.启用GitHub Action</h2>
+<p><img src="/images/Jekyll-images/jekyll.31.png" alt="" /></p>
+<h2 id="3安装jekyll站点">3.安装Jekyll站点</h2>
+<p><img src="/images/Jekyll-images/jekyll.32.png" alt="" />
+直接提交
+<img src="/images/Jekyll-images/jekyll.33.png" alt="" /></p>
+<h2 id="4做出修改并保存">4.做出修改并保存</h2>
+<h2 id="5查看网站">5.查看网站</h2>
+<p>我这里仅改了下标题
+<img src="/images/Jekyll-images/jekyll.34.png" alt="" /></p>
+<h1 id="八完结">八.完结</h1>
+<p>**就我目前的理解：
+1.index.markdown是默认的页面，当你添加了一个index.html作为主页后，记得删除  index.markdown，否则还会显示原来的，因为它的优先级较高<br />
+2.可以添加一个_layouts文件和_includes文件，再进行一些配置来添加页眉页脚<br />
+3.chatgpt是个好工具，我对Jekyll的了解很大一部分缘于它<br />
+54.关于具体怎么修改Jekyll项目，我也不是很清楚,<del>所以我做的静态网站那么简陋</del><br />
+可以去看看官方文档，或找找其它教学<br />
+5.以后有经验了，我再回来 **</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />更新怎么丰富网站内容</li>
+</ul>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Jekyll" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何获得一个静态网站]]></summary></entry></feed>
