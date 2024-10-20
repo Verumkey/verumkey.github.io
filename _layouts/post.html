@@ -46,6 +46,7 @@
             left: 0px; /* 距离左侧的距离 */
             z-index: 1001; /* 确保在上层 */
         }
+
         .content {
             margin-left: 270px; /* 内容左侧留出空间 */
             flex: 1; /* 右侧内容占据剩余部分 */
@@ -60,16 +61,16 @@
             .container {
                 flex-direction: column; /* 在小屏幕上垂直排列 */
             }
-            .content {
-                margin-left: 0; /* 移除左侧间距 */
-                width: 100%; /* 内容占满宽度 */
-            }
             .toc {
                 width: 100%; /* 侧边栏宽度为100% */
                 left: -100%; /* 默认隐藏 */
             }
             .toc.open {
                 left: 0; /* 打开时显示 */
+            }
+            .content {
+                margin-left: 0; /* 移除左侧间距 */
+                width: 100%; /* 内容占满宽度 */
             }
         }
     </style>
@@ -78,7 +79,7 @@
 <body>
 
     {% include header.html %}
-
+    
     <button class="toggle-btn" onclick="toggleToc()">☰</button> <!-- 美观的按钮 -->
 
     <div class="toc" id="toc">
