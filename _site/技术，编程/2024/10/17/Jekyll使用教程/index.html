@@ -1,57 +1,34 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Jekyll 使用教程 | 水镜的博客</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Jekyll 使用教程" />
-<meta name="author" content="secrecy" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="本篇文章演示如何获得一个静态网站" />
-<meta property="og:description" content="本篇文章演示如何获得一个静态网站" />
-<link rel="canonical" href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
-<meta property="og:url" content="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
-<meta property="og:site_name" content="水镜的博客" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-10-17T19:05:01+08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Jekyll 使用教程" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"secrecy"},"dateModified":"2024-10-17T19:05:01+08:00","datePublished":"2024-10-17T19:05:01+08:00","description":"本篇文章演示如何获得一个静态网站","headline":"Jekyll 使用教程","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"},"url":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="水镜的博客" /></head>
-<body><header>
-    <nav>
-      <ul>
-        <li><a href="https://www.verumkey.com" target="_self">Home</a></li>
-        <!-- 你可以根据需求添加其他链接 -->
-      </ul>
-    </nav>
-  </header>
-  
-  <style>
-    header {
-      background-color: #f8f9fa;
-      padding: 10px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-    nav ul li {
-      margin-right: 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-    }
-    nav ul li a:hover {
-      color: #007bff;
-    }
-  </style>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jekyll 使用教程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px; /* 设置最大宽度 */
+            margin: 0 auto; /* 居中 */
+            padding: 20px; /* 内边距 */
+        }
+        img {
+            max-width: 100%; /* 使图片自适应宽度 */
+            height: auto; /* 保持图片比例 */
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <ul><li><a href="#jekyll概述"><strong>Jekyll概述</strong></a><ul><li><a href="#jekyll-的工作原理">Jekyll 的工作原理：</a></li><li><a href="#jekyll-的特点">Jekyll 的特点：</a></li><li><a href="#基本使用步骤">基本使用步骤：</a></li></ul></li><li><a href="#一在windows上配置jekyll"><strong>一.在Windows上配置Jekyll</strong></a><ul><li><a href="#1安装ruby和devkit">1.安装Ruby和DevKit</a></li><li><a href="#2安装bundler和jekyll">2.安装Bundler和Jekyll</a></li></ul></li><li><a href="#二创建jekyll网站项目"><strong>二.创建Jekyll网站项目</strong></a><ul><li><a href="#1创建一个存放项目的文件">1.创建一个存放项目的文件</a></li><li><a href="#2创建一个jekyll网站项目">2.创建一个Jekyll网站项目</a><ul><li><a href="#21使用cd命令进入你上面创建的文件的目录下">2.1.使用cd命令进入你上面创建的文件的目录下</a></li><li><a href="#22输入命令jekyll-new-文件名">2.2.输入命令：jekyll new 文件名</a></li><li><a href="#23进入创建的文件安装项目依赖">2.3.进入创建的文件安装项目依赖</a></li><li><a href="#24运行本地服务器以预览网站">2.4.运行本地服务器以预览网站</a></li><li><a href="#25图片演示">2.5.图片演示</a></li><li><a href="#25编辑脚本快速打开">2.5.编辑脚本快速打开</a></li></ul></li></ul></li><li><a href="#三在github上配置静态网站"><strong>三.在GitHub上配置静态网站</strong></a><ul><li><a href="#1创建仓库">1.创建仓库</a><ul><li><a href="#规定由来">规定由来</a><ul><li><a href="#1-唯一识别的顶级域名">1. <strong>唯一识别的顶级域名</strong>：</a></li><li><a href="#2-自动部署机制">2. <strong>自动部署机制</strong>：</a></li><li><a href="#3-区别于项目页面">3. <strong>区别于项目页面</strong>：</a></li></ul></li></ul></li><li><a href="#2配置jekyll">2.配置Jekyll</a><ul><li><a href="#21启用github-action">2.1.启用GitHub Action</a></li><li><a href="#22github-action介绍">2.2.GitHub Action介绍</a><ul><li><a href="#核心功能">核心功能：</a></li><li><a href="#github-actions-的基本概念">GitHub Actions 的基本概念：</a></li><li><a href="#github-actions-的用途">GitHub Actions 的用途：</a></li><li><a href="#1-自动化构建和部署">1. <strong>自动化构建和部署</strong>：</a></li><li><a href="#2-自定义构建过程">2. <strong>自定义构建过程</strong>：</a></li><li><a href="#3-集成其他工具">3. <strong>集成其他工具</strong>：</a></li><li><a href="#4-使用自定义插件">4. <strong>使用自定义插件</strong>：</a></li><li><a href="#5-持续集成和持续交付cicd">5. <strong>持续集成和持续交付（CI/CD）</strong>：</a></li><li><a href="#6-简化复杂的部署需求">6. <strong>简化复杂的部署需求</strong>：</a></li></ul></li><li><a href="#23安装jekyll依赖">2.3.安装Jekyll依赖</a></li><li><a href="#24jekyll依赖作用">2.4.Jekyll依赖作用</a></li><li><a href="#1-自动构建-jekyll-网站">1. <strong>自动构建 Jekyll 网站</strong>：</a></li><li><a href="#2-预安装-github-pages-依赖">2. <strong>预安装 GitHub Pages 依赖</strong>：</a></li><li><a href="#3-简化部署流程">3. <strong>简化部署流程</strong>：</a></li><li><a href="#4-确保版本一致性">4. <strong>确保版本一致性</strong>：</a><ul><li><a href="#总结"><strong>总结</strong>：</a></li></ul></li><li><a href="#25查看网站">2.5.查看网站</a></li></ul></li><li><a href="#3将jekyll项目push到仓库">3.将Jekyll项目push到仓库</a><ul><li><a href="#31打开上传">3.1.打开上传</a></li><li><a href="#32复制粘贴">3.2.复制粘贴</a></li><li><a href="#33提交">3.3.提交</a></li><li><a href="#35查看网站">3.5.查看网站</a></li></ul></li></ul></li><li><a href="#四修改jekyll项目"><strong>四.修改Jekyll项目</strong></a><ul><li><a href="#1将远程仓库克隆到本地">1.将远程仓库克隆到本地</a></li><li><a href="#2进入克隆的目录下修改文件">2.进入克隆的目录下修改文件</a></li><li><a href="#3本地运行">3.本地运行</a></li><li><a href="#4push到远程仓库">4.push到远程仓库</a><ul><li><a href="#41提交更改">4.1.提交更改</a></li><li><a href="#42推送">4.2.推送</a></li><li><a href="#43查看网站">4.3.查看网站</a></li></ul></li></ul></li><li><a href="#五jekyll-项目文件结构及作用"><strong>五.Jekyll 项目文件结构及作用</strong></a><ul><li><a href="#发文章的规则">发文章的规则</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#六markdown基本语法"><strong>六.Markdown基本语法</strong></a><ul><li><a href="#1-标题">1. 标题</a></li><li><a href="#2-段落和换行">2. 段落和换行</a></li><li><a href="#3-强调">3. 强调</a></li><li><a href="#4-列表">4. 列表</a></li><li><a href="#5-链接">5. 链接</a></li><li><a href="#6-图片">6. 图片</a></li><li><a href="#7-引用">7. 引用</a></li><li><a href="#8-代码">8. 代码</a></li><li><a href="#9-水平线">9. 水平线</a></li><li><a href="#10-表格">10. 表格</a></li><li><a href="#11-任务列表">11. 任务列表</a></li></ul></li><li><a href="#七fork别人的静态网站仓库">七.fork别人的静态网站仓库</a><ul><li><a href="#1找到一个合适的静态网站仓库并fork">1.找到一个合适的静态网站仓库并fork</a></li><li><a href="#2启用github-action">2.启用GitHub Action</a></li><li><a href="#3安装jekyll站点">3.安装Jekyll站点</a></li><li><a href="#4做出修改并保存">4.做出修改并保存</a></li><li><a href="#5查看网站">5.查看网站</a></li></ul></li><li><a href="#八完结"><strong>八.完结</strong></a></li></ul>
+    
+    <div class="container">
         <p>本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问<br />
 作者实现的静态网站：<a href="https://verumkey.github.io">verumkey.github.io</a><br />
 项目仓库：<a href="https://github.com/Verumkey/verumkey.github.io">https://github.com/Verumkey/verumkey.github.io</a><br />
@@ -652,9 +629,10 @@ Markdown 是一种轻量级的标记语言，常用于格式化文本。它的�
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />更新怎么丰富网站内容</li>
 </ul>
+ <!-- 显示页面内容 -->
+    </div>
 
-      </div>
-    </main><footer>
+    <footer>
     <p>Contact me via email: verumkeys@gmail.com</p >
     <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. Stay tuned for interesting insights!</p >
@@ -677,6 +655,7 @@ Markdown 是一种轻量级的标记语言，常用于格式化文本。它的�
     footer a:hover {
       text-decoration: underline;
     }
-  </style></body>
+  </style>
 
+</body>
 </html>

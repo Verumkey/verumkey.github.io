@@ -26,11 +26,7 @@
 </head>
 <body>
 
-    {% include header.html %}
-    
-    <div class="toc">
-        {% toc %}
-    </div>
+    {% include toc.html html=content %}
     
     <div class="container">
         {{ content }} <!-- 显示页面内容 -->

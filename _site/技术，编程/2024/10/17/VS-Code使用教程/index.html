@@ -1,57 +1,34 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>VS Code 使用教程 | 水镜的博客</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="VS Code 使用教程" />
-<meta name="author" content="secrecy" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="本篇文章演示如何从0开始使用VS Code" />
-<meta property="og:description" content="本篇文章演示如何从0开始使用VS Code" />
-<link rel="canonical" href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
-<meta property="og:url" content="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
-<meta property="og:site_name" content="水镜的博客" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-10-17T22:05:01+08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="VS Code 使用教程" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"secrecy"},"dateModified":"2024-10-17T22:05:01+08:00","datePublished":"2024-10-17T22:05:01+08:00","description":"本篇文章演示如何从0开始使用VS Code","headline":"VS Code 使用教程","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"},"url":"http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="水镜的博客" /></head>
-<body><header>
-    <nav>
-      <ul>
-        <li><a href="https://www.verumkey.com" target="_self">Home</a></li>
-        <!-- 你可以根据需求添加其他链接 -->
-      </ul>
-    </nav>
-  </header>
-  
-  <style>
-    header {
-      background-color: #f8f9fa;
-      padding: 10px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-    nav ul li {
-      margin-right: 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-    }
-    nav ul li a:hover {
-      color: #007bff;
-    }
-  </style>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code 使用教程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px; /* 设置最大宽度 */
+            margin: 0 auto; /* 居中 */
+            padding: 20px; /* 内边距 */
+        }
+        img {
+            max-width: 100%; /* 使图片自适应宽度 */
+            height: auto; /* 保持图片比例 */
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <ul><li><a href="#一下载"><strong>一.下载</strong></a><ul><li><a href="#1下载vs-code">1.下载VS Code</a></li></ul></li><li><a href="#二配置环境"><strong>二.配置环境</strong></a><ul><li><a href="#1打开扩展">1.打开扩展</a></li><li><a href="#2安装中文包">2.安装中文包</a><ul><li><a href="#21在搜索栏中搜索chinese">2.1.在搜索栏中搜索Chinese</a></li><li><a href="#22选择简体中文安装">2.2.选择简体中文安装</a></li><li><a href="#23重启">2.3.重启</a></li></ul></li></ul></li><li><a href="#三根据所需语言配置环境cc"><strong>三.根据所需语言配置环境（C/C++）</strong></a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#11cc-插件">1.1.C/C++ 插件</a></li><li><a href="#12cc-compile-run-插件">1.2.C/C++ Compile Run 插件</a></li><li><a href="#13better-c-syntax-插件">1.3.Better C++ Syntax 插件</a></li></ul></li><li><a href="#2配置开发者工具集mingw获得ucrt">2.配置开发者工具集MinGW，获得UCRT</a><ul><li><a href="#21下载msys2">2.1.下载MSYS2</a></li><li><a href="#22安装后复制网站中的命令输入">2.2.安装后复制网站中的命令输入</a></li><li><a href="#23在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">2.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</a></li><li><a href="#24将ucrt64的bin文件地址到-windows环境变量的path路径中">2.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</a><ul><li><a href="#241在搜索栏中搜索系统环境变量并打开">2.4.1.在搜索栏中搜索系统环境变量并打开</a></li><li><a href="#242-点击环境变量在用户系统变量中选择path变量然后选择编辑">2.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</a></li><li><a href="#243-点击新建将复制的文件地址复制进去最后点击确定退出">2.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</a></li><li><a href="#244图片演示">2.4.4.图片演示</a></li></ul></li></ul></li><li><a href="#3编写cc程序">3.编写C/C++程序</a><ul><li><a href="#31创建一个文件">3.1.创建一个文件</a></li><li><a href="#32通过vscode打开你上面创建的文件">3.2.通过VScode打开你上面创建的文件</a></li><li><a href="#33创建文本文件后缀需为c或cpp再在弹出的语言选择中选择c">3.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++</a></li><li><a href="#34编写代码并运行可以在终端看到输出结果">3.4.编写代码并运行，可以在终端看到输出结果</a></li><li><a href="#35设置在控制台中输出结果">3.5.设置在控制台中输出结果</a><ul><li><a href="#351打开cc-compile-run的设置">3.5.1.打开C/C++ Compile Run的设置</a></li><li><a href="#352下滑勾选选项run-in-external-terminal">3.5.2.下滑勾选选项Run-in-external-terminal</a></li><li><a href="#353配置环境完成">3.5.3.配置环境完成</a></li></ul></li></ul></li></ul></li><li><a href="#四根据所需语言配置环境python"><strong>四.根据所需语言配置环境（Python）</strong></a><ul><li><a href="#1下载python解释器">1下载Python解释器</a></li><li><a href="#2安装插件">2.安装插件</a><ul><li><a href="#21python-插件">2.1.python 插件</a></li><li><a href="#22python的主要功能">2.2.python的主要功能</a></li><li><a href="#23python-extension-pack-插件">2.3.Python Extension Pack 插件</a></li><li><a href="#24python-extension-pack-的主要功能">2.4.Python Extension Pack 的主要功能：</a></li></ul></li><li><a href="#3编写python程序">3.编写Python程序</a><ul><li><a href="#31创建一个文件-1">3.1创建一个文件</a></li><li><a href="#32通过vscode打开你上面创建的文件-1">3.2.通过VScode打开你上面创建的文件</a></li><li><a href="#33创建文本文件后缀需为py再在弹出的语言选择中选择python">3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python</a></li><li><a href="#34编写代码并运行可以在终端看到输出结果-1">3.4.编写代码并运行，可以在终端看到输出结果</a></li></ul></li></ul></li><li><a href="#五根据所需语言配置环境htmlcssjs"><strong>五.根据所需语言配置环境（HTML+CSS+JS）</strong></a><ul><li><a href="#1安装插件-1">1.安装插件</a><ul><li><a href="#12html-css-support-插件">1.2.HTML CSS Support 插件</a></li><li><a href="#13html-css-support的主要功能">1.3.HTML CSS Support的主要功能</a></li><li><a href="#14live-server-插件">1.4.Live Server 插件</a></li><li><a href="#15live-server的主要功能">1.5.Live Server的主要功能</a></li><li><a href="#16auto-rename-tag-插件">1.6.Auto Rename Tag 插件</a></li><li><a href="#17auto-rename-tag的主要功能">1.7.Auto Rename Tag的主要功能</a></li></ul></li><li><a href="#2编写html程序">2.编写HTML程序</a><ul><li><a href="#21创建一个文件">2.1.创建一个文件</a></li><li><a href="#22通过vscode打开你上面创建的文件">2.2.通过VScode打开你上面创建的文件</a></li><li><a href="#23创建文本文件后缀需为html">2.3.创建文本文件，后缀需为.html</a></li><li><a href="#24编写代码鼠标右键再点击open-with-live-server">2.4.编写代码，鼠标右键再点击Open with Live Server</a></li></ul></li></ul></li><li><a href="#六快捷操作"><strong>六.快捷操作</strong></a><ul><li><a href="#1使用编辑器操场">1.使用编辑器操场</a></li><li><a href="#2multi-cursor-editing多光标编辑">2.Multi-Cursor Editing（多光标编辑）</a><ul><li><a href="#21box-selection">2.1.Box selection</a></li><li><a href="#22add-a-cursor">2.2.Add a Cursor</a></li><li><a href="#23creat-curosrs-on-all-occurences-of-a-string">2.3.Creat curosrs on all occurences of a string</a></li></ul></li><li><a href="#3line-actions行操作">3.Line Actions（行操作）</a><ul><li><a href="#31copy-a-line-and-insert-it-above-or-below-the-current-postion">3.1.Copy a line and insert it above or below the current postion</a></li><li><a href="#32move-an-entire-line-or-selection-of-lines-up-or-downloads">3.2.Move an entire line or selection of lines up or downloads</a></li><li><a href="#33delete-the-entire-line">3.3.Delete the entire Line</a></li></ul></li><li><a href="#4rename-refactoring重命名一个类或函数名的所有字符串">4.Rename Refactoring（重命名一个类或函数名的所有字符串）</a></li><li><a href="#5formatting格式化代码">5.Formatting（格式化代码）</a></li><li><a href="#6code-folding代码折叠">6.Code Folding（代码折叠）</a></li><li><a href="#7撤销">7.撤销</a></li></ul></li></ul></li><li><a href="#四命令搜索栏与其它"><strong>四.命令搜索栏与其它</strong></a><ul><li><a href="#1使用命令">1.使用命令</a></li><li><a href="#2更改语言">2.更改语言</a></li><li><a href="#3更改字体">3.更改字体</a></li><li><a href="#4快捷键参考">4.快捷键参考</a></li></ul></li><li><a href="#七完结"><strong>七.完结</strong></a></li></ul>
+    
+    <div class="container">
         <h1 id="一下载"><strong>一.下载</strong></h1>
 
 <h2 id="1下载vs-code">1.下载VS Code</h2>
@@ -330,9 +307,10 @@
 
 <p><strong>根据上述操作，就能正常使用VS Code<br />
 VS Code还能方便的管理Git项目，详情请见介绍Git的文章</strong></p>
+ <!-- 显示页面内容 -->
+    </div>
 
-      </div>
-    </main><footer>
+    <footer>
     <p>Contact me via email: verumkeys@gmail.com</p >
     <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. Stay tuned for interesting insights!</p >
@@ -355,6 +333,7 @@ VS Code还能方便的管理Git项目，详情请见介绍Git的文章</strong><
     footer a:hover {
       text-decoration: underline;
     }
-  </style></body>
+  </style>
 
+</body>
 </html>
