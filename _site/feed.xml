@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-20T12:04:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述">一.Git概述</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-20T13:10:23+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述">一.Git概述</h1>
 
 <p>Git 是一个分布式版本控制系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
 
@@ -607,12 +607,14 @@ git add .         # 添加当前目录下所有文件
 <img src="/images/git-images/git.61.png" alt="" />
 合并成功后内容做出修改，并且贡献者中会多出你的用户名
 <img src="/images/git-images/git.62.png" alt="" /></p>
-<h1 id="八完结">八.完结</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Git" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Git]]></summary></entry><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一下载">一.下载</h1>
+<h1 id="八完结">八.完结</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Git" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Git]]></summary></entry><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一下载"><strong>一.下载</strong></h1>
+
 <h2 id="1下载vs-code">1.下载VS Code</h2>
 <p>网址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
 <img src="/images/vscode-images/vscode.1.png" alt="" /></p>
 
-<h1 id="二配置环境">二.配置环境</h1>
+<h1 id="二配置环境"><strong>二.配置环境</strong></h1>
+
 <h2 id="1打开扩展">1.打开扩展</h2>
 <p><img src="/images/vscode-images/vscode.2.png" alt="" /></p>
 <h2 id="2安装中文包">2.安装中文包</h2>
@@ -780,43 +782,74 @@ git add .         # 添加当前目录下所有文件
 </ol>
 
 <p><img src="/images/vscode-images/vscode.31.png" alt="" /></p>
-<h2 id="6熟悉操作">6.熟悉操作</h2>
-<h3 id="61使用编辑器操场">6.1.使用编辑器操场</h3>
+
+<h1 id="三快捷操作"><strong>三.快捷操作</strong></h1>
+
+<h3 id="1使用编辑器操场">1.使用编辑器操场</h3>
 <p>编辑器操场会提供许多快捷键的使用
 <img src="/images/vscode-images/vscode.32.png" alt="" /></p>
-<h4 id="611multi-cursor-editing多光标编辑">6.1.1.Multi-Cursor Editing（多光标编辑）</h4>
+<h3 id="2multi-cursor-editing多光标编辑">2.Multi-Cursor Editing（多光标编辑）</h3>
 <p>注意：DownArrow就是键盘上的向下箭头，其它同理</p>
-<h5 id="6111box-selection选择矩形块">6.1.1.1.Box Selection（选择矩形块）</h5>
-<p><strong>Shift+Alt再拖动鼠标</strong>，实现选择一个矩形块
+<h4 id="21box-selection">2.1.Box selection</h4>
+<p>（选择矩形块）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shift+Alt再拖动鼠标
+</code></pre></div></div>
+<p>实现选择一个矩形块
 <img src="/images/vscode-images/vscode.33.png" alt="" /></p>
-<h5 id="6112add-a-cursor添加光标">6.1.1.2.Add a cursor（添加光标）</h5>
-<p><strong>Crtl+Alt+上/下箭头</strong>，将向上/向下额外添加一个光标；<strong>Alt再点击鼠标</strong>，可以在点击位置额外添加一个光标</p>
-<h5 id="6113creat-curosrs-on-all-occurences-of-a-string选择光标所在字符串并在字符串的所有出现处创建光标">6.1.1.3.Creat curosrs on all occurences of a string（选择光标所在字符串，并在字符串的所有出现处创建光标）</h5>
-<p><strong>Crtl+Shift+L</strong>,选中光标所在单词的所有单词，并创建一个光标到单词尾
+<h4 id="22add-a-cursor">2.2.Add a Cursor</h4>
+<p>（添加光标）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Crtl+Alt+UpArrow/DownArrow(上/下箭头)
+</code></pre></div></div>
+<p>将向上/向下额外添加一个光标</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alt再点击鼠标
+</code></pre></div></div>
+<p>可以在点击位置额外添加一个光标</p>
+<h4 id="23creat-curosrs-on-all-occurences-of-a-string">2.3.Creat curosrs on all occurences of a string</h4>
+<p>（选择光标所在字符串，并在字符串的所有出现处创建光标）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Crtl+Shift+L
+</code></pre></div></div>
+<p>选中光标所在单词的所有单词，并创建一个光标到单词尾<br />
 注意：截图不显示光标，实际上每个backgroud的末尾都有一个光标，可以对这个单词进行批量操作
 <img src="/images/vscode-images/vscode.34.png" alt="" /></p>
-<h4 id="612line-actions行操作">6.1.2.Line Actions（行操作）</h4>
-<h5 id="6121copy-a-line-and-insert-it-above-or-below-the-current-postion复制一行到上下一行">6.1.2.1.Copy a line and insert it above or below the current postion（复制一行到上/下一行）</h5>
-<p><strong>Shift+Alt+UpArrow/DownArrow(上/下箭头)</strong>，会将光标所在行向上/下复制一行</p>
-<h5 id="6122move-an-entire-line-or-selection-of-lines-up-or-down将所在行与上下行将换位置">6.1.2.2.Move an entire line or selection of lines up or down（将所在行与上/下行将换位置)</h5>
-<p><strong>Alt+UpArrow/DownArrow</strong></p>
-<h5 id="6123delete-the-entire-line删除选中或所在行">6.1.2.3.Delete the entire line（删除选中或所在行）</h5>
-<p><strong>Ctrl+Shift+K</strong></p>
-<h4 id="613rename-refactoring重命名一个类或函数名的所有字符串">6.1.3.Rename Refactoring（重命名一个类或函数名的所有字符串）</h4>
-<p><strong>F2</strong>，先选中需要重命名的函数或类的名称，再点击<strong>F2</strong>进行重命名，注意：这对不是类或函数名的字符串不起作用</p>
-<h4 id="614formatting格式化代码">6.1.4.Formatting（格式化代码）</h4>
-<p><strong>Shift+Alt+F</strong>,将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思</p>
-<h4 id="615code-folding代码折叠">6.1.5.Code Folding（代码折叠）</h4>
-<p><strong>Ctrl+Shift+左中括号/右中括号</strong>，(中括号在这个软件里是特殊字符，我就没打出了)，将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来</p>
-<h3 id="61使用命令">6.1.使用命令</h3>
-<p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令的搜索栏，也可以直接使用快捷键<strong>Ctrl+Shift+P</strong>进入</p>
-<h4 id="611更改语言">6.1.1.更改语言</h4>
+<h3 id="3line-actions行操作">3.Line Actions（行操作）</h3>
+<h4 id="31copy-a-line-and-insert-it-above-or-below-the-current-postion">3.1.Copy a line and insert it above or below the current postion</h4>
+<p>（复制一行到上/下一行）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shift+Alt+UpArrow/DownArrow(上/下箭头)
+</code></pre></div></div>
+<p>会将光标所在行向上/下复制一行</p>
+<h4 id="32move-an-entire-line-or-selection-of-lines-up-or-downloads">3.2.Move an entire line or selection of lines up or downloads</h4>
+<p>（将所在行与上/下行将换位置）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alt+UpArrow/DownArrow
+</code></pre></div></div>
+<h4 id="33delete-the-entire-line">3.3.Delete the entire Line</h4>
+<p>（删除选中或所在行）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Shift+K
+</code></pre></div></div>
+<h3 id="4rename-refactoring重命名一个类或函数名的所有字符串">4.Rename Refactoring（重命名一个类或函数名的所有字符串）</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>F2
+</code></pre></div></div>
+<p>先选中需要重命名的函数或类的名称，再点击<strong>F2</strong>进行重命名，注意：这对不是类或函数名的字符串不起作用</p>
+<h3 id="5formatting格式化代码">5.Formatting（格式化代码）</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shift+Alt+F
+</code></pre></div></div>
+<p>将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思</p>
+<h3 id="6code-folding代码折叠">6.Code Folding（代码折叠）</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Shift+[/]
+</code></pre></div></div>
+<p>将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来</p>
+<h3 id="7使用命令">7.使用命令</h3>
+<p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令搜索栏，也可以直接使用快捷键<br />
+也可直接在搜索栏里输入一个&gt;进入命令搜索栏</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Shift+P
+</code></pre></div></div>
+<h3 id="8更改语言">8.更改语言</h3>
 <p>先<strong>Ctrl+Shift+P</strong>进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
 <img src="/images/vscode-images/vscode.35.png" alt="" /></p>
-<h4 id="611更改字体">6.1.1.更改字体</h4>
+<h3 id="9更改字体">9.更改字体</h3>
 <p><img src="/images/vscode-images/vscode.36.png" alt="" /></p>
 <h2 id="7完结">7.完结</h2>
-<p>根据上述操作，就能正常使用VS Code，更多的操作就需要自己去探索了</p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<p>本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问<br />
+<p>根据上述操作，就能正常使用VS Code<br />
+VS Code还能方便的管理Git项目，详情请见介绍Git的文章</p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<p>本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问<br />
 作者实现的静态网站：<a href="https://verumkey.github.io">verumkey.github.io</a><br />
 项目仓库：<a href="https://github.com/Verumkey/verumkey.github.io">https://github.com/Verumkey/verumkey.github.io</a><br />
 Jekyll官方文档：<a href="https://jekyllrb.com/docs/">https://jekyllrb.com/docs/</a></p>
@@ -1403,13 +1436,13 @@ Markdown 是一种轻量级的标记语言，常用于格式化文本。它的�
 <p>我这里仅改了下标题
 <img src="/images/Jekyll-images/jekyll.34.png" alt="" /></p>
 <h1 id="八完结">八.完结</h1>
-<p>**就我目前的理解：
+<p><strong>就我目前的理解：<br />
 1.index.markdown是默认的页面，当你添加了一个index.html作为主页后，记得删除  index.markdown，否则还会显示原来的，因为它的优先级较高<br />
 2.可以添加一个_layouts文件和_includes文件，再进行一些配置来添加页眉页脚<br />
 3.chatgpt是个好工具，我对Jekyll的了解很大一部分缘于它<br />
 54.关于具体怎么修改Jekyll项目，我也不是很清楚,<del>所以我做的静态网站那么简陋</del><br />
 可以去看看官方文档，或找找其它教学<br />
-5.以后有经验了，我再回来 **</p>
+5.以后有经验了，我再回来</strong></p>
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />更新怎么丰富网站内容</li>
 </ul>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Jekyll" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何获得一个静态网站]]></summary></entry></feed>

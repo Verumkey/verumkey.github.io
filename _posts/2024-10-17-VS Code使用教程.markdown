@@ -6,12 +6,15 @@ categories: [技术，编程]
 tags: [VS Code,博客]
 excerpt: "本篇文章演示如何从0开始使用VS Code"
 ---
-# 一.下载
+
+# **一.下载**
+
 ## 1.下载VS Code
 网址：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 ![](/images/vscode-images/vscode.1.png)
 
-# 二.配置环境
+# **二.配置环境**
+
 ## 1.打开扩展
 ![](/images/vscode-images/vscode.2.png)
 ## 2.安装中文包
@@ -158,40 +161,82 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
 ![](/images/vscode-images/vscode.30.png)
 
 ![](/images/vscode-images/vscode.31.png)
-## 6.熟悉操作
-### 6.1.使用编辑器操场
+
+# **三.快捷操作**
+
+### 1.使用编辑器操场
 编辑器操场会提供许多快捷键的使用
 ![](/images/vscode-images/vscode.32.png)
-#### 6.1.1.Multi-Cursor Editing（多光标编辑）
+### 2.Multi-Cursor Editing（多光标编辑） 
 注意：DownArrow就是键盘上的向下箭头，其它同理
-##### 6.1.1.1.Box Selection（选择矩形块）
-**Shift+Alt再拖动鼠标**，实现选择一个矩形块
+#### 2.1.Box selection
+（选择矩形块）  
+```
+Shift+Alt再拖动鼠标
+```
+实现选择一个矩形块
 ![](/images/vscode-images/vscode.33.png)
-##### 6.1.1.2.Add a cursor（添加光标）
-**Crtl+Alt+上/下箭头**，将向上/向下额外添加一个光标；**Alt再点击鼠标**，可以在点击位置额外添加一个光标
-##### 6.1.1.3.Creat curosrs on all occurences of a string（选择光标所在字符串，并在字符串的所有出现处创建光标）
-**Crtl+Shift+L**,选中光标所在单词的所有单词，并创建一个光标到单词尾
+#### 2.2.Add a Cursor
+（添加光标）  
+```
+Crtl+Alt+UpArrow/DownArrow(上/下箭头)
+```
+将向上/向下额外添加一个光标  
+```
+Alt再点击鼠标
+```
+可以在点击位置额外添加一个光标
+#### 2.3.Creat curosrs on all occurences of a string
+（选择光标所在字符串，并在字符串的所有出现处创建光标）  
+```
+Crtl+Shift+L
+```
+选中光标所在单词的所有单词，并创建一个光标到单词尾  
 注意：截图不显示光标，实际上每个backgroud的末尾都有一个光标，可以对这个单词进行批量操作
 ![](/images/vscode-images/vscode.34.png)
-#### 6.1.2.Line Actions（行操作）
-##### 6.1.2.1.Copy a line and insert it above or below the current postion（复制一行到上/下一行）
-**Shift+Alt+UpArrow/DownArrow(上/下箭头)**，会将光标所在行向上/下复制一行
-##### 6.1.2.2.Move an entire line or selection of lines up or down（将所在行与上/下行将换位置)
-**Alt+UpArrow/DownArrow**
-##### 6.1.2.3.Delete the entire line（删除选中或所在行）
-**Ctrl+Shift+K**
-#### 6.1.3.Rename Refactoring（重命名一个类或函数名的所有字符串）
-**F2**，先选中需要重命名的函数或类的名称，再点击**F2**进行重命名，注意：这对不是类或函数名的字符串不起作用
-#### 6.1.4.Formatting（格式化代码）
-**Shift+Alt+F**,将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思
-#### 6.1.5.Code Folding（代码折叠）
-**Ctrl+Shift+左中括号/右中括号**，(中括号在这个软件里是特殊字符，我就没打出了)，将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来
-### 6.1.使用命令
-帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令的搜索栏，也可以直接使用快捷键**Ctrl+Shift+P**进入
-#### 6.1.1.更改语言
+### 3.Line Actions（行操作）
+#### 3.1.Copy a line and insert it above or below the current postion
+（复制一行到上/下一行）  
+```
+Shift+Alt+UpArrow/DownArrow(上/下箭头)
+```
+会将光标所在行向上/下复制一行
+#### 3.2.Move an entire line or selection of lines up or downloads
+（将所在行与上/下行将换位置）  
+```
+Alt+UpArrow/DownArrow
+```
+#### 3.3.Delete the entire Line
+（删除选中或所在行）  
+```
+Ctrl+Shift+K
+```
+### 4.Rename Refactoring（重命名一个类或函数名的所有字符串）
+```
+F2
+```
+先选中需要重命名的函数或类的名称，再点击**F2**进行重命名，注意：这对不是类或函数名的字符串不起作用
+### 5.Formatting（格式化代码）
+```
+Shift+Alt+F
+```
+将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思
+### 6.Code Folding（代码折叠）
+```
+Ctrl+Shift+[/]
+```
+将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来
+### 7.使用命令
+帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令搜索栏，也可以直接使用快捷键  
+也可直接在搜索栏里输入一个>进入命令搜索栏
+```
+Ctrl+Shift+P
+```
+### 8.更改语言
 先**Ctrl+Shift+P**进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
 ![](/images/vscode-images/vscode.35.png)
-#### 6.1.1.更改字体
+### 9.更改字体
 ![](/images/vscode-images/vscode.36.png)
 ## 7.完结
-根据上述操作，就能正常使用VS Code，更多的操作就需要自己去探索了
+根据上述操作，就能正常使用VS Code  
+VS Code还能方便的管理Git项目，详情请见介绍Git的文章
