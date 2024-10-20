@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Git 使用教程"
 date:   2024-10-19 16:02:00 +0800
 categories: [技术，编程]

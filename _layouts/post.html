@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px; /* 设置最大宽度 */
+            margin: 0 auto; /* 居中 */
+            padding: 20px; /* 内边距 */
+        }
+        img {
+            max-width: 100%; /* 使图片自适应宽度 */
+            height: auto; /* 保持图片比例 */
+        }
+    </style>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+</head>
+<body>
+
+    {% include header.html %}
+    
+    <div class="toc">
+        {% toc %}
+    </div>
+    
+    <div class="container">
+        {{ content }} <!-- 显示页面内容 -->
+    </div>
+
+    {% include footer.html %}
+
+</body>
+</html>

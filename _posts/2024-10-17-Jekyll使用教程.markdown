@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Jekyll 使用教程"
 date:   2024-10-17 19:05:01 +0800
 categories: [技术，编程]
