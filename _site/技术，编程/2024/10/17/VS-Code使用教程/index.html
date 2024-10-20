@@ -20,28 +20,31 @@
         .toc {
             width: 450px; /* 设置宽度 */
             position: fixed; /* 固定位置 */
-            top: 105px; /* 距离顶部的距离 */
+            top: 120; /* 距离顶部的距离 */
             left: -450px; /* 默认隐藏 */
             transition: left 0.3s; /* 动画效果 */
             background: #f9f9f9; /* 背景色 */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
             max-height: 80vh; /* 设置最大高度 */
             overflow-y: auto; /* 允许纵向滚动 */
+            z-index: 1000; /* 确保在上层 */
         }
+
         .toc.open {
             left: 0; /* 打开时显示 */
         }
         .toggle-btn {
             cursor: pointer; /* 鼠标指针样式 */
             padding: 10px; /* 内边距 */
+            height: 50px; /* 设置按钮高度 */
             background: #007bff; /* 按钮背景 */
             color: white; /* 按钮文字颜色 */
             border: none; /* 去掉边框 */
             border-radius: 5px; /* 圆角 */
             position: fixed; /* 固定位置 */
             top: 80px; /* 距离顶部的距离 */
-            left: 10px; /* 距离左侧的距离 */
-            z-index: 1000; /* 确保在上层 */
+            left: 0px; /* 距离左侧的距离 */
+            z-index: 1001; /* 确保在上层 */
         }
         .content {
             margin-left: 270px; /* 内容左侧留出空间 */
@@ -50,6 +53,24 @@
         img {
             max-width: 100%; /* 使图片自适应宽度 */
             height: auto; /* 保持图片比例 */
+        }
+
+        /* 响应式样式 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* 在小屏幕上垂直排列 */
+            }
+            .content {
+                margin-left: 0; /* 移除左侧间距 */
+                width: 100%; /* 内容占满宽度 */
+            }
+            .toc {
+                width: 100%; /* 侧边栏宽度为100% */
+                left: -100%; /* 默认隐藏 */
+            }
+            .toc.open {
+                left: 0; /* 打开时显示 */
+            }
         }
     </style>
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -85,6 +106,7 @@
       color: #007bff;
     }
   </style>
+
 
     <button class="toggle-btn" onclick="toggleToc()">☰</button> <!-- 美观的按钮 -->
 
