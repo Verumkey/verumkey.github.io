@@ -12,9 +12,17 @@
             padding: 0;
         }
         .container {
-            max-width: 800px; /* 设置最大宽度 */
+            display: flex; /* 使用 flexbox */
+            max-width: 1200px; /* 设置最大宽度 */
             margin: 0 auto; /* 居中 */
             padding: 20px; /* 内边距 */
+        }
+        .toc {
+            flex: 1; /* 左侧大纲占据 1 部分 */
+            margin-right: 20px; /* 右边距 */
+        }
+        .content {
+            flex: 3; /* 右侧内容占据 3 部分 */
         }
         img {
             max-width: 100%; /* 使图片自适应宽度 */
@@ -22,14 +30,18 @@
         }
     </style>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
 </head>
 <body>
-
-    {% include toc.html html=content %}
+    
+    {% include header.html %}
     
     <div class="container">
-        {{ content }} <!-- 显示页面内容 -->
+        <div class="toc">
+            {% include toc.html html=content %}
+        </div>
+        <div class="content">
+            {{ content }} <!-- 显示页面内容 -->
+        </div>
     </div>
 
     {% include footer.html %}
