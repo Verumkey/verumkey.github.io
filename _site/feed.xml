@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-20T16:29:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-20T16:52:35+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
 
 <p>Git 是一个分布式版本控制系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
 
@@ -638,10 +638,11 @@ git add .         # 添加当前目录下所有文件
 <h3 id="23重启">2.3.重启</h3>
 <p><img src="/images/vscode-images/vscode.3.png" alt="" /></p>
 
-<h2 id="3-根据所需语言配置环境cc">3. 根据所需语言配置环境（C/C++）</h2>
+<h1 id="三根据所需语言配置环境cc"><strong>三.根据所需语言配置环境（C/C++）</strong></h1>
 
-<h3 id="31安装插件">3.1安装插件</h3>
-<h4 id="311-cc-插件">3.1.1. <strong>C/C++ 插件</strong></h4>
+<p><strong>不需要此语言请跳过三</strong></p>
+<h2 id="1安装插件">1.安装插件</h2>
+<h3 id="11cc-插件">1.1.C/C++ 插件</h3>
 
 <ul>
   <li><strong>用途</strong>：这是由微软官方提供的插件，主要用于在 VSCode 上开发和调试 C/C++ 代码。它提供了丰富的功能来增强 C/C++ 开发的体验。</li>
@@ -657,7 +658,7 @@ git add .         # 添加当前目录下所有文件
   </li>
 </ul>
 
-<h4 id="312-cc-compile-run-插件">3.1.2. <strong>C/C++ Compile Run 插件</strong></h4>
+<h3 id="12cc-compile-run-插件">1.2.C/C++ Compile Run 插件</h3>
 
 <ul>
   <li><strong>用途</strong>：该插件简化了在 VSCode 上编译和运行 C/C++ 程序的过程，特别适合需要快速测试代码的开发者。</li>
@@ -671,7 +672,7 @@ git add .         # 添加当前目录下所有文件
   </li>
 </ul>
 
-<h4 id="313-better-c-syntax-插件">3.1.3. <strong>Better C++ Syntax 插件</strong></h4>
+<h3 id="13better-c-syntax-插件">1.3.Better C++ Syntax 插件</h3>
 
 <ul>
   <li><strong>用途</strong>：这个插件专注于改进 C++ 代码的语法高亮显示和格式化，提供比默认的 C++ 高亮显示更丰富的特性。</li>
@@ -685,45 +686,37 @@ git add .         # 添加当前目录下所有文件
   </li>
 </ul>
 
-<h4 id="314cc插件总结">3.1.4.C/C++插件总结：</h4>
-
-<ul>
-  <li><strong>C/C++ 插件</strong> 是一个功能全面的开发和调试工具，适合需要全功能开发环境的开发者。</li>
-  <li><strong>C/C++ Compile Run 插件</strong> 更适合那些希望简单快速编译和运行程序的人，特别是用于测试和练习。</li>
-  <li><strong>Better C++ Syntax 插件</strong> 则专注于提供更好的语法高亮和代码美观性，特别适合对代码显示有较高要求的用户。</li>
-</ul>
-
-<h3 id="34配置开发者工具集mingw获得ucrt">3.4.配置开发者工具集MinGW，获得UCRT</h3>
+<h2 id="2配置开发者工具集mingw获得ucrt">2.配置开发者工具集MinGW，获得UCRT</h2>
 
 <p>注意：UCRT是为C和C++设计的标准运行时库，通过MSYS2安装ucrt64工具链时，实际上安装了一个基于UCRT的GCC工具链(这个工具链中包括编译器(gcc,c++),链接器，库文件等)</p>
-<h4 id="341下载msys2">3.4.1.下载MSYS2</h4>
+<h3 id="21下载msys2">2.1.下载MSYS2</h3>
 <p>网址：<a href="https://code.visualstudio.com/docs/cpp/config-mingw">https://code.visualstudio.com/docs/cpp/config-mingw</a><br />
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
 <img src="/images/vscode-images/vscode.7.png" alt="" /></p>
-<h4 id="342安装后复制网站中的命令输入">3.4.2.安装后复制网站中的命令输入</h4>
+<h3 id="22安装后复制网站中的命令输入">2.2.安装后复制网站中的命令输入</h3>
 <p>注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
 <img src="/images/vscode-images/vscode.8.png" alt="" /></p>
-<h4 id="343在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">3.4.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</h4>
+<h3 id="23在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">2.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</h3>
 <p><img src="/images/vscode-images/vscode.9.png" alt="" /></p>
-<h4 id="344将ucrt64的bin文件地址到-windows环境变量的path路径中">3.4.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</h4>
-<h5 id="3441在搜索栏中搜索系统环境变量并打开">3.4.4.1.在搜索栏中搜索系统环境变量并打开</h5>
+<h3 id="24将ucrt64的bin文件地址到-windows环境变量的path路径中">2.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</h3>
+<h4 id="241在搜索栏中搜索系统环境变量并打开">2.4.1.在搜索栏中搜索系统环境变量并打开</h4>
 <p><img src="/images/vscode-images/vscode.10.png" alt="" /></p>
-<h5 id="3442-点击环境变量在用户系统变量中选择path变量然后选择编辑">3.4.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</h5>
-<h5 id="3443-点击新建将复制的文件地址复制进去最后点击确定退出">3.4.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</h5>
-<h5 id="3444图片演示">3.4.4.4.图片演示</h5>
+<h4 id="242-点击环境变量在用户系统变量中选择path变量然后选择编辑">2.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</h4>
+<h4 id="243-点击新建将复制的文件地址复制进去最后点击确定退出">2.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</h4>
+<h4 id="244图片演示">2.4.4.图片演示</h4>
 <p><img src="/images/vscode-images/vscode.11.png" alt="" />
 <img src="/images/vscode-images/vscode.12.png" alt="" />
 <img src="/images/vscode-images/vscode.13.png" alt="" /></p>
 
-<h3 id="34编写cc程序">3.4.编写C/C++程序</h3>
+<h2 id="3编写cc程序">3.编写C/C++程序</h2>
 
-<h4 id="341创建一个文件">3.4.1.创建一个文件</h4>
+<h3 id="31创建一个文件">3.1.创建一个文件</h3>
 <p><img src="/images/vscode-images/vscode.15.png" alt="" /></p>
-<h4 id="342通过vscode打开你上面创建的文件">3.4.2.通过VScode打开你上面创建的文件</h4>
+<h3 id="32通过vscode打开你上面创建的文件">3.2.通过VScode打开你上面创建的文件</h3>
 <p><img src="/images/vscode-images/vscode.16.png" alt="" /></p>
-<h4 id="343创建文本文件后缀需为c或cpp再在弹出的语言选择中选择c">3.4.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++</h4>
+<h3 id="33创建文本文件后缀需为c或cpp再在弹出的语言选择中选择c">3.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++</h3>
 <p><img src="/images/vscode-images/vscode.17.png" alt="" /></p>
-<h4 id="344编写代码并运行可以在终端看到输出结果">3.4.4.编写代码并运行，可以在终端看到输出结果</h4>
+<h3 id="34编写代码并运行可以在终端看到输出结果">3.4.编写代码并运行，可以在终端看到输出结果</h3>
 <p><img src="/images/vscode-images/vscode.18.png" alt="" /></p>
 <h3 id="35设置在控制台中输出结果">3.5.设置在控制台中输出结果</h3>
 <h4 id="351打开cc-compile-run的设置">3.5.1.打开C/C++ Compile Run的设置</h4>
@@ -733,16 +726,17 @@ git add .         # 添加当前目录下所有文件
 <h4 id="353配置环境完成">3.5.3.配置环境完成</h4>
 <p><img src="/images/vscode-images/vscode.21.png" alt="" /></p>
 
-<h2 id="4-根据所需语言配置环境python">4. 根据所需语言配置环境（Python）</h2>
+<h1 id="四根据所需语言配置环境python"><strong>四.根据所需语言配置环境（Python）</strong></h1>
 
-<h3 id="41下载python解释器">4.1下载Python解释器</h3>
+<p><strong>不需要此语言请跳过四</strong></p>
+<h2 id="1下载python解释器">1下载Python解释器</h2>
 <p>网址：<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
 <img src="/images/vscode-images/vscode.22.png" alt="" />
 <img src="/images/vscode-images/vscode.23.png" alt="" />(下面两个选项要勾上，第一个就是运行Python程序时会调用它，第二个是把它添加到系统路径，让系统可以直接调用它)</p>
-<h3 id="42安装插件">4.2.安装插件</h3>
-<h4 id="421python-插件">4.2.1.<strong>python</strong> 插件</h4>
+<h2 id="2安装插件">2.安装插件</h2>
+<h3 id="21python-插件">2.1.python 插件</h3>
 <p><img src="/images/vscode-images/vscode.24.png" alt="" /></p>
-<h4 id="422python的主要功能">4.2.2.python的主要功能</h4>
+<h3 id="22python的主要功能">2.2.python的主要功能</h3>
 <ul>
   <li><strong>代码智能提示</strong>：提供 Python 代码的自动补全、函数参数提示、变量/函数定义跳转等功能。</li>
   <li><strong>调试支持</strong>：集成调试器，可以直接在 VS Code 中进行 Python 代码的调试，设置断点、变量监视和调用堆栈查看等。</li>
@@ -751,12 +745,12 @@ git add .         # 添加当前目录下所有文件
   <li><strong>Jupyter 支持</strong>：可以在 VS Code 中直接运行 Jupyter Notebooks，进行交互式的 Python 开发，特别适合数据科学工作流。</li>
   <li><strong>测试集成</strong>：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
 这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。
-    <h4 id="421python-extension-pack-插件">4.2.1.<strong>Python Extension Pack</strong> 插件</h4>
+    <h3 id="23python-extension-pack-插件">2.3.Python Extension Pack 插件</h3>
     <p><img src="/images/vscode-images/vscode.26.png" alt="" /></p>
   </li>
 </ul>
 
-<h4 id="421python-extension-pack-的主要功能">4.2.1.Python Extension Pack 的主要功能：</h4>
+<h3 id="24python-extension-pack-的主要功能">2.4.Python Extension Pack 的主要功能：</h3>
 <p><strong>Python Extension Pack</strong> 是为 Visual Studio Code 的 Python 开发者设计的一组插件包，包含了多个非常有用的扩展，主要包括：</p>
 <ol>
   <li><strong>Python</strong> - 提供核心功能，如代码检查（linting）、调试（包括多线程和远程调试）、智能感知（IntelliSense）、代码格式化、重构、单元测试，以及用于数据科学任务的 Jupyter Notebook 支持。</li>
@@ -769,21 +763,24 @@ git add .         # 添加当前目录下所有文件
   <li><strong>Jupyter</strong> - 提供对 Jupyter Notebook 的支持，适用于数据科学、机器学习和科学计算等任务。</li>
 </ol>
 
-<h3 id="43编写python程序">4.3.编写Python程序</h3>
+<h2 id="3编写python程序">3.编写Python程序</h2>
 
-<h4 id="431创建一个文件">4.3.1创建一个文件</h4>
+<h3 id="31创建一个文件-1">3.1创建一个文件</h3>
 <p><img src="/images/vscode-images/vscode.15.png" alt="" /></p>
-<h4 id="432通过vscode打开你上面创建的文件">4.3.2.通过VScode打开你上面创建的文件</h4>
+<h3 id="32通过vscode打开你上面创建的文件-1">3.2.通过VScode打开你上面创建的文件</h3>
 <p><img src="/images/vscode-images/vscode.16.png" alt="" /></p>
-<h4 id="433创建文本文件后缀需为py再在弹出的语言选择中选择python">4.3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python</h4>
+<h3 id="33创建文本文件后缀需为py再在弹出的语言选择中选择python">3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python</h3>
 <p><img src="/images/vscode-images/vscode.17.png" alt="" /></p>
-<h4 id="434编写代码并运行可以在终端看到输出结果">4.3.4.编写代码并运行，可以在终端看到输出结果</h4>
+<h3 id="34编写代码并运行可以在终端看到输出结果-1">3.4.编写代码并运行，可以在终端看到输出结果</h3>
 <p><img src="/images/vscode-images/vscode.25.png" alt="" /></p>
-<h2 id="5-根据所需语言配置环境htmlcssjs">5. 根据所需语言配置环境（HTML+CSS+JS）</h2>
-<h3 id="51安装插件">5.1.安装插件</h3>
-<h4 id="511html-css-support-插件">5.1.1.<strong>HTML CSS Support</strong> 插件</h4>
+
+<h1 id="五根据所需语言配置环境htmlcssjs"><strong>五.根据所需语言配置环境（HTML+CSS+JS）</strong></h1>
+
+<p><strong>不需要此语言请跳过五</strong></p>
+<h2 id="1安装插件-1">1.安装插件</h2>
+<h3 id="12html-css-support-插件">1.2.HTML CSS Support 插件</h3>
 <p><img src="/images/vscode-images/vscode.27.png" alt="" /></p>
-<h4 id="512html-css-support的主要功能">5.1.2.HTML CSS Support的主要功能</h4>
+<h3 id="13html-css-support的主要功能">1.3.HTML CSS Support的主要功能</h3>
 
 <ul>
   <li>为 HTML 文件中的元素提供 CSS 类名的自动补全。你在 HTML 文件中编辑时，输入 <code class="language-plaintext highlighter-rouge">class</code> 属性时，插件会自动从项目中的 CSS 文件中获取可用的类名并建议补全。</li>
@@ -792,10 +789,10 @@ git add .         # 添加当前目录下所有文件
 这个插件非常适合在 HTML 和 CSS 开发中频繁切换的开发者。</li>
 </ul>
 
-<h4 id="513-live-server-插件">5.1.3. <strong>Live Server</strong> 插件</h4>
+<h3 id="14live-server-插件">1.4.Live Server 插件</h3>
 <p><img src="/images/vscode-images/vscode.28.png" alt="" /></p>
 
-<h4 id="514live-server的主要功能">5.1.4.Live Server的主要功能</h4>
+<h3 id="15live-server的主要功能">1.5.Live Server的主要功能</h3>
 <ul>
   <li>启动一个本地开发服务器，让你可以实时预览 HTML、CSS 和 JavaScript 文件的更改。</li>
   <li>每次保存文件时，浏览器会自动刷新页面，立即反映所做的更改（即所谓的 “热重载” 功能）。</li>
@@ -804,9 +801,9 @@ git add .         # 添加当前目录下所有文件
 对于那些进行网页设计和前端开发的用户来说，这个插件非常实用。</li>
 </ul>
 
-<h4 id="515auto-rename-tag-插件">5.1.5.<strong>Auto Rename Tag</strong> 插件</h4>
+<h3 id="16auto-rename-tag-插件">1.6.Auto Rename Tag 插件</h3>
 <p><img src="/images/vscode-images/vscode.29.png" alt="" /></p>
-<h4 id="515auto-rename-tag的主要功能">5.1.5.Auto Rename Tag的主要功能</h4>
+<h3 id="17auto-rename-tag的主要功能">1.7.Auto Rename Tag的主要功能</h3>
 <ul>
   <li>自动同步重命名 HTML/XML 标签。当你修改或重命名一个标签时，插件会自动更新相应的闭合标签。</li>
   <li>支持所有 HTML、XML 和相关语言中的标签。</li>
@@ -814,16 +811,16 @@ git add .         # 添加当前目录下所有文件
 这个插件对写 HTML 和 XML 时特别有帮助，能有效避免遗漏或错误的闭合标签。</li>
 </ul>
 
-<h3 id="52编写html程序">5.2.编写HTML程序</h3>
-<h4 id="521创建一个文件">5.2.1.创建一个文件</h4>
-<h4 id="522通过vscode打开你上面创建的文件">5.2.2.通过VScode打开你上面创建的文件</h4>
-<h4 id="523创建文本文件后缀需为html">5.2.3.创建文本文件，后缀需为.html</h4>
-<h4 id="524编写代码鼠标右键再点击open-with-live-server">5.2.4.编写代码，鼠标右键再点击Open with Live Server</h4>
+<h2 id="2编写html程序">2.编写HTML程序</h2>
+<h3 id="21创建一个文件">2.1.创建一个文件</h3>
+<h3 id="22通过vscode打开你上面创建的文件">2.2.通过VScode打开你上面创建的文件</h3>
+<h3 id="23创建文本文件后缀需为html">2.3.创建文本文件，后缀需为.html</h3>
+<h3 id="24编写代码鼠标右键再点击open-with-live-server">2.4.编写代码，鼠标右键再点击Open with Live Server</h3>
 <p><img src="/images/vscode-images/vscode.30.png" alt="" /></p>
 
 <p><img src="/images/vscode-images/vscode.31.png" alt="" /></p>
 
-<h1 id="三快捷操作"><strong>三.快捷操作</strong></h1>
+<h1 id="六快捷操作"><strong>六.快捷操作</strong></h1>
 
 <h3 id="1使用编辑器操场">1.使用编辑器操场</h3>
 <p>编辑器操场会提供许多快捷键的使用
@@ -877,18 +874,27 @@ git add .         # 添加当前目录下所有文件
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Shift+[/]
 </code></pre></div></div>
 <p>将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来</p>
-<h3 id="7使用命令">7.使用命令</h3>
+<h3 id="7撤销">7.撤销</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Z
+</code></pre></div></div>
+<p>可以撤销到你的上一步，错删时很好用</p>
+
+<h1 id="四命令搜索栏与其它"><strong>四.命令搜索栏与其它</strong></h1>
+
+<h2 id="1使用命令">1.使用命令</h2>
 <p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令搜索栏，也可以直接使用快捷键<br />
 也可直接在搜索栏里输入一个&gt;进入命令搜索栏</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+Shift+P
 </code></pre></div></div>
-<h3 id="8更改语言">8.更改语言</h3>
+<h2 id="2更改语言">2.更改语言</h2>
 <p>先<strong>Ctrl+Shift+P</strong>进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
 <img src="/images/vscode-images/vscode.35.png" alt="" /></p>
-<h3 id="9更改字体">9.更改字体</h3>
+<h2 id="3更改字体">3.更改字体</h2>
 <p><img src="/images/vscode-images/vscode.36.png" alt="" /></p>
+<h2 id="4快捷键参考">4.快捷键参考</h2>
+<p><img src="/images/vscode-images/vscode.37.png" alt="" /></p>
 
-<h1 id="四完结"><strong>四.完结</strong></h1>
+<h1 id="七完结"><strong>七.完结</strong></h1>
 
 <p><strong>根据上述操作，就能正常使用VS Code<br />
 VS Code还能方便的管理Git项目，详情请见介绍Git的文章</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<p>本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问<br />

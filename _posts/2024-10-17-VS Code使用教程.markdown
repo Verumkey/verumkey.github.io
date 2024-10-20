@@ -25,10 +25,11 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
 ### 2.3.重启
 ![](/images/vscode-images/vscode.3.png)
 
-## 3. 根据所需语言配置环境（C/C++）
+# **三.根据所需语言配置环境（C/C++）**
 
-### 3.1安装插件
-#### 3.1.1. **C/C++ 插件**
+**不需要此语言请跳过三**  
+## 1.安装插件
+### 1.1.C/C++ 插件
 
 - **用途**：这是由微软官方提供的插件，主要用于在 VSCode 上开发和调试 C/C++ 代码。它提供了丰富的功能来增强 C/C++ 开发的体验。
 - **功能**：
@@ -39,7 +40,7 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
     - 多平台支持：该插件支持在 Windows、Linux 和 macOS 平台上工作。
 ![](/images/vscode-images/vscode.4.png)
 
-#### 3.1.2. **C/C++ Compile Run 插件**
+### 1.2.C/C++ Compile Run 插件
 
 - **用途**：该插件简化了在 VSCode 上编译和运行 C/C++ 程序的过程，特别适合需要快速测试代码的开发者。
 - **功能**：
@@ -48,7 +49,7 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
     - 适合小型项目：这个插件更适合快速测试小型 C/C++ 项目，因为它不提供完整的调试功能。
 ![](/images/vscode-images/vscode.5.png)
 
-#### 3.1.3. **Better C++ Syntax 插件**
+### 1.3.Better C++ Syntax 插件
 
 - **用途**：这个插件专注于改进 C++ 代码的语法高亮显示和格式化，提供比默认的 C++ 高亮显示更丰富的特性。
 - **功能**：
@@ -57,43 +58,37 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
     - 自定义语法高亮：你可以根据自己的需求自定义 C++ 的高亮规则。
 ![](/images/vscode-images/vscode.6.png)
 
-#### 3.1.4.C/C++插件总结：
-
-- **C/C++ 插件** 是一个功能全面的开发和调试工具，适合需要全功能开发环境的开发者。
-- **C/C++ Compile Run 插件** 更适合那些希望简单快速编译和运行程序的人，特别是用于测试和练习。
-- **Better C++ Syntax 插件** 则专注于提供更好的语法高亮和代码美观性，特别适合对代码显示有较高要求的用户。
-
-### 3.4.配置开发者工具集MinGW，获得UCRT
+## 2.配置开发者工具集MinGW，获得UCRT
 
 注意：UCRT是为C和C++设计的标准运行时库，通过MSYS2安装ucrt64工具链时，实际上安装了一个基于UCRT的GCC工具链(这个工具链中包括编译器(gcc,c++),链接器，库文件等)
-#### 3.4.1.下载MSYS2
+### 2.1.下载MSYS2
 网址：[https://code.visualstudio.com/docs/cpp/config-mingw](https://code.visualstudio.com/docs/cpp/config-mingw)  
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
 ![](/images/vscode-images/vscode.7.png)
-#### 3.4.2.安装后复制网站中的命令输入
+### 2.2.安装后复制网站中的命令输入
 注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
 ![](/images/vscode-images/vscode.8.png)
-#### 3.4.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
+### 2.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
 ![](/images/vscode-images/vscode.9.png)
-#### 3.4.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中
-##### 3.4.4.1.在搜索栏中搜索系统环境变量并打开
+### 2.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中
+#### 2.4.1.在搜索栏中搜索系统环境变量并打开
 ![](/images/vscode-images/vscode.10.png)
-##### 3.4.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑
-##### 3.4.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出
-##### 3.4.4.4.图片演示
+#### 2.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑
+#### 2.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出
+#### 2.4.4.图片演示
 ![](/images/vscode-images/vscode.11.png)
 ![](/images/vscode-images/vscode.12.png)
 ![](/images/vscode-images/vscode.13.png)
 
-### 3.4.编写C/C++程序
+## 3.编写C/C++程序
 
-#### 3.4.1.创建一个文件
+### 3.1.创建一个文件
 ![](/images/vscode-images/vscode.15.png)
-#### 3.4.2.通过VScode打开你上面创建的文件
+### 3.2.通过VScode打开你上面创建的文件
 ![](/images/vscode-images/vscode.16.png)
-#### 3.4.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++
+### 3.3.创建文本文件，后缀需为.c或.cpp,再在弹出的语言选择中选择c++
 ![](/images/vscode-images/vscode.17.png)
-#### 3.4.4.编写代码并运行，可以在终端看到输出结果
+### 3.4.编写代码并运行，可以在终端看到输出结果
 ![](/images/vscode-images/vscode.18.png)
 ### 3.5.设置在控制台中输出结果
 #### 3.5.1.打开C/C++ Compile Run的设置
@@ -103,16 +98,17 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
 #### 3.5.3.配置环境完成
 ![](/images/vscode-images/vscode.21.png)
 
-## 4. 根据所需语言配置环境（Python）
+# **四.根据所需语言配置环境（Python）**
 
-### 4.1下载Python解释器
+**不需要此语言请跳过四** 
+## 1下载Python解释器
 网址：[https://www.python.org/downloads/](https://www.python.org/downloads/)
 ![](/images/vscode-images/vscode.22.png)
 ![](/images/vscode-images/vscode.23.png)(下面两个选项要勾上，第一个就是运行Python程序时会调用它，第二个是把它添加到系统路径，让系统可以直接调用它)
-### 4.2.安装插件
-#### 4.2.1.**python** 插件
+## 2.安装插件
+### 2.1.python 插件
 ![](/images/vscode-images/vscode.24.png)
-#### 4.2.2.python的主要功能
+### 2.2.python的主要功能
 - **代码智能提示**：提供 Python 代码的自动补全、函数参数提示、变量/函数定义跳转等功能。
 - **调试支持**：集成调试器，可以直接在 VS Code 中进行 Python 代码的调试，设置断点、变量监视和调用堆栈查看等。
 - **代码检查**：支持代码静态分析工具，如 Pylint 和 Flake8，帮助你发现代码中的潜在错误和格式问题。
@@ -120,10 +116,10 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
 - **Jupyter 支持**：可以在 VS Code 中直接运行 Jupyter Notebooks，进行交互式的 Python 开发，特别适合数据科学工作流。
 - **测试集成**：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
 这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。
-#### 4.2.1.**Python Extension Pack** 插件
+### 2.3.Python Extension Pack 插件
 ![](/images/vscode-images/vscode.26.png)
 
-#### 4.2.1.Python Extension Pack 的主要功能：
+### 2.4.Python Extension Pack 的主要功能：
 **Python Extension Pack** 是为 Visual Studio Code 的 Python 开发者设计的一组插件包，包含了多个非常有用的扩展，主要包括：
 1. **Python** - 提供核心功能，如代码检查（linting）、调试（包括多线程和远程调试）、智能感知（IntelliSense）、代码格式化、重构、单元测试，以及用于数据科学任务的 Jupyter Notebook 支持。
 2. **Jinja** - 提供 Jinja 模板语言的语法高亮和代码片段。
@@ -134,55 +130,58 @@ excerpt: "本篇文章演示如何从0开始使用VS Code"
 7. **Python Indent** - 自动纠正 Python 代码的缩进。
 8. **Jupyter** - 提供对 Jupyter Notebook 的支持，适用于数据科学、机器学习和科学计算等任务。
 
-### 4.3.编写Python程序
+## 3.编写Python程序
 
-#### 4.3.1创建一个文件
+### 3.1创建一个文件
 ![](/images/vscode-images/vscode.15.png)
-#### 4.3.2.通过VScode打开你上面创建的文件
+### 3.2.通过VScode打开你上面创建的文件
 ![](/images/vscode-images/vscode.16.png)
-#### 4.3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python
+### 3.3.创建文本文件，后缀需为.py,再在弹出的语言选择中选择python
 ![](/images/vscode-images/vscode.17.png)
-#### 4.3.4.编写代码并运行，可以在终端看到输出结果
+### 3.4.编写代码并运行，可以在终端看到输出结果
 ![](/images/vscode-images/vscode.25.png)
-## 5. 根据所需语言配置环境（HTML+CSS+JS）
-### 5.1.安装插件
-#### 5.1.1.**HTML CSS Support** 插件
+
+# **五.根据所需语言配置环境（HTML+CSS+JS）**
+
+**不需要此语言请跳过五** 
+## 1.安装插件
+### 1.2.HTML CSS Support 插件
 ![](/images/vscode-images/vscode.27.png)
-#### 5.1.2.HTML CSS Support的主要功能
+### 1.3.HTML CSS Support的主要功能
 
 - 为 HTML 文件中的元素提供 CSS 类名的自动补全。你在 HTML 文件中编辑时，输入 `class` 属性时，插件会自动从项目中的 CSS 文件中获取可用的类名并建议补全。
 - 支持从链接的 CSS 文件中提取类名，还包括嵌入在 HTML 中的 `<style>` 标签内的样式。
 - 这有助于提高开发效率，避免拼写错误，并且能更轻松地管理和使用样式表中的 CSS 类。
 这个插件非常适合在 HTML 和 CSS 开发中频繁切换的开发者。
 
-#### 5.1.3. **Live Server** 插件
+### 1.4.Live Server 插件
 ![](/images/vscode-images/vscode.28.png)
 
-#### 5.1.4.Live Server的主要功能
+### 1.5.Live Server的主要功能
 - 启动一个本地开发服务器，让你可以实时预览 HTML、CSS 和 JavaScript 文件的更改。
 - 每次保存文件时，浏览器会自动刷新页面，立即反映所做的更改（即所谓的 "热重载" 功能）。
 - 支持自定义端口、根目录等配置，适合多种开发场景。
 - 提高了开发效率，无需手动刷新浏览器，特别适合前端开发。
 对于那些进行网页设计和前端开发的用户来说，这个插件非常实用。
 
-#### 5.1.5.**Auto Rename Tag** 插件
+### 1.6.Auto Rename Tag 插件
 ![](/images/vscode-images/vscode.29.png)
-#### 5.1.5.Auto Rename Tag的主要功能
+### 1.7.Auto Rename Tag的主要功能
 - 自动同步重命名 HTML/XML 标签。当你修改或重命名一个标签时，插件会自动更新相应的闭合标签。
 - 支持所有 HTML、XML 和相关语言中的标签。
 - 减少了手动修改闭合标签的麻烦，提高了开发效率，尤其是对嵌套标签较多的代码片段非常有用。
 这个插件对写 HTML 和 XML 时特别有帮助，能有效避免遗漏或错误的闭合标签。
 
-### 5.2.编写HTML程序
-#### 5.2.1.创建一个文件
-#### 5.2.2.通过VScode打开你上面创建的文件
-#### 5.2.3.创建文本文件，后缀需为.html
-#### 5.2.4.编写代码，鼠标右键再点击Open with Live Server
+## 2.编写HTML程序
+### 2.1.创建一个文件
+### 2.2.通过VScode打开你上面创建的文件
+### 2.3.创建文本文件，后缀需为.html
+### 2.4.编写代码，鼠标右键再点击Open with Live Server
 ![](/images/vscode-images/vscode.30.png)
 
 ![](/images/vscode-images/vscode.31.png)
 
-# **三.快捷操作**
+# **六.快捷操作**
 
 ### 1.使用编辑器操场
 编辑器操场会提供许多快捷键的使用
@@ -246,19 +245,29 @@ Shift+Alt+F
 Ctrl+Shift+[/]
 ```
 将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来
-### 7.使用命令
+### 7.撤销
+```
+Ctrl+Z
+```
+可以撤销到你的上一步，错删时很好用
+
+# **四.命令搜索栏与其它**
+
+## 1.使用命令
 帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令搜索栏，也可以直接使用快捷键  
 也可直接在搜索栏里输入一个>进入命令搜索栏
 ```
 Ctrl+Shift+P
 ```
-### 8.更改语言
+## 2.更改语言
 先**Ctrl+Shift+P**进入命令搜索栏，再在搜索栏中搜索语言，点击配置显示语言就能实现中英文切换
 ![](/images/vscode-images/vscode.35.png)
-### 9.更改字体
+## 3.更改字体
 ![](/images/vscode-images/vscode.36.png)
+## 4.快捷键参考
+![](/images/vscode-images/vscode.37.png)
 
-# **四.完结**
+# **七.完结**
 
 **根据上述操作，就能正常使用VS Code  
 VS Code还能方便的管理Git项目，详情请见介绍Git的文章**
