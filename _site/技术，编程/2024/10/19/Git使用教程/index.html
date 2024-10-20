@@ -12,48 +12,47 @@
             padding: 0;
         }
         .container {
-            display: flex; /* 使用 flexbox */
             max-width: 1200px; /* 设置最大宽度 */
             margin: 0 auto; /* 居中 */
             padding: 20px; /* 内边距 */
+            margin-top: 60px; /* 留出页眉的空间 */
+            position: relative; /* 确保绝对定位的元素相对于容器 */
         }
         .toc {
-            width: 450px; /* 设置宽度 */
+            width: 100%; /* 侧边栏宽度为100% */
             position: fixed; /* 固定位置 */
-            top: 120; /* 距离顶部的距离 */
-            left: -450px; /* 默认隐藏 */
-            transition: left 0.3s; /* 动画效果 */
+            top: 60px; /* 距离顶部的距离 */
+            left: 0; /* 默认隐藏 */
+            transition: transform 0.3s; /* 动画效果 */
             background: #f9f9f9; /* 背景色 */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
             max-height: 80vh; /* 设置最大高度 */
             overflow-y: auto; /* 允许纵向滚动 */
             z-index: 1000; /* 确保在上层 */
+            transform: translateX(-100%); /* 初始隐藏 */
         }
 
         .toc.open {
-            left: 0; /* 打开时显示 */
+            transform: translateX(0); /* 打开时显示 */
         }
+
         .toggle-btn {
             cursor: pointer; /* 鼠标指针样式 */
-            padding: 10px; /* 内边距 */
-            height: 50px; /* 设置按钮高度 */
-            background: #007bff; /* 按钮背景 */
-            color: white; /* 按钮文字颜色 */
-            border: none; /* 去掉边框 */
-            border-radius: 5px; /* 圆角 */
-            position: fixed; /* 固定位置 */
-            top: 80px; /* 距离顶部的距离 */
-            left: 0px; /* 距离左侧的距离 */
             z-index: 1001; /* 确保在上层 */
         }
 
         .content {
-            margin-left: 270px; /* 内容左侧留出空间 */
-            flex: 1; /* 右侧内容占据剩余部分 */
+            margin: 0 auto; /* 居中显示内容 */
+            max-width: 800px; /* 限制最大宽度 */
+            padding: 20px; /* 内边距 */
+            position: relative; /* 确保绝对定位的元素相对于内容 */
         }
+
         img {
+            display: block; /* 图片作为块级元素 */
             max-width: 100%; /* 使图片自适应宽度 */
             height: auto; /* 保持图片比例 */
+            margin: 20px auto; /* 上下边距 */
         }
 
         /* 响应式样式 */
@@ -61,16 +60,9 @@
             .container {
                 flex-direction: column; /* 在小屏幕上垂直排列 */
             }
-            .toc {
-                width: 100%; /* 侧边栏宽度为100% */
-                left: -100%; /* 默认隐藏 */
-            }
-            .toc.open {
-                left: 0; /* 打开时显示 */
-            }
             .content {
-                margin-left: 0; /* 移除左侧间距 */
                 width: 100%; /* 内容占满宽度 */
+                padding: 10px; /* 较小内边距 */
             }
         }
     </style>
@@ -78,42 +70,21 @@
 </head>
 <body>
 
-    <header>
-    <nav>
-      <ul>
-        <li><a href="https://www.verumkey.com" target="_self">Home</a></li>
-        <!-- 你可以根据需求添加其他链接 -->
-      </ul>
-    </nav>
-  </header>
-  
-  <style>
-    header {
-      background-color: #f8f9fa;
-      padding: 10px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-    nav ul li {
-      margin-right: 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-    }
-    nav ul li a:hover {
-      color: #007bff;
-    }
-  </style>
+    <!-- _includes/post_header.html -->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div style="position: fixed; top: 0; left: 0; right: 0; background: white; z-index: 1000; padding: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); display: flex; justify-content: space-between; align-items: center;">
+    <a href="https://verumkey.com" style="margin-left: 20px;">Home</a>
+    <button class="toggle-btn" onclick="toggleToc()" style="border: none; background: transparent; cursor: pointer; font-size: 20px; margin-right: 20px;">
+        <i class="fas fa-list"></i> <!-- 使用 Font Awesome 图标 -->
+    </button>
+</div>
 
-    
-    <button class="toggle-btn" onclick="toggleToc()">☰</button> <!-- 美观的按钮 -->
+<div class="toc" id="toc">
+    <ul><li><a href="#一git概述"><strong>一.Git概述</strong></a><ul><li><a href="#git-的一些核心概念">Git 的一些核心概念：</a></li><li><a href="#常用命令">常用命令：</a></li></ul></li></ul></li><li><a href="#二配置git环境"><strong>二.配置Git环境</strong></a><ul><li><a href="#1下载git">1.下载Git</a></li><li><a href="#2安装git">2.安装Git</a><ul><li><a href="#21vim编辑器和vs-code编辑器对比">2.1.Vim编辑器和VS Code编辑器对比</a><ul><li><a href="#1-vim-编辑器">1. Vim 编辑器：</a></li><li><a href="#2vs-code编辑器">2.VS Code编辑器：</a></li></ul></li><li><a href="#22选择编辑器">2.2.选择编辑器</a></li><li><a href="#23ssh介绍">2.3.SSH介绍</a><ul><li><a href="#ssh-的主要功能">SSH 的主要功能：</a></li><li><a href="#openssh-是什么">OpenSSH 是什么？</a></li></ul></li></ul></li><li><a href="#3设置用户签名">3.设置用户签名</a></li></ul></li><li><a href="#三编辑器常用命令"><strong>三.编辑器常用命令</strong></a><ul><li><a href="#vim-编辑器常用命令">Vim 编辑器常用命令</a><ul><li><a href="#1-模式切换">1. 模式切换</a></li><li><a href="#2-文件操作">2. 文件操作</a></li><li><a href="#3-移动光标">3. 移动光标</a></li><li><a href="#4-文本编辑">4. 文本编辑</a></li><li><a href="#5-查找和替换">5. 查找和替换</a></li></ul></li><li><a href="#vs-code-编辑器常用命令">VS Code 编辑器常用命令</a><ul><li><a href="#1-基础命令">1. 基础命令</a></li><li><a href="#2-导航">2. 导航</a></li><li><a href="#3-编辑">3. 编辑</a></li><li><a href="#4-多光标编辑">4. 多光标编辑</a></li><li><a href="#5-代码格式化和调试">5. 代码格式化和调试</a></li><li><a href="#6-搜索和替换">6. 搜索和替换</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#四git常用命令"><strong>四.Git常用命令</strong></a><ul><li><a href="#1-基本-git-操作">1. 基本 Git 操作</a><ul><li><a href="#11-初始化仓库">1.1. 初始化仓库</a></li><li><a href="#12-克隆仓库">1.2. 克隆仓库</a></li><li><a href="#13-查看状态">1.3. 查看状态</a></li><li><a href="#14-添加文件到暂存区">1.4. 添加文件到暂存区</a></li><li><a href="#15-提交更改">1.5. 提交更改</a></li><li><a href="#16-查看提交历史">1.6. 查看提交历史</a></li><li><a href="#17-查看差异">1.7. 查看差异</a></li></ul></li><li><a href="#2-分支操作">2. 分支操作</a><ul><li><a href="#21-查看分支">2.1. 查看分支</a></li><li><a href="#22-创建新分支">2.2. 创建新分支</a></li><li><a href="#23-切换分支">2.3. 切换分支</a></li><li><a href="#24-创建并切换分支">2.4. 创建并切换分支</a></li><li><a href="#25-合并分支">2.5. 合并分支</a></li><li><a href="#26-删除分支">2.6. 删除分支</a></li></ul></li><li><a href="#git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</a></li><li><a href="#3-远程操作">3. 远程操作</a><ul><li><a href="#31-查看远程仓库">3.1. 查看远程仓库</a></li><li><a href="#32-添加远程仓库">3.2. 添加远程仓库</a></li><li><a href="#33-推送到远程仓库">3.3. 推送到远程仓库</a></li><li><a href="#34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</a></li><li><a href="#35-从远程仓库获取更新">3.5. 从远程仓库获取更新</a></li></ul></li><li><a href="#git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</a></li><li><a href="#4-撤销更改">4. 撤销更改</a><ul><li><a href="#41-取消文件暂存">4.1. 取消文件暂存</a></li><li><a href="#42-撤销文件修改">4.2. 撤销文件修改</a></li><li><a href="#43-重置到特定提交">4.3. 重置到特定提交</a></li></ul></li><li><a href="#git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</a></li><li><a href="#5-标签操作">5. 标签操作</a><ul><li><a href="#51-创建标签">5.1. 创建标签</a></li><li><a href="#52-查看标签">5.2. 查看标签</a></li><li><a href="#53-推送标签到远程仓库">5.3. 推送标签到远程仓库</a></li></ul></li><li><a href="#git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</a></li><li><a href="#6-其他有用命令">6. 其他有用命令</a><ul><li><a href="#61-清理未跟踪的文件">6.1. 清理未跟踪的文件</a></li><li><a href="#62-查看全局配置">6.2. 查看全局配置</a></li><li><a href="#63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</a></li></ul></li></ul></li><li><a href="#五git-bash使用示范">五.Git Bash使用示范</a><ul><li><a href="#1初始化本地库">1.初始化本地库</a><ul><li><a href="#11创建文件打开git-bash">1.1.创建文件，打开Git Bash</a></li><li><a href="#12使用命令git-init">1.2.使用命令git init</a></li></ul></li><li><a href="#2查看本地库状态">2.查看本地库状态</a></li><li><a href="#3创建项目">3.创建项目</a><ul><li><a href="#31使用vim创建文件">3.1.使用vim创建文件</a></li></ul></li></ul></li><li><a href="#六vs-code中使用git"><strong>六.VS Code中使用Git</strong></a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1markdownlint-插件">1.markdownlint 插件</a><ul><li><a href="#功能介绍">功能介绍</a></li></ul></li><li><a href="#2git-graph-插件">2.Git Graph 插件</a><ul><li><a href="#功能介绍-1">功能介绍</a></li></ul></li></ul></li><li><a href="#2使用vs-code创建项目">2.使用VS Code创建项目</a><ul><li><a href="#21打开终端">2.1.打开终端</a></li><li><a href="#22新建文件">2.2.新建文件</a></li><li><a href="#23提交到暂存区并添加到本地库">2.3.提交到暂存区并添加到本地库</a><ul><li><a href="#方法一使用终端操作">方法一(使用终端操作)</a><ul><li><a href="#1提交到暂存区">1.提交到暂存区</a></li><li><a href="#1添加到本地库">1.添加到本地库</a></li></ul></li><li><a href="#方法二使用源代码管理">方法二(使用源代码管理)</a></li></ul></li><li><a href="#24修改文件">2.4.修改文件</a></li><li><a href="#25切换到不同的提交">2.5.切换到不同的提交</a><ul><li><a href="#2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></a></li></ul></li><li><a href="#26使用分支">2.6.使用分支</a></li><li><a href="#27合并分支">2.7.合并分支</a><ul><li><a href="#271在新建的分支里的文件做出修改并提交">2.7.1.在新建的分支里的文件做出修改并提交</a></li><li><a href="#271返回需要合并到的分支进行合并">2.7.1.返回需要合并到的分支进行合并</a></li></ul></li></ul></li><li><a href="#3使用代码托管平台github">3.使用代码托管平台（GitHub）</a><ul><li><a href="#31创建远程仓库">3.1.创建远程仓库</a></li><li><a href="#32添加文件到远程存储库">3.2.添加文件到远程存储库</a></li><li><a href="#33从远程存储库库下载文件到本地">3.3.从远程存储库库下载文件到本地</a></li></ul></li><li><a href="#4团队内协作">4.团队内协作</a><ul><li><a href="#41邀请协作的人">4.1.邀请协作的人</a></li></ul></li><li><a href="#4跨团队协作">4.跨团队协作</a><ul><li><a href="#41fork项目">4.1.fork项目</a></li><li><a href="#42做出修改">4.2.做出修改</a></li><li><a href="#43发出pull请求">4.3.发出pull请求</a></li><li><a href="#44仓库管理者同意pull请求">4.4.仓库管理者同意pull请求</a></li></ul></li></ul></li><li><a href="#七完结">七.完结</a></li></ul>
+</div>
 
-    <div class="toc" id="toc">
-        <ul><li><a href="#一git概述"><strong>一.Git概述</strong></a><ul><li><a href="#git-的一些核心概念">Git 的一些核心概念：</a></li><li><a href="#常用命令">常用命令：</a></li></ul></li></ul></li><li><a href="#二配置git环境"><strong>二.配置Git环境</strong></a><ul><li><a href="#1下载git">1.下载Git</a></li><li><a href="#2安装git">2.安装Git</a><ul><li><a href="#21vim编辑器和vs-code编辑器对比">2.1.Vim编辑器和VS Code编辑器对比</a><ul><li><a href="#1-vim-编辑器">1. Vim 编辑器：</a></li><li><a href="#2vs-code编辑器">2.VS Code编辑器：</a></li></ul></li><li><a href="#22选择编辑器">2.2.选择编辑器</a></li><li><a href="#23ssh介绍">2.3.SSH介绍</a><ul><li><a href="#ssh-的主要功能">SSH 的主要功能：</a></li><li><a href="#openssh-是什么">OpenSSH 是什么？</a></li></ul></li></ul></li><li><a href="#3设置用户签名">3.设置用户签名</a></li></ul></li><li><a href="#三编辑器常用命令"><strong>三.编辑器常用命令</strong></a><ul><li><a href="#vim-编辑器常用命令">Vim 编辑器常用命令</a><ul><li><a href="#1-模式切换">1. 模式切换</a></li><li><a href="#2-文件操作">2. 文件操作</a></li><li><a href="#3-移动光标">3. 移动光标</a></li><li><a href="#4-文本编辑">4. 文本编辑</a></li><li><a href="#5-查找和替换">5. 查找和替换</a></li></ul></li><li><a href="#vs-code-编辑器常用命令">VS Code 编辑器常用命令</a><ul><li><a href="#1-基础命令">1. 基础命令</a></li><li><a href="#2-导航">2. 导航</a></li><li><a href="#3-编辑">3. 编辑</a></li><li><a href="#4-多光标编辑">4. 多光标编辑</a></li><li><a href="#5-代码格式化和调试">5. 代码格式化和调试</a></li><li><a href="#6-搜索和替换">6. 搜索和替换</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#四git常用命令"><strong>四.Git常用命令</strong></a><ul><li><a href="#1-基本-git-操作">1. 基本 Git 操作</a><ul><li><a href="#11-初始化仓库">1.1. 初始化仓库</a></li><li><a href="#12-克隆仓库">1.2. 克隆仓库</a></li><li><a href="#13-查看状态">1.3. 查看状态</a></li><li><a href="#14-添加文件到暂存区">1.4. 添加文件到暂存区</a></li><li><a href="#15-提交更改">1.5. 提交更改</a></li><li><a href="#16-查看提交历史">1.6. 查看提交历史</a></li><li><a href="#17-查看差异">1.7. 查看差异</a></li></ul></li><li><a href="#2-分支操作">2. 分支操作</a><ul><li><a href="#21-查看分支">2.1. 查看分支</a></li><li><a href="#22-创建新分支">2.2. 创建新分支</a></li><li><a href="#23-切换分支">2.3. 切换分支</a></li><li><a href="#24-创建并切换分支">2.4. 创建并切换分支</a></li><li><a href="#25-合并分支">2.5. 合并分支</a></li><li><a href="#26-删除分支">2.6. 删除分支</a></li></ul></li><li><a href="#git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</a></li><li><a href="#3-远程操作">3. 远程操作</a><ul><li><a href="#31-查看远程仓库">3.1. 查看远程仓库</a></li><li><a href="#32-添加远程仓库">3.2. 添加远程仓库</a></li><li><a href="#33-推送到远程仓库">3.3. 推送到远程仓库</a></li><li><a href="#34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</a></li><li><a href="#35-从远程仓库获取更新">3.5. 从远程仓库获取更新</a></li></ul></li><li><a href="#git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</a></li><li><a href="#4-撤销更改">4. 撤销更改</a><ul><li><a href="#41-取消文件暂存">4.1. 取消文件暂存</a></li><li><a href="#42-撤销文件修改">4.2. 撤销文件修改</a></li><li><a href="#43-重置到特定提交">4.3. 重置到特定提交</a></li></ul></li><li><a href="#git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</a></li><li><a href="#5-标签操作">5. 标签操作</a><ul><li><a href="#51-创建标签">5.1. 创建标签</a></li><li><a href="#52-查看标签">5.2. 查看标签</a></li><li><a href="#53-推送标签到远程仓库">5.3. 推送标签到远程仓库</a></li></ul></li><li><a href="#git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</a></li><li><a href="#6-其他有用命令">6. 其他有用命令</a><ul><li><a href="#61-清理未跟踪的文件">6.1. 清理未跟踪的文件</a></li><li><a href="#62-查看全局配置">6.2. 查看全局配置</a></li><li><a href="#63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</a></li></ul></li></ul></li><li><a href="#五git-bash使用示范">五.Git Bash使用示范</a><ul><li><a href="#1初始化本地库">1.初始化本地库</a><ul><li><a href="#11创建文件打开git-bash">1.1.创建文件，打开Git Bash</a></li><li><a href="#12使用命令git-init">1.2.使用命令git init</a></li></ul></li><li><a href="#2查看本地库状态">2.查看本地库状态</a></li><li><a href="#3创建项目">3.创建项目</a><ul><li><a href="#31使用vim创建文件">3.1.使用vim创建文件</a></li></ul></li></ul></li><li><a href="#六vs-code中使用git"><strong>六.VS Code中使用Git</strong></a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1markdownlint-插件">1.markdownlint 插件</a><ul><li><a href="#功能介绍">功能介绍</a></li></ul></li><li><a href="#2git-graph-插件">2.Git Graph 插件</a><ul><li><a href="#功能介绍-1">功能介绍</a></li></ul></li></ul></li><li><a href="#2使用vs-code创建项目">2.使用VS Code创建项目</a><ul><li><a href="#21打开终端">2.1.打开终端</a></li><li><a href="#22新建文件">2.2.新建文件</a></li><li><a href="#23提交到暂存区并添加到本地库">2.3.提交到暂存区并添加到本地库</a><ul><li><a href="#方法一使用终端操作">方法一(使用终端操作)</a><ul><li><a href="#1提交到暂存区">1.提交到暂存区</a></li><li><a href="#1添加到本地库">1.添加到本地库</a></li></ul></li><li><a href="#方法二使用源代码管理">方法二(使用源代码管理)</a></li></ul></li><li><a href="#24修改文件">2.4.修改文件</a></li><li><a href="#25切换到不同的提交">2.5.切换到不同的提交</a><ul><li><a href="#2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></a></li></ul></li><li><a href="#26使用分支">2.6.使用分支</a></li><li><a href="#27合并分支">2.7.合并分支</a><ul><li><a href="#271在新建的分支里的文件做出修改并提交">2.7.1.在新建的分支里的文件做出修改并提交</a></li><li><a href="#271返回需要合并到的分支进行合并">2.7.1.返回需要合并到的分支进行合并</a></li></ul></li></ul></li><li><a href="#3使用代码托管平台github">3.使用代码托管平台（GitHub）</a><ul><li><a href="#31创建远程仓库">3.1.创建远程仓库</a></li><li><a href="#32添加文件到远程存储库">3.2.添加文件到远程存储库</a></li><li><a href="#33从远程存储库库下载文件到本地">3.3.从远程存储库库下载文件到本地</a></li></ul></li><li><a href="#4团队内协作">4.团队内协作</a><ul><li><a href="#41邀请协作的人">4.1.邀请协作的人</a></li></ul></li><li><a href="#4跨团队协作">4.跨团队协作</a><ul><li><a href="#41fork项目">4.1.fork项目</a></li><li><a href="#42做出修改">4.2.做出修改</a></li><li><a href="#43发出pull请求">4.3.发出pull请求</a></li><li><a href="#44仓库管理者同意pull请求">4.4.仓库管理者同意pull请求</a></li></ul></li></ul></li><li><a href="#七完结">七.完结</a></li></ul>
-    </div>
 
     <div class="container">
         <div class="content">
@@ -756,6 +727,7 @@ git add .         # 添加当前目录下所有文件
         function toggleToc() {
             const toc = document.getElementById('toc');
             toc.classList.toggle('open'); // 切换大纲显示状态
+            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
         }
     </script>
 

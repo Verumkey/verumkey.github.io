@@ -12,48 +12,47 @@
             padding: 0;
         }
         .container {
-            display: flex; /* 使用 flexbox */
             max-width: 1200px; /* 设置最大宽度 */
             margin: 0 auto; /* 居中 */
             padding: 20px; /* 内边距 */
+            margin-top: 60px; /* 留出页眉的空间 */
+            position: relative; /* 确保绝对定位的元素相对于容器 */
         }
         .toc {
-            width: 450px; /* 设置宽度 */
+            width: 100%; /* 侧边栏宽度为100% */
             position: fixed; /* 固定位置 */
-            top: 120; /* 距离顶部的距离 */
-            left: -450px; /* 默认隐藏 */
-            transition: left 0.3s; /* 动画效果 */
+            top: 60px; /* 距离顶部的距离 */
+            left: 0; /* 默认隐藏 */
+            transition: transform 0.3s; /* 动画效果 */
             background: #f9f9f9; /* 背景色 */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
             max-height: 80vh; /* 设置最大高度 */
             overflow-y: auto; /* 允许纵向滚动 */
             z-index: 1000; /* 确保在上层 */
+            transform: translateX(-100%); /* 初始隐藏 */
         }
 
         .toc.open {
-            left: 0; /* 打开时显示 */
+            transform: translateX(0); /* 打开时显示 */
         }
+
         .toggle-btn {
             cursor: pointer; /* 鼠标指针样式 */
-            padding: 10px; /* 内边距 */
-            height: 50px; /* 设置按钮高度 */
-            background: #007bff; /* 按钮背景 */
-            color: white; /* 按钮文字颜色 */
-            border: none; /* 去掉边框 */
-            border-radius: 5px; /* 圆角 */
-            position: fixed; /* 固定位置 */
-            top: 80px; /* 距离顶部的距离 */
-            left: 0px; /* 距离左侧的距离 */
             z-index: 1001; /* 确保在上层 */
         }
 
         .content {
-            margin-left: 270px; /* 内容左侧留出空间 */
-            flex: 1; /* 右侧内容占据剩余部分 */
+            margin: 0 auto; /* 居中显示内容 */
+            max-width: 800px; /* 限制最大宽度 */
+            padding: 20px; /* 内边距 */
+            position: relative; /* 确保绝对定位的元素相对于内容 */
         }
+
         img {
+            display: block; /* 图片作为块级元素 */
             max-width: 100%; /* 使图片自适应宽度 */
             height: auto; /* 保持图片比例 */
+            margin: 20px auto; /* 上下边距 */
         }
 
         /* 响应式样式 */
@@ -61,16 +60,9 @@
             .container {
                 flex-direction: column; /* 在小屏幕上垂直排列 */
             }
-            .toc {
-                width: 100%; /* 侧边栏宽度为100% */
-                left: -100%; /* 默认隐藏 */
-            }
-            .toc.open {
-                left: 0; /* 打开时显示 */
-            }
             .content {
-                margin-left: 0; /* 移除左侧间距 */
                 width: 100%; /* 内容占满宽度 */
+                padding: 10px; /* 较小内边距 */
             }
         }
     </style>
@@ -78,13 +70,7 @@
 </head>
 <body>
 
-    {% include header.html %}
-    
-    <button class="toggle-btn" onclick="toggleToc()">☰</button> <!-- 美观的按钮 -->
-
-    <div class="toc" id="toc">
-        {% include toc.html html=content %}
-    </div>
+    {% include post_header.html %}
 
     <div class="container">
         <div class="content">
@@ -98,6 +84,7 @@
         function toggleToc() {
             const toc = document.getElementById('toc');
             toc.classList.toggle('open'); // 切换大纲显示状态
+            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
         }
     </script>
 
