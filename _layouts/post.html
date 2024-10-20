@@ -18,11 +18,34 @@
             padding: 20px; /* 内边距 */
         }
         .toc {
-            flex: 1; /* 左侧大纲占据 1 部分 */
-            margin-right: 20px; /* 右边距 */
+            width: 450px; /* 设置宽度 */
+            position: fixed; /* 固定位置 */
+            top: 105px; /* 距离顶部的距离 */
+            left: -450px; /* 默认隐藏 */
+            transition: left 0.3s; /* 动画效果 */
+            background: #f9f9f9; /* 背景色 */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
+            max-height: 80vh; /* 设置最大高度 */
+            overflow-y: auto; /* 允许纵向滚动 */
+        }
+        .toc.open {
+            left: 0; /* 打开时显示 */
+        }
+        .toggle-btn {
+            cursor: pointer; /* 鼠标指针样式 */
+            padding: 10px; /* 内边距 */
+            background: #007bff; /* 按钮背景 */
+            color: white; /* 按钮文字颜色 */
+            border: none; /* 去掉边框 */
+            border-radius: 5px; /* 圆角 */
+            position: fixed; /* 固定位置 */
+            top: 80px; /* 距离顶部的距离 */
+            left: 10px; /* 距离左侧的距离 */
+            z-index: 1000; /* 确保在上层 */
         }
         .content {
-            flex: 3; /* 右侧内容占据 3 部分 */
+            margin-left: 270px; /* 内容左侧留出空间 */
+            flex: 1; /* 右侧内容占据剩余部分 */
         }
         img {
             max-width: 100%; /* 使图片自适应宽度 */
@@ -32,19 +55,28 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    
+
     {% include header.html %}
-    
+    <button class="toggle-btn" onclick="toggleToc()">☰</button> <!-- 美观的按钮 -->
+
+    <div class="toc" id="toc">
+        {% include toc.html html=content %}
+    </div>
+
     <div class="container">
-        <div class="toc">
-            {% include toc.html html=content %}
-        </div>
         <div class="content">
             {{ content }} <!-- 显示页面内容 -->
         </div>
     </div>
 
     {% include footer.html %}
+
+    <script>
+        function toggleToc() {
+            const toc = document.getElementById('toc');
+            toc.classList.toggle('open'); // 切换大纲显示状态
+        }
+    </script>
 
 </body>
 </html>
