@@ -1,10 +1,18 @@
 /* 设置页面主要内容容器的最大宽度和自适应宽度 */
 .container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px; /* 保留少量内边距，避免内容贴边 */
-    box-sizing: border-box;
+    max-width: 1200px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+    padding: 0 10px; /* 设置左右内边距 */
+    margin-top: 20px; /* 调整页眉与内容之间的距离 */
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 列方向 */
+    align-items: center; /* 居中对齐 */
+}
+
+.content {
+    width: 100%; /* 内容占满宽度 */
+    padding: 10px; /* 内边距 */
+    box-sizing: border-box; /* 包含内边距 */
 }
 
 /* 让图片自适应屏幕 */
@@ -21,27 +29,9 @@ table {
     word-wrap: break-word;
 }
 
-/* 针对小屏幕设备的样式调整 */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none; /* 小屏幕上隐藏侧边栏，或调整侧边栏位置 */
-    }
-
-    .main-content {
-        width: 100%; /* 主内容区域在小屏幕上占满宽度 */
-    }
-}
-
-/* 使用Flexbox布局使内容在不同设备上更灵活 */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .main-content {
-    flex: 1;
-    width: 100%;
+    flex: 1; /* 主内容区域自适应 */
+    width: 100%; /* 确保主内容区域占满宽度 */
 }
 
 .sidebar {
@@ -50,10 +40,11 @@ table {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        margin-top: 40px; /* 在手机上增加上边距 */
+        padding: 0 5px; /* 在手机上可以考虑设置左右小的内边距 */
     }
 
     .sidebar {
-        width: 100%;
+        width: 100%; /* 在手机上侧边栏占满宽度 */
     }
 }
