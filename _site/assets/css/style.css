@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 防止横向滚动 */
+}
+
+.container {
+    max-width: 1200px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+    padding: 0 10px; /* 设置左右内边距，避免切割 */
+    margin-top: 60px; /* 留出页眉的空间 */
+}
+
+.content {
+    width: 100%; /* 内容占满宽度 */
+    padding: 0; /* 去掉内边距，避免切割 */
+    box-sizing: border-box; /* 包含内边距 */
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* 容器宽度100% */
+        padding: 0; /* 去掉内边距 */
+    }
+    .content {
+        width: 100%; /* 内容占满宽度 */
+        padding: 10px; /* 加点内边距，保持美观 */
+    }
+}
+
+img {
+    max-width: 100%; /* 确保图片自适应宽度 */
+    height: auto; /* 保持比例 */
+}
+

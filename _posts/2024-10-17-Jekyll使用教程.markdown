@@ -6,6 +6,7 @@ categories: [技术，编程]
 tags: [Jekyll,博客]
 excerpt: "本篇文章演示如何获得一个静态网站"
 ---
+# **简介**
 本文使用Jekyll来搭建静态网站，并通过Github Pages实现访问  
 作者实现的静态网站：[verumkey.github.io](https://verumkey.github.io)  
 项目仓库：[https://github.com/Verumkey/verumkey.github.io](https://github.com/Verumkey/verumkey.github.io)  
