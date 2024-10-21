@@ -58,11 +58,15 @@
         /* 响应式样式 */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* 在小屏幕上垂直排列 */
+                width: 100%; /* 容器宽度100% */
+                padding: 10px; /* 较小内边距 */
             }
             .content {
                 width: 100%; /* 内容占满宽度 */
                 padding: 10px; /* 较小内边距 */
+            }
+            img {
+                margin: 20px 0; /* 图片上下边距，左右不留空 */
             }
         }
     </style>
