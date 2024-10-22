@@ -1,9 +1,9 @@
 /* 设置页面主要内容容器的最大宽度和自适应宽度 */
 .container {
-    max-width: 1200px; /* 最大宽度 */
+    max-width: 100%; /* 最大宽度 */
     margin: 0 auto; /* 居中 */
     padding: 0 10px; /* 设置左右内边距 */
-    margin-top: 80px; /* 调整页眉与内容之间的距离，避免内容被页眉遮挡 */
+    margin-top: 30px; /* 调整页眉与内容之间的距离，避免内容被页眉遮挡 */
     display: flex; /* 使用Flexbox布局 */
     flex-direction: column; /* 列方向 */
     align-items: center; /* 居中对齐 */
@@ -41,7 +41,7 @@ table {
 @media (max-width: 768px) {
     .container {
         margin-top: 100px; /* 在手机上增加上边距，确保内容不会被页眉遮挡 */
-        padding: 0 5px; /* 在手机上可以考虑设置左右小的内边距 */
+        padding: 0px; /* 在手机上可以考虑设置左右小的内边距 */
     }
 
     .sidebar {
@@ -51,7 +51,7 @@ table {
 
 /* 页眉样式 */
 header {
-    width: 100vw; /* 使页眉宽度占满整个视口 */
+    width: 100%; /* 使页眉宽度占满整个视口 */
     position: fixed; /* 固定页眉在顶部 */
     top: 0; /* 让页眉固定在视口顶部 */
     left: 0; /* 确保没有左右偏移 */
@@ -81,7 +81,7 @@ header .toggle-btn {
 
 /* 增加页面内容与页眉之间的间距，防止内容被页眉遮挡 */
 body {
-    padding-top:20px; /* 页眉高度的占位 */
+    padding-top:80px; /* 页眉高度的占位 */
 }
 
 /* 针对移动设备的页眉样式 */
@@ -100,7 +100,7 @@ body {
 }
 
 .article {
-    max-width: 100%; /* 使文章宽度适应屏幕 */
-    margin: 0 auto; /* 居中显示 */
-    overflow: hidden; /* 防止溢出 */
+    max-width: 100%; /* 限制宽度为 100% */
+    margin: 0 auto; /* 居中 */
 }
+
