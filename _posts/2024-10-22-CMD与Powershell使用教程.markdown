@@ -7,9 +7,7 @@ tags: [CMD,Powershell,博客]
 excerpt: "本篇文章演示如何从0开始使用CMD与Powershell"
 ---
 # **简介**
-本文会列出大部分CMD和Powershell的命令，但不会演示怎么使用  
-仅演示使用频率很高的  
-如果你看到一个单词每个字母被-隔开，那就是这个单词在这里导致了奇怪的bug不得已为之
+
 ## 1.CMD
 
 CMD（命令提示符）是**Windows 操作系统**中的一个**命令行界面**，用于执行各种命令行任务。它的作用主要集中在基本的**系统操作、文件管理、网络配置和诊断任务**等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。
@@ -665,16 +663,16 @@ PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结�
 ### 1.2.运行命令检查执行策略
 
 我这已经提前更改过了，初始是限制的
-```
-Get-ExecutionPolicy -List
-```
+
+**Get-ExecutionPolicy -List**
+
 ![](/images/CMD_Powershell-images/cmd_powershell.8.png)
 
 ### 1.3.更改执行策略
 更改CurrentUser 的策略为RemoteSigned
-```
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+
+**Set-ExecutionPolicy RemoteSigned -Scope CurrentUser**
+
 
 ## 2.批量重命名文件名
 
