@@ -72,7 +72,7 @@ PowerShell 允许你使用命令（称为 **cmdlets**）执行各种任务，如
 
 ### 2. 脚本编写和自动化
 
-PowerShell 支持编写脚本文件（通常扩展名为 `.ps1`），通过这些脚本，你可以自动化复杂的系统管理任务，比如批量创建用户、部署应用、备份数据等。系统管理员可以使用它自动化日常任务，提高工作效率。
+PowerShell 支持编写脚本文件（通常扩展名为 .ps1），通过这些脚本，你可以自动化复杂的系统管理任务，比如批量创建用户、部署应用、备份数据等。系统管理员可以使用它自动化日常任务，提高工作效率。
 
 ### 3. 对象导向
 
@@ -92,8 +92,8 @@ PowerShell 支持模块化扩展，你可以安装第三方模块以获得更多
 
 ### 常见用法：
 
-- **启动 PowerShell**：按 `Win+X`，选择 "Windows PowerShell" 或 "Windows PowerShell (管理员)"。
-- **执行命令**：你可以在 PowerShell 中输入类似 `Get-Process` 来获取当前运行的进程，或用 `Get-Help` 查询命令的帮助文档。
+- **启动 PowerShell**：按 Win+X，选择 "Windows PowerShell" 或 "Windows PowerShell (管理员)"。
+- **执行命令**：你可以在 PowerShell 中输入类似 Get-Process 来获取当前运行的进程，或用  Get-Help 查询命令的帮助文档。
 
 如果你是开发人员或系统管理员，PowerShell 是非常强大且灵活的工具，适合用于自动化任务和复杂的系统管理。
 
@@ -103,7 +103,7 @@ PowerShell 和 CMD（命令提示符）是 Windows 操作系统中两种命令�
 
 ### 1. 命令集和功能
 
-- **CMD**：CMD 是 Windows 操作系统的传统命令行界面，它使用一组相对简单的命令（如 `dir`, `copy`, `del`）来执行文件管理和一些基本的系统任务。CMD 的命令集较为有限，适合执行简单的任务。
+- **CMD**：CMD 是 Windows 操作系统的传统命令行界面，它使用一组相对简单的命令（如 dir, copy, del）来执行文件管理和一些基本的系统任务。CMD 的命令集较为有限，适合执行简单的任务。
 - **PowerShell**：PowerShell 是一个功能强大的任务自动化工具，提供了更为丰富和复杂的命令集（称为 **cmdlets**）。它可以管理文件系统、注册表、进程、服务、事件日志等，远超 CMD 的功能。
 
 ### 2. 基于文本 vs 基于对象
@@ -113,8 +113,8 @@ PowerShell 和 CMD（命令提示符）是 Windows 操作系统中两种命令�
 
 ### 3. 脚本能力
 
-- **CMD**：CMD 支持简单的批处理脚本（以 `.bat` 或 `.cmd` 为后缀），这些脚本文件可以自动执行一系列命令。然而，CMD 的脚本功能较为基础，缺少现代编程语言中的结构和灵活性。
-- **PowerShell**：PowerShell 提供了强大的脚本编写能力，支持复杂的编程结构，如循环、条件语句、函数和错误处理。PowerShell 脚本文件以 `.ps1` 作为扩展名，能够编写和自动化非常复杂的任务。
+- **CMD**：CMD 支持简单的批处理脚本（以 .bat 或 .cmd 为后缀），这些脚本文件可以自动执行一系列命令。然而，CMD 的脚本功能较为基础，缺少现代编程语言中的结构和灵活性。
+- **PowerShell**：PowerShell 提供了强大的脚本编写能力，支持复杂的编程结构，如循环、条件语句、函数和错误处理。PowerShell 脚本文件以 .ps1 作为扩展名，能够编写和自动化非常复杂的任务。
 
 ### 4. 跨平台支持
 
@@ -133,8 +133,8 @@ PowerShell 和 CMD（命令提示符）是 Windows 操作系统中两种命令�
 
 ### 7. 命令语法
 
-- **CMD**：CMD 的命令语法比较简单。例如，列出目录中的文件使用 `dir`。
-- **PowerShell**：PowerShell 的命令语法更像编程语言，通常遵循 `动词-名词` 格式。例如，列出目录中的文件使用 `Get-ChildItem`。这种命令格式使命令更加直观和一致。
+- **CMD**：CMD 的命令语法比较简单。例如，列出目录中的文件使用 dir。
+- **PowerShell**：PowerShell 的命令语法更像编程语言，通常遵循 动词-名词 格式。例如，列出目录中的文件使用 Get-ChildItem。这种命令格式使命令更加直观和一致。
 
 ### 8. 集成 .NET
 
@@ -210,59 +210,59 @@ CMD（命令提示符）有许多命令，用于文件管理、系统诊断、�
 
 这些是最常用的命令，用于操作文件和文件夹。
 
-- **`dir`**：列出当前目录的文件和子目录。
+- **dir**：列出当前目录的文件和子目录。
 ```
 dir
 ```
-- **`cd`**：改变当前目录，进入指定路径。
+- **cd**：改变当前目录，进入指定路径。
 
-- **`copy`**：复制文件到指定位置。
+- **copy**：复制文件到指定位置。
 ```
-copy source.txt C:\Destination
+copy source.txt 路径
 ```
-- **`move`**：移动文件或重命名文件。
+- **move**：移动文件或重命名文件。
 ```
-move source.txt C:\Destination
+move source.txt 路径
 ```
-- **`del`**：删除一个或多个文件。
+- **del**：删除一个或多个文件。
 ```
 del file.txt
 ```
-- **`mkdir`**：创建新目录。
+- **mkdir**：创建新目录。
 ```
 mkdir NewFolder
 ```
-- **`rmdir`**：删除目录。
+- **rmdir**：删除目录。
 
 ### 2. 系统诊断和修复命令
 
 这些命令用于检查和修复系统，排查问题。
 
-- **`sfc /scannow`**：扫描并修复系统文件的完整性。
+- **sfc /scannow**：扫描并修复系统文件的完整性。
 ```
 sfc /scannow
 ```
-- **`chkdsk`**：检查磁盘并修复文件系统错误。
+- **chkdsk**：检查磁盘并修复文件系统错误。
 ```
 chkdsk C: /f
 ```
-- **`tasklist`**：显示当前运行的所有进程。
+- **tasklist**：显示当前运行的所有进程。
 ```
 tasklist
 ```
-- **`taskkill`**：终止指定进程。
+- **taskkill**：终止指定进程。
 ```
 taskkill /IM notepad.exe /F
 ```
-- **`systeminfo`**：显示系统的详细配置信息。
+- **systeminfo**：显示系统的详细配置信息。
 ```
 systeminfo
 ```
-- **`ipconfig`**：显示网络接口的配置信息，如 IP 地址、子网掩码等。
+- **ipconfig**：显示网络接口的配置信息，如 IP 地址、子网掩码等。
 ```
 ipconfig
 ```
-- **`ping`**：测试与远程服务器的网络连接。
+- **ping**：测试与远程服务器的网络连接。
 ```
 ping google.com
 ```
@@ -270,49 +270,47 @@ ping google.com
 
 这些命令用于诊断网络连接和配置网络设置。
 
-- **`netstat`**：显示当前的网络连接、端口和协议。
+- **netstat**：显示当前的网络连接、端口和协议。
 ```
 netstat -an
 ```
-- **`tracert`**：显示到目标主机的路由路径。
+- **tracert**：显示到目标主机的路由路径。
 ```
 tracert google.com
 ```
-- **`nslookup`**：查询域名对应的 IP 地址或检查 DNS 解析问题。
+- **nslookup**：查询域名对应的 IP 地址或检查 DNS 解析问题。
 ```
 nslookup google.com
 ```
-- **`net use`**：映射或断开网络驱动器。
-```
-net use Z: \\server\sharedfolder
-```
-- **`netsh`**：管理网络配置（如 IP 设置、防火墙规则）。
+- **net use**：映射或断开网络驱动器。
+
+- **netsh**：管理网络配置（如 IP 设置、防火墙规则）。
 
 ### 4. 批处理命令
 
 这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。
 
-- **`echo`**：显示消息或启用/禁用命令回显。
+- **echo**：显示消息或启用/禁用命令回显。
 ```
 echo Hello, World!
 ```
-- **`set`**：设置或显示环境变量。
+- **set**：设置或显示环境变量。
 ```
 set PATH
 ```
-- **`pause`**：在批处理文件中暂停命令执行，等待用户按键。
+- **pause**：在批处理文件中暂停命令执行，等待用户按键。
 ```
 pause
 ```
-- **`if`**：条件语句，判断是否执行某些命令。
+- **if**：条件语句，判断是否执行某些命令。
 ```
 if exist file.txt echo File exists
 ```
-- **`for`**：循环处理文件或命令。
+- **for**：循环处理文件或命令。
 ```
 for %%f in (*.txt) do echo %%f
 ```
-- **`goto`**：跳转到脚本中的某个标签，通常和 `if` 配合使用。
+- **goto**：跳转到脚本中的某个标签，通常和 if 配合使用。
 ```
 goto :start
 ```
@@ -320,27 +318,25 @@ goto :start
 
 这些命令用于管理用户账户和权限。
 
-- **`net user`**：管理用户账户（创建、删除、修改用户）。
+- **net user**：管理用户账户（创建、删除、修改用户）。
 ```
 net user username password /add
 ```
-- **`net localgroup`**：管理本地用户组。
+- **net localgroup**：管理本地用户组。
 ```
 net localgroup administrators username /add
 ```
-- **`runas`**：以其他用户身份执行命令。
-```
-runas /user:Administrator cmd
-```
+- **runas**：以其他用户身份执行命令。
+
 ### 6. 磁盘管理命令
 
 这些命令用于管理硬盘驱动器和分区。
 
-- **`diskpart`**：管理磁盘分区（创建、删除、调整大小）。
+- **diskpart**：管理磁盘分区（创建、删除、调整大小）。
 ```
 diskpart
 ```
-- **`format`**：格式化磁盘或分区。
+- **format**：格式化磁盘或分区。
 ```
 format D:
 ```
@@ -348,77 +344,78 @@ format D:
 
 这些命令用于查看、终止进程或管理系统服务。
 
-- **`shutdown`**：关闭或重启计算机。
+- **shutdown**：关闭或重启计算机。
 
 ### 8. 时间与计划任务管理
 
 这些命令用于与系统时间、计划任务有关的操作。
 
-- **`time`**：显示或设置系统时间。
+- **time**：显示或设置系统时间。
 ```
 time
 ```
-- **`schtasks`**：管理计划任务，自动执行任务。
+- **schtasks**：管理计划任务，自动执行任务。
 
 ### 9. 高级管理命令
 
 这些命令用于执行更高级的管理操作，通常由系统管理员使用。
 
-- **`bcdedit`**：管理启动配置数据（修改启动选项）。
+- **bcdedit**：管理启动配置数据（修改启动选项）。
 ```
 bcdedit /set {bootmgr} timeout 30
 ```
-- **`gpupdate`**：更新组策略设置。
+- **gpupdate**：更新组策略设置。
 ```
 gpupdate /force
 ```
-- **`wmic`**：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
+- **wmic**：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
 ```
 wmic process get name
 ```
 ### 总结：
 
-1. **文件和目录管理**：如 `dir`、`cd`、`copy`、`del` 等，是最基础的操作。
-2. **系统诊断和修复**：如 `sfc`、`chkdsk`、`ipconfig` 等，用于维护和修复系统。
-3. **网络操作**：如 `ping`、`netstat`、`tracert`，对于网络调试和故障排查非常有用。
-4. **批处理和自动化**：如 `echo`、`for`、`if`，用于编写自动化脚本。
-5. **用户和权限管理**：如 `net user`、`runas`，用于管理账户和权限。
+1. **文件和目录管理**：如 dir、cd、copy、del 等，是最基础的操作。
+2. **系统诊断和修复**：如 sfc、chkdsk、ipconfig 等，用于维护和修复系统。
+3. **网络操作**：如 ping、netstat、tracert，对于网络调试和故障排查非常有用。
+4. **批处理和自动化**：如 echo、for、if，用于编写自动化脚本。
+5. **用户和权限管理**：如 net user、runas，用于管理账户和权限。
 
 # **三.bat文件语法**
 
-批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 `.bat` 或 `.cmd` 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。
+批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 .bat 或 .cmd 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。
 
 ### 1. 基本语法结构
 
 BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。
 
-- **注释：** 使用 `REM` 或 `::` 来注释代码，注释行不会执行。
+- **注释：** 使用 REM 或 :: 来注释代码，注释行不会执行。
 ```
 REM This is a comment :: This is also a comment
 ```
-- **显示消息：** 使用 `echo` 打印消息或控制命令回显。
+- **显示消息：** 使用 echo 打印消息或控制命令回显。
 ```
 echo Hello, World!
 ```
-- **变量：** 使用 `set` 定义和访问变量。变量名用 `%` 包围来引用。
+- **变量：** 使用 set 定义和访问变量。变量名用 % 包围来引用。
 ```
 set myVar=123 echo %myVar%
 ```
-- **禁用回显：** 在脚本开头使用 `@echo off` 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
+- **禁用回显：** 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
 ```
 @echo off
 ```
+
 ### 2. 流程控制语法
 
 BAT 文件支持基本的流程控制语法，如条件语句、循环等。
 
 #### 条件语句 (if)
 
-- `if` 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。 
-- 
+- if 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。 
+
 #### 循环语句 (for)
 
-- `for` 循环用于遍历文件、目录或变量集合。
+- for 循环用于遍历文件、目录或变量集合。
     - 遍历文件：
 ```
 for %%f in (*.txt) do echo %%f
@@ -430,65 +427,66 @@ for /L %%i in (1, 1, 10) do echo %%i
 
 ### 3. 输入输出
 
-- **用户输入：** 使用 `set /p` 提示用户输入，并将输入存储到变量中。
+- **用户输入：** 使用 set /p 提示用户输入，并将输入存储到变量中。
 
-- **重定向输出：** 使用 `>`、`>>` 将命令的输出重定向到文件。
-    
-    - `>` 将输出重定向到文件并覆盖该文件的内容。
+- **重定向输出：** 使用 >、>> 将命令的输出重定向到文件。
+
+- 将输出重定向到文件并覆盖该文件的内容。
 ```
 echo This is a test > output.txt
 ```
-    - `>>` 将输出附加到文件末尾。
+- 将输出附加到文件末尾。
 ```
 echo Another line >> output.txt
 ```
 
 ### 4. 子程序与跳转
 
-- **标签 (`:`)** 和 **跳转 (`goto`)**：可以通过标签创建脚本的不同部分，并使用 `goto` 跳转到某个标签。
+- **标签 (:)** 和 **跳转 (goto)**：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
 ```
 goto :start  :start echo This is the start
 ```
-- **`call` 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。
+- **call 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。
 ```
 call otherScript.bat
 ```
+
 ### 5. 错误处理
 
-- **`errorlevel`**：每个命令执行后会设置一个返回码，称为 `errorlevel`。可以通过检查 `errorlevel` 来执行错误处理。
+- **errorlevel**：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
 ```
 if %errorlevel% neq 0 echo An error occurred
 ```
 
 ### 6. 批处理文件常见参数
 
-- **`%1` 到 `%9`**：批处理文件可以接收命令行参数，使用 `%1` 访问第一个参数，`%2` 访问第二个参数，依次类推。
+- **%1 到 %9**：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。
 ```
 echo First parameter is %1
 ```
-- **`shift`**：用于左移参数，`%2` 变为 `%1`，`%3` 变为 `%2`。
+- **shift**：用于左移参数，%2 变为 %1，%3 变为 %2。
 ```
 shift
 ```
 
 ### 7. 批处理文件常用命令
 
-- **`pause`**：暂停脚本执行，等待用户按任意键继续。
+- **pause**：暂停脚本执行，等待用户按任意键继续。
 ```
 pause
 ```
-- **`exit`**：终止批处理文件的执行，并可选择返回错误码。
+- **exit**：终止批处理文件的执行，并可选择返回错误码。
 ```
 exit /b 0
 ```
 
 ### 8. 高级功能
 
-- **`setlocal` 和 `endlocal`**：用于限制变量的作用范围，使得在 `setlocal` 和 `endlocal` 之间定义的变量在该范围外无效。
+- **setlocal 和 endlocal**：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。
 ```
 setlocal set myVar=123 endlocal
 ```
-- **环境变量操作**：批处理文件可以访问系统环境变量，如 `PATH`、`TEMP` 等，并进行修改或使用。
+- **环境变量操作**：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。
     
 
 ### 9. 批处理文件的应用场景
@@ -507,88 +505,88 @@ PowerShell 是一个功能强大的命令行界面和脚本语言，支持多种
 
 ### 1. 基本命令
 
-- **`Get-Command`**：获取可用的所有命令及其详细信息。
-- **`Get-Help`**：显示有关 PowerShell 命令和语法的帮助信息。
-- **`Get-Process`**：获取当前正在运行的进程列表。
-- **`Get-Service`**：获取当前计算机上所有服务的状态。
+- **Get-Command**：获取可用的所有命令及其详细信息。
+- **Get-Help**：显示有关 PowerShell 命令和语法的帮助信息。
+- **Get-Process**：获取当前正在运行的进程列表。
+- **Get-Service**：获取当前计算机上所有服务的状态。
 
 ### 2. 文件和目录管理
 
-- **`Get-ChildItem`**：列出目录中的文件和子目录（相当于 CMD 中的 `dir`）。
-- **`Set-Location`**：改变当前工作目录（相当于 CMD 中的 `cd`）。
-- **`Copy-Item`**：复制文件或目录。
-- **`Move-Item`**：移动文件或目录。
-- **`Remove-Item`**：删除文件或目录。
-- **`New-Item`**：创建新文件或目录。
+- **Get-ChildItem**：列出目录中的文件和子目录（相当于 CMD 中的 dir）。
+- **Set-Location**：改变当前工作目录（相当于 CMD 中的 cd）。
+- **Copy-Item**：复制文件或目录。
+- **Move-Item**：移动文件或目录。
+- **Remove-Item**：删除文件或目录。
+- **New-Item**：创建新文件或目录。
 
 ### 3. 系统管理
 
-- **`Get-EventLog`**：获取系统事件日志。
-- **`Clear-Host`**：清除 PowerShell 窗口中的所有内容。
-- **`Get-ExecutionPolicy`**：查看当前的脚本执行策略。
-- **`Set-ExecutionPolicy`**：设置 PowerShell 脚本的执行策略。
+- **Get-EventLog**：获取系统事件日志。
+- **Clear-Host**：清除 PowerShell 窗口中的所有内容。
+- **Get-ExecutionPolicy**：查看当前的脚本执行策略。
+- **Set-ExecutionPolicy**：设置 PowerShell 脚本的执行策略。
 
 ### 4. 网络管理
 
-- **`Test-Connection`**：测试与远程主机的网络连接（相当于 `ping` 命令）。
-- **`Get-NetAdapter`**：获取网络适配器的详细信息。
-- **`Get-NetIPAddress`**：获取 IP 地址配置。
-- **`New-NetFirewallRule`**：创建新的防火墙规则。
+- **Test-Connection**：测试与远程主机的网络连接（相当于 ping 命令）。
+- **Get-NetAdapter**：获取网络适配器的详细信息。
+- **Get-NetIPAddress**：获取 IP 地址配置。
+- **New-NetFirewallRule**：创建新的防火墙规则。
 
 ### 5. 用户和权限管理
 
-- **`Get-LocalUser`**：列出本地用户账户。
-- **`New-LocalUser`**：创建新的本地用户账户。
-- **`Remove-LocalUser`**：删除本地用户账户。
-- **`Add-LocalGroupMember`**：将用户添加到本地组中。
+- **Get-LocalUser**：列出本地用户账户。
+- **New-LocalUser**：创建新的本地用户账户。
+- **Remove-LocalUser**：删除本地用户账户。
+- **Add-LocalGroupMember**：将用户添加到本地组中。
 
 ### 6. 服务和进程管理
 
-- **`Start-Service`**：启动指定服务。
-- **`Stop-Service`**：停止指定服务。
-- **`Restart-Service`**：重启指定服务。
-- **`Stop-Process`**：终止指定进程。
+- **Start-Service**：启动指定服务。
+- **Stop-Service**：停止指定服务。
+- **Restart-Service**：重启指定服务。
+- **Stop-Process**：终止指定进程。
 
 ### 7. 脚本和自动化
 
-- **`Invoke-Command`**：在本地或远程计算机上执行命令或脚本块。
-- **`Start-Job`**：启动后台作业。
-- **`Get-Job`**：获取后台作业的信息。
-- **`Receive-Job`**：接收后台作业的输出。
+- **Invoke-Command**：在本地或远程计算机上执行命令或脚本块。
+- **Start-Job**：启动后台作业。
+- **Get-Job**：获取后台作业的信息。
+- **Receive-Job**：接收后台作业的输出。
 
 ### 8. 对象和管道处理
 
-- **`Select-Object`**：选择对象的特定属性。
-- **`Where-Object`**：过滤对象集合，返回满足条件的对象。
-- **`Sort-Object`**：对对象集合进行排序。
+- **Select-Object**：选择对象的特定属性。
+- **Where-Object**：过滤对象集合，返回满足条件的对象。
+- **Sort-Object**：对对象集合进行排序。
 
 ### 9. 注册表操作
 
-- **`Get-Item`**：获取指定路径的注册表项。
-- **`Set-Item`**：设置注册表项的值。
-- **`Remove-Item`**：删除注册表项或值。
+- **Get-Item**：获取指定路径的注册表项。
+- **Set-Item**：设置注册表项的值。
+- **Remove-Item**：删除注册表项或值。
 
 ### 10. 获取系统信息
 
-- **`Get-ComputerInfo`**：获取计算机的系统信息。
-- **`Get-WmiObject`**：访问 Windows 管理工具（WMI）以获取系统的详细信息。
+- **Get-ComputerInfo**：获取计算机的系统信息。
+- **Get-WmiObject**：访问 Windows 管理工具（WMI）以获取系统的详细信息。
 
 ### 11. 环境变量
 
-- **`Get-ChildItem Env:`**：列出所有环境变量。
-- **`Set-Item Env:VariableName`**：设置或修改环境变量。
+- **Get-ChildItem Env:**：列出所有环境变量。
+- **Set-Item Env:VariableName**：设置或修改环境变量。
 
 ### 12. 其他常用命令
 
-- **`Write-Host`**：向控制台输出信息。
-- **`Read-Host`**：从用户获取输入。
-- **`Exit`**：退出 PowerShell 会话。
+- **Write-Host**：向控制台输出信息。
+- **Read-Host**：从用户获取输入。
+- **Exit**：退出 PowerShell 会话。
 
 ### 总结
 
 以上列举的是一些重要且常用的 PowerShell 命令，按照其在日常使用中的重要性进行排序。这些命令可以帮助用户完成许多任务，从基础的文件管理到复杂的系统管理和自动化操作。PowerShell 的强大之处在于它的命令组合能力和对象处理能力，用户可以通过管道将一个命令的输出直接传递给另一个命令，从而实现更复杂的操作。
 # **五.ps1文件语法**
-PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 `.ps1`。PowerShell 脚本使用 PowerShell 语言编写，支持丰富的语法和功能。以下是对 PowerShell 脚本（PSL 文件）语法的详细介绍：
+PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShell 脚本使用 PowerShell 语言编写，支持丰富的语法和功能。以下是对 PowerShell 脚本（PSL 文件）语法的详细介绍：
 
 ### 1. **基本结构**
 
@@ -597,7 +595,7 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 `.ps1`。PowerS
 
 ### 2. 变量
 
-- **定义变量**：使用 `$` 符号定义变量，等号（`=`）用于赋值。
+- **定义变量**：使用 $ 符号定义变量，等号（=）用于赋值。
 ```
 $myVariable = "Hello, World!"
 ```
@@ -613,25 +611,20 @@ Write-Host "The message is: $myVariable"
 
 - **条件语句**：
 
-- **循环语句**：
-    
-    - `for` 循环：
-
-    - `foreach` 循环：
-
-    - `while` 循环：
+- **循环语句**:
+(for 循环  foreach 循环  while 循环)
 
 ### 5. 函数
 
-- **定义函数**：使用 `function` 关键字定义一个函数。
+- **定义函数**：使用 function 关键字定义一个函数。
 
 ### 6. 错误处理
 
-- **`try`、`catch` 和 `finally`**：
+- **try、catch 和 finally**：
 
 ### 7. 模块和导入
 
-- **导入模块**：使用 `Import-Module` 导入 PowerShell 模块。
+- **导入模块**：使用 Import-Module 导入 PowerShell 模块。
 ```
 Import-Module ModuleName
 ```
@@ -647,7 +640,7 @@ Write-Host "This is output to the console"
 
 ### 9. 管道
 
-- PowerShell 支持管道（`|`）将一个命令的输出直接传递给另一个命令。
+- PowerShell 支持管道（|）将一个命令的输出直接传递给另一个命令。
 ```
 Get-Process | Where-Object { $_.CPU -gt 100 }
 ```
@@ -656,12 +649,12 @@ Get-Process | Where-Object { $_.CPU -gt 100 }
 
 - **读取文件**：
 ```
-$content = Get-Content "C:\path\to\file.txt"
+$content = Get-Content 路径
 ```
 
 - **写入文件**：
 ```
-"Hello, World!" | Out-File "C:\path\to\output.txt"
+"Hello, World!" | Out-File 路径
 ```
 
 ### 11. 对象和属性
@@ -674,16 +667,12 @@ $content = Get-Content "C:\path\to\file.txt"
 
 ### 13. 模块的创建与使用
 
-- **创建模块**：将相关的函数和命令放入一个 `.psm1` 文件中。
+- **创建模块**：将相关的函数和命令放入一个 .psm1 文件中。
 - **使用模块**：导入模块并调用模块中的函数。
 
 ### 14. 管道和流
 
 - 管道允许多个命令连接在一起，可以有效处理数据流。
-- **示例**：
-```
-Get-Service | Where-Object { $_.Status -eq 'Running' }
-```
 
 ### 15. 自动完成和参数
 
@@ -708,7 +697,7 @@ PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结�
 5. **Bypass**：不进行任何检查，允许所有脚本运行。
 6. **Undefined**：没有设置策略，PowerShell 会回到默认策略。
 
-可以通过 PowerShell 中的 `Get-ExecutionPolicy` 命令查看当前策略，通过 `Set-ExecutionPolicy` 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。
+可以通过 PowerShell 中的 Get-ExecutionPolicy 命令查看当前策略，通过 Set-ExecutionPolicy 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。
 
 ### 1.2.运行命令检查执行策略
 
@@ -718,7 +707,7 @@ Get-ExecutionPolicy -List
 ```
 ![](/images/CMD_Powershell-images/cmd_powershell.8.png)
 
-### 1.3更改CurrentUser 的策略为RemoteSigned
+### 1.3.更改CurrentUser 的策略为RemoteSigned
 
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -759,3 +748,4 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 **因为一些奇怪的BUG，有些命令的介绍被我删除了  
 关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索**
+
