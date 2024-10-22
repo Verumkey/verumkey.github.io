@@ -1,4 +1,943 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-21T17:07:45+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T11:34:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+
+<h2 id="1cmd">1.CMD</h2>
+
+<p>CMD（命令提示符）是<strong>Windows 操作系统</strong>中的一个<strong>命令行界面</strong>，用于执行各种命令行任务。它的作用主要集中在基本的<strong>系统操作、文件管理、网络配置和诊断任务</strong>等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。</p>
+
+<h3 id="1-文件和目录管理">1. 文件和目录管理</h3>
+
+<p>CMD 最基本的功能是操作文件和文件夹。用户可以通过命令创建、删除、复制和移动文件及文件夹，也可以查看当前目录中的文件列表或更改当前工作目录。文件管理操作在维护和组织系统文件时非常常用。</p>
+
+<h3 id="2-系统诊断和维护">2. 系统诊断和维护</h3>
+
+<p>CMD 提供了许多系统维护相关的命令，用于检查系统健康状态、修复系统文件错误和获取有关计算机硬件和操作系统的信息。这些命令可以帮助用户排查系统问题，如文件损坏、磁盘错误等，确保计算机稳定运行。</p>
+
+<h3 id="3-网络操作与诊断">3. 网络操作与诊断</h3>
+
+<p>通过 CMD，可以执行多种网络操作和测试。用户可以查看计算机的网络配置、测试与其他计算机或服务器的连接、追踪网络路径以及查看当前网络连接的状态。这些网络命令在解决网络连接问题或配置网络设置时非常有用。</p>
+
+<h3 id="4-批处理与自动化">4. 批处理与自动化</h3>
+
+<p>CMD 支持批处理脚本，这使得用户可以自动执行一系列任务。批处理文件可以包含多个命令，按照顺序执行，从而自动化一些重复性的工作任务。批处理文件在系统管理和运维中经常使用，特别是需要定期执行的任务，如备份或清理。</p>
+
+<h3 id="5-进程和服务管理">5. 进程和服务管理</h3>
+
+<p>CMD 提供了管理系统进程和服务的功能。用户可以查看当前正在运行的进程，终止不需要的进程，启动或停止系统服务。管理进程和服务对于监控和维护计算机的正常运行至关重要，特别是在处理性能问题或特定服务故障时。</p>
+
+<h3 id="6-用户和权限管理">6. 用户和权限管理</h3>
+
+<p>CMD 允许用户管理系统账户和权限设置。这包括创建新用户、删除现有用户、更改用户密码以及将用户添加到系统组。这些功能在多用户系统或需要配置权限的环境中非常重要，特别是管理员在管理本地用户时。</p>
+
+<h3 id="7-磁盘和分区管理">7. 磁盘和分区管理</h3>
+
+<p>CMD 具有一些磁盘管理命令，可以帮助用户查看和管理磁盘上的分区、格式化驱动器或检查磁盘的健康状况。这些命令可以在处理存储设备问题或重新组织磁盘空间时发挥作用。</p>
+
+<h3 id="8-计划任务管理">8. 计划任务管理</h3>
+
+<p>用户可以通过 CMD 配置计划任务，自动执行某些命令或脚本。这对定期执行的任务（如备份、更新、清理等）非常有帮助，且可以精确控制任务执行的时间和频率。</p>
+
+<h3 id="9-高级系统设置">9. 高级系统设置</h3>
+
+<p>CMD 提供了某些高级系统设置的访问权限，包括管理启动配置、更新组策略等。系统管理员通常使用这些命令来修改系统行为或执行深度管理任务。</p>
+
+<h3 id="10-调试与故障排查">10. 调试与故障排查</h3>
+
+<p>CMD 还提供了许多用于调试和故障排查的工具。例如，用户可以使用它检查系统的详细状态信息、查看日志，或测试与特定服务器的连接。它是排查问题、修复故障、提高计算机稳定性的重要工具。</p>
+
+<p>CMD 是一个功能丰富的工具，虽然它的界面基于文本，但它可以执行各种任务，尤其适用于系统管理、文件操作、批量任务自动化以及故障排查等场景。在现代 Windows 系统中，虽然 PowerShell 更加功能强大，但 CMD 依然是一个简单易用的工具，适合执行许多日常的系统操作。</p>
+
+<h3 id="cmd-的局限性">CMD 的局限性：</h3>
+
+<p>CMD 虽然功能实用，但与现代工具（如 PowerShell）相比，功能较为基础，缺少编程和高级管理功能。而 PowerShell 不仅能够执行 CMD 的所有功能，还提供了更强大的脚本能力和系统管理功能。</p>
+
+<p>总结：CMD 是一个简单但功能可靠的工具，适合执行文件操作、网络诊断、批处理任务等基本管理任务，但它在现代自动化需求中已经逐渐被 PowerShell 等功能更强的工具所取代。</p>
+
+<p>Windows批处理是使用CMD运行的一系列命令，通常以.bat或.cmd扩展名的文件保存</p>
+
+<h2 id="2powershell">2.Powershell</h2>
+
+<p>PowerShell 是一种基于命令行的任务自动化和配置管理框架，由 Microsoft 开发，专为系统管理员和高级用户设计。它具有以下几个主要功能和作用：</p>
+
+<h3 id="1-命令行接口-cli">1. 命令行接口 (CLI)</h3>
+
+<p>PowerShell 允许你使用命令（称为 <strong>cmdlets</strong>）执行各种任务，如文件操作、网络配置、服务管理等。它比传统的 CMD 提供了更强大的功能和更复杂的脚本处理能力。</p>
+
+<h3 id="2-脚本编写和自动化">2. 脚本编写和自动化</h3>
+
+<p>PowerShell 支持编写脚本文件（通常扩展名为 <code class="language-plaintext highlighter-rouge">.ps1</code>），通过这些脚本，你可以自动化复杂的系统管理任务，比如批量创建用户、部署应用、备份数据等。系统管理员可以使用它自动化日常任务，提高工作效率。</p>
+
+<h3 id="3-对象导向">3. 对象导向</h3>
+
+<p>与传统命令行不同，PowerShell 的输出是对象，而不是纯文本。这意味着可以轻松处理、过滤和操作这些数据，进行更精细的管理。例如，你可以获取系统中的进程，然后筛选或终止特定的进程。</p>
+
+<h3 id="4-跨平台支持">4. 跨平台支持</h3>
+
+<p>虽然 PowerShell 最初是为 Windows 开发的，但现在它已经开源并跨平台支持，可以在 Linux 和 macOS 上运行。这使得它适合管理混合环境的企业或开发者。</p>
+
+<h3 id="5-系统管理和配置">5. 系统管理和配置</h3>
+
+<p>PowerShell 提供了对 Windows 操作系统和应用程序的深入控制，用户可以通过它管理注册表、服务、进程、事件日志、网络配置、文件系统等。管理员也可以使用 PowerShell 执行远程管理。</p>
+
+<h3 id="6-模块扩展和社区支持">6. 模块扩展和社区支持</h3>
+
+<p>PowerShell 支持模块化扩展，你可以安装第三方模块以获得更多功能，像 Azure PowerShell 模块用于管理 Azure 资源。PowerShell 库还提供了大量社区和官方开发的脚本和模块，进一步增强了它的功能。</p>
+
+<h3 id="常见用法">常见用法：</h3>
+
+<ul>
+  <li><strong>启动 PowerShell</strong>：按 <code class="language-plaintext highlighter-rouge">Win+X</code>，选择 “Windows PowerShell” 或 “Windows PowerShell (管理员)”。</li>
+  <li><strong>执行命令</strong>：你可以在 PowerShell 中输入类似 <code class="language-plaintext highlighter-rouge">Get-Process</code> 来获取当前运行的进程，或用 <code class="language-plaintext highlighter-rouge">Get-Help</code> 查询命令的帮助文档。</li>
+</ul>
+
+<p>如果你是开发人员或系统管理员，PowerShell 是非常强大且灵活的工具，适合用于自动化任务和复杂的系统管理。</p>
+
+<h2 id="3区别">3.区别</h2>
+
+<p>PowerShell 和 CMD（命令提示符）是 Windows 操作系统中两种命令行接口，但它们在功能、设计和用途上有显著的区别。（不过都使用命令cls清屏）以下是一些主要差异：</p>
+
+<h3 id="1-命令集和功能">1. 命令集和功能</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 是 Windows 操作系统的传统命令行界面，它使用一组相对简单的命令（如 <code class="language-plaintext highlighter-rouge">dir</code>, <code class="language-plaintext highlighter-rouge">copy</code>, <code class="language-plaintext highlighter-rouge">del</code>）来执行文件管理和一些基本的系统任务。CMD 的命令集较为有限，适合执行简单的任务。</li>
+  <li><strong>PowerShell</strong>：PowerShell 是一个功能强大的任务自动化工具，提供了更为丰富和复杂的命令集（称为 <strong>cmdlets</strong>）。它可以管理文件系统、注册表、进程、服务、事件日志等，远超 CMD 的功能。</li>
+</ul>
+
+<h3 id="2-基于文本-vs-基于对象">2. 基于文本 vs 基于对象</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 的输出都是纯文本。当你运行一个命令时，它会以文本格式输出结果。这意味着进一步处理或解析数据时，需要手动使用字符串操作。</li>
+  <li><strong>PowerShell</strong>：PowerShell 的输出是 <strong>对象</strong>，而不是文本。每个 cmdlet 都输出.NET 对象，可以直接对这些对象进行操作，而不需要将输出转换为文本再解析。这使得数据处理更加简洁和高效。</li>
+</ul>
+
+<h3 id="3-脚本能力">3. 脚本能力</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 支持简单的批处理脚本（以 <code class="language-plaintext highlighter-rouge">.bat</code> 或 <code class="language-plaintext highlighter-rouge">.cmd</code> 为后缀），这些脚本文件可以自动执行一系列命令。然而，CMD 的脚本功能较为基础，缺少现代编程语言中的结构和灵活性。</li>
+  <li><strong>PowerShell</strong>：PowerShell 提供了强大的脚本编写能力，支持复杂的编程结构，如循环、条件语句、函数和错误处理。PowerShell 脚本文件以 <code class="language-plaintext highlighter-rouge">.ps1</code> 作为扩展名，能够编写和自动化非常复杂的任务。</li>
+</ul>
+
+<h3 id="4-跨平台支持-1">4. 跨平台支持</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 是 Windows 专用的命令行界面，只能在 Windows 系统中使用。</li>
+  <li><strong>PowerShell</strong>：PowerShell（从 PowerShell Core 开始）是跨平台的，支持 Windows、Linux 和 macOS。这使得它在管理混合系统环境时非常有用。</li>
+</ul>
+
+<h3 id="5-模块化和扩展性">5. 模块化和扩展性</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 的功能较为固定，没有模块化系统，无法轻松扩展其命令集。</li>
+  <li><strong>PowerShell</strong>：PowerShell 具有模块化体系结构，允许用户加载模块以扩展其功能。用户可以安装官方或社区提供的模块，来支持更多任务，如管理云资源、网络设备等。</li>
+</ul>
+
+<h3 id="6-管理员权限">6. 管理员权限</h3>
+
+<ul>
+  <li><strong>CMD</strong>：虽然 CMD 可以通过“以管理员身份运行”提升权限，但其系统管理功能相对有限。</li>
+  <li><strong>PowerShell</strong>：PowerShell 提供了更深入的系统管理功能，特别是在管理员权限下，可以执行高级任务，如管理注册表、Windows服务、事件日志、进程等。</li>
+</ul>
+
+<h3 id="7-命令语法">7. 命令语法</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 的命令语法比较简单。例如，列出目录中的文件使用 <code class="language-plaintext highlighter-rouge">dir</code>。</li>
+  <li><strong>PowerShell</strong>：PowerShell 的命令语法更像编程语言，通常遵循 <code class="language-plaintext highlighter-rouge">动词-名词</code> 格式。例如，列出目录中的文件使用 <code class="language-plaintext highlighter-rouge">Get-ChildItem</code>。这种命令格式使命令更加直观和一致。</li>
+</ul>
+
+<h3 id="8-集成-net">8. 集成 .NET</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 与 .NET 无关，无法直接利用 .NET 框架的功能。</li>
+  <li><strong>PowerShell</strong>：PowerShell 完全基于 .NET 框架，允许你直接使用 .NET 类和方法，这为编写复杂脚本和自动化任务提供了强大支持。</li>
+</ul>
+
+<h3 id="9-远程管理">9. 远程管理</h3>
+
+<ul>
+  <li><strong>CMD</strong>：CMD 不具备本地化远程管理功能。</li>
+  <li><strong>PowerShell</strong>：PowerShell 具有强大的远程管理能力，支持通过 PowerShell Remoting 连接到远程计算机，执行远程任务，非常适合管理员对大规模服务器或计算机网络进行管理。</li>
+</ul>
+
+<h3 id="什么时候使用-cmd-和-powershell">什么时候使用 CMD 和 PowerShell？</h3>
+
+<ul>
+  <li><strong>CMD</strong>：如果你只是需要执行一些简单的命令，如导航目录、管理文件等，CMD 足够好用，启动速度也较快。</li>
+  <li><strong>PowerShell</strong>：如果你需要自动化复杂的任务，进行系统管理、跨平台开发，或者需要更强大的编程能力，那么 PowerShell 是更好的选择。</li>
+</ul>
+
+<p>总结：</p>
+
+<ul>
+  <li>CMD 适合执行简单的、快速的任务。</li>
+  <li>PowerShell 更现代化、功能更强大，适合需要复杂任务自动化和系统管理的场景。</li>
+</ul>
+
+<p>你可以根据任务的复杂度选择最合适的工具！</p>
+<h2 id="4winr">4.win+R</h2>
+<p>Win+R用于打开 “运行”对话框<br />
+在这个<strong>对话框</strong>中，你可以输入<strong>程序名、文件名、文档名或互联网地址</strong>，<strong>快速启动</strong>相应的<strong>应用程序</strong>或打开<strong>文件</strong><br />
+你可以输入<strong>cmd打开命令提示符</strong>，也可输入<strong>powershell打开终端</strong>
+<img src="/images/CMD_Powershell-images/cmd_powershell.1.png" alt="" /></p>
+<h1 id="一cmd使用示例"><strong>一.CMD使用示例</strong></h1>
+<p>以我目前使用CMD的经验，主要有三个方面的用法<br />
+关于这些命令和bat中的语法，可以先去看看二和三<br />
+下面演示都只用了最基本的命令与语法<br />
+更高级的目前我还没用到</p>
+<h2 id="1查询信息">1.查询信息</h2>
+<p>1.可以用ipconfig查询ip地址
+<img src="/images/CMD_Powershell-images/cmd_powershell.2.png" alt="" />
+2.可以使用ping命令查看是否连接有网络，包括是否是科学环境
+<img src="/images/CMD_Powershell-images/cmd_powershell.3.png" alt="" /></p>
+<h2 id="2使用bat脚本">2.使用bat脚本</h2>
+<p>再次介绍：BAT文件是批处理文件的一种，包含一系列可以在CMD中自动执行的命令，常用于自动化任务<br />
+需求：1.我每次想浏览Jekyll网站时，都需要运行一个命令，以此启动一个本地的开发服务器<br />
+通过运行这个bat文件，就能自动运行其中的命令
+<img src="/images/CMD_Powershell-images/cmd_powershell.4.png" alt="" />
+2.可以写一个py文件的启动器
+<img src="/images/CMD_Powershell-images/cmd_powershell.5.png" alt="" /></p>
+<h2 id="3进行文件间的操作">3.进行文件间的操作</h2>
+<p>1.图中演示了我将ipconfig的输出重定向到了ip.txt
+<img src="/images/CMD_Powershell-images/cmd_powershell.6.png" alt="" /></p>
+<h2 id="4核心概念">4.核心概念</h2>
+<p>1.重定向运算</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; (是左边出内容追加到右边)
+&gt;  (是左边输出内容覆盖到右边)
+&lt;  (是右边出内容追加到左边)
+&lt;&lt; (记忆：箭头哪边，内容向哪边走)
+</code></pre></div></div>
+<p>2.管道运算</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A | B (A的输出作为B的输入)
+</code></pre></div></div>
+<p>3.命令帮助信息查看</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>命令 /?
+</code></pre></div></div>
+<p>使用此命令后会显示命令的用法，和参数的介绍
+<img src="/images/CMD_Powershell-images/cmd_powershell.7.png" alt="" />
+4.更多的操作我目前并没怎么没有用到，如果有机会用到再更新</p>
+
+<h1 id="二cmd命令大全"><strong>二.CMD命令大全</strong></h1>
+
+<p>CMD（命令提示符）有许多命令，用于文件管理、系统诊断、网络操作等。在这里，将根据日常使用的<strong>重要性和频率</strong>对 CMD 命令进行排序和介绍。</p>
+
+<h3 id="1-文件和目录管理命令">1. 文件和目录管理命令</h3>
+
+<p>这些是最常用的命令，用于操作文件和文件夹。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">dir</code></strong>：列出当前目录的文件和子目录。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dir
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">cd</code></strong>：改变当前目录，进入指定路径。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd C:\Users\YourUserName\Documents
+</code></pre></div></div>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">copy</code></strong>：复制文件到指定位置。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>copy source.txt C:\Destination
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">move</code></strong>：移动文件或重命名文件。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>move source.txt C:\Destination
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">del</code></strong>：删除一个或多个文件。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>del file.txt
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">mkdir</code></strong>：创建新目录。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir NewFolder
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">rmdir</code></strong>：删除目录。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rmdir /S /Q C:\Path\To\Folder  # /S 删除子目录和文件, /Q 安静模式
+</code></pre></div>    </div>
+    <h3 id="2-系统诊断和修复命令">2. 系统诊断和修复命令</h3>
+  </li>
+</ul>
+
+<p>这些命令用于检查和修复系统，排查问题。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">sfc /scannow</code></strong>：扫描并修复系统文件的完整性。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sfc /scannow
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">chkdsk</code></strong>：检查磁盘并修复文件系统错误。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chkdsk C: /f
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">tasklist</code></strong>：显示当前运行的所有进程。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasklist
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">taskkill</code></strong>：终止指定进程。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskkill /IM notepad.exe /F
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">systeminfo</code></strong>：显示系统的详细配置信息。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systeminfo
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">ipconfig</code></strong>：显示网络接口的配置信息，如 IP 地址、子网掩码等。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">ping</code></strong>：测试与远程服务器的网络连接。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping google.com
+</code></pre></div>    </div>
+    <h3 id="3-网络命令">3. 网络命令</h3>
+  </li>
+</ul>
+
+<p>这些命令用于诊断网络连接和配置网络设置。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">netstat</code></strong>：显示当前的网络连接、端口和协议。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -an
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">tracert</code></strong>：显示到目标主机的路由路径。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tracert google.com
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">nslookup</code></strong>：查询域名对应的 IP 地址或检查 DNS 解析问题。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nslookup google.com
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">net use</code></strong>：映射或断开网络驱动器。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net use Z: \\server\sharedfolder
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">netsh</code></strong>：管理网络配置（如 IP 设置、防火墙规则）。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netsh int ip set address "Local Area Connection" static 192.168.1.100 255.255.255.0 192.168.1.1
+</code></pre></div>    </div>
+    <h3 id="4-批处理命令">4. 批处理命令</h3>
+  </li>
+</ul>
+
+<p>这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">echo</code></strong>：显示消息或启用/禁用命令回显。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">set</code></strong>：设置或显示环境变量。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set PATH
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">pause</code></strong>：在批处理文件中暂停命令执行，等待用户按键。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">if</code></strong>：条件语句，判断是否执行某些命令。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if exist file.txt echo File exists
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">for</code></strong>：循环处理文件或命令。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">goto</code></strong>：跳转到脚本中的某个标签，通常和 <code class="language-plaintext highlighter-rouge">if</code> 配合使用。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start
+</code></pre></div>    </div>
+    <h3 id="5-用户和权限管理">5. 用户和权限管理</h3>
+  </li>
+</ul>
+
+<p>这些命令用于管理用户账户和权限。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">net user</code></strong>：管理用户账户（创建、删除、修改用户）。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net user username password /add
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">net localgroup</code></strong>：管理本地用户组。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net localgroup administrators username /add
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">runas</code></strong>：以其他用户身份执行命令。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>runas /user:Administrator cmd
+</code></pre></div>    </div>
+    <h3 id="6-磁盘管理命令">6. 磁盘管理命令</h3>
+  </li>
+</ul>
+
+<p>这些命令用于管理硬盘驱动器和分区。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">diskpart</code></strong>：管理磁盘分区（创建、删除、调整大小）。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskpart
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">format</code></strong>：格式化磁盘或分区。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>format D:
+</code></pre></div>    </div>
+    <h3 id="7-进程和服务管理">7. 进程和服务管理</h3>
+  </li>
+</ul>
+
+<p>这些命令用于查看、终止进程或管理系统服务。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">sc</code></strong>：管理系统服务（启动、停止、查询服务状态）。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sc query wuauserv
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">shutdown</code></strong>：关闭或重启计算机。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
+</code></pre></div>    </div>
+    <h3 id="8-时间与计划任务管理">8. 时间与计划任务管理</h3>
+  </li>
+</ul>
+
+<p>这些命令用于与系统时间、计划任务有关的操作。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">time</code></strong>：显示或设置系统时间。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>time
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">schtasks</code></strong>：管理计划任务，自动执行任务。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>schtasks /create /sc daily /tn "Backup" /tr "backup.bat" /st 23:00
+</code></pre></div>    </div>
+    <h3 id="9-高级管理命令">9. 高级管理命令</h3>
+  </li>
+</ul>
+
+<p>这些命令用于执行更高级的管理操作，通常由系统管理员使用。</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">bcdedit</code></strong>：管理启动配置数据（修改启动选项）。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bcdedit /set {bootmgr} timeout 30
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">gpupdate</code></strong>：更新组策略设置。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpupdate /force
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">wmic</code></strong>：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wmic process get name
+</code></pre></div>    </div>
+    <h3 id="总结">总结：</h3>
+  </li>
+</ul>
+
+<ol>
+  <li><strong>文件和目录管理</strong>：如 <code class="language-plaintext highlighter-rouge">dir</code>、<code class="language-plaintext highlighter-rouge">cd</code>、<code class="language-plaintext highlighter-rouge">copy</code>、<code class="language-plaintext highlighter-rouge">del</code> 等，是最基础的操作。</li>
+  <li><strong>系统诊断和修复</strong>：如 <code class="language-plaintext highlighter-rouge">sfc</code>、<code class="language-plaintext highlighter-rouge">chkdsk</code>、<code class="language-plaintext highlighter-rouge">ipconfig</code> 等，用于维护和修复系统。</li>
+  <li><strong>网络操作</strong>：如 <code class="language-plaintext highlighter-rouge">ping</code>、<code class="language-plaintext highlighter-rouge">netstat</code>、<code class="language-plaintext highlighter-rouge">tracert</code>，对于网络调试和故障排查非常有用。</li>
+  <li><strong>批处理和自动化</strong>：如 <code class="language-plaintext highlighter-rouge">echo</code>、<code class="language-plaintext highlighter-rouge">for</code>、<code class="language-plaintext highlighter-rouge">if</code>，用于编写自动化脚本。</li>
+  <li><strong>用户和权限管理</strong>：如 <code class="language-plaintext highlighter-rouge">net user</code>、<code class="language-plaintext highlighter-rouge">runas</code>，用于管理账户和权限。
+    <h1 id="三bat文件语法"><strong>三.bat文件语法</strong></h1>
+    <p>批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 <code class="language-plaintext highlighter-rouge">.bat</code> 或 <code class="language-plaintext highlighter-rouge">.cmd</code> 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。</p>
+  </li>
+</ol>
+
+<h3 id="1-基本语法结构">1. 基本语法结构</h3>
+
+<p>BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。</p>
+
+<ul>
+  <li><strong>注释：</strong> 使用 <code class="language-plaintext highlighter-rouge">REM</code> 或 <code class="language-plaintext highlighter-rouge">::</code> 来注释代码，注释行不会执行。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REM This is a comment :: This is also a comment
+</code></pre></div>    </div>
+  </li>
+  <li><strong>显示消息：</strong> 使用 <code class="language-plaintext highlighter-rouge">echo</code> 打印消息或控制命令回显。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
+</code></pre></div>    </div>
+  </li>
+  <li><strong>变量：</strong> 使用 <code class="language-plaintext highlighter-rouge">set</code> 定义和访问变量。变量名用 <code class="language-plaintext highlighter-rouge">%</code> 包围来引用。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set myVar=123 echo %myVar%
+</code></pre></div>    </div>
+  </li>
+  <li><strong>禁用回显：</strong> 在脚本开头使用 <code class="language-plaintext highlighter-rouge">@echo off</code> 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+</code></pre></div>    </div>
+    <h3 id="2-流程控制语法">2. 流程控制语法</h3>
+  </li>
+</ul>
+
+<p>BAT 文件支持基本的流程控制语法，如条件语句、循环等。</p>
+
+<h4 id="条件语句-if">条件语句 (if)</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">if</code> 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。
+    <ul>
+      <li>存在判断：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if exist file.txt echo File exists
+</code></pre></div>        </div>
+      </li>
+      <li>字符串比较：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if "%myVar%"=="123" echo Variable is 123
+</code></pre></div>        </div>
+      </li>
+      <li>数值比较：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if %myVar% GEQ 100 echo Value is greater than or equal to 100
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="循环语句-for">循环语句 (for)</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">for</code> 循环用于遍历文件、目录或变量集合。
+    <ul>
+      <li>遍历文件：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
+</code></pre></div>        </div>
+      </li>
+      <li>遍历数字范围：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for /L %%i in (1, 1, 10) do echo %%i
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-输入输出">3. 输入输出</h3>
+
+<ul>
+  <li><strong>用户输入：</strong> 使用 <code class="language-plaintext highlighter-rouge">set /p</code> 提示用户输入，并将输入存储到变量中。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set /p userInput=Enter your name:  echo Hello, %userInput%
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>重定向输出：</strong> 使用 <code class="language-plaintext highlighter-rouge">&gt;</code>、<code class="language-plaintext highlighter-rouge">&gt;&gt;</code> 将命令的输出重定向到文件。</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&gt;</code> 将输出重定向到文件并覆盖该文件的内容。
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo This is a test &gt; output.txt
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">&gt;&gt;</code> 将输出附加到文件末尾。
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Another line &gt;&gt; output.txt
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-子程序与跳转">4. 子程序与跳转</h3>
+
+<ul>
+  <li><strong>标签 (<code class="language-plaintext highlighter-rouge">:</code>)</strong> 和 <strong>跳转 (<code class="language-plaintext highlighter-rouge">goto</code>)</strong>：可以通过标签创建脚本的不同部分，并使用 <code class="language-plaintext highlighter-rouge">goto</code> 跳转到某个标签。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start  :start echo This is the start
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">call</code> 语句：</strong> 用于调用另一个批处理文件或调用当前脚本的子例程。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>call otherScript.bat
+</code></pre></div>    </div>
+    <h3 id="5-错误处理">5. 错误处理</h3>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">errorlevel</code></strong>：每个命令执行后会设置一个返回码，称为 <code class="language-plaintext highlighter-rouge">errorlevel</code>。可以通过检查 <code class="language-plaintext highlighter-rouge">errorlevel</code> 来执行错误处理。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if %errorlevel% neq 0 echo An error occurred
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="6-批处理文件常见参数">6. 批处理文件常见参数</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">%1</code> 到 <code class="language-plaintext highlighter-rouge">%9</code></strong>：批处理文件可以接收命令行参数，使用 <code class="language-plaintext highlighter-rouge">%1</code> 访问第一个参数，<code class="language-plaintext highlighter-rouge">%2</code> 访问第二个参数，依次类推。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo First parameter is %1
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">shift</code></strong>：用于左移参数，<code class="language-plaintext highlighter-rouge">%2</code> 变为 <code class="language-plaintext highlighter-rouge">%1</code>，<code class="language-plaintext highlighter-rouge">%3</code> 变为 <code class="language-plaintext highlighter-rouge">%2</code>。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shift
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="7-批处理文件常用命令">7. 批处理文件常用命令</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">pause</code></strong>：暂停脚本执行，等待用户按任意键继续。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
+</code></pre></div>    </div>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">exit</code></strong>：终止批处理文件的执行，并可选择返回错误码。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit /b 0
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="8-高级功能">8. 高级功能</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">setlocal</code> 和 <code class="language-plaintext highlighter-rouge">endlocal</code></strong>：用于限制变量的作用范围，使得在 <code class="language-plaintext highlighter-rouge">setlocal</code> 和 <code class="language-plaintext highlighter-rouge">endlocal</code> 之间定义的变量在该范围外无效。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setlocal set myVar=123 endlocal
+</code></pre></div>    </div>
+  </li>
+  <li><strong>环境变量操作</strong>：批处理文件可以访问系统环境变量，如 <code class="language-plaintext highlighter-rouge">PATH</code>、<code class="language-plaintext highlighter-rouge">TEMP</code> 等，并进行修改或使用。</li>
+</ul>
+
+<h3 id="9-批处理文件的应用场景">9. 批处理文件的应用场景</h3>
+
+<ul>
+  <li><strong>自动化任务</strong>：定期执行备份、清理日志文件或其他维护任务。</li>
+  <li><strong>批量操作</strong>：批处理文件可以批量处理大量文件，如重命名、复制或移动。</li>
+  <li><strong>系统配置和设置</strong>：设置系统变量、安装软件或配置网络等。</li>
+</ul>
+
+<h3 id="总结-1">总结：</h3>
+
+<p>BAT 文件语法虽然简单，但在系统自动化和维护中非常有用。它结合了条件语句、循环、变量操作等功能，可以编写复杂的脚本来处理各种任务。如果需要实现更复杂的功能或与外部工具交互，批处理脚本也可以作为基础，通过调用其他程序实现更强大的自动化解决方案。</p>
+<h1 id="四powershell命令大全"><strong>四.Powershell命令大全</strong></h1>
+<p>PowerShell 是一个功能强大的命令行界面和脚本语言，支持多种命令（cmdlets），这些命令用于系统管理、文件操作、网络管理等。以下是按重要性排序的一些常用 PowerShell 命令及其简要说明：</p>
+
+<h3 id="1-基本命令">1. 基本命令</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Command</code></strong>：获取可用的所有命令及其详细信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Help</code></strong>：显示有关 PowerShell 命令和语法的帮助信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Process</code></strong>：获取当前正在运行的进程列表。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Service</code></strong>：获取当前计算机上所有服务的状态。</li>
+</ul>
+
+<h3 id="2-文件和目录管理">2. 文件和目录管理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-ChildItem</code></strong>：列出目录中的文件和子目录（相当于 CMD 中的 <code class="language-plaintext highlighter-rouge">dir</code>）。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Set-Location</code></strong>：改变当前工作目录（相当于 CMD 中的 <code class="language-plaintext highlighter-rouge">cd</code>）。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Copy-Item</code></strong>：复制文件或目录。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Move-Item</code></strong>：移动文件或目录。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Remove-Item</code></strong>：删除文件或目录。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">New-Item</code></strong>：创建新文件或目录。</li>
+</ul>
+
+<h3 id="3-系统管理">3. 系统管理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-EventLog</code></strong>：获取系统事件日志。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Clear-Host</code></strong>：清除 PowerShell 窗口中的所有内容。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-ExecutionPolicy</code></strong>：查看当前的脚本执行策略。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Set-ExecutionPolicy</code></strong>：设置 PowerShell 脚本的执行策略。</li>
+</ul>
+
+<h3 id="4-网络管理">4. 网络管理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Test-Connection</code></strong>：测试与远程主机的网络连接（相当于 <code class="language-plaintext highlighter-rouge">ping</code> 命令）。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-NetAdapter</code></strong>：获取网络适配器的详细信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-NetIPAddress</code></strong>：获取 IP 地址配置。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">New-NetFirewallRule</code></strong>：创建新的防火墙规则。</li>
+</ul>
+
+<h3 id="5-用户和权限管理-1">5. 用户和权限管理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-LocalUser</code></strong>：列出本地用户账户。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">New-LocalUser</code></strong>：创建新的本地用户账户。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Remove-LocalUser</code></strong>：删除本地用户账户。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Add-LocalGroupMember</code></strong>：将用户添加到本地组中。</li>
+</ul>
+
+<h3 id="6-服务和进程管理">6. 服务和进程管理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Start-Service</code></strong>：启动指定服务。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Stop-Service</code></strong>：停止指定服务。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Restart-Service</code></strong>：重启指定服务。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Stop-Process</code></strong>：终止指定进程。</li>
+</ul>
+
+<h3 id="7-脚本和自动化">7. 脚本和自动化</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Invoke-Command</code></strong>：在本地或远程计算机上执行命令或脚本块。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Start-Job</code></strong>：启动后台作业。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Job</code></strong>：获取后台作业的信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Receive-Job</code></strong>：接收后台作业的输出。</li>
+</ul>
+
+<h3 id="8-对象和管道处理">8. 对象和管道处理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Select-Object</code></strong>：选择对象的特定属性。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Where-Object</code></strong>：过滤对象集合，返回满足条件的对象。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Sort-Object</code></strong>：对对象集合进行排序。</li>
+</ul>
+
+<h3 id="9-注册表操作">9. 注册表操作</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-Item</code></strong>：获取指定路径的注册表项。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Set-Item</code></strong>：设置注册表项的值。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Remove-Item</code></strong>：删除注册表项或值。</li>
+</ul>
+
+<h3 id="10-获取系统信息">10. 获取系统信息</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-ComputerInfo</code></strong>：获取计算机的系统信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-WmiObject</code></strong>：访问 Windows 管理工具（WMI）以获取系统的详细信息。</li>
+</ul>
+
+<h3 id="11-环境变量">11. 环境变量</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Get-ChildItem Env:</code></strong>：列出所有环境变量。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Set-Item Env:VariableName</code></strong>：设置或修改环境变量。</li>
+</ul>
+
+<h3 id="12-其他常用命令">12. 其他常用命令</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Write-Host</code></strong>：向控制台输出信息。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Read-Host</code></strong>：从用户获取输入。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Exit</code></strong>：退出 PowerShell 会话。</li>
+</ul>
+
+<h3 id="总结-2">总结</h3>
+
+<p>以上列举的是一些重要且常用的 PowerShell 命令，按照其在日常使用中的重要性进行排序。这些命令可以帮助用户完成许多任务，从基础的文件管理到复杂的系统管理和自动化操作。PowerShell 的强大之处在于它的命令组合能力和对象处理能力，用户可以通过管道将一个命令的输出直接传递给另一个命令，从而实现更复杂的操作。</p>
+<h1 id="五ysl文件语法"><strong>五.ysl文件语法</strong></h1>
+<p>PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 <code class="language-plaintext highlighter-rouge">.ps1</code>。PowerShell 脚本使用 PowerShell 语言编写，支持丰富的语法和功能。以下是对 PowerShell 脚本（PSL 文件）语法的详细介绍：</p>
+
+<h3 id="1-基本结构">1. <strong>基本结构</strong></h3>
+
+<ul>
+  <li><strong>脚本注释</strong>：
+    <ul>
+      <li>单行注释使用 <code class="language-plaintext highlighter-rouge">#</code> 符号：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is a comment`
+</code></pre></div>        </div>
+      </li>
+      <li>多行注释使用 <code class="language-plaintext highlighter-rouge">&lt;#</code> 和 <code class="language-plaintext highlighter-rouge">#&gt;</code>：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;# This is a multi-line comment It can span multiple lines #&gt;
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-变量">2. 变量</h3>
+
+<ul>
+  <li><strong>定义变量</strong>：使用 <code class="language-plaintext highlighter-rouge">$</code> 符号定义变量，等号（<code class="language-plaintext highlighter-rouge">=</code>）用于赋值。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$myVariable = "Hello, World!"
+</code></pre></div>    </div>
+  </li>
+  <li><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "The message is: $myVariable"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="3-数据类型">3. 数据类型</h3>
+
+<ul>
+  <li>PowerShell 支持多种数据类型，包括字符串、整数、数组、哈希表等。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$stringVar = "This is a string" $intVar = 42 $arrayVar = @(1, 2, 3, 4) $hashTable = @{"key1" = "value1"; "key2" = "value2"}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="4-流程控制">4. 流程控制</h3>
+
+<ul>
+  <li><strong>条件语句</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ($condition) {     # Do something } elseif ($otherCondition) {     # Do something else } else {     # Do another thing }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>循环语句</strong>：</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">for</code> 循环：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for ($i = 0; $i -lt 10; $i++) {     Write-Host $i }
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">foreach</code> 循环：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foreach ($item in $arrayVar) {     Write-Host $item }
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">while</code> 循环：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$counter = 0 while ($counter -lt 5) {     Write-Host $counter     $counter++ }
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-函数">5. 函数</h3>
+
+<ul>
+  <li><strong>定义函数</strong>：使用 <code class="language-plaintext highlighter-rouge">function</code> 关键字定义一个函数。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function MyFunction {     param ($param1, $param2)     Write-Host "Parameter 1 is $param1"     Write-Host "Parameter 2 is $param2" }  MyFunction "Value1" "Value2"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="6-错误处理">6. 错误处理</h3>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">try</code>、<code class="language-plaintext highlighter-rouge">catch</code> 和 <code class="language-plaintext highlighter-rouge">finally</code></strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>try {     # Code that might throw an exception } catch {     Write-Host "An error occurred: $_" } finally {     # Code that runs regardless of success or failure }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="7-模块和导入">7. 模块和导入</h3>
+
+<ul>
+  <li><strong>导入模块</strong>：使用 <code class="language-plaintext highlighter-rouge">Import-Module</code> 导入 PowerShell 模块。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Import-Module ModuleName
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="8-输入和输出">8. 输入和输出</h3>
+
+<ul>
+  <li><strong>输出到控制台</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "This is output to the console"
+</code></pre></div>    </div>
+  </li>
+  <li><strong>获取用户输入</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$userInput = Read-Host "Enter your name" Write-Host "Hello, $userInput!"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="9-管道">9. 管道</h3>
+
+<ul>
+  <li>PowerShell 支持管道（<code class="language-plaintext highlighter-rouge">|</code>）将一个命令的输出直接传递给另一个命令。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Process | Where-Object { $_.CPU -gt 100 }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="10-文件操作">10. 文件操作</h3>
+
+<ul>
+  <li><strong>读取文件</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$content = Get-Content "C:\path\to\file.txt"
+</code></pre></div>    </div>
+  </li>
+  <li><strong>写入文件</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Hello, World!" | Out-File "C:\path\to\output.txt"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="11-对象和属性">11. 对象和属性</h3>
+
+<ul>
+  <li>PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$process = Get-Process | Where-Object { $_.Name -eq "powershell" } Write-Host "Process ID: $($process.Id)"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="12-自动化和计划任务">12. 自动化和计划任务</h3>
+
+<ul>
+  <li><strong>创建计划任务</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "C:\path\to\script.ps1" $trigger = New-ScheduledTaskTrigger -At 7am -Daily Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "MyTask"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="13-模块的创建与使用">13. 模块的创建与使用</h3>
+
+<ul>
+  <li><strong>创建模块</strong>：将相关的函数和命令放入一个 <code class="language-plaintext highlighter-rouge">.psm1</code> 文件中。</li>
+  <li><strong>使用模块</strong>：导入模块并调用模块中的函数。</li>
+</ul>
+
+<h3 id="14-管道和流">14. 管道和流</h3>
+
+<ul>
+  <li>管道允许多个命令连接在一起，可以有效处理数据流。</li>
+  <li><strong>示例</strong>：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Service | Where-Object { $_.Status -eq 'Running' }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="15-自动完成和参数">15. 自动完成和参数</h3>
+
+<ul>
+  <li>PowerShell 支持命令的自动完成功能，并可以使用参数简化命令的输入。</li>
+</ul>
+
+<h3 id="总结-3">总结</h3>
+
+<p>PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结构，使其能够用于系统管理、自动化任务、文件处理等多种场景。通过合理使用这些语法结构，用户可以编写高效、可维护的脚本来完成复杂的操作。</p>
+
+<h1 id="六powershell使用示例"><strong>六.Powershell使用示例</strong></h1>
+
+<h2 id="1配置环境">1.配置环境</h2>
+
+<h3 id="11执行策略介绍">1.1.执行策略介绍</h3>
+
+<p>执行策略（Execution Policy）是 PowerShell 中的一个安全功能，用于控制脚本和配置文件的运行权限。它通过限制脚本的执行来保护系统不受潜在恶意代码的影响。主要的执行策略有：</p>
+
+<ol>
+  <li><strong>Restricted</strong>：默认策略，不允许任何脚本运行。</li>
+  <li><strong>AllSigned</strong>：只允许运行由受信任的发布者签名的脚本。</li>
+  <li><strong>RemoteSigned</strong>：本地脚本可以运行，远程脚本必须签名。</li>
+  <li><strong>Unrestricted</strong>：允许所有脚本运行，但在执行远程脚本时会有警告。</li>
+  <li><strong>Bypass</strong>：不进行任何检查，允许所有脚本运行。</li>
+  <li><strong>Undefined</strong>：没有设置策略，PowerShell 会回到默认策略。</li>
+</ol>
+
+<p>可以通过 PowerShell 中的 <code class="language-plaintext highlighter-rouge">Get-ExecutionPolicy</code> 命令查看当前策略，通过 <code class="language-plaintext highlighter-rouge">Set-ExecutionPolicy</code> 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。</p>
+
+<h3 id="12运行命令检查执行策略">1.2.运行命令检查执行策略</h3>
+
+<p>我这已经提前更改过了，初始是限制的</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-ExecutionPolicy -List
+</code></pre></div></div>
+<p><img src="/images/CMD_Powershell-images/cmd_powershell.8.png" alt="" /></p>
+
+<h3 id="13更改currentuser-的策略为remotesigned">1.3更改CurrentUser 的策略为RemoteSigned</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+</code></pre></div></div>
+
+<h2 id="2批量重命名文件名">2.批量重命名文件名</h2>
+
+<h3 id="21需求">2.1.需求</h3>
+
+<p>我需要对一个目录下的所有png图片按照时间顺序进行指定格式的重命名</p>
+
+<h3 id="22编写代码">2.2.编写代码</h3>
+
+<p>文件后缀是ps1,不要写成psl了，数字1与字母l很像
+<img src="/images/CMD_Powershell-images/cmd_powershell.9.png" alt="" /></p>
+
+<h3 id="23在终端中运行">2.3.在终端中运行</h3>
+
+<p>需处理的文件
+<img src="/images/CMD_Powershell-images/cmd_powershell.10.png" alt="" />
+运行命令
+<img src="/images/CMD_Powershell-images/cmd_powershell.11.png" alt="" />
+完成处理
+<img src="/images/CMD_Powershell-images/cmd_powershell.12.png" alt="" /></p>
+
+<h3 id="24python实现相同操作">2.4.python实现相同操作</h3>
+
+<p><img src="/images/CMD_Powershell-images/cmd_powershell.13.png" alt="" />
+<img src="/images/CMD_Powershell-images/cmd_powershell.14.png" alt="" /></p>
+
+<h2 id="3注意事项">3.注意事项</h2>
+
+<h3 id="1文件名命名最好不要用中文和空格">1.文件名命名最好不要用中文和空格</h3>
+
+<p>在<strong>文件路径</strong>中使用<strong>中文字符和空格</strong>可能导致路径<strong>解析错误</strong>，特别是在某些编程语言和工具中。这可能导致文件<strong>无法找到或命令无法执行</strong>，增加了开发和调试的复杂性。因此，使用英文字符和下划线等替代方式更为稳妥</p>
+
+<h1 id="七完结"><strong>七.完结</strong></h1>
+
+<p><strong>关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="CMD" /><category term="Powershell" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用CMD与Powershell]]></summary></entry><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
 <p>Git 是一个分布式版本控制系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
 
 <ol>
