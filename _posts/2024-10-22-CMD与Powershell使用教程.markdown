@@ -218,28 +218,26 @@ dir
 ```
 - **cd**：改变当前目录，进入指定路径。
 ```
-cd C:\Users\YourUserName\Documents
+cd 路径
 ```
 - **copy**：复制文件到指定位置。
 ```
-copy source.txt C:\Destination
+copy source.txt 路径
 ```
 - **move**：移动文件或重命名文件。
 ```
-move source.txt C:\Destination
+move source.txt 路径
 ```
 - **del**：删除一个或多个文件。
 ```
 del file.txt
 ```
-- **m-k-d-i-r**：创建新目录。
+- **mkdir**：创建新目录。
 ```
 mkdir NewFolder
 ```
-- **r-m-d-i-r**：删除目录。
-```
-rmdir /S /Q C:\Path\To\Folder  # /S 删除子目录和文件, /Q 安静模式
-```
+- **rmdir**：删除目录。
+
 ### 2. 系统诊断和修复命令
 
 这些命令用于检查和修复系统，排查问题。
