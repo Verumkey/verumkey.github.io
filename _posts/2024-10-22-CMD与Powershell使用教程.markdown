@@ -581,17 +581,11 @@ PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结�
 ### 1.2.运行命令检查执行策略
 
 我这已经提前更改过了，初始是限制的
-```bash
-Get-ExecutionPolicy -List
-```
+
 ![](/images/CMD_Powershell-images/cmd_powershell.8.png)
 
 ### 1.3.更改执行策略
 更改CurrentUser 的策略为RemoteSigned
-
-```bash
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
 
 ## 2.批量重命名文件名
 
