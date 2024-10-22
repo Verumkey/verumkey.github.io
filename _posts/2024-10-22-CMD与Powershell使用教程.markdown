@@ -213,19 +213,33 @@ CMD（命令提示符）有许多命令，用于文件管理、系统诊断、�
 这些是最常用的命令，用于操作文件和文件夹。
 
 - **dir**：列出当前目录的文件和子目录。
-
+```
+dir
+```
 - **cd**：改变当前目录，进入指定路径。
-
+```
+cd C:\Users\YourUserName\Documents
+```
 - **copy**：复制文件到指定位置。
-
+```
+copy source.txt C:\Destination
+```
 - **move**：移动文件或重命名文件。
-
+```
+move source.txt C:\Destination
+```
 - **del**：删除一个或多个文件。
-
+```
+del file.txt
+```
 - **m-k-d-i-r**：创建新目录。
-
+```
+mkdir NewFolder
+```
 - **r-m-d-i-r**：删除目录。
-
+```
+rmdir /S /Q C:\Path\To\Folder  # /S 删除子目录和文件, /Q 安静模式
+```
 ### 2. 系统诊断和修复命令
 
 这些命令用于检查和修复系统，排查问题。
