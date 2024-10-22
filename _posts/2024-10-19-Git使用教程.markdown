@@ -26,15 +26,15 @@ Git 是一个分布式版本控制系统，用于管理项目中的代码变化�
 - **Push (推送)**：将本地仓库的更改上传到远程仓库。
 
 ### 常用命令：
-- `git init`：初始化一个新的 Git 仓库。
-- `git clone`：克隆远程仓库到本地。
-- `git status`：查看当前工作区的状态（有哪些改动）。
-- `git add`：将改动添加到暂存区。
-- `git commit -m "消息"`：提交暂存区的改动，并添加描述信息。
-- `git push`：将本地提交推送到远程仓库。
-- `git pull`：从远程仓库拉取更新并合并到本地分支。
-- `git branch`：查看所有分支，或创建、删除分支。
-- `git checkout`：切换到另一个分支。
+- git init：初始化一个新的 Git 仓库。
+- git clone：克隆远程仓库到本地。
+- git status：查看当前工作区的状态（有哪些改动）。
+- git add：将改动添加到暂存区。
+- git commit -m "消息"：提交暂存区的改动，并添加描述信息。
+- git push：将本地提交推送到远程仓库。
+- git pull：从远程仓库拉取更新并合并到本地分支。
+- git branch：查看所有分支，或创建、删除分支。
+- git checkout：切换到另一个分支。
 通过 Git，开发者能够更好地管理代码版本，尤其是在复杂项目中，它可以极大地提高效率并减少冲突。
 
 # **二.配置Git环境**
@@ -107,25 +107,25 @@ SSH（**Secure Shell**）是一种用于通过不安全的网络安全登录到�
 
 #### SSH 的主要功能：
 - **远程登录**：可以在本地计算机上通过终端控制远程服务器。
-- **文件传输**：通过 `scp` 或 `sftp` 等方式在本地和远程机器之间安全地传输文件。
+- **文件传输**：通过 scp 或 sftp 等方式在本地和远程机器之间安全地传输文件。
 - **端口转发**：通过 SSH 隧道实现的端口转发功能，可以把本地端口重定向到远程机器上的端口，用于保护其他通信协议的安全。
 
 #### OpenSSH 是什么？
 **OpenSSH** 是 SSH 协议的一个开源实现，广泛应用于各类操作系统中（特别是类 Unix 系统，如 Linux 和 macOS）。它不仅支持 SSH 协议本身，还包括一些相关的工具，例如：
 
-- `ssh`：用于远程登录。
-- `scp` 和 `sftp`：用于安全地传输文件。
-- `ssh-agent` 和 `ssh-add`：用于管理 SSH 密钥和自动登录。
-- `sshd`：SSH 服务器程序，允许远程登录到本地系统。
+- ssh：用于远程登录。
+- scp 和 sftp：用于安全地传输文件。
+- ssh-agent 和 ssh-add：用于管理 SSH 密钥和自动登录。
+- sshd：SSH 服务器程序，允许远程登录到本地系统。
 
 OpenSSH 是目前最常用的 SSH 实现之一，由于其开源和安全性，它在服务器管理和远程开发中被广泛使用。
 
 在你的 Git 安装过程中，选择使用 **OpenSSH** 意味着 Git 将使用 SSH 协议来执行安全的远程操作，比如在 Git 仓库中通过 SSH 进行拉取或推送操作。
 
 图中有两个选择：
-1. **Use bundled OpenSSH**（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 `ssh.exe`，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。
+1. **Use bundled OpenSSH**（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 ssh.exe，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。
     
-2. **Use external OpenSSH**（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 `ssh.exe`，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
+2. **Use external OpenSSH**（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 ssh.exe，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
 一般选择**默认**即可
 7.![](/images/git-images/git.10.png)8.![](/images/git-images/git.11.png)
 9.![](/images/git-images/git.12.png)10.![](/images/git-images/git.14.png)
@@ -156,47 +156,47 @@ git config --global user.email
 ## Vim 编辑器常用命令
 ### 1. 模式切换
 
-- `i`：进入插入模式（开始编辑文本）。
-- `Esc`：退出插入模式，回到普通模式。
-- `:q`：退出 Vim。
-- `:w`：保存文件。
-- `:wq`：保存并退出。
-- `:q!`：强制退出（不保存修改）。
-- `:x`：保存并退出（与 `:wq` 类似）。
+- i：进入插入模式（开始编辑文本）。
+- Esc：退出插入模式，回到普通模式。
+- :q：退出 Vim。
+- :w：保存文件。
+- :wq：保存并退出。
+- :q!：强制退出（不保存修改）。
+- :x：保存并退出（与 :wq 类似）。
 
 ### 2. 文件操作
 
-- `vim filename`：打开文件，若文件不存在则新建文件。
-- `:e filename`：打开其他文件。
-- `:w filename`：另存为指定文件名。
+- vim filename：打开文件，若文件不存在则新建文件。
+- :e filename：打开其他文件。
+- :w filename：另存为指定文件名。
 
 ### 3. 移动光标
 
-- `h`：向左移动一个字符。
-- `j`：向下移动一行。
-- `k`：向上移动一行。
-- `l`：向右移动一个字符。
-- `gg`：移动到文件开头。
-- `G`：移动到文件末尾。
-- `w`：移动到下一个单词的开头。
-- `b`：移动到上一个单词的开头。
+- h：向左移动一个字符。
+- j：向下移动一行。
+- k：向上移动一行。
+- l：向右移动一个字符。
+- gg：移动到文件开头。
+- G：移动到文件末尾。
+- w：移动到下一个单词的开头。
+- b：移动到上一个单词的开头。
 
 ### 4. 文本编辑
 
-- `x`：删除光标下的字符。
-- `dd`：删除当前行。
-- `yy`：复制当前行。
-- `p`：粘贴。
-- `u`：撤销上一步操作。
-- `Ctrl + r`：重做上一步操作。
+- x：删除光标下的字符。
+- dd：删除当前行。
+- yy：复制当前行。
+- p：粘贴。
+- u：撤销上一步操作。
+- Ctrl + r：重做上一步操作。
 
 ### 5. 查找和替换
 
-- `/keyword`：查找 `keyword`。
-- `n`：跳到下一个匹配项。
-- `N`：跳到上一个匹配项。
-- `:%s/old/new/g`：全局替换 `old` 为 `new`。
-- `:n,m s/old/new/g`：从第 `n` 行到第 `m` 行替换 `old` 为 `new`。
+- /keyword：查找 keyword。
+- n：跳到下一个匹配项。
+- N：跳到上一个匹配项。
+- :%s/old/new/g：全局替换 old 为 new。
+- :n,m s/old/new/g：从第 n 行到第 m 行替换 old 为 new。
 
 ---
 
@@ -204,50 +204,50 @@ git config --global user.email
 
 ### 1. 基础命令
 
-- `Ctrl + P` / `Cmd + P`：快速打开文件（输入文件名）。
-- `Ctrl + N` / `Cmd + N`：新建文件。
-- `Ctrl + S` / `Cmd + S`：保存文件。
-- `Ctrl + Shift + S` / `Cmd + Shift + S`：另存为。
-- `Ctrl + W` / `Cmd + W`：关闭当前文件。
-- `Ctrl + Shift + P` / `Cmd + Shift + P`：打开命令面板。
+- Ctrl + P / Cmd + P：快速打开文件（输入文件名）。
+- Ctrl + N / Cmd + N：新建文件。
+- Ctrl + S / Cmd + S：保存文件。
+- Ctrl + Shift + S / Cmd + Shift + S：另存为。
+- Ctrl + W / Cmd + W：关闭当前文件。
+- Ctrl + Shift + P / Cmd + Shift + P：打开命令面板。
 
 ### 2. 导航
 
-- `Ctrl + Tab` / `Cmd + Tab`：切换打开的文件。
-- `Ctrl + G` / `Cmd + G`：跳转到指定行号。
-- `Ctrl + Shift + O` / `Cmd + Shift + O`：按符号（函数/类名）跳转。
-- `Ctrl + T` / `Cmd + T`：搜索并跳转到符号。
+- Ctrl + Tab / Cmd + Tab：切换打开的文件。
+- Ctrl + G / Cmd + G：跳转到指定行号。
+- Ctrl + Shift + O / Cmd + Shift + O：按符号（函数/类名）跳转。
+- Ctrl + T / Cmd + T：搜索并跳转到符号。
 
 ### 3. 编辑
 
-- `Ctrl + Z` / `Cmd + Z`：撤销。
-- `Ctrl + Shift + Z` / `Cmd + Shift + Z`：重做。
-- `Ctrl + X` / `Cmd + X`：剪切。
-- `Ctrl + C` / `Cmd + C`：复制。
-- `Ctrl + V` / `Cmd + V`：粘贴。
-- `Ctrl + /` / `Cmd + /`：注释/取消注释当前行。
-- `Alt + Up` / `Option + Up`：上移当前行。
-- `Alt + Down` / `Option + Down`：下移当前行。
+- Ctrl + Z / Cmd + Z：撤销。
+- Ctrl + Shift + Z / Cmd + Shift + Z：重做。
+- Ctrl + X / Cmd + X：剪切。
+- Ctrl + C / Cmd + C：复制。
+- Ctrl + V / Cmd + V：粘贴。
+- Ctrl + / / Cmd + /：注释/取消注释当前行。
+- Alt + Up / Option + Up：上移当前行。
+- Alt + Down / Option + Down：下移当前行。
 
 ### 4. 多光标编辑
 
-- `Alt + Click` / `Option + Click`：添加光标。
-- `Ctrl + Alt + Down` / `Cmd + Option + Down`：向下添加光标。
-- `Ctrl + Alt + Up` / `Cmd + Option + Up`：向上添加光标。
+- Alt + Click / Option + Click：添加光标。
+- Ctrl + Alt + Down / Cmd + Option + Down：向下添加光标。
+- Ctrl + Alt + Up / Cmd + Option + Up：向上添加光标。
 
 ### 5. 代码格式化和调试
 
-- `Shift + Alt + F` / `Shift + Option + F`：格式化代码。
-- `F5`：启动/继续调试。
-- `F9`：设置/取消断点。
-- `F10`：逐过程调试。
-- `F11`：逐语句调试。
+- Shift + Alt + F / Shift + Option + F：格式化代码。
+- F5：启动/继续调试。
+- F9：设置/取消断点。
+- F10：逐过程调试。
+- F11：逐语句调试。
 
 ### 6. 搜索和替换
 
-- `Ctrl + F` / `Cmd + F`：查找。
-- `Ctrl + H` / `Cmd + H`：替换。
-- `Ctrl + Shift + F` / `Cmd + Shift + F`：全局搜索。
+- Ctrl + F / Cmd + F：查找。
+- Ctrl + H / Cmd + H：替换。
+- Ctrl + Shift + F / Cmd + Shift + F：全局搜索。
 
 ---
 
@@ -262,29 +262,29 @@ git config --global user.email
 
 ### 1.1. 初始化仓库
 
-- `git init`：初始化一个新的 Git 仓库。
+- git init：初始化一个新的 Git 仓库。
 ### 1.2. 克隆仓库
 
-- `git clone [url]`：从远程仓库克隆项目。
+- git clone [url]：从远程仓库克隆项目。
 ### 1.3. 查看状态
 
-- `git status`：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
+- git status：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
 ### 1.4. 添加文件到暂存区
 
-- `git add [filename]`：将单个文件添加到暂存区。
-- `git add .`：将当前目录下所有更改添加到暂存区。
+- git add [filename]：将单个文件添加到暂存区。
+- git add .：将当前目录下所有更改添加到暂存区。
 ### 1.5. 提交更改
 
-- `git commit -m "[message]"`：提交暂存区中的更改，并附加提交信息。
-- `git commit -a -m "[message]"`：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
+- git commit -m "[message]"：提交暂存区中的更改，并附加提交信息。
+- git commit -a -m "[message]"：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
 ### 1.6. 查看提交历史
 
-- `git log`：查看提交历史。
-- `git log --oneline`：以简短的形式查看提交历史。
+- git log：查看提交历史。
+- git log --oneline：以简短的形式查看提交历史。
 ### 1.7. 查看差异
 
-- `git diff`：查看工作区和暂存区的文件差异。
-- `git diff --staged`：查看已暂存文件的差异。
+- git diff：查看工作区和暂存区的文件差异。
+- git diff --staged：查看已暂存文件的差异。
 
 ---
 
@@ -292,87 +292,87 @@ git config --global user.email
 
 ### 2.1. 查看分支
 
-- `git branch`：查看本地分支列表。
+- git branch：查看本地分支列表。
 ### 2.2. 创建新分支
 
-- `git branch [branch-name]`：创建一个新的分支。
+- git branch [branch-name]：创建一个新的分支。
 ### 2.3. 切换分支
 
-- `git checkout [branch-name]`：切换到指定分支。
-- `git switch [branch-name]`：切换分支的更现代命令。
+- git checkout [branch-name]：切换到指定分支。
+- git switch [branch-name]：切换分支的更现代命令。
 ### 2.4. 创建并切换分支
 
-- `git checkout -b [branch-name]`：创建并切换到新分支。
-- `git switch -c [branch-name]`：新版本的等效命令。
+- git checkout -b [branch-name]：创建并切换到新分支。
+- git switch -c [branch-name]：新版本的等效命令。
 ### 2.5. 合并分支
 
-- `git merge [branch-name]`：将指定分支合并到当前分支。
+- git merge [branch-name]：将指定分支合并到当前分支。
 ### 2.6. 删除分支
 
-- `git branch -d [branch-name]`：删除分支（若该分支的更改已被合并）。
-- `git branch -D [branch-name]`：强制删除分支（即使未合并）。
+- git branch -d [branch-name]：删除分支（若该分支的更改已被合并）。
+- git branch -D [branch-name]：强制删除分支（即使未合并）。
 ---
 
 ## 3. 远程操作
 
 ### 3.1. 查看远程仓库
 
-- `git remote -v`：查看远程仓库地址。
+- git remote -v：查看远程仓库地址。
 ### 3.2. 添加远程仓库
 
-- `git remote add [name] [url]`：添加远程仓库。
+- git remote add [name] [url]：添加远程仓库。
 ### 3.3. 推送到远程仓库
 
-- `git push [remote] [branch]`：将本地分支推送到远程仓库。
-- `git push -u [remote] [branch]`：设置默认推送的上游分支，并推送。
+- git push [remote] [branch]：将本地分支推送到远程仓库。
+- git push -u [remote] [branch]：设置默认推送的上游分支，并推送。
 ### 3.4. 拉取远程仓库的更改
 
-- `git pull`：从远程仓库拉取并合并更改。
+- git pull：从远程仓库拉取并合并更改。
 ### 3.5. 从远程仓库获取更新
 
-- `git fetch`：从远程仓库获取更改，但不自动合并。
+- git fetch：从远程仓库获取更改，但不自动合并。
 ---
 
 ## 4. 撤销更改
 
 ### 4.1. 取消文件暂存
 
-- `git reset HEAD [filename]`：将文件从暂存区移除，但保留工作区的更改。
+- git reset HEAD [filename]：将文件从暂存区移除，但保留工作区的更改。
 ### 4.2. 撤销文件修改
 
-- `git checkout -- [filename]`：撤销工作区的修改，恢复到上一次提交的状态。
+- git checkout -- [filename]：撤销工作区的修改，恢复到上一次提交的状态。
 ### 4.3. 重置到特定提交
 
-- `git reset --hard [commit]`：重置当前分支到指定的提交，并丢弃之后的更改。
+- git reset --hard [commit]：重置当前分支到指定的提交，并丢弃之后的更改。
 ---
 
 ## 5. 标签操作
 
 ### 5.1. 创建标签
 
-- `git tag [tag-name]`：创建一个轻量标签。
-- `git tag -a [tag-name] -m "[message]"`：创建带注释的标签。
+- git tag [tag-name]：创建一个轻量标签。
+- git tag -a [tag-name] -m "[message]"：创建带注释的标签。
 ### 5.2. 查看标签
 
-- `git tag`：列出所有标签。
+- git tag：列出所有标签。
 ### 5.3. 推送标签到远程仓库
 
-- `git push origin [tag-name]`：推送单个标签。
-- `git push origin --tags`：推送所有标签。
+- git push origin [tag-name]：推送单个标签。
+- git push origin --tags：推送所有标签。
 ---
 
 ## 6. 其他有用命令
 
 ### 6.1. 清理未跟踪的文件
 
-- `git clean -f`：删除未跟踪的文件。
+- git clean -f：删除未跟踪的文件。
 ### 6.2. 查看全局配置
 
-- `git config --list`：查看所有 Git 配置信息。
+- git config --list：查看所有 Git 配置信息。
 ### 6.3. 设置全局用户名和邮箱
 
-- `git config --global user.name "[name]"`：设置用户名。
-- `git config --global user.email "[email]"`：设置邮箱。
+- git config --global user.name "[name]"：设置用户名。
+- git config --global user.email "[email]"：设置邮箱。
 
 # 五.Git Bash使用示范
 ## 1.初始化本地库
@@ -448,12 +448,12 @@ git commit -m "first commit" hello.txt
 ![](/images/git-images/git.36.png)![](/images/git-images/git.37.png)
 ### 2.5.切换到不同的提交
 你每提交一次，都会生成一个哈希值，也可以理解为一个版本对应一个版本号
-#### 2. **`git reset <hash>`**
-- **作用**：`git reset <hash>` 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。
-- **状态变化**：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 `--soft`、`--mixed` 或 `--hard`），会影响索引和工作目录的状态：
-    - **`--soft`**：仅重置 HEAD，索引和工作目录保持不变。
-    - **`--mixed`**（默认）：重置 HEAD 和索引，工作目录保持不变。
-    - **`--hard`**：重置 HEAD、索引和工作目录，将所有更改丢弃。
+#### 2. **git reset <hash>**
+- **作用**：git reset <hash> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。
+- **状态变化**：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 --soft、--mixed 或 --hard），会影响索引和工作目录的状态：
+    - **--soft**：仅重置 HEAD，索引和工作目录保持不变。
+    - **--mixed**（默认）：重置 HEAD 和索引，工作目录保持不变。
+    - **--hard**：重置 HEAD、索引和工作目录，将所有更改丢弃。
 ![](/images/git-images/git.38.png)
 ![](/images/git-images/git.39.png)
 ### 2.6.使用分支

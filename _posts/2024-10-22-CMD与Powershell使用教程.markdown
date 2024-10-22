@@ -7,7 +7,8 @@ tags: [CMD,Powershell,博客]
 excerpt: "本篇文章演示如何从0开始使用CMD与Powershell"
 ---
 # **简介**
-
+本文会列出大部分CMD和Powershell的命令，但不会演示怎么使用  
+仅演示使用频率很高的
 ## 1.CMD
 
 CMD（命令提示符）是**Windows 操作系统**中的一个**命令行界面**，用于执行各种命令行任务。它的作用主要集中在基本的**系统操作、文件管理、网络配置和诊断任务**等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。
@@ -211,27 +212,17 @@ CMD（命令提示符）有许多命令，用于文件管理、系统诊断、�
 这些是最常用的命令，用于操作文件和文件夹。
 
 - **dir**：列出当前目录的文件和子目录。
-```
-dir
-```
+
 - **cd**：改变当前目录，进入指定路径。
 
 - **copy**：复制文件到指定位置。
-```
-copy source.txt 路径
-```
+
 - **move**：移动文件或重命名文件。
-```
-move source.txt 路径
-```
+
 - **del**：删除一个或多个文件。
-```
-del file.txt
-```
+
 - **mkdir**：创建新目录。
-```
-mkdir NewFolder
-```
+
 - **rmdir**：删除目录。
 
 ### 2. 系统诊断和修复命令
@@ -239,49 +230,29 @@ mkdir NewFolder
 这些命令用于检查和修复系统，排查问题。
 
 - **sfc /scannow**：扫描并修复系统文件的完整性。
-```
-sfc /scannow
-```
+
 - **chkdsk**：检查磁盘并修复文件系统错误。
-```
-chkdsk C: /f
-```
+
 - **tasklist**：显示当前运行的所有进程。
-```
-tasklist
-```
+
 - **taskkill**：终止指定进程。
-```
-taskkill /IM notepad.exe /F
-```
+
 - **systeminfo**：显示系统的详细配置信息。
-```
-systeminfo
-```
+
 - **ipconfig**：显示网络接口的配置信息，如 IP 地址、子网掩码等。
-```
-ipconfig
-```
+
 - **ping**：测试与远程服务器的网络连接。
-```
-ping google.com
-```
+
 ### 3. 网络命令
 
 这些命令用于诊断网络连接和配置网络设置。
 
 - **netstat**：显示当前的网络连接、端口和协议。
-```
-netstat -an
-```
+
 - **tracert**：显示到目标主机的路由路径。
-```
-tracert google.com
-```
+
 - **nslookup**：查询域名对应的 IP 地址或检查 DNS 解析问题。
-```
-nslookup google.com
-```
+
 - **net use**：映射或断开网络驱动器。
 
 - **netsh**：管理网络配置（如 IP 设置、防火墙规则）。
@@ -291,41 +262,25 @@ nslookup google.com
 这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。
 
 - **echo**：显示消息或启用/禁用命令回显。
-```
-echo Hello, World!
-```
+
 - **set**：设置或显示环境变量。
-```
-set PATH
-```
+
 - **pause**：在批处理文件中暂停命令执行，等待用户按键。
-```
-pause
-```
+
 - **if**：条件语句，判断是否执行某些命令。
-```
-if exist file.txt echo File exists
-```
+
 - **for**：循环处理文件或命令。
-```
-for %%f in (*.txt) do echo %%f
-```
+
 - **goto**：跳转到脚本中的某个标签，通常和 if 配合使用。
-```
-goto :start
-```
+
 ### 5. 用户和权限管理
 
 这些命令用于管理用户账户和权限。
 
 - **net user**：管理用户账户（创建、删除、修改用户）。
-```
-net user username password /add
-```
+
 - **net localgroup**：管理本地用户组。
-```
-net localgroup administrators username /add
-```
+
 - **runas**：以其他用户身份执行命令。
 
 ### 6. 磁盘管理命令
@@ -333,13 +288,9 @@ net localgroup administrators username /add
 这些命令用于管理硬盘驱动器和分区。
 
 - **diskpart**：管理磁盘分区（创建、删除、调整大小）。
-```
-diskpart
-```
+
 - **format**：格式化磁盘或分区。
-```
-format D:
-```
+
 ### 7. 进程和服务管理
 
 这些命令用于查看、终止进程或管理系统服务。
@@ -351,9 +302,7 @@ format D:
 这些命令用于与系统时间、计划任务有关的操作。
 
 - **time**：显示或设置系统时间。
-```
-time
-```
+
 - **schtasks**：管理计划任务，自动执行任务。
 
 ### 9. 高级管理命令
@@ -361,17 +310,11 @@ time
 这些命令用于执行更高级的管理操作，通常由系统管理员使用。
 
 - **bcdedit**：管理启动配置数据（修改启动选项）。
-```
-bcdedit /set {bootmgr} timeout 30
-```
+
 - **gpupdate**：更新组策略设置。
-```
-gpupdate /force
-```
-- **wmic**：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
-```
-wmic process get name
-```
+
+- **wmic**：用于查询和管理操作系统相关信息。
+
 ### 总结：
 
 1. **文件和目录管理**：如 dir、cd、copy、del 等，是最基础的操作。
@@ -389,21 +332,12 @@ wmic process get name
 BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。
 
 - **注释：** 使用 REM 或 :: 来注释代码，注释行不会执行。
-```
-REM This is a comment :: This is also a comment
-```
+
 - **显示消息：** 使用 echo 打印消息或控制命令回显。
-```
-echo Hello, World!
-```
+
 - **变量：** 使用 set 定义和访问变量。变量名用 % 包围来引用。
-```
-set myVar=123 echo %myVar%
-```
+
 - **禁用回显：** 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
-```
-@echo off
-```
 
 ### 2. 流程控制语法
 
@@ -416,14 +350,6 @@ BAT 文件支持基本的流程控制语法，如条件语句、循环等。
 #### 循环语句 (for)
 
 - for 循环用于遍历文件、目录或变量集合。
-    - 遍历文件：
-```
-for %%f in (*.txt) do echo %%f
-```
-    - 遍历数字范围：
-```
-for /L %%i in (1, 1, 10) do echo %%i
-```
 
 ### 3. 输入输出
 
@@ -432,60 +358,35 @@ for /L %%i in (1, 1, 10) do echo %%i
 - **重定向输出：** 使用 >、>> 将命令的输出重定向到文件。
 
 - 将输出重定向到文件并覆盖该文件的内容。
-```
-echo This is a test > output.txt
-```
+
 - 将输出附加到文件末尾。
-```
-echo Another line >> output.txt
-```
 
 ### 4. 子程序与跳转
 
 - **标签 (:)** 和 **跳转 (goto)**：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
-```
-goto :start  :start echo This is the start
-```
+
 - **call 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。
-```
-call otherScript.bat
-```
 
 ### 5. 错误处理
 
 - **errorlevel**：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
-```
-if %errorlevel% neq 0 echo An error occurred
-```
 
 ### 6. 批处理文件常见参数
 
 - **%1 到 %9**：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。
-```
-echo First parameter is %1
-```
+
 - **shift**：用于左移参数，%2 变为 %1，%3 变为 %2。
-```
-shift
-```
 
 ### 7. 批处理文件常用命令
 
 - **pause**：暂停脚本执行，等待用户按任意键继续。
-```
-pause
-```
+
 - **exit**：终止批处理文件的执行，并可选择返回错误码。
-```
-exit /b 0
-```
 
 ### 8. 高级功能
 
 - **setlocal 和 endlocal**：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。
-```
-setlocal set myVar=123 endlocal
-```
+
 - **环境变量操作**：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。
     
 
@@ -591,19 +492,13 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShe
 ### 1. **基本结构**
 
 - **脚本注释**：
-    - 单行注释使用井符号：
+    - 单行注释使用井符号
 
 ### 2. 变量
 
 - **定义变量**：使用 $ 符号定义变量，等号（=）用于赋值。
-```
-$myVariable = "Hello, World!"
-```
 
 - **使用变量**：在字符串中使用变量时，可用双引号引用。
-```
-Write-Host "The message is: $myVariable"
-```
 
 ### 3. 数据类型
 
@@ -625,37 +520,22 @@ Write-Host "The message is: $myVariable"
 ### 7. 模块和导入
 
 - **导入模块**：使用 Import-Module 导入 PowerShell 模块。
-```
-Import-Module ModuleName
-```
 
 ### 8. 输入和输出
 
-- **输出到控制台**：
-```
-Write-Host "This is output to the console"
-```
+- **输出到控制台**
 
-- **获取用户输入**：
+- **获取用户输入**
 
 ### 9. 管道
 
-- PowerShell 支持管道（|）将一个命令的输出直接传递给另一个命令。
-```
-Get-Process | Where-Object { $_.CPU -gt 100 }
-```
+- PowerShell支持管道（`|`）将一个命令的输出直接传递给另一个命令。
 
 ### 10. 文件操作
 
-- **读取文件**：
-```
-$content = Get-Content 路径
-```
+- **读取文件**
 
-- **写入文件**：
-```
-"Hello, World!" | Out-File 路径
-```
+- **写入文件**
 
 ### 11. 对象和属性
 
@@ -745,7 +625,6 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 在**文件路径**中使用**中文字符和空格**可能导致路径**解析错误**，特别是在某些编程语言和工具中。这可能导致文件**无法找到或命令无法执行**，增加了开发和调试的复杂性。因此，使用英文字符和下划线等替代方式更为稳妥
 
 # **七.完结**
-
-**因为一些奇怪的BUG，有些命令的介绍被我删除了  
-关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索**
+ 
+**关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索**
 

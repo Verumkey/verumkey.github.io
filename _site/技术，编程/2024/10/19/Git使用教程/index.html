@@ -86,7 +86,7 @@
 </header>
 
 <div class="toc" id="toc">
-    <ul><li><a href="#一git概述"><strong>一.Git概述</strong></a><ul><li><a href="#git-的一些核心概念">Git 的一些核心概念：</a></li><li><a href="#常用命令">常用命令：</a></li></ul></li></ul></li><li><a href="#二配置git环境"><strong>二.配置Git环境</strong></a><ul><li><a href="#1下载git">1.下载Git</a></li><li><a href="#2安装git">2.安装Git</a><ul><li><a href="#21vim编辑器和vs-code编辑器对比">2.1.Vim编辑器和VS Code编辑器对比</a><ul><li><a href="#1-vim-编辑器">1. Vim 编辑器：</a></li><li><a href="#2vs-code编辑器">2.VS Code编辑器：</a></li></ul></li><li><a href="#22选择编辑器">2.2.选择编辑器</a></li><li><a href="#23ssh介绍">2.3.SSH介绍</a><ul><li><a href="#ssh-的主要功能">SSH 的主要功能：</a></li><li><a href="#openssh-是什么">OpenSSH 是什么？</a></li></ul></li></ul></li><li><a href="#3设置用户签名">3.设置用户签名</a></li></ul></li><li><a href="#三编辑器常用命令"><strong>三.编辑器常用命令</strong></a><ul><li><a href="#vim-编辑器常用命令">Vim 编辑器常用命令</a><ul><li><a href="#1-模式切换">1. 模式切换</a></li><li><a href="#2-文件操作">2. 文件操作</a></li><li><a href="#3-移动光标">3. 移动光标</a></li><li><a href="#4-文本编辑">4. 文本编辑</a></li><li><a href="#5-查找和替换">5. 查找和替换</a></li></ul></li><li><a href="#vs-code-编辑器常用命令">VS Code 编辑器常用命令</a><ul><li><a href="#1-基础命令">1. 基础命令</a></li><li><a href="#2-导航">2. 导航</a></li><li><a href="#3-编辑">3. 编辑</a></li><li><a href="#4-多光标编辑">4. 多光标编辑</a></li><li><a href="#5-代码格式化和调试">5. 代码格式化和调试</a></li><li><a href="#6-搜索和替换">6. 搜索和替换</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#四git常用命令"><strong>四.Git常用命令</strong></a><ul><li><a href="#1-基本-git-操作">1. 基本 Git 操作</a><ul><li><a href="#11-初始化仓库">1.1. 初始化仓库</a></li><li><a href="#12-克隆仓库">1.2. 克隆仓库</a></li><li><a href="#13-查看状态">1.3. 查看状态</a></li><li><a href="#14-添加文件到暂存区">1.4. 添加文件到暂存区</a></li><li><a href="#15-提交更改">1.5. 提交更改</a></li><li><a href="#16-查看提交历史">1.6. 查看提交历史</a></li><li><a href="#17-查看差异">1.7. 查看差异</a></li></ul></li><li><a href="#2-分支操作">2. 分支操作</a><ul><li><a href="#21-查看分支">2.1. 查看分支</a></li><li><a href="#22-创建新分支">2.2. 创建新分支</a></li><li><a href="#23-切换分支">2.3. 切换分支</a></li><li><a href="#24-创建并切换分支">2.4. 创建并切换分支</a></li><li><a href="#25-合并分支">2.5. 合并分支</a></li><li><a href="#26-删除分支">2.6. 删除分支</a></li></ul></li><li><a href="#git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</a></li><li><a href="#3-远程操作">3. 远程操作</a><ul><li><a href="#31-查看远程仓库">3.1. 查看远程仓库</a></li><li><a href="#32-添加远程仓库">3.2. 添加远程仓库</a></li><li><a href="#33-推送到远程仓库">3.3. 推送到远程仓库</a></li><li><a href="#34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</a></li><li><a href="#35-从远程仓库获取更新">3.5. 从远程仓库获取更新</a></li></ul></li><li><a href="#git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</a></li><li><a href="#4-撤销更改">4. 撤销更改</a><ul><li><a href="#41-取消文件暂存">4.1. 取消文件暂存</a></li><li><a href="#42-撤销文件修改">4.2. 撤销文件修改</a></li><li><a href="#43-重置到特定提交">4.3. 重置到特定提交</a></li></ul></li><li><a href="#git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</a></li><li><a href="#5-标签操作">5. 标签操作</a><ul><li><a href="#51-创建标签">5.1. 创建标签</a></li><li><a href="#52-查看标签">5.2. 查看标签</a></li><li><a href="#53-推送标签到远程仓库">5.3. 推送标签到远程仓库</a></li></ul></li><li><a href="#git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</a></li><li><a href="#6-其他有用命令">6. 其他有用命令</a><ul><li><a href="#61-清理未跟踪的文件">6.1. 清理未跟踪的文件</a></li><li><a href="#62-查看全局配置">6.2. 查看全局配置</a></li><li><a href="#63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</a></li></ul></li></ul></li><li><a href="#五git-bash使用示范">五.Git Bash使用示范</a><ul><li><a href="#1初始化本地库">1.初始化本地库</a><ul><li><a href="#11创建文件打开git-bash">1.1.创建文件，打开Git Bash</a></li><li><a href="#12使用命令git-init">1.2.使用命令git init</a></li></ul></li><li><a href="#2查看本地库状态">2.查看本地库状态</a></li><li><a href="#3创建项目">3.创建项目</a><ul><li><a href="#31使用vim创建文件">3.1.使用vim创建文件</a></li></ul></li></ul></li><li><a href="#六vs-code中使用git"><strong>六.VS Code中使用Git</strong></a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1markdownlint-插件">1.markdownlint 插件</a><ul><li><a href="#功能介绍">功能介绍</a></li></ul></li><li><a href="#2git-graph-插件">2.Git Graph 插件</a><ul><li><a href="#功能介绍-1">功能介绍</a></li></ul></li></ul></li><li><a href="#2使用vs-code创建项目">2.使用VS Code创建项目</a><ul><li><a href="#21打开终端">2.1.打开终端</a></li><li><a href="#22新建文件">2.2.新建文件</a></li><li><a href="#23提交到暂存区并添加到本地库">2.3.提交到暂存区并添加到本地库</a><ul><li><a href="#方法一使用终端操作">方法一(使用终端操作)</a><ul><li><a href="#1提交到暂存区">1.提交到暂存区</a></li><li><a href="#1添加到本地库">1.添加到本地库</a></li></ul></li><li><a href="#方法二使用源代码管理">方法二(使用源代码管理)</a></li></ul></li><li><a href="#24修改文件">2.4.修改文件</a></li><li><a href="#25切换到不同的提交">2.5.切换到不同的提交</a><ul><li><a href="#2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></a></li></ul></li><li><a href="#26使用分支">2.6.使用分支</a></li><li><a href="#27合并分支">2.7.合并分支</a><ul><li><a href="#271在新建的分支里的文件做出修改并提交">2.7.1.在新建的分支里的文件做出修改并提交</a></li><li><a href="#271返回需要合并到的分支进行合并">2.7.1.返回需要合并到的分支进行合并</a></li></ul></li></ul></li><li><a href="#3使用代码托管平台github">3.使用代码托管平台（GitHub）</a><ul><li><a href="#31创建远程仓库">3.1.创建远程仓库</a></li><li><a href="#32添加文件到远程存储库">3.2.添加文件到远程存储库</a></li><li><a href="#33从远程存储库库下载文件到本地">3.3.从远程存储库库下载文件到本地</a></li></ul></li><li><a href="#4团队内协作">4.团队内协作</a><ul><li><a href="#41邀请协作的人">4.1.邀请协作的人</a></li></ul></li><li><a href="#4跨团队协作">4.跨团队协作</a><ul><li><a href="#41fork项目">4.1.fork项目</a></li><li><a href="#42做出修改">4.2.做出修改</a></li><li><a href="#43发出pull请求">4.3.发出pull请求</a></li><li><a href="#44仓库管理者同意pull请求">4.4.仓库管理者同意pull请求</a></li></ul></li></ul></li><li><a href="#七完结">七.完结</a></li></ul>
+    <ul><li><a href="#一git概述"><strong>一.Git概述</strong></a><ul><li><a href="#git-的一些核心概念">Git 的一些核心概念：</a></li><li><a href="#常用命令">常用命令：</a></li></ul></li></ul></li><li><a href="#二配置git环境"><strong>二.配置Git环境</strong></a><ul><li><a href="#1下载git">1.下载Git</a></li><li><a href="#2安装git">2.安装Git</a><ul><li><a href="#21vim编辑器和vs-code编辑器对比">2.1.Vim编辑器和VS Code编辑器对比</a><ul><li><a href="#1-vim-编辑器">1. Vim 编辑器：</a></li><li><a href="#2vs-code编辑器">2.VS Code编辑器：</a></li></ul></li><li><a href="#22选择编辑器">2.2.选择编辑器</a></li><li><a href="#23ssh介绍">2.3.SSH介绍</a><ul><li><a href="#ssh-的主要功能">SSH 的主要功能：</a></li><li><a href="#openssh-是什么">OpenSSH 是什么？</a></li></ul></li></ul></li><li><a href="#3设置用户签名">3.设置用户签名</a></li></ul></li><li><a href="#三编辑器常用命令"><strong>三.编辑器常用命令</strong></a><ul><li><a href="#vim-编辑器常用命令">Vim 编辑器常用命令</a><ul><li><a href="#1-模式切换">1. 模式切换</a></li><li><a href="#2-文件操作">2. 文件操作</a></li><li><a href="#3-移动光标">3. 移动光标</a></li><li><a href="#4-文本编辑">4. 文本编辑</a></li><li><a href="#5-查找和替换">5. 查找和替换</a></li></ul></li><li><a href="#vs-code-编辑器常用命令">VS Code 编辑器常用命令</a><ul><li><a href="#1-基础命令">1. 基础命令</a></li><li><a href="#2-导航">2. 导航</a></li><li><a href="#3-编辑">3. 编辑</a></li><li><a href="#4-多光标编辑">4. 多光标编辑</a></li><li><a href="#5-代码格式化和调试">5. 代码格式化和调试</a></li><li><a href="#6-搜索和替换">6. 搜索和替换</a></li></ul></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#四git常用命令"><strong>四.Git常用命令</strong></a><ul><li><a href="#1-基本-git-操作">1. 基本 Git 操作</a><ul><li><a href="#11-初始化仓库">1.1. 初始化仓库</a></li><li><a href="#12-克隆仓库">1.2. 克隆仓库</a></li><li><a href="#13-查看状态">1.3. 查看状态</a></li><li><a href="#14-添加文件到暂存区">1.4. 添加文件到暂存区</a></li><li><a href="#15-提交更改">1.5. 提交更改</a></li><li><a href="#16-查看提交历史">1.6. 查看提交历史</a></li><li><a href="#17-查看差异">1.7. 查看差异</a></li></ul></li><li><a href="#2-分支操作">2. 分支操作</a><ul><li><a href="#21-查看分支">2.1. 查看分支</a></li><li><a href="#22-创建新分支">2.2. 创建新分支</a></li><li><a href="#23-切换分支">2.3. 切换分支</a></li><li><a href="#24-创建并切换分支">2.4. 创建并切换分支</a></li><li><a href="#25-合并分支">2.5. 合并分支</a></li><li><a href="#26-删除分支">2.6. 删除分支</a></li></ul></li><li><a href="#git-branch--d-branch-name强制删除分支即使未合并">git branch -D [branch-name]：强制删除分支（即使未合并）。</a></li><li><a href="#3-远程操作">3. 远程操作</a><ul><li><a href="#31-查看远程仓库">3.1. 查看远程仓库</a></li><li><a href="#32-添加远程仓库">3.2. 添加远程仓库</a></li><li><a href="#33-推送到远程仓库">3.3. 推送到远程仓库</a></li><li><a href="#34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</a></li><li><a href="#35-从远程仓库获取更新">3.5. 从远程仓库获取更新</a></li></ul></li><li><a href="#git-fetch从远程仓库获取更改但不自动合并">git fetch：从远程仓库获取更改，但不自动合并。</a></li><li><a href="#4-撤销更改">4. 撤销更改</a><ul><li><a href="#41-取消文件暂存">4.1. 取消文件暂存</a></li><li><a href="#42-撤销文件修改">4.2. 撤销文件修改</a></li><li><a href="#43-重置到特定提交">4.3. 重置到特定提交</a></li></ul></li><li><a href="#git-reset-hard-commit重置当前分支到指定的提交并丢弃之后的更改">git reset –hard [commit]：重置当前分支到指定的提交，并丢弃之后的更改。</a></li><li><a href="#5-标签操作">5. 标签操作</a><ul><li><a href="#51-创建标签">5.1. 创建标签</a></li><li><a href="#52-查看标签">5.2. 查看标签</a></li><li><a href="#53-推送标签到远程仓库">5.3. 推送标签到远程仓库</a></li></ul></li><li><a href="#git-push-origin-tags推送所有标签">git push origin –tags：推送所有标签。</a></li><li><a href="#6-其他有用命令">6. 其他有用命令</a><ul><li><a href="#61-清理未跟踪的文件">6.1. 清理未跟踪的文件</a></li><li><a href="#62-查看全局配置">6.2. 查看全局配置</a></li><li><a href="#63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</a></li></ul></li></ul></li><li><a href="#五git-bash使用示范">五.Git Bash使用示范</a><ul><li><a href="#1初始化本地库">1.初始化本地库</a><ul><li><a href="#11创建文件打开git-bash">1.1.创建文件，打开Git Bash</a></li><li><a href="#12使用命令git-init">1.2.使用命令git init</a></li></ul></li><li><a href="#2查看本地库状态">2.查看本地库状态</a></li><li><a href="#3创建项目">3.创建项目</a><ul><li><a href="#31使用vim创建文件">3.1.使用vim创建文件</a></li></ul></li></ul></li><li><a href="#六vs-code中使用git"><strong>六.VS Code中使用Git</strong></a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1markdownlint-插件">1.markdownlint 插件</a><ul><li><a href="#功能介绍">功能介绍</a></li></ul></li><li><a href="#2git-graph-插件">2.Git Graph 插件</a><ul><li><a href="#功能介绍-1">功能介绍</a></li></ul></li></ul></li><li><a href="#2使用vs-code创建项目">2.使用VS Code创建项目</a><ul><li><a href="#21打开终端">2.1.打开终端</a></li><li><a href="#22新建文件">2.2.新建文件</a></li><li><a href="#23提交到暂存区并添加到本地库">2.3.提交到暂存区并添加到本地库</a><ul><li><a href="#方法一使用终端操作">方法一(使用终端操作)</a><ul><li><a href="#1提交到暂存区">1.提交到暂存区</a></li><li><a href="#1添加到本地库">1.添加到本地库</a></li></ul></li><li><a href="#方法二使用源代码管理">方法二(使用源代码管理)</a></li></ul></li><li><a href="#24修改文件">2.4.修改文件</a></li><li><a href="#25切换到不同的提交">2.5.切换到不同的提交</a><ul><li><a href="#2-git-reset-">2. **git reset </a></li></ul></li><li><a href="#26使用分支">2.6.使用分支</a></li><li><a href="#27合并分支">2.7.合并分支</a><ul><li><a href="#271在新建的分支里的文件做出修改并提交">2.7.1.在新建的分支里的文件做出修改并提交</a></li><li><a href="#271返回需要合并到的分支进行合并">2.7.1.返回需要合并到的分支进行合并</a></li></ul></li></ul></li><li><a href="#3使用代码托管平台github">3.使用代码托管平台（GitHub）</a><ul><li><a href="#31创建远程仓库">3.1.创建远程仓库</a></li><li><a href="#32添加文件到远程存储库">3.2.添加文件到远程存储库</a></li><li><a href="#33从远程存储库库下载文件到本地">3.3.从远程存储库库下载文件到本地</a></li></ul></li><li><a href="#4团队内协作">4.团队内协作</a><ul><li><a href="#41邀请协作的人">4.1.邀请协作的人</a></li></ul></li><li><a href="#4跨团队协作">4.跨团队协作</a><ul><li><a href="#41fork项目">4.1.fork项目</a></li><li><a href="#42做出修改">4.2.做出修改</a></li><li><a href="#43发出pull请求">4.3.发出pull请求</a></li><li><a href="#44仓库管理者同意pull请求">4.4.仓库管理者同意pull请求</a></li></ul></li></ul></li><li><a href="#七完结">七.完结</a></li></ul>
 </div>
 
 
@@ -122,15 +122,15 @@
 
 <h3 id="常用命令">常用命令：</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git clone</code>：克隆远程仓库到本地。</li>
-  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前工作区的状态（有哪些改动）。</li>
-  <li><code class="language-plaintext highlighter-rouge">git add</code>：将改动添加到暂存区。</li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -m "消息"</code>：提交暂存区的改动，并添加描述信息。</li>
-  <li><code class="language-plaintext highlighter-rouge">git push</code>：将本地提交推送到远程仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取更新并合并到本地分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看所有分支，或创建、删除分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout</code>：切换到另一个分支。
+  <li>git init：初始化一个新的 Git 仓库。</li>
+  <li>git clone：克隆远程仓库到本地。</li>
+  <li>git status：查看当前工作区的状态（有哪些改动）。</li>
+  <li>git add：将改动添加到暂存区。</li>
+  <li>git commit -m “消息”：提交暂存区的改动，并添加描述信息。</li>
+  <li>git push：将本地提交推送到远程仓库。</li>
+  <li>git pull：从远程仓库拉取更新并合并到本地分支。</li>
+  <li>git branch：查看所有分支，或创建、删除分支。</li>
+  <li>git checkout：切换到另一个分支。
 通过 Git，开发者能够更好地管理代码版本，尤其是在复杂项目中，它可以极大地提高效率并减少冲突。</li>
 </ul>
 
@@ -232,7 +232,7 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <h4 id="ssh-的主要功能">SSH 的主要功能：</h4>
 <ul>
   <li><strong>远程登录</strong>：可以在本地计算机上通过终端控制远程服务器。</li>
-  <li><strong>文件传输</strong>：通过 <code class="language-plaintext highlighter-rouge">scp</code> 或 <code class="language-plaintext highlighter-rouge">sftp</code> 等方式在本地和远程机器之间安全地传输文件。</li>
+  <li><strong>文件传输</strong>：通过 scp 或 sftp 等方式在本地和远程机器之间安全地传输文件。</li>
   <li><strong>端口转发</strong>：通过 SSH 隧道实现的端口转发功能，可以把本地端口重定向到远程机器上的端口，用于保护其他通信协议的安全。</li>
 </ul>
 
@@ -240,10 +240,10 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <p><strong>OpenSSH</strong> 是 SSH 协议的一个开源实现，广泛应用于各类操作系统中（特别是类 Unix 系统，如 Linux 和 macOS）。它不仅支持 SSH 协议本身，还包括一些相关的工具，例如：</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ssh</code>：用于远程登录。</li>
-  <li><code class="language-plaintext highlighter-rouge">scp</code> 和 <code class="language-plaintext highlighter-rouge">sftp</code>：用于安全地传输文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">ssh-agent</code> 和 <code class="language-plaintext highlighter-rouge">ssh-add</code>：用于管理 SSH 密钥和自动登录。</li>
-  <li><code class="language-plaintext highlighter-rouge">sshd</code>：SSH 服务器程序，允许远程登录到本地系统。</li>
+  <li>ssh：用于远程登录。</li>
+  <li>scp 和 sftp：用于安全地传输文件。</li>
+  <li>ssh-agent 和 ssh-add：用于管理 SSH 密钥和自动登录。</li>
+  <li>sshd：SSH 服务器程序，允许远程登录到本地系统。</li>
 </ul>
 
 <p>OpenSSH 是目前最常用的 SSH 实现之一，由于其开源和安全性，它在服务器管理和远程开发中被广泛使用。</p>
@@ -253,10 +253,10 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <p>图中有两个选择：</p>
 <ol>
   <li>
-    <p><strong>Use bundled OpenSSH</strong>（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。</p>
+    <p><strong>Use bundled OpenSSH</strong>（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 ssh.exe，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。</p>
   </li>
   <li>
-    <p><strong>Use external OpenSSH</strong>（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
+    <p><strong>Use external OpenSSH</strong>（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 ssh.exe，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
 一般选择<strong>默认</strong>即可
 7.<img src="/images/git-images/git.10.png" alt="" />8.<img src="/images/git-images/git.11.png" alt="" />
 9.<img src="/images/git-images/git.12.png" alt="" />10.<img src="/images/git-images/git.14.png" alt="" />
@@ -288,55 +288,55 @@ git config --global user.email
 <h3 id="1-模式切换">1. 模式切换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">i</code>：进入插入模式（开始编辑文本）。</li>
-  <li><code class="language-plaintext highlighter-rouge">Esc</code>：退出插入模式，回到普通模式。</li>
-  <li><code class="language-plaintext highlighter-rouge">:q</code>：退出 Vim。</li>
-  <li><code class="language-plaintext highlighter-rouge">:w</code>：保存文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:wq</code>：保存并退出。</li>
-  <li><code class="language-plaintext highlighter-rouge">:q!</code>：强制退出（不保存修改）。</li>
-  <li><code class="language-plaintext highlighter-rouge">:x</code>：保存并退出（与 <code class="language-plaintext highlighter-rouge">:wq</code> 类似）。</li>
+  <li>i：进入插入模式（开始编辑文本）。</li>
+  <li>Esc：退出插入模式，回到普通模式。</li>
+  <li>:q：退出 Vim。</li>
+  <li>:w：保存文件。</li>
+  <li>:wq：保存并退出。</li>
+  <li>:q!：强制退出（不保存修改）。</li>
+  <li>:x：保存并退出（与 :wq 类似）。</li>
 </ul>
 
 <h3 id="2-文件操作">2. 文件操作</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">vim filename</code>：打开文件，若文件不存在则新建文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:e filename</code>：打开其他文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:w filename</code>：另存为指定文件名。</li>
+  <li>vim filename：打开文件，若文件不存在则新建文件。</li>
+  <li>:e filename：打开其他文件。</li>
+  <li>:w filename：另存为指定文件名。</li>
 </ul>
 
 <h3 id="3-移动光标">3. 移动光标</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">h</code>：向左移动一个字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">j</code>：向下移动一行。</li>
-  <li><code class="language-plaintext highlighter-rouge">k</code>：向上移动一行。</li>
-  <li><code class="language-plaintext highlighter-rouge">l</code>：向右移动一个字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">gg</code>：移动到文件开头。</li>
-  <li><code class="language-plaintext highlighter-rouge">G</code>：移动到文件末尾。</li>
-  <li><code class="language-plaintext highlighter-rouge">w</code>：移动到下一个单词的开头。</li>
-  <li><code class="language-plaintext highlighter-rouge">b</code>：移动到上一个单词的开头。</li>
+  <li>h：向左移动一个字符。</li>
+  <li>j：向下移动一行。</li>
+  <li>k：向上移动一行。</li>
+  <li>l：向右移动一个字符。</li>
+  <li>gg：移动到文件开头。</li>
+  <li>G：移动到文件末尾。</li>
+  <li>w：移动到下一个单词的开头。</li>
+  <li>b：移动到上一个单词的开头。</li>
 </ul>
 
 <h3 id="4-文本编辑">4. 文本编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">x</code>：删除光标下的字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">dd</code>：删除当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">yy</code>：复制当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">p</code>：粘贴。</li>
-  <li><code class="language-plaintext highlighter-rouge">u</code>：撤销上一步操作。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + r</code>：重做上一步操作。</li>
+  <li>x：删除光标下的字符。</li>
+  <li>dd：删除当前行。</li>
+  <li>yy：复制当前行。</li>
+  <li>p：粘贴。</li>
+  <li>u：撤销上一步操作。</li>
+  <li>Ctrl + r：重做上一步操作。</li>
 </ul>
 
 <h3 id="5-查找和替换">5. 查找和替换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/keyword</code>：查找 <code class="language-plaintext highlighter-rouge">keyword</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">n</code>：跳到下一个匹配项。</li>
-  <li><code class="language-plaintext highlighter-rouge">N</code>：跳到上一个匹配项。</li>
-  <li><code class="language-plaintext highlighter-rouge">:%s/old/new/g</code>：全局替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">:n,m s/old/new/g</code>：从第 <code class="language-plaintext highlighter-rouge">n</code> 行到第 <code class="language-plaintext highlighter-rouge">m</code> 行替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
+  <li>/keyword：查找 keyword。</li>
+  <li>n：跳到下一个匹配项。</li>
+  <li>N：跳到上一个匹配项。</li>
+  <li>:%s/old/new/g：全局替换 old 为 new。</li>
+  <li>:n,m s/old/new/g：从第 n 行到第 m 行替换 old 为 new。</li>
 </ul>
 
 <hr />
@@ -346,60 +346,60 @@ git config --global user.email
 <h3 id="1-基础命令">1. 基础命令</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + P</code>：快速打开文件（输入文件名）。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + N</code> / <code class="language-plaintext highlighter-rouge">Cmd + N</code>：新建文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + S</code>：保存文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + S</code>：另存为。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + W</code> / <code class="language-plaintext highlighter-rouge">Cmd + W</code>：关闭当前文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + P</code>：打开命令面板。</li>
+  <li>Ctrl + P / Cmd + P：快速打开文件（输入文件名）。</li>
+  <li>Ctrl + N / Cmd + N：新建文件。</li>
+  <li>Ctrl + S / Cmd + S：保存文件。</li>
+  <li>Ctrl + Shift + S / Cmd + Shift + S：另存为。</li>
+  <li>Ctrl + W / Cmd + W：关闭当前文件。</li>
+  <li>Ctrl + Shift + P / Cmd + Shift + P：打开命令面板。</li>
 </ul>
 
 <h3 id="2-导航">2. 导航</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Tab</code> / <code class="language-plaintext highlighter-rouge">Cmd + Tab</code>：切换打开的文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + G</code> / <code class="language-plaintext highlighter-rouge">Cmd + G</code>：跳转到指定行号。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + O</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + O</code>：按符号（函数/类名）跳转。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + T</code> / <code class="language-plaintext highlighter-rouge">Cmd + T</code>：搜索并跳转到符号。</li>
+  <li>Ctrl + Tab / Cmd + Tab：切换打开的文件。</li>
+  <li>Ctrl + G / Cmd + G：跳转到指定行号。</li>
+  <li>Ctrl + Shift + O / Cmd + Shift + O：按符号（函数/类名）跳转。</li>
+  <li>Ctrl + T / Cmd + T：搜索并跳转到符号。</li>
 </ul>
 
 <h3 id="3-编辑">3. 编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Z</code>：撤销。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + Z</code>：重做。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + X</code> / <code class="language-plaintext highlighter-rouge">Cmd + X</code>：剪切。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + C</code> / <code class="language-plaintext highlighter-rouge">Cmd + C</code>：复制。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + V</code> / <code class="language-plaintext highlighter-rouge">Cmd + V</code>：粘贴。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + /</code> / <code class="language-plaintext highlighter-rouge">Cmd + /</code>：注释/取消注释当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Option + Up</code>：上移当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Option + Down</code>：下移当前行。</li>
+  <li>Ctrl + Z / Cmd + Z：撤销。</li>
+  <li>Ctrl + Shift + Z / Cmd + Shift + Z：重做。</li>
+  <li>Ctrl + X / Cmd + X：剪切。</li>
+  <li>Ctrl + C / Cmd + C：复制。</li>
+  <li>Ctrl + V / Cmd + V：粘贴。</li>
+  <li>Ctrl + / / Cmd + /：注释/取消注释当前行。</li>
+  <li>Alt + Up / Option + Up：上移当前行。</li>
+  <li>Alt + Down / Option + Down：下移当前行。</li>
 </ul>
 
 <h3 id="4-多光标编辑">4. 多光标编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Click</code> / <code class="language-plaintext highlighter-rouge">Option + Click</code>：添加光标。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Down</code>：向下添加光标。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Up</code>：向上添加光标。</li>
+  <li>Alt + Click / Option + Click：添加光标。</li>
+  <li>Ctrl + Alt + Down / Cmd + Option + Down：向下添加光标。</li>
+  <li>Ctrl + Alt + Up / Cmd + Option + Up：向上添加光标。</li>
 </ul>
 
 <h3 id="5-代码格式化和调试">5. 代码格式化和调试</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Shift + Alt + F</code> / <code class="language-plaintext highlighter-rouge">Shift + Option + F</code>：格式化代码。</li>
-  <li><code class="language-plaintext highlighter-rouge">F5</code>：启动/继续调试。</li>
-  <li><code class="language-plaintext highlighter-rouge">F9</code>：设置/取消断点。</li>
-  <li><code class="language-plaintext highlighter-rouge">F10</code>：逐过程调试。</li>
-  <li><code class="language-plaintext highlighter-rouge">F11</code>：逐语句调试。</li>
+  <li>Shift + Alt + F / Shift + Option + F：格式化代码。</li>
+  <li>F5：启动/继续调试。</li>
+  <li>F9：设置/取消断点。</li>
+  <li>F10：逐过程调试。</li>
+  <li>F11：逐语句调试。</li>
 </ul>
 
 <h3 id="6-搜索和替换">6. 搜索和替换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + F</code>：查找。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + H</code> / <code class="language-plaintext highlighter-rouge">Cmd + H</code>：替换。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + F</code>：全局搜索。</li>
+  <li>Ctrl + F / Cmd + F：查找。</li>
+  <li>Ctrl + H / Cmd + H：替换。</li>
+  <li>Ctrl + Shift + F / Cmd + Shift + F：全局搜索。</li>
 </ul>
 
 <hr />
@@ -418,29 +418,29 @@ git config --global user.email
 <h3 id="11-初始化仓库">1.1. 初始化仓库</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。
+  <li>git init：初始化一个新的 Git 仓库。
     <h3 id="12-克隆仓库">1.2. 克隆仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git clone [url]</code>：从远程仓库克隆项目。
+  <li>git clone [url]：从远程仓库克隆项目。
     <h3 id="13-查看状态">1.3. 查看状态</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
+  <li>git status：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
     <h3 id="14-添加文件到暂存区">1.4. 添加文件到暂存区</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git add [filename]</code>：将单个文件添加到暂存区。</li>
-  <li><code class="language-plaintext highlighter-rouge">git add .</code>：将当前目录下所有更改添加到暂存区。
+  <li>git add [filename]：将单个文件添加到暂存区。</li>
+  <li>git add .：将当前目录下所有更改添加到暂存区。
     <h3 id="15-提交更改">1.5. 提交更改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -m "[message]"</code>：提交暂存区中的更改，并附加提交信息。</li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -a -m "[message]"</code>：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
+  <li>git commit -m “[message]”：提交暂存区中的更改，并附加提交信息。</li>
+  <li>git commit -a -m “[message]”：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
     <h3 id="16-查看提交历史">1.6. 查看提交历史</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git log</code>：查看提交历史。</li>
-  <li><code class="language-plaintext highlighter-rouge">git log --oneline</code>：以简短的形式查看提交历史。
+  <li>git log：查看提交历史。</li>
+  <li>git log –oneline：以简短的形式查看提交历史。
     <h3 id="17-查看差异">1.7. 查看差异</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git diff</code>：查看工作区和暂存区的文件差异。</li>
-  <li><code class="language-plaintext highlighter-rouge">git diff --staged</code>：查看已暂存文件的差异。</li>
+  <li>git diff：查看工作区和暂存区的文件差异。</li>
+  <li>git diff –staged：查看已暂存文件的差异。</li>
 </ul>
 
 <hr />
@@ -450,26 +450,26 @@ git config --global user.email
 <h3 id="21-查看分支">2.1. 查看分支</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看本地分支列表。
+  <li>git branch：查看本地分支列表。
     <h3 id="22-创建新分支">2.2. 创建新分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git branch [branch-name]</code>：创建一个新的分支。
+  <li>git branch [branch-name]：创建一个新的分支。
     <h3 id="23-切换分支">2.3. 切换分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout [branch-name]</code>：切换到指定分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git switch [branch-name]</code>：切换分支的更现代命令。
+  <li>git checkout [branch-name]：切换到指定分支。</li>
+  <li>git switch [branch-name]：切换分支的更现代命令。
     <h3 id="24-创建并切换分支">2.4. 创建并切换分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout -b [branch-name]</code>：创建并切换到新分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git switch -c [branch-name]</code>：新版本的等效命令。
+  <li>git checkout -b [branch-name]：创建并切换到新分支。</li>
+  <li>git switch -c [branch-name]：新版本的等效命令。
     <h3 id="25-合并分支">2.5. 合并分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git merge [branch-name]</code>：将指定分支合并到当前分支。
+  <li>git merge [branch-name]：将指定分支合并到当前分支。
     <h3 id="26-删除分支">2.6. 删除分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git branch -d [branch-name]</code>：删除分支（若该分支的更改已被合并）。</li>
+  <li>git branch -d [branch-name]：删除分支（若该分支的更改已被合并）。</li>
   <li>
-    <h2 id="git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</h2>
+    <h2 id="git-branch--d-branch-name强制删除分支即使未合并">git branch -D [branch-name]：强制删除分支（即使未合并）。</h2>
   </li>
 </ul>
 
@@ -478,21 +478,21 @@ git config --global user.email
 <h3 id="31-查看远程仓库">3.1. 查看远程仓库</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git remote -v</code>：查看远程仓库地址。
+  <li>git remote -v：查看远程仓库地址。
     <h3 id="32-添加远程仓库">3.2. 添加远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git remote add [name] [url]</code>：添加远程仓库。
+  <li>git remote add [name] [url]：添加远程仓库。
     <h3 id="33-推送到远程仓库">3.3. 推送到远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git push [remote] [branch]</code>：将本地分支推送到远程仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git push -u [remote] [branch]</code>：设置默认推送的上游分支，并推送。
+  <li>git push [remote] [branch]：将本地分支推送到远程仓库。</li>
+  <li>git push -u [remote] [branch]：设置默认推送的上游分支，并推送。
     <h3 id="34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取并合并更改。
+  <li>git pull：从远程仓库拉取并合并更改。
     <h3 id="35-从远程仓库获取更新">3.5. 从远程仓库获取更新</h3>
   </li>
   <li>
-    <h2 id="git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</h2>
+    <h2 id="git-fetch从远程仓库获取更改但不自动合并">git fetch：从远程仓库获取更改，但不自动合并。</h2>
   </li>
 </ul>
 
@@ -501,14 +501,14 @@ git config --global user.email
 <h3 id="41-取消文件暂存">4.1. 取消文件暂存</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git reset HEAD [filename]</code>：将文件从暂存区移除，但保留工作区的更改。
+  <li>git reset HEAD [filename]：将文件从暂存区移除，但保留工作区的更改。
     <h3 id="42-撤销文件修改">4.2. 撤销文件修改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout -- [filename]</code>：撤销工作区的修改，恢复到上一次提交的状态。
+  <li>git checkout – [filename]：撤销工作区的修改，恢复到上一次提交的状态。
     <h3 id="43-重置到特定提交">4.3. 重置到特定提交</h3>
   </li>
   <li>
-    <h2 id="git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</h2>
+    <h2 id="git-reset-hard-commit重置当前分支到指定的提交并丢弃之后的更改">git reset –hard [commit]：重置当前分支到指定的提交，并丢弃之后的更改。</h2>
   </li>
 </ul>
 
@@ -517,16 +517,16 @@ git config --global user.email
 <h3 id="51-创建标签">5.1. 创建标签</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git tag [tag-name]</code>：创建一个轻量标签。</li>
-  <li><code class="language-plaintext highlighter-rouge">git tag -a [tag-name] -m "[message]"</code>：创建带注释的标签。
+  <li>git tag [tag-name]：创建一个轻量标签。</li>
+  <li>git tag -a [tag-name] -m “[message]”：创建带注释的标签。
     <h3 id="52-查看标签">5.2. 查看标签</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git tag</code>：列出所有标签。
+  <li>git tag：列出所有标签。
     <h3 id="53-推送标签到远程仓库">5.3. 推送标签到远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git push origin [tag-name]</code>：推送单个标签。</li>
+  <li>git push origin [tag-name]：推送单个标签。</li>
   <li>
-    <h2 id="git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</h2>
+    <h2 id="git-push-origin-tags推送所有标签">git push origin –tags：推送所有标签。</h2>
   </li>
 </ul>
 
@@ -535,14 +535,14 @@ git config --global user.email
 <h3 id="61-清理未跟踪的文件">6.1. 清理未跟踪的文件</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git clean -f</code>：删除未跟踪的文件。
+  <li>git clean -f：删除未跟踪的文件。
     <h3 id="62-查看全局配置">6.2. 查看全局配置</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git config --list</code>：查看所有 Git 配置信息。
+  <li>git config –list：查看所有 Git 配置信息。
     <h3 id="63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git config --global user.name "[name]"</code>：设置用户名。</li>
-  <li><code class="language-plaintext highlighter-rouge">git config --global user.email "[email]"</code>：设置邮箱。</li>
+  <li>git config –global user.name “[name]”：设置用户名。</li>
+  <li>git config –global user.email “[email]”：设置邮箱。</li>
 </ul>
 
 <h1 id="五git-bash使用示范">五.Git Bash使用示范</h1>
@@ -615,14 +615,14 @@ git add .         # 添加当前目录下所有文件
 <img src="/images/git-images/git.36.png" alt="" /><img src="/images/git-images/git.37.png" alt="" /></p>
     <h3 id="25切换到不同的提交">2.5.切换到不同的提交</h3>
     <p>你每提交一次，都会生成一个哈希值，也可以理解为一个版本对应一个版本号</p>
-    <h4 id="2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></h4>
+    <h4 id="2-git-reset-">2. **git reset <hash>**</hash></h4>
   </li>
-  <li><strong>作用</strong>：<code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</li>
-  <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 <code class="language-plaintext highlighter-rouge">--soft</code>、<code class="language-plaintext highlighter-rouge">--mixed</code> 或 <code class="language-plaintext highlighter-rouge">--hard</code>），会影响索引和工作目录的状态：
+  <li><strong>作用</strong>：git reset <hash> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</hash></li>
+  <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 –soft、–mixed 或 –hard），会影响索引和工作目录的状态：
     <ul>
-      <li><strong><code class="language-plaintext highlighter-rouge">--soft</code></strong>：仅重置 HEAD，索引和工作目录保持不变。</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">--mixed</code></strong>（默认）：重置 HEAD 和索引，工作目录保持不变。</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">--hard</code></strong>：重置 HEAD、索引和工作目录，将所有更改丢弃。
+      <li><strong>–soft</strong>：仅重置 HEAD，索引和工作目录保持不变。</li>
+      <li><strong>–mixed</strong>（默认）：重置 HEAD 和索引，工作目录保持不变。</li>
+      <li><strong>–hard</strong>：重置 HEAD、索引和工作目录，将所有更改丢弃。
 <img src="/images/git-images/git.38.png" alt="" />
 <img src="/images/git-images/git.39.png" alt="" />
         <h3 id="26使用分支">2.6.使用分支</h3>

@@ -93,7 +93,8 @@
     <div class="container">
         <div class="content">
             <h1 id="简介"><strong>简介</strong></h1>
-
+<p>本文会列出大部分CMD和Powershell的命令，但不会演示怎么使用<br />
+仅演示使用频率很高的</p>
 <h2 id="1cmd">1.CMD</h2>
 
 <p>CMD（命令提示符）是<strong>Windows 操作系统</strong>中的一个<strong>命令行界面</strong>，用于执行各种命令行任务。它的作用主要集中在基本的<strong>系统操作、文件管理、网络配置和诊断任务</strong>等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。</p>
@@ -318,30 +319,27 @@
 <p>这些是最常用的命令，用于操作文件和文件夹。</p>
 
 <ul>
-  <li><strong>dir</strong>：列出当前目录的文件和子目录。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dir
-</code></pre></div>    </div>
+  <li>
+    <p><strong>dir</strong>：列出当前目录的文件和子目录。</p>
   </li>
   <li>
     <p><strong>cd</strong>：改变当前目录，进入指定路径。</p>
   </li>
-  <li><strong>copy</strong>：复制文件到指定位置。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>copy source.txt 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>copy</strong>：复制文件到指定位置。</p>
   </li>
-  <li><strong>move</strong>：移动文件或重命名文件。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>move source.txt 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>move</strong>：移动文件或重命名文件。</p>
   </li>
-  <li><strong>del</strong>：删除一个或多个文件。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>del file.txt
-</code></pre></div>    </div>
+  <li>
+    <p><strong>del</strong>：删除一个或多个文件。</p>
   </li>
-  <li><strong>mkdir</strong>：创建新目录。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir NewFolder
-</code></pre></div>    </div>
+  <li>
+    <p><strong>mkdir</strong>：创建新目录。</p>
   </li>
-  <li><strong>rmdir</strong>：删除目录。</li>
+  <li>
+    <p><strong>rmdir</strong>：删除目录。</p>
+  </li>
 </ul>
 
 <h3 id="2-系统诊断和修复命令">2. 系统诊断和修复命令</h3>
@@ -349,56 +347,49 @@
 <p>这些命令用于检查和修复系统，排查问题。</p>
 
 <ul>
-  <li><strong>sfc /scannow</strong>：扫描并修复系统文件的完整性。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sfc /scannow
-</code></pre></div>    </div>
+  <li>
+    <p><strong>sfc /scannow</strong>：扫描并修复系统文件的完整性。</p>
   </li>
-  <li><strong>chkdsk</strong>：检查磁盘并修复文件系统错误。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chkdsk C: /f
-</code></pre></div>    </div>
+  <li>
+    <p><strong>chkdsk</strong>：检查磁盘并修复文件系统错误。</p>
   </li>
-  <li><strong>tasklist</strong>：显示当前运行的所有进程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasklist
-</code></pre></div>    </div>
+  <li>
+    <p><strong>tasklist</strong>：显示当前运行的所有进程。</p>
   </li>
-  <li><strong>taskkill</strong>：终止指定进程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskkill /IM notepad.exe /F
-</code></pre></div>    </div>
+  <li>
+    <p><strong>taskkill</strong>：终止指定进程。</p>
   </li>
-  <li><strong>systeminfo</strong>：显示系统的详细配置信息。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systeminfo
-</code></pre></div>    </div>
+  <li>
+    <p><strong>systeminfo</strong>：显示系统的详细配置信息。</p>
   </li>
-  <li><strong>ipconfig</strong>：显示网络接口的配置信息，如 IP 地址、子网掩码等。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig
-</code></pre></div>    </div>
+  <li>
+    <p><strong>ipconfig</strong>：显示网络接口的配置信息，如 IP 地址、子网掩码等。</p>
   </li>
-  <li><strong>ping</strong>：测试与远程服务器的网络连接。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping google.com
-</code></pre></div>    </div>
-    <h3 id="3-网络命令">3. 网络命令</h3>
+  <li>
+    <p><strong>ping</strong>：测试与远程服务器的网络连接。</p>
   </li>
 </ul>
+
+<h3 id="3-网络命令">3. 网络命令</h3>
 
 <p>这些命令用于诊断网络连接和配置网络设置。</p>
 
 <ul>
-  <li><strong>netstat</strong>：显示当前的网络连接、端口和协议。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -an
-</code></pre></div>    </div>
+  <li>
+    <p><strong>netstat</strong>：显示当前的网络连接、端口和协议。</p>
   </li>
-  <li><strong>tracert</strong>：显示到目标主机的路由路径。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tracert google.com
-</code></pre></div>    </div>
+  <li>
+    <p><strong>tracert</strong>：显示到目标主机的路由路径。</p>
   </li>
-  <li><strong>nslookup</strong>：查询域名对应的 IP 地址或检查 DNS 解析问题。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nslookup google.com
-</code></pre></div>    </div>
+  <li>
+    <p><strong>nslookup</strong>：查询域名对应的 IP 地址或检查 DNS 解析问题。</p>
   </li>
   <li>
     <p><strong>net use</strong>：映射或断开网络驱动器。</p>
   </li>
-  <li><strong>netsh</strong>：管理网络配置（如 IP 设置、防火墙规则）。</li>
+  <li>
+    <p><strong>netsh</strong>：管理网络配置（如 IP 设置、防火墙规则）。</p>
+  </li>
 </ul>
 
 <h3 id="4-批处理命令">4. 批处理命令</h3>
@@ -406,45 +397,40 @@
 <p>这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。</p>
 
 <ul>
-  <li><strong>echo</strong>：显示消息或启用/禁用命令回显。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
-</code></pre></div>    </div>
+  <li>
+    <p><strong>echo</strong>：显示消息或启用/禁用命令回显。</p>
   </li>
-  <li><strong>set</strong>：设置或显示环境变量。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set PATH
-</code></pre></div>    </div>
+  <li>
+    <p><strong>set</strong>：设置或显示环境变量。</p>
   </li>
-  <li><strong>pause</strong>：在批处理文件中暂停命令执行，等待用户按键。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
-</code></pre></div>    </div>
+  <li>
+    <p><strong>pause</strong>：在批处理文件中暂停命令执行，等待用户按键。</p>
   </li>
-  <li><strong>if</strong>：条件语句，判断是否执行某些命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if exist file.txt echo File exists
-</code></pre></div>    </div>
+  <li>
+    <p><strong>if</strong>：条件语句，判断是否执行某些命令。</p>
   </li>
-  <li><strong>for</strong>：循环处理文件或命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
-</code></pre></div>    </div>
+  <li>
+    <p><strong>for</strong>：循环处理文件或命令。</p>
   </li>
-  <li><strong>goto</strong>：跳转到脚本中的某个标签，通常和 if 配合使用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start
-</code></pre></div>    </div>
-    <h3 id="5-用户和权限管理">5. 用户和权限管理</h3>
+  <li>
+    <p><strong>goto</strong>：跳转到脚本中的某个标签，通常和 if 配合使用。</p>
   </li>
 </ul>
+
+<h3 id="5-用户和权限管理">5. 用户和权限管理</h3>
 
 <p>这些命令用于管理用户账户和权限。</p>
 
 <ul>
-  <li><strong>net user</strong>：管理用户账户（创建、删除、修改用户）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net user username password /add
-</code></pre></div>    </div>
+  <li>
+    <p><strong>net user</strong>：管理用户账户（创建、删除、修改用户）。</p>
   </li>
-  <li><strong>net localgroup</strong>：管理本地用户组。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net localgroup administrators username /add
-</code></pre></div>    </div>
+  <li>
+    <p><strong>net localgroup</strong>：管理本地用户组。</p>
   </li>
-  <li><strong>runas</strong>：以其他用户身份执行命令。</li>
+  <li>
+    <p><strong>runas</strong>：以其他用户身份执行命令。</p>
+  </li>
 </ul>
 
 <h3 id="6-磁盘管理命令">6. 磁盘管理命令</h3>
@@ -452,16 +438,15 @@
 <p>这些命令用于管理硬盘驱动器和分区。</p>
 
 <ul>
-  <li><strong>diskpart</strong>：管理磁盘分区（创建、删除、调整大小）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskpart
-</code></pre></div>    </div>
+  <li>
+    <p><strong>diskpart</strong>：管理磁盘分区（创建、删除、调整大小）。</p>
   </li>
-  <li><strong>format</strong>：格式化磁盘或分区。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>format D:
-</code></pre></div>    </div>
-    <h3 id="7-进程和服务管理">7. 进程和服务管理</h3>
+  <li>
+    <p><strong>format</strong>：格式化磁盘或分区。</p>
   </li>
 </ul>
+
+<h3 id="7-进程和服务管理">7. 进程和服务管理</h3>
 
 <p>这些命令用于查看、终止进程或管理系统服务。</p>
 
@@ -474,11 +459,12 @@
 <p>这些命令用于与系统时间、计划任务有关的操作。</p>
 
 <ul>
-  <li><strong>time</strong>：显示或设置系统时间。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>time
-</code></pre></div>    </div>
+  <li>
+    <p><strong>time</strong>：显示或设置系统时间。</p>
   </li>
-  <li><strong>schtasks</strong>：管理计划任务，自动执行任务。</li>
+  <li>
+    <p><strong>schtasks</strong>：管理计划任务，自动执行任务。</p>
+  </li>
 </ul>
 
 <h3 id="9-高级管理命令">9. 高级管理命令</h3>
@@ -486,20 +472,18 @@
 <p>这些命令用于执行更高级的管理操作，通常由系统管理员使用。</p>
 
 <ul>
-  <li><strong>bcdedit</strong>：管理启动配置数据（修改启动选项）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bcdedit /set {bootmgr} timeout 30
-</code></pre></div>    </div>
+  <li>
+    <p><strong>bcdedit</strong>：管理启动配置数据（修改启动选项）。</p>
   </li>
-  <li><strong>gpupdate</strong>：更新组策略设置。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpupdate /force
-</code></pre></div>    </div>
+  <li>
+    <p><strong>gpupdate</strong>：更新组策略设置。</p>
   </li>
-  <li><strong>wmic</strong>：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wmic process get name
-</code></pre></div>    </div>
-    <h3 id="总结">总结：</h3>
+  <li>
+    <p><strong>wmic</strong>：用于查询和管理操作系统相关信息。</p>
   </li>
 </ul>
+
+<h3 id="总结">总结：</h3>
 
 <ol>
   <li><strong>文件和目录管理</strong>：如 dir、cd、copy、del 等，是最基础的操作。</li>
@@ -518,21 +502,17 @@
 <p>BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。</p>
 
 <ul>
-  <li><strong>注释：</strong> 使用 REM 或 :: 来注释代码，注释行不会执行。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REM This is a comment :: This is also a comment
-</code></pre></div>    </div>
+  <li>
+    <p><strong>注释：</strong> 使用 REM 或 :: 来注释代码，注释行不会执行。</p>
   </li>
-  <li><strong>显示消息：</strong> 使用 echo 打印消息或控制命令回显。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
-</code></pre></div>    </div>
+  <li>
+    <p><strong>显示消息：</strong> 使用 echo 打印消息或控制命令回显。</p>
   </li>
-  <li><strong>变量：</strong> 使用 set 定义和访问变量。变量名用 % 包围来引用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set myVar=123 echo %myVar%
-</code></pre></div>    </div>
+  <li>
+    <p><strong>变量：</strong> 使用 set 定义和访问变量。变量名用 % 包围来引用。</p>
   </li>
-  <li><strong>禁用回显：</strong> 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
-</code></pre></div>    </div>
+  <li>
+    <p><strong>禁用回显：</strong> 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。</p>
   </li>
 </ul>
 
@@ -549,18 +529,7 @@
 <h4 id="循环语句-for">循环语句 (for)</h4>
 
 <ul>
-  <li>for 循环用于遍历文件、目录或变量集合。
-    <ul>
-      <li>遍历文件：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
-</code></pre></div>        </div>
-      </li>
-      <li>遍历数字范围：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for /L %%i in (1, 1, 10) do echo %%i
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
+  <li>for 循环用于遍历文件、目录或变量集合。</li>
 </ul>
 
 <h3 id="3-输入输出">3. 输入输出</h3>
@@ -572,72 +541,62 @@
   <li>
     <p><strong>重定向输出：</strong> 使用 &gt;、» 将命令的输出重定向到文件。</p>
   </li>
-  <li>将输出重定向到文件并覆盖该文件的内容。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo This is a test &gt; output.txt
-</code></pre></div>    </div>
+  <li>
+    <p>将输出重定向到文件并覆盖该文件的内容。</p>
   </li>
-  <li>将输出附加到文件末尾。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Another line &gt;&gt; output.txt
-</code></pre></div>    </div>
+  <li>
+    <p>将输出附加到文件末尾。</p>
   </li>
 </ul>
 
 <h3 id="4-子程序与跳转">4. 子程序与跳转</h3>
 
 <ul>
-  <li><strong>标签 (:)</strong> 和 <strong>跳转 (goto)</strong>：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start  :start echo This is the start
-</code></pre></div>    </div>
+  <li>
+    <p><strong>标签 (:)</strong> 和 <strong>跳转 (goto)</strong>：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。</p>
   </li>
-  <li><strong>call 语句：</strong> 用于调用另一个批处理文件或调用当前脚本的子例程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>call otherScript.bat
-</code></pre></div>    </div>
+  <li>
+    <p><strong>call 语句：</strong> 用于调用另一个批处理文件或调用当前脚本的子例程。</p>
   </li>
 </ul>
 
 <h3 id="5-错误处理">5. 错误处理</h3>
 
 <ul>
-  <li><strong>errorlevel</strong>：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if %errorlevel% neq 0 echo An error occurred
-</code></pre></div>    </div>
-  </li>
+  <li><strong>errorlevel</strong>：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。</li>
 </ul>
 
 <h3 id="6-批处理文件常见参数">6. 批处理文件常见参数</h3>
 
 <ul>
-  <li><strong>%1 到 %9</strong>：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo First parameter is %1
-</code></pre></div>    </div>
+  <li>
+    <p><strong>%1 到 %9</strong>：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。</p>
   </li>
-  <li><strong>shift</strong>：用于左移参数，%2 变为 %1，%3 变为 %2。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shift
-</code></pre></div>    </div>
+  <li>
+    <p><strong>shift</strong>：用于左移参数，%2 变为 %1，%3 变为 %2。</p>
   </li>
 </ul>
 
 <h3 id="7-批处理文件常用命令">7. 批处理文件常用命令</h3>
 
 <ul>
-  <li><strong>pause</strong>：暂停脚本执行，等待用户按任意键继续。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
-</code></pre></div>    </div>
+  <li>
+    <p><strong>pause</strong>：暂停脚本执行，等待用户按任意键继续。</p>
   </li>
-  <li><strong>exit</strong>：终止批处理文件的执行，并可选择返回错误码。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit /b 0
-</code></pre></div>    </div>
+  <li>
+    <p><strong>exit</strong>：终止批处理文件的执行，并可选择返回错误码。</p>
   </li>
 </ul>
 
 <h3 id="8-高级功能">8. 高级功能</h3>
 
 <ul>
-  <li><strong>setlocal 和 endlocal</strong>：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setlocal set myVar=123 endlocal
-</code></pre></div>    </div>
+  <li>
+    <p><strong>setlocal 和 endlocal</strong>：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。</p>
   </li>
-  <li><strong>环境变量操作</strong>：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。</li>
+  <li>
+    <p><strong>环境变量操作</strong>：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。</p>
+  </li>
 </ul>
 
 <h3 id="9-批处理文件的应用场景">9. 批处理文件的应用场景</h3>
@@ -770,7 +729,7 @@
 <ul>
   <li><strong>脚本注释</strong>：
     <ul>
-      <li>单行注释使用井符号：</li>
+      <li>单行注释使用井符号</li>
     </ul>
   </li>
 </ul>
@@ -778,13 +737,11 @@
 <h3 id="2-变量">2. 变量</h3>
 
 <ul>
-  <li><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$myVariable = "Hello, World!"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。</p>
   </li>
-  <li><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "The message is: $myVariable"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。</p>
   </li>
 </ul>
 
@@ -817,41 +774,34 @@
 <h3 id="7-模块和导入">7. 模块和导入</h3>
 
 <ul>
-  <li><strong>导入模块</strong>：使用 Import-Module 导入 PowerShell 模块。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Import-Module ModuleName
-</code></pre></div>    </div>
-  </li>
+  <li><strong>导入模块</strong>：使用 Import-Module 导入 PowerShell 模块。</li>
 </ul>
 
 <h3 id="8-输入和输出">8. 输入和输出</h3>
 
 <ul>
-  <li><strong>输出到控制台</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "This is output to the console"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>输出到控制台</strong></p>
   </li>
-  <li><strong>获取用户输入</strong>：</li>
+  <li>
+    <p><strong>获取用户输入</strong></p>
+  </li>
 </ul>
 
 <h3 id="9-管道">9. 管道</h3>
 
 <ul>
-  <li>PowerShell 支持管道（|）将一个命令的输出直接传递给另一个命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Process | Where-Object { $_.CPU -gt 100 }
-</code></pre></div>    </div>
-  </li>
+  <li>PowerShell支持管道（<code class="language-plaintext highlighter-rouge">|</code>）将一个命令的输出直接传递给另一个命令。</li>
 </ul>
 
 <h3 id="10-文件操作">10. 文件操作</h3>
 
 <ul>
-  <li><strong>读取文件</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$content = Get-Content 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>读取文件</strong></p>
   </li>
-  <li><strong>写入文件</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Hello, World!" | Out-File 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>写入文件</strong></p>
   </li>
 </ul>
 
@@ -954,8 +904,7 @@
 
 <h1 id="七完结"><strong>七.完结</strong></h1>
 
-<p><strong>因为一些奇怪的BUG，有些命令的介绍被我删除了<br />
-关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>
+<p><strong>关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>
 
  <!-- 显示页面内容 -->
         </div>

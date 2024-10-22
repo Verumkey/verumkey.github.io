@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T20:59:34+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T21:18:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<p>本文会列出大部分CMD和Powershell的命令，但不会演示怎么使用<br />
+仅演示使用频率很高的</p>
 <h2 id="1cmd">1.CMD</h2>
 
 <p>CMD（命令提示符）是<strong>Windows 操作系统</strong>中的一个<strong>命令行界面</strong>，用于执行各种命令行任务。它的作用主要集中在基本的<strong>系统操作、文件管理、网络配置和诊断任务</strong>等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。</p>
@@ -224,30 +225,27 @@
 <p>这些是最常用的命令，用于操作文件和文件夹。</p>
 
 <ul>
-  <li><strong>dir</strong>：列出当前目录的文件和子目录。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dir
-</code></pre></div>    </div>
+  <li>
+    <p><strong>dir</strong>：列出当前目录的文件和子目录。</p>
   </li>
   <li>
     <p><strong>cd</strong>：改变当前目录，进入指定路径。</p>
   </li>
-  <li><strong>copy</strong>：复制文件到指定位置。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>copy source.txt 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>copy</strong>：复制文件到指定位置。</p>
   </li>
-  <li><strong>move</strong>：移动文件或重命名文件。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>move source.txt 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>move</strong>：移动文件或重命名文件。</p>
   </li>
-  <li><strong>del</strong>：删除一个或多个文件。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>del file.txt
-</code></pre></div>    </div>
+  <li>
+    <p><strong>del</strong>：删除一个或多个文件。</p>
   </li>
-  <li><strong>mkdir</strong>：创建新目录。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir NewFolder
-</code></pre></div>    </div>
+  <li>
+    <p><strong>mkdir</strong>：创建新目录。</p>
   </li>
-  <li><strong>rmdir</strong>：删除目录。</li>
+  <li>
+    <p><strong>rmdir</strong>：删除目录。</p>
+  </li>
 </ul>
 
 <h3 id="2-系统诊断和修复命令">2. 系统诊断和修复命令</h3>
@@ -255,56 +253,49 @@
 <p>这些命令用于检查和修复系统，排查问题。</p>
 
 <ul>
-  <li><strong>sfc /scannow</strong>：扫描并修复系统文件的完整性。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sfc /scannow
-</code></pre></div>    </div>
+  <li>
+    <p><strong>sfc /scannow</strong>：扫描并修复系统文件的完整性。</p>
   </li>
-  <li><strong>chkdsk</strong>：检查磁盘并修复文件系统错误。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chkdsk C: /f
-</code></pre></div>    </div>
+  <li>
+    <p><strong>chkdsk</strong>：检查磁盘并修复文件系统错误。</p>
   </li>
-  <li><strong>tasklist</strong>：显示当前运行的所有进程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasklist
-</code></pre></div>    </div>
+  <li>
+    <p><strong>tasklist</strong>：显示当前运行的所有进程。</p>
   </li>
-  <li><strong>taskkill</strong>：终止指定进程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taskkill /IM notepad.exe /F
-</code></pre></div>    </div>
+  <li>
+    <p><strong>taskkill</strong>：终止指定进程。</p>
   </li>
-  <li><strong>systeminfo</strong>：显示系统的详细配置信息。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systeminfo
-</code></pre></div>    </div>
+  <li>
+    <p><strong>systeminfo</strong>：显示系统的详细配置信息。</p>
   </li>
-  <li><strong>ipconfig</strong>：显示网络接口的配置信息，如 IP 地址、子网掩码等。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig
-</code></pre></div>    </div>
+  <li>
+    <p><strong>ipconfig</strong>：显示网络接口的配置信息，如 IP 地址、子网掩码等。</p>
   </li>
-  <li><strong>ping</strong>：测试与远程服务器的网络连接。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping google.com
-</code></pre></div>    </div>
-    <h3 id="3-网络命令">3. 网络命令</h3>
+  <li>
+    <p><strong>ping</strong>：测试与远程服务器的网络连接。</p>
   </li>
 </ul>
+
+<h3 id="3-网络命令">3. 网络命令</h3>
 
 <p>这些命令用于诊断网络连接和配置网络设置。</p>
 
 <ul>
-  <li><strong>netstat</strong>：显示当前的网络连接、端口和协议。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -an
-</code></pre></div>    </div>
+  <li>
+    <p><strong>netstat</strong>：显示当前的网络连接、端口和协议。</p>
   </li>
-  <li><strong>tracert</strong>：显示到目标主机的路由路径。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tracert google.com
-</code></pre></div>    </div>
+  <li>
+    <p><strong>tracert</strong>：显示到目标主机的路由路径。</p>
   </li>
-  <li><strong>nslookup</strong>：查询域名对应的 IP 地址或检查 DNS 解析问题。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nslookup google.com
-</code></pre></div>    </div>
+  <li>
+    <p><strong>nslookup</strong>：查询域名对应的 IP 地址或检查 DNS 解析问题。</p>
   </li>
   <li>
     <p><strong>net use</strong>：映射或断开网络驱动器。</p>
   </li>
-  <li><strong>netsh</strong>：管理网络配置（如 IP 设置、防火墙规则）。</li>
+  <li>
+    <p><strong>netsh</strong>：管理网络配置（如 IP 设置、防火墙规则）。</p>
+  </li>
 </ul>
 
 <h3 id="4-批处理命令">4. 批处理命令</h3>
@@ -312,45 +303,40 @@
 <p>这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。</p>
 
 <ul>
-  <li><strong>echo</strong>：显示消息或启用/禁用命令回显。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
-</code></pre></div>    </div>
+  <li>
+    <p><strong>echo</strong>：显示消息或启用/禁用命令回显。</p>
   </li>
-  <li><strong>set</strong>：设置或显示环境变量。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set PATH
-</code></pre></div>    </div>
+  <li>
+    <p><strong>set</strong>：设置或显示环境变量。</p>
   </li>
-  <li><strong>pause</strong>：在批处理文件中暂停命令执行，等待用户按键。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
-</code></pre></div>    </div>
+  <li>
+    <p><strong>pause</strong>：在批处理文件中暂停命令执行，等待用户按键。</p>
   </li>
-  <li><strong>if</strong>：条件语句，判断是否执行某些命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if exist file.txt echo File exists
-</code></pre></div>    </div>
+  <li>
+    <p><strong>if</strong>：条件语句，判断是否执行某些命令。</p>
   </li>
-  <li><strong>for</strong>：循环处理文件或命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
-</code></pre></div>    </div>
+  <li>
+    <p><strong>for</strong>：循环处理文件或命令。</p>
   </li>
-  <li><strong>goto</strong>：跳转到脚本中的某个标签，通常和 if 配合使用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start
-</code></pre></div>    </div>
-    <h3 id="5-用户和权限管理">5. 用户和权限管理</h3>
+  <li>
+    <p><strong>goto</strong>：跳转到脚本中的某个标签，通常和 if 配合使用。</p>
   </li>
 </ul>
+
+<h3 id="5-用户和权限管理">5. 用户和权限管理</h3>
 
 <p>这些命令用于管理用户账户和权限。</p>
 
 <ul>
-  <li><strong>net user</strong>：管理用户账户（创建、删除、修改用户）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net user username password /add
-</code></pre></div>    </div>
+  <li>
+    <p><strong>net user</strong>：管理用户账户（创建、删除、修改用户）。</p>
   </li>
-  <li><strong>net localgroup</strong>：管理本地用户组。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net localgroup administrators username /add
-</code></pre></div>    </div>
+  <li>
+    <p><strong>net localgroup</strong>：管理本地用户组。</p>
   </li>
-  <li><strong>runas</strong>：以其他用户身份执行命令。</li>
+  <li>
+    <p><strong>runas</strong>：以其他用户身份执行命令。</p>
+  </li>
 </ul>
 
 <h3 id="6-磁盘管理命令">6. 磁盘管理命令</h3>
@@ -358,16 +344,15 @@
 <p>这些命令用于管理硬盘驱动器和分区。</p>
 
 <ul>
-  <li><strong>diskpart</strong>：管理磁盘分区（创建、删除、调整大小）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskpart
-</code></pre></div>    </div>
+  <li>
+    <p><strong>diskpart</strong>：管理磁盘分区（创建、删除、调整大小）。</p>
   </li>
-  <li><strong>format</strong>：格式化磁盘或分区。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>format D:
-</code></pre></div>    </div>
-    <h3 id="7-进程和服务管理">7. 进程和服务管理</h3>
+  <li>
+    <p><strong>format</strong>：格式化磁盘或分区。</p>
   </li>
 </ul>
+
+<h3 id="7-进程和服务管理">7. 进程和服务管理</h3>
 
 <p>这些命令用于查看、终止进程或管理系统服务。</p>
 
@@ -380,11 +365,12 @@
 <p>这些命令用于与系统时间、计划任务有关的操作。</p>
 
 <ul>
-  <li><strong>time</strong>：显示或设置系统时间。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>time
-</code></pre></div>    </div>
+  <li>
+    <p><strong>time</strong>：显示或设置系统时间。</p>
   </li>
-  <li><strong>schtasks</strong>：管理计划任务，自动执行任务。</li>
+  <li>
+    <p><strong>schtasks</strong>：管理计划任务，自动执行任务。</p>
+  </li>
 </ul>
 
 <h3 id="9-高级管理命令">9. 高级管理命令</h3>
@@ -392,20 +378,18 @@
 <p>这些命令用于执行更高级的管理操作，通常由系统管理员使用。</p>
 
 <ul>
-  <li><strong>bcdedit</strong>：管理启动配置数据（修改启动选项）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bcdedit /set {bootmgr} timeout 30
-</code></pre></div>    </div>
+  <li>
+    <p><strong>bcdedit</strong>：管理启动配置数据（修改启动选项）。</p>
   </li>
-  <li><strong>gpupdate</strong>：更新组策略设置。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpupdate /force
-</code></pre></div>    </div>
+  <li>
+    <p><strong>gpupdate</strong>：更新组策略设置。</p>
   </li>
-  <li><strong>wmic</strong>：Windows Management Instrumentation Command，用于查询和管理操作系统相关信息。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wmic process get name
-</code></pre></div>    </div>
-    <h3 id="总结">总结：</h3>
+  <li>
+    <p><strong>wmic</strong>：用于查询和管理操作系统相关信息。</p>
   </li>
 </ul>
+
+<h3 id="总结">总结：</h3>
 
 <ol>
   <li><strong>文件和目录管理</strong>：如 dir、cd、copy、del 等，是最基础的操作。</li>
@@ -424,21 +408,17 @@
 <p>BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。</p>
 
 <ul>
-  <li><strong>注释：</strong> 使用 REM 或 :: 来注释代码，注释行不会执行。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REM This is a comment :: This is also a comment
-</code></pre></div>    </div>
+  <li>
+    <p><strong>注释：</strong> 使用 REM 或 :: 来注释代码，注释行不会执行。</p>
   </li>
-  <li><strong>显示消息：</strong> 使用 echo 打印消息或控制命令回显。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Hello, World!
-</code></pre></div>    </div>
+  <li>
+    <p><strong>显示消息：</strong> 使用 echo 打印消息或控制命令回显。</p>
   </li>
-  <li><strong>变量：</strong> 使用 set 定义和访问变量。变量名用 % 包围来引用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set myVar=123 echo %myVar%
-</code></pre></div>    </div>
+  <li>
+    <p><strong>变量：</strong> 使用 set 定义和访问变量。变量名用 % 包围来引用。</p>
   </li>
-  <li><strong>禁用回显：</strong> 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
-</code></pre></div>    </div>
+  <li>
+    <p><strong>禁用回显：</strong> 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。</p>
   </li>
 </ul>
 
@@ -455,18 +435,7 @@
 <h4 id="循环语句-for">循环语句 (for)</h4>
 
 <ul>
-  <li>for 循环用于遍历文件、目录或变量集合。
-    <ul>
-      <li>遍历文件：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %%f in (*.txt) do echo %%f
-</code></pre></div>        </div>
-      </li>
-      <li>遍历数字范围：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for /L %%i in (1, 1, 10) do echo %%i
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
+  <li>for 循环用于遍历文件、目录或变量集合。</li>
 </ul>
 
 <h3 id="3-输入输出">3. 输入输出</h3>
@@ -478,72 +447,62 @@
   <li>
     <p><strong>重定向输出：</strong> 使用 &gt;、» 将命令的输出重定向到文件。</p>
   </li>
-  <li>将输出重定向到文件并覆盖该文件的内容。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo This is a test &gt; output.txt
-</code></pre></div>    </div>
+  <li>
+    <p>将输出重定向到文件并覆盖该文件的内容。</p>
   </li>
-  <li>将输出附加到文件末尾。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo Another line &gt;&gt; output.txt
-</code></pre></div>    </div>
+  <li>
+    <p>将输出附加到文件末尾。</p>
   </li>
 </ul>
 
 <h3 id="4-子程序与跳转">4. 子程序与跳转</h3>
 
 <ul>
-  <li><strong>标签 (:)</strong> 和 <strong>跳转 (goto)</strong>：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goto :start  :start echo This is the start
-</code></pre></div>    </div>
+  <li>
+    <p><strong>标签 (:)</strong> 和 <strong>跳转 (goto)</strong>：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。</p>
   </li>
-  <li><strong>call 语句：</strong> 用于调用另一个批处理文件或调用当前脚本的子例程。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>call otherScript.bat
-</code></pre></div>    </div>
+  <li>
+    <p><strong>call 语句：</strong> 用于调用另一个批处理文件或调用当前脚本的子例程。</p>
   </li>
 </ul>
 
 <h3 id="5-错误处理">5. 错误处理</h3>
 
 <ul>
-  <li><strong>errorlevel</strong>：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if %errorlevel% neq 0 echo An error occurred
-</code></pre></div>    </div>
-  </li>
+  <li><strong>errorlevel</strong>：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。</li>
 </ul>
 
 <h3 id="6-批处理文件常见参数">6. 批处理文件常见参数</h3>
 
 <ul>
-  <li><strong>%1 到 %9</strong>：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo First parameter is %1
-</code></pre></div>    </div>
+  <li>
+    <p><strong>%1 到 %9</strong>：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。</p>
   </li>
-  <li><strong>shift</strong>：用于左移参数，%2 变为 %1，%3 变为 %2。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shift
-</code></pre></div>    </div>
+  <li>
+    <p><strong>shift</strong>：用于左移参数，%2 变为 %1，%3 变为 %2。</p>
   </li>
 </ul>
 
 <h3 id="7-批处理文件常用命令">7. 批处理文件常用命令</h3>
 
 <ul>
-  <li><strong>pause</strong>：暂停脚本执行，等待用户按任意键继续。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pause
-</code></pre></div>    </div>
+  <li>
+    <p><strong>pause</strong>：暂停脚本执行，等待用户按任意键继续。</p>
   </li>
-  <li><strong>exit</strong>：终止批处理文件的执行，并可选择返回错误码。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit /b 0
-</code></pre></div>    </div>
+  <li>
+    <p><strong>exit</strong>：终止批处理文件的执行，并可选择返回错误码。</p>
   </li>
 </ul>
 
 <h3 id="8-高级功能">8. 高级功能</h3>
 
 <ul>
-  <li><strong>setlocal 和 endlocal</strong>：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setlocal set myVar=123 endlocal
-</code></pre></div>    </div>
+  <li>
+    <p><strong>setlocal 和 endlocal</strong>：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。</p>
   </li>
-  <li><strong>环境变量操作</strong>：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。</li>
+  <li>
+    <p><strong>环境变量操作</strong>：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。</p>
+  </li>
 </ul>
 
 <h3 id="9-批处理文件的应用场景">9. 批处理文件的应用场景</h3>
@@ -676,7 +635,7 @@
 <ul>
   <li><strong>脚本注释</strong>：
     <ul>
-      <li>单行注释使用井符号：</li>
+      <li>单行注释使用井符号</li>
     </ul>
   </li>
 </ul>
@@ -684,13 +643,11 @@
 <h3 id="2-变量">2. 变量</h3>
 
 <ul>
-  <li><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$myVariable = "Hello, World!"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。</p>
   </li>
-  <li><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "The message is: $myVariable"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。</p>
   </li>
 </ul>
 
@@ -723,41 +680,34 @@
 <h3 id="7-模块和导入">7. 模块和导入</h3>
 
 <ul>
-  <li><strong>导入模块</strong>：使用 Import-Module 导入 PowerShell 模块。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Import-Module ModuleName
-</code></pre></div>    </div>
-  </li>
+  <li><strong>导入模块</strong>：使用 Import-Module 导入 PowerShell 模块。</li>
 </ul>
 
 <h3 id="8-输入和输出">8. 输入和输出</h3>
 
 <ul>
-  <li><strong>输出到控制台</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "This is output to the console"
-</code></pre></div>    </div>
+  <li>
+    <p><strong>输出到控制台</strong></p>
   </li>
-  <li><strong>获取用户输入</strong>：</li>
+  <li>
+    <p><strong>获取用户输入</strong></p>
+  </li>
 </ul>
 
 <h3 id="9-管道">9. 管道</h3>
 
 <ul>
-  <li>PowerShell 支持管道（|）将一个命令的输出直接传递给另一个命令。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Process | Where-Object { $_.CPU -gt 100 }
-</code></pre></div>    </div>
-  </li>
+  <li>PowerShell支持管道（<code class="language-plaintext highlighter-rouge">|</code>）将一个命令的输出直接传递给另一个命令。</li>
 </ul>
 
 <h3 id="10-文件操作">10. 文件操作</h3>
 
 <ul>
-  <li><strong>读取文件</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$content = Get-Content 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>读取文件</strong></p>
   </li>
-  <li><strong>写入文件</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Hello, World!" | Out-File 路径
-</code></pre></div>    </div>
+  <li>
+    <p><strong>写入文件</strong></p>
   </li>
 </ul>
 
@@ -860,8 +810,7 @@
 
 <h1 id="七完结"><strong>七.完结</strong></h1>
 
-<p><strong>因为一些奇怪的BUG，有些命令的介绍被我删除了<br />
-关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="CMD" /><category term="Powershell" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用CMD与Powershell]]></summary></entry><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
+<p><strong>关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="CMD" /><category term="Powershell" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用CMD与Powershell]]></summary></entry><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一git概述"><strong>一.Git概述</strong></h1>
 <p>Git 是一个分布式版本控制系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
 
 <ol>
@@ -891,15 +840,15 @@
 
 <h3 id="常用命令">常用命令：</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git clone</code>：克隆远程仓库到本地。</li>
-  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前工作区的状态（有哪些改动）。</li>
-  <li><code class="language-plaintext highlighter-rouge">git add</code>：将改动添加到暂存区。</li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -m "消息"</code>：提交暂存区的改动，并添加描述信息。</li>
-  <li><code class="language-plaintext highlighter-rouge">git push</code>：将本地提交推送到远程仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取更新并合并到本地分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看所有分支，或创建、删除分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout</code>：切换到另一个分支。
+  <li>git init：初始化一个新的 Git 仓库。</li>
+  <li>git clone：克隆远程仓库到本地。</li>
+  <li>git status：查看当前工作区的状态（有哪些改动）。</li>
+  <li>git add：将改动添加到暂存区。</li>
+  <li>git commit -m “消息”：提交暂存区的改动，并添加描述信息。</li>
+  <li>git push：将本地提交推送到远程仓库。</li>
+  <li>git pull：从远程仓库拉取更新并合并到本地分支。</li>
+  <li>git branch：查看所有分支，或创建、删除分支。</li>
+  <li>git checkout：切换到另一个分支。
 通过 Git，开发者能够更好地管理代码版本，尤其是在复杂项目中，它可以极大地提高效率并减少冲突。</li>
 </ul>
 
@@ -1001,7 +950,7 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <h4 id="ssh-的主要功能">SSH 的主要功能：</h4>
 <ul>
   <li><strong>远程登录</strong>：可以在本地计算机上通过终端控制远程服务器。</li>
-  <li><strong>文件传输</strong>：通过 <code class="language-plaintext highlighter-rouge">scp</code> 或 <code class="language-plaintext highlighter-rouge">sftp</code> 等方式在本地和远程机器之间安全地传输文件。</li>
+  <li><strong>文件传输</strong>：通过 scp 或 sftp 等方式在本地和远程机器之间安全地传输文件。</li>
   <li><strong>端口转发</strong>：通过 SSH 隧道实现的端口转发功能，可以把本地端口重定向到远程机器上的端口，用于保护其他通信协议的安全。</li>
 </ul>
 
@@ -1009,10 +958,10 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <p><strong>OpenSSH</strong> 是 SSH 协议的一个开源实现，广泛应用于各类操作系统中（特别是类 Unix 系统，如 Linux 和 macOS）。它不仅支持 SSH 协议本身，还包括一些相关的工具，例如：</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ssh</code>：用于远程登录。</li>
-  <li><code class="language-plaintext highlighter-rouge">scp</code> 和 <code class="language-plaintext highlighter-rouge">sftp</code>：用于安全地传输文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">ssh-agent</code> 和 <code class="language-plaintext highlighter-rouge">ssh-add</code>：用于管理 SSH 密钥和自动登录。</li>
-  <li><code class="language-plaintext highlighter-rouge">sshd</code>：SSH 服务器程序，允许远程登录到本地系统。</li>
+  <li>ssh：用于远程登录。</li>
+  <li>scp 和 sftp：用于安全地传输文件。</li>
+  <li>ssh-agent 和 ssh-add：用于管理 SSH 密钥和自动登录。</li>
+  <li>sshd：SSH 服务器程序，允许远程登录到本地系统。</li>
 </ul>
 
 <p>OpenSSH 是目前最常用的 SSH 实现之一，由于其开源和安全性，它在服务器管理和远程开发中被广泛使用。</p>
@@ -1022,10 +971,10 @@ VS Code编辑器使用Git主要用VS Code打开文件夹，进入资源管理器
 <p>图中有两个选择：</p>
 <ol>
   <li>
-    <p><strong>Use bundled OpenSSH</strong>（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。</p>
+    <p><strong>Use bundled OpenSSH</strong>（使用 Git 附带的 OpenSSH）：这意味着 Git 会使用 Git 自带的 ssh.exe，也就是你不需要单独安装 SSH 程序，直接使用 Git 包含的版本。</p>
   </li>
   <li>
-    <p><strong>Use external OpenSSH</strong>（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 <code class="language-plaintext highlighter-rouge">ssh.exe</code>，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
+    <p><strong>Use external OpenSSH</strong>（使用外部的 OpenSSH）：这选项意味着你已经在系统中安装了 OpenSSH，Git 将使用系统中已有的 ssh.exe，而不是安装 Git 自己的版本。这个选择适用于你已经有外部的 OpenSSH 安装并且想用系统默认的 SSH 配置。
 一般选择<strong>默认</strong>即可
 7.<img src="/images/git-images/git.10.png" alt="" />8.<img src="/images/git-images/git.11.png" alt="" />
 9.<img src="/images/git-images/git.12.png" alt="" />10.<img src="/images/git-images/git.14.png" alt="" />
@@ -1057,55 +1006,55 @@ git config --global user.email
 <h3 id="1-模式切换">1. 模式切换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">i</code>：进入插入模式（开始编辑文本）。</li>
-  <li><code class="language-plaintext highlighter-rouge">Esc</code>：退出插入模式，回到普通模式。</li>
-  <li><code class="language-plaintext highlighter-rouge">:q</code>：退出 Vim。</li>
-  <li><code class="language-plaintext highlighter-rouge">:w</code>：保存文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:wq</code>：保存并退出。</li>
-  <li><code class="language-plaintext highlighter-rouge">:q!</code>：强制退出（不保存修改）。</li>
-  <li><code class="language-plaintext highlighter-rouge">:x</code>：保存并退出（与 <code class="language-plaintext highlighter-rouge">:wq</code> 类似）。</li>
+  <li>i：进入插入模式（开始编辑文本）。</li>
+  <li>Esc：退出插入模式，回到普通模式。</li>
+  <li>:q：退出 Vim。</li>
+  <li>:w：保存文件。</li>
+  <li>:wq：保存并退出。</li>
+  <li>:q!：强制退出（不保存修改）。</li>
+  <li>:x：保存并退出（与 :wq 类似）。</li>
 </ul>
 
 <h3 id="2-文件操作">2. 文件操作</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">vim filename</code>：打开文件，若文件不存在则新建文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:e filename</code>：打开其他文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">:w filename</code>：另存为指定文件名。</li>
+  <li>vim filename：打开文件，若文件不存在则新建文件。</li>
+  <li>:e filename：打开其他文件。</li>
+  <li>:w filename：另存为指定文件名。</li>
 </ul>
 
 <h3 id="3-移动光标">3. 移动光标</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">h</code>：向左移动一个字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">j</code>：向下移动一行。</li>
-  <li><code class="language-plaintext highlighter-rouge">k</code>：向上移动一行。</li>
-  <li><code class="language-plaintext highlighter-rouge">l</code>：向右移动一个字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">gg</code>：移动到文件开头。</li>
-  <li><code class="language-plaintext highlighter-rouge">G</code>：移动到文件末尾。</li>
-  <li><code class="language-plaintext highlighter-rouge">w</code>：移动到下一个单词的开头。</li>
-  <li><code class="language-plaintext highlighter-rouge">b</code>：移动到上一个单词的开头。</li>
+  <li>h：向左移动一个字符。</li>
+  <li>j：向下移动一行。</li>
+  <li>k：向上移动一行。</li>
+  <li>l：向右移动一个字符。</li>
+  <li>gg：移动到文件开头。</li>
+  <li>G：移动到文件末尾。</li>
+  <li>w：移动到下一个单词的开头。</li>
+  <li>b：移动到上一个单词的开头。</li>
 </ul>
 
 <h3 id="4-文本编辑">4. 文本编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">x</code>：删除光标下的字符。</li>
-  <li><code class="language-plaintext highlighter-rouge">dd</code>：删除当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">yy</code>：复制当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">p</code>：粘贴。</li>
-  <li><code class="language-plaintext highlighter-rouge">u</code>：撤销上一步操作。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + r</code>：重做上一步操作。</li>
+  <li>x：删除光标下的字符。</li>
+  <li>dd：删除当前行。</li>
+  <li>yy：复制当前行。</li>
+  <li>p：粘贴。</li>
+  <li>u：撤销上一步操作。</li>
+  <li>Ctrl + r：重做上一步操作。</li>
 </ul>
 
 <h3 id="5-查找和替换">5. 查找和替换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/keyword</code>：查找 <code class="language-plaintext highlighter-rouge">keyword</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">n</code>：跳到下一个匹配项。</li>
-  <li><code class="language-plaintext highlighter-rouge">N</code>：跳到上一个匹配项。</li>
-  <li><code class="language-plaintext highlighter-rouge">:%s/old/new/g</code>：全局替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">:n,m s/old/new/g</code>：从第 <code class="language-plaintext highlighter-rouge">n</code> 行到第 <code class="language-plaintext highlighter-rouge">m</code> 行替换 <code class="language-plaintext highlighter-rouge">old</code> 为 <code class="language-plaintext highlighter-rouge">new</code>。</li>
+  <li>/keyword：查找 keyword。</li>
+  <li>n：跳到下一个匹配项。</li>
+  <li>N：跳到上一个匹配项。</li>
+  <li>:%s/old/new/g：全局替换 old 为 new。</li>
+  <li>:n,m s/old/new/g：从第 n 行到第 m 行替换 old 为 new。</li>
 </ul>
 
 <hr />
@@ -1115,60 +1064,60 @@ git config --global user.email
 <h3 id="1-基础命令">1. 基础命令</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + P</code>：快速打开文件（输入文件名）。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + N</code> / <code class="language-plaintext highlighter-rouge">Cmd + N</code>：新建文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + S</code>：保存文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + S</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + S</code>：另存为。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + W</code> / <code class="language-plaintext highlighter-rouge">Cmd + W</code>：关闭当前文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + P</code>：打开命令面板。</li>
+  <li>Ctrl + P / Cmd + P：快速打开文件（输入文件名）。</li>
+  <li>Ctrl + N / Cmd + N：新建文件。</li>
+  <li>Ctrl + S / Cmd + S：保存文件。</li>
+  <li>Ctrl + Shift + S / Cmd + Shift + S：另存为。</li>
+  <li>Ctrl + W / Cmd + W：关闭当前文件。</li>
+  <li>Ctrl + Shift + P / Cmd + Shift + P：打开命令面板。</li>
 </ul>
 
 <h3 id="2-导航">2. 导航</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Tab</code> / <code class="language-plaintext highlighter-rouge">Cmd + Tab</code>：切换打开的文件。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + G</code> / <code class="language-plaintext highlighter-rouge">Cmd + G</code>：跳转到指定行号。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + O</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + O</code>：按符号（函数/类名）跳转。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + T</code> / <code class="language-plaintext highlighter-rouge">Cmd + T</code>：搜索并跳转到符号。</li>
+  <li>Ctrl + Tab / Cmd + Tab：切换打开的文件。</li>
+  <li>Ctrl + G / Cmd + G：跳转到指定行号。</li>
+  <li>Ctrl + Shift + O / Cmd + Shift + O：按符号（函数/类名）跳转。</li>
+  <li>Ctrl + T / Cmd + T：搜索并跳转到符号。</li>
 </ul>
 
 <h3 id="3-编辑">3. 编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Z</code>：撤销。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Z</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + Z</code>：重做。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + X</code> / <code class="language-plaintext highlighter-rouge">Cmd + X</code>：剪切。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + C</code> / <code class="language-plaintext highlighter-rouge">Cmd + C</code>：复制。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + V</code> / <code class="language-plaintext highlighter-rouge">Cmd + V</code>：粘贴。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + /</code> / <code class="language-plaintext highlighter-rouge">Cmd + /</code>：注释/取消注释当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Option + Up</code>：上移当前行。</li>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Option + Down</code>：下移当前行。</li>
+  <li>Ctrl + Z / Cmd + Z：撤销。</li>
+  <li>Ctrl + Shift + Z / Cmd + Shift + Z：重做。</li>
+  <li>Ctrl + X / Cmd + X：剪切。</li>
+  <li>Ctrl + C / Cmd + C：复制。</li>
+  <li>Ctrl + V / Cmd + V：粘贴。</li>
+  <li>Ctrl + / / Cmd + /：注释/取消注释当前行。</li>
+  <li>Alt + Up / Option + Up：上移当前行。</li>
+  <li>Alt + Down / Option + Down：下移当前行。</li>
 </ul>
 
 <h3 id="4-多光标编辑">4. 多光标编辑</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Alt + Click</code> / <code class="language-plaintext highlighter-rouge">Option + Click</code>：添加光标。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Down</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Down</code>：向下添加光标。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Alt + Up</code> / <code class="language-plaintext highlighter-rouge">Cmd + Option + Up</code>：向上添加光标。</li>
+  <li>Alt + Click / Option + Click：添加光标。</li>
+  <li>Ctrl + Alt + Down / Cmd + Option + Down：向下添加光标。</li>
+  <li>Ctrl + Alt + Up / Cmd + Option + Up：向上添加光标。</li>
 </ul>
 
 <h3 id="5-代码格式化和调试">5. 代码格式化和调试</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Shift + Alt + F</code> / <code class="language-plaintext highlighter-rouge">Shift + Option + F</code>：格式化代码。</li>
-  <li><code class="language-plaintext highlighter-rouge">F5</code>：启动/继续调试。</li>
-  <li><code class="language-plaintext highlighter-rouge">F9</code>：设置/取消断点。</li>
-  <li><code class="language-plaintext highlighter-rouge">F10</code>：逐过程调试。</li>
-  <li><code class="language-plaintext highlighter-rouge">F11</code>：逐语句调试。</li>
+  <li>Shift + Alt + F / Shift + Option + F：格式化代码。</li>
+  <li>F5：启动/继续调试。</li>
+  <li>F9：设置/取消断点。</li>
+  <li>F10：逐过程调试。</li>
+  <li>F11：逐语句调试。</li>
 </ul>
 
 <h3 id="6-搜索和替换">6. 搜索和替换</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + F</code>：查找。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + H</code> / <code class="language-plaintext highlighter-rouge">Cmd + H</code>：替换。</li>
-  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + F</code> / <code class="language-plaintext highlighter-rouge">Cmd + Shift + F</code>：全局搜索。</li>
+  <li>Ctrl + F / Cmd + F：查找。</li>
+  <li>Ctrl + H / Cmd + H：替换。</li>
+  <li>Ctrl + Shift + F / Cmd + Shift + F：全局搜索。</li>
 </ul>
 
 <hr />
@@ -1187,29 +1136,29 @@ git config --global user.email
 <h3 id="11-初始化仓库">1.1. 初始化仓库</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git init</code>：初始化一个新的 Git 仓库。
+  <li>git init：初始化一个新的 Git 仓库。
     <h3 id="12-克隆仓库">1.2. 克隆仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git clone [url]</code>：从远程仓库克隆项目。
+  <li>git clone [url]：从远程仓库克隆项目。
     <h3 id="13-查看状态">1.3. 查看状态</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git status</code>：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
+  <li>git status：查看当前文件状态，包括未跟踪的文件、修改文件、暂存文件等。
     <h3 id="14-添加文件到暂存区">1.4. 添加文件到暂存区</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git add [filename]</code>：将单个文件添加到暂存区。</li>
-  <li><code class="language-plaintext highlighter-rouge">git add .</code>：将当前目录下所有更改添加到暂存区。
+  <li>git add [filename]：将单个文件添加到暂存区。</li>
+  <li>git add .：将当前目录下所有更改添加到暂存区。
     <h3 id="15-提交更改">1.5. 提交更改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -m "[message]"</code>：提交暂存区中的更改，并附加提交信息。</li>
-  <li><code class="language-plaintext highlighter-rouge">git commit -a -m "[message]"</code>：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
+  <li>git commit -m “[message]”：提交暂存区中的更改，并附加提交信息。</li>
+  <li>git commit -a -m “[message]”：将已跟踪文件的更改自动暂存并提交（不包括新文件）。
     <h3 id="16-查看提交历史">1.6. 查看提交历史</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git log</code>：查看提交历史。</li>
-  <li><code class="language-plaintext highlighter-rouge">git log --oneline</code>：以简短的形式查看提交历史。
+  <li>git log：查看提交历史。</li>
+  <li>git log –oneline：以简短的形式查看提交历史。
     <h3 id="17-查看差异">1.7. 查看差异</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git diff</code>：查看工作区和暂存区的文件差异。</li>
-  <li><code class="language-plaintext highlighter-rouge">git diff --staged</code>：查看已暂存文件的差异。</li>
+  <li>git diff：查看工作区和暂存区的文件差异。</li>
+  <li>git diff –staged：查看已暂存文件的差异。</li>
 </ul>
 
 <hr />
@@ -1219,26 +1168,26 @@ git config --global user.email
 <h3 id="21-查看分支">2.1. 查看分支</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git branch</code>：查看本地分支列表。
+  <li>git branch：查看本地分支列表。
     <h3 id="22-创建新分支">2.2. 创建新分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git branch [branch-name]</code>：创建一个新的分支。
+  <li>git branch [branch-name]：创建一个新的分支。
     <h3 id="23-切换分支">2.3. 切换分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout [branch-name]</code>：切换到指定分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git switch [branch-name]</code>：切换分支的更现代命令。
+  <li>git checkout [branch-name]：切换到指定分支。</li>
+  <li>git switch [branch-name]：切换分支的更现代命令。
     <h3 id="24-创建并切换分支">2.4. 创建并切换分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout -b [branch-name]</code>：创建并切换到新分支。</li>
-  <li><code class="language-plaintext highlighter-rouge">git switch -c [branch-name]</code>：新版本的等效命令。
+  <li>git checkout -b [branch-name]：创建并切换到新分支。</li>
+  <li>git switch -c [branch-name]：新版本的等效命令。
     <h3 id="25-合并分支">2.5. 合并分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git merge [branch-name]</code>：将指定分支合并到当前分支。
+  <li>git merge [branch-name]：将指定分支合并到当前分支。
     <h3 id="26-删除分支">2.6. 删除分支</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git branch -d [branch-name]</code>：删除分支（若该分支的更改已被合并）。</li>
+  <li>git branch -d [branch-name]：删除分支（若该分支的更改已被合并）。</li>
   <li>
-    <h2 id="git-branch--d-branch-name强制删除分支即使未合并"><code class="language-plaintext highlighter-rouge">git branch -D [branch-name]</code>：强制删除分支（即使未合并）。</h2>
+    <h2 id="git-branch--d-branch-name强制删除分支即使未合并">git branch -D [branch-name]：强制删除分支（即使未合并）。</h2>
   </li>
 </ul>
 
@@ -1247,21 +1196,21 @@ git config --global user.email
 <h3 id="31-查看远程仓库">3.1. 查看远程仓库</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git remote -v</code>：查看远程仓库地址。
+  <li>git remote -v：查看远程仓库地址。
     <h3 id="32-添加远程仓库">3.2. 添加远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git remote add [name] [url]</code>：添加远程仓库。
+  <li>git remote add [name] [url]：添加远程仓库。
     <h3 id="33-推送到远程仓库">3.3. 推送到远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git push [remote] [branch]</code>：将本地分支推送到远程仓库。</li>
-  <li><code class="language-plaintext highlighter-rouge">git push -u [remote] [branch]</code>：设置默认推送的上游分支，并推送。
+  <li>git push [remote] [branch]：将本地分支推送到远程仓库。</li>
+  <li>git push -u [remote] [branch]：设置默认推送的上游分支，并推送。
     <h3 id="34-拉取远程仓库的更改">3.4. 拉取远程仓库的更改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git pull</code>：从远程仓库拉取并合并更改。
+  <li>git pull：从远程仓库拉取并合并更改。
     <h3 id="35-从远程仓库获取更新">3.5. 从远程仓库获取更新</h3>
   </li>
   <li>
-    <h2 id="git-fetch从远程仓库获取更改但不自动合并"><code class="language-plaintext highlighter-rouge">git fetch</code>：从远程仓库获取更改，但不自动合并。</h2>
+    <h2 id="git-fetch从远程仓库获取更改但不自动合并">git fetch：从远程仓库获取更改，但不自动合并。</h2>
   </li>
 </ul>
 
@@ -1270,14 +1219,14 @@ git config --global user.email
 <h3 id="41-取消文件暂存">4.1. 取消文件暂存</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git reset HEAD [filename]</code>：将文件从暂存区移除，但保留工作区的更改。
+  <li>git reset HEAD [filename]：将文件从暂存区移除，但保留工作区的更改。
     <h3 id="42-撤销文件修改">4.2. 撤销文件修改</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git checkout -- [filename]</code>：撤销工作区的修改，恢复到上一次提交的状态。
+  <li>git checkout – [filename]：撤销工作区的修改，恢复到上一次提交的状态。
     <h3 id="43-重置到特定提交">4.3. 重置到特定提交</h3>
   </li>
   <li>
-    <h2 id="git-reset---hard-commit重置当前分支到指定的提交并丢弃之后的更改"><code class="language-plaintext highlighter-rouge">git reset --hard [commit]</code>：重置当前分支到指定的提交，并丢弃之后的更改。</h2>
+    <h2 id="git-reset-hard-commit重置当前分支到指定的提交并丢弃之后的更改">git reset –hard [commit]：重置当前分支到指定的提交，并丢弃之后的更改。</h2>
   </li>
 </ul>
 
@@ -1286,16 +1235,16 @@ git config --global user.email
 <h3 id="51-创建标签">5.1. 创建标签</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git tag [tag-name]</code>：创建一个轻量标签。</li>
-  <li><code class="language-plaintext highlighter-rouge">git tag -a [tag-name] -m "[message]"</code>：创建带注释的标签。
+  <li>git tag [tag-name]：创建一个轻量标签。</li>
+  <li>git tag -a [tag-name] -m “[message]”：创建带注释的标签。
     <h3 id="52-查看标签">5.2. 查看标签</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git tag</code>：列出所有标签。
+  <li>git tag：列出所有标签。
     <h3 id="53-推送标签到远程仓库">5.3. 推送标签到远程仓库</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git push origin [tag-name]</code>：推送单个标签。</li>
+  <li>git push origin [tag-name]：推送单个标签。</li>
   <li>
-    <h2 id="git-push-origin---tags推送所有标签"><code class="language-plaintext highlighter-rouge">git push origin --tags</code>：推送所有标签。</h2>
+    <h2 id="git-push-origin-tags推送所有标签">git push origin –tags：推送所有标签。</h2>
   </li>
 </ul>
 
@@ -1304,14 +1253,14 @@ git config --global user.email
 <h3 id="61-清理未跟踪的文件">6.1. 清理未跟踪的文件</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">git clean -f</code>：删除未跟踪的文件。
+  <li>git clean -f：删除未跟踪的文件。
     <h3 id="62-查看全局配置">6.2. 查看全局配置</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git config --list</code>：查看所有 Git 配置信息。
+  <li>git config –list：查看所有 Git 配置信息。
     <h3 id="63-设置全局用户名和邮箱">6.3. 设置全局用户名和邮箱</h3>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">git config --global user.name "[name]"</code>：设置用户名。</li>
-  <li><code class="language-plaintext highlighter-rouge">git config --global user.email "[email]"</code>：设置邮箱。</li>
+  <li>git config –global user.name “[name]”：设置用户名。</li>
+  <li>git config –global user.email “[email]”：设置邮箱。</li>
 </ul>
 
 <h1 id="五git-bash使用示范">五.Git Bash使用示范</h1>
@@ -1384,14 +1333,14 @@ git add .         # 添加当前目录下所有文件
 <img src="/images/git-images/git.36.png" alt="" /><img src="/images/git-images/git.37.png" alt="" /></p>
     <h3 id="25切换到不同的提交">2.5.切换到不同的提交</h3>
     <p>你每提交一次，都会生成一个哈希值，也可以理解为一个版本对应一个版本号</p>
-    <h4 id="2-git-reset-hash">2. <strong><code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code></strong></h4>
+    <h4 id="2-git-reset-">2. **git reset <hash>**</hash></h4>
   </li>
-  <li><strong>作用</strong>：<code class="language-plaintext highlighter-rouge">git reset &lt;hash&gt;</code> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</li>
-  <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 <code class="language-plaintext highlighter-rouge">--soft</code>、<code class="language-plaintext highlighter-rouge">--mixed</code> 或 <code class="language-plaintext highlighter-rouge">--hard</code>），会影响索引和工作目录的状态：
+  <li><strong>作用</strong>：git reset <hash> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</hash></li>
+  <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 –soft、–mixed 或 –hard），会影响索引和工作目录的状态：
     <ul>
-      <li><strong><code class="language-plaintext highlighter-rouge">--soft</code></strong>：仅重置 HEAD，索引和工作目录保持不变。</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">--mixed</code></strong>（默认）：重置 HEAD 和索引，工作目录保持不变。</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">--hard</code></strong>：重置 HEAD、索引和工作目录，将所有更改丢弃。
+      <li><strong>–soft</strong>：仅重置 HEAD，索引和工作目录保持不变。</li>
+      <li><strong>–mixed</strong>（默认）：重置 HEAD 和索引，工作目录保持不变。</li>
+      <li><strong>–hard</strong>：重置 HEAD、索引和工作目录，将所有更改丢弃。
 <img src="/images/git-images/git.38.png" alt="" />
 <img src="/images/git-images/git.39.png" alt="" />
         <h3 id="26使用分支">2.6.使用分支</h3>
