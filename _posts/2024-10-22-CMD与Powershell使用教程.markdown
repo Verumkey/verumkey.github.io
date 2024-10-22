@@ -275,13 +275,21 @@ ping google.com
 这些命令用于诊断网络连接和配置网络设置。
 
 - **netstat**：显示当前的网络连接、端口和协议。
-
+```
+netstat -an
+```
 - **tracert**：显示到目标主机的路由路径。
-
+```
+tracert google.com
+```
 - **nslookup**：查询域名对应的 IP 地址或检查 DNS 解析问题。
-
+```
+nslookup google.com
+```
 - **net use**：映射或断开网络驱动器。
-
+```
+net use Z: \\server\sharedfolder
+```
 - **netsh**：管理网络配置（如 IP 设置、防火墙规则）。
 
 ### 4. 批处理命令
@@ -289,17 +297,29 @@ ping google.com
 这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。
 
 - **echo**：显示消息或启用/禁用命令回显。
-
+```
+echo Hello, World!
+```
 - **set**：设置或显示环境变量。
-
+```
+set PATH
+```
 - **pause**：在批处理文件中暂停命令执行，等待用户按键。
-
+```
+pause
+```
 - **if**：条件语句，判断是否执行某些命令。
-
+```
+if exist file.txt echo File exists
+```
 - **for**：循环处理文件或命令。
-
+```
+for %%f in (*.txt) do echo %%f
+```
 - **goto**：跳转到脚本中的某个标签，通常和 if 配合使用。
-
+```
+goto :start
+```
 ### 5. 用户和权限管理
 
 这些命令用于管理用户账户和权限。
