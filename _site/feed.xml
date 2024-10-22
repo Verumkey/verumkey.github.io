@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T19:02:49+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T19:05:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 
 <h2 id="1cmd">1.CMD</h2>
 
@@ -456,27 +456,10 @@
 <h4 id="条件语句-if">条件语句 (if)</h4>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">if</code> 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。
-    <ul>
-      <li>存在判断：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if exist file.txt echo File exists
-</code></pre></div>        </div>
-      </li>
-      <li>字符串比较：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if "%myVar%"=="123" echo Variable is 123
-</code></pre></div>        </div>
-      </li>
-      <li>数值比较：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if %myVar% GEQ 100 echo Value is greater than or equal to 100
-</code></pre></div>        </div>
-      </li>
-    </ul>
+  <li><code class="language-plaintext highlighter-rouge">if</code> 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。</li>
+  <li>
+    <h4 id="循环语句-for">循环语句 (for)</h4>
   </li>
-</ul>
-
-<h4 id="循环语句-for">循环语句 (for)</h4>
-
-<ul>
   <li><code class="language-plaintext highlighter-rouge">for</code> 循环用于遍历文件、目录或变量集合。
     <ul>
       <li>遍历文件：
