@@ -3,7 +3,7 @@
     width: 100%; /* 设置宽度为 100% */
     margin: 0 auto; /* 居中 */
     padding: 0 10px; /* 设置左右内边距 */
-    margin-top: 30px; /* 调整页眉与内容之间的距离 */
+    margin-top: 60px; /* 调整页眉与内容之间的距离 */
     display: flex; /* 使用 Flexbox 布局 */
     flex-direction: column; /* 列方向 */
     align-items: center; /* 居中对齐 */
@@ -51,6 +51,7 @@ table {
 /* 页眉样式 */
 header, .site-header {
     width: 100%; /* 使页眉宽度占满整个视口 */
+    height: 40px; /* 设置固定高度 */
     position: fixed; /* 固定页眉在顶部 */
     top: 0; /* 让页眉固定在视口顶部 */
     left: 0; /* 确保没有左右偏移 */
@@ -88,4 +89,9 @@ header .toggle-btn {
 .article {
     max-width: 100%; /* 限制宽度为 100% */
     margin: 0 auto; /* 居中 */
+}
+
+/* 防止页面在小屏幕上横向溢出 */
+body {
+    overflow-x: hidden; /* 防止横向滚动条 */
 }
