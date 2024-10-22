@@ -48,3 +48,10 @@ table {
         width: 100%; /* 在手机上侧边栏占满宽度 */
     }
 }
+
+header {
+    width: 100vw; /* 使页眉宽度占满整个视口 */
+    position: relative; /* 相对定位 */
+    left: 0; /* 确保没有左右偏移 */
+}
+
