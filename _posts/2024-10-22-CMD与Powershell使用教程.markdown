@@ -337,6 +337,7 @@ net localgroup administrators username /add
 ```
 runas /user:Administrator cmd
 ```
+
 ### 6. 磁盘管理命令
 
 这些命令用于管理硬盘驱动器和分区。
@@ -349,6 +350,7 @@ diskpart
 ```
 format D:
 ```
+
 ### 7. 进程和服务管理
 
 这些命令用于查看、终止进程或管理系统服务。
@@ -406,6 +408,7 @@ echo Hello, World!
 ```
 @echo off
 ```
+
 ### 2. 流程控制语法
 
 BAT 文件支持基本的流程控制语法，如条件语句、循环等。
@@ -432,6 +435,7 @@ echo This is a test > output.txt
 ```
 echo Another line >> output.txt
 ```
+
 ### 4. 子程序与跳转
 
 - **标签 (:)** 和 **跳转 (goto)**：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
@@ -440,6 +444,7 @@ echo Another line >> output.txt
 ```
 call 文件名
 ```
+
 ### 5. 错误处理
 
 - **errorlevel**：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
@@ -654,6 +659,8 @@ PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结�
 4. **Unrestricted**：允许所有脚本运行，但在执行远程脚本时会有警告。
 5. **Bypass**：不进行任何检查，允许所有脚本运行。
 6. **Undefined**：没有设置策略，PowerShell 会回到默认策略。
+
+可以通过 PowerShell 中的 `Get-ExecutionPolicy` 命令查看当前策略，通过 `Set-ExecutionPolicy` 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。
 
 ### 1.2.运行命令检查执行策略
 
