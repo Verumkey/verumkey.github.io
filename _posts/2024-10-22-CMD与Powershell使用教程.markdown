@@ -243,19 +243,33 @@ mkdir NewFolder
 这些命令用于检查和修复系统，排查问题。
 
 - **sfc /scannow**：扫描并修复系统文件的完整性。
-
+```
+sfc /scannow
+```
 - **chkdsk**：检查磁盘并修复文件系统错误。
-
+```
+chkdsk C: /f
+```
 - **tasklist**：显示当前运行的所有进程。
-
+```
+tasklist
+```
 - **taskkill**：终止指定进程。
-
+```
+taskkill /IM notepad.exe /F
+```
 - **systeminfo**：显示系统的详细配置信息。
-
+```
+systeminfo
+```
 - **ipconfig**：显示网络接口的配置信息，如 IP 地址、子网掩码等。
-
+```
+ipconfig
+```
 - **ping**：测试与远程服务器的网络连接。
-
+```
+ping google.com
+```
 ### 3. 网络命令
 
 这些命令用于诊断网络连接和配置网络设置。
