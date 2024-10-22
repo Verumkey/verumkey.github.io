@@ -236,9 +236,7 @@ del file.txt
 mkdir NewFolder
 ```
 - **`rmdir`**：删除目录。
-```
-rmdir /S /Q C:\Path\To\Folder  # /S 删除子目录和文件, /Q 安静模式
-```
+
 ### 2. 系统诊断和修复命令
 
 这些命令用于检查和修复系统，排查问题。
@@ -292,9 +290,7 @@ nslookup google.com
 net use Z: \\server\sharedfolder
 ```
 - **`netsh`**：管理网络配置（如 IP 设置、防火墙规则）。
-```
-netsh int ip set address "Local Area Connection" static 192.168.1.100 255.255.255.0 192.168.1.1
-```
+
 ### 4. 批处理命令
 
 这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。
@@ -355,10 +351,6 @@ format D:
 
 这些命令用于查看、终止进程或管理系统服务。
 
-- **`sc`**：管理系统服务（启动、停止、查询服务状态）。
-```
-sc query wuauserv
-```
 - **`shutdown`**：关闭或重启计算机。
 ```
 shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
@@ -645,48 +637,25 @@ Write-Host "The message is: $myVariable"
 
 ### 3. 数据类型
 
-- PowerShell 支持多种数据类型，包括字符串、整数、数组、哈希表等。
-```
-$stringVar = "This is a string" $intVar = 42 $arrayVar = @(1, 2, 3, 4) $hashTable = @{"key1" = "value1"; "key2" = "value2"}
-```
-
 ### 4. 流程控制
 
 - **条件语句**：
-```
-if ($condition) {     # Do something } elseif ($otherCondition) {     # Do something else } else {     # Do another thing }
-```
 
 - **循环语句**：
     
     - `for` 循环：
-```
-for ($i = 0; $i -lt 10; $i++) {     Write-Host $i }
-```
 
     - `foreach` 循环：
-```
-foreach ($item in $arrayVar) {     Write-Host $item }
-```
 
     - `while` 循环：
-```
-$counter = 0 while ($counter -lt 5) {     Write-Host $counter     $counter++ }
-```
 
 ### 5. 函数
 
 - **定义函数**：使用 `function` 关键字定义一个函数。
-```
-function MyFunction {     param ($param1, $param2)     Write-Host "Parameter 1 is $param1"     Write-Host "Parameter 2 is $param2" }  MyFunction "Value1" "Value2"
-```
 
 ### 6. 错误处理
 
 - **`try`、`catch` 和 `finally`**：
-```
-try {     # Code that might throw an exception } catch {     Write-Host "An error occurred: $_" } finally {     # Code that runs regardless of success or failure }
-```
 
 ### 7. 模块和导入
 
@@ -703,9 +672,6 @@ Write-Host "This is output to the console"
 ```
 
 - **获取用户输入**：
-```
-$userInput = Read-Host "Enter your name" Write-Host "Hello, $userInput!"
-```
 
 ### 9. 管道
 
@@ -729,16 +695,10 @@ $content = Get-Content "C:\path\to\file.txt"
 ### 11. 对象和属性
 
 - PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。
-```
-$process = Get-Process | Where-Object { $_.Name -eq "powershell" } Write-Host "Process ID: $($process.Id)"
-```
 
 ### 12. 自动化和计划任务
 
 - **创建计划任务**：
-```
-$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "C:\path\to\script.ps1" $trigger = New-ScheduledTaskTrigger -At 7am -Daily Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "MyTask"
-```
 
 ### 13. 模块的创建与使用
 

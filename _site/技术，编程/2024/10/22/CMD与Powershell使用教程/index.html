@@ -344,12 +344,10 @@
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir NewFolder
 </code></pre></div>    </div>
   </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">rmdir</code></strong>：删除目录。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rmdir /S /Q C:\Path\To\Folder  # /S 删除子目录和文件, /Q 安静模式
-</code></pre></div>    </div>
-    <h3 id="2-系统诊断和修复命令">2. 系统诊断和修复命令</h3>
-  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">rmdir</code></strong>：删除目录。</li>
 </ul>
+
+<h3 id="2-系统诊断和修复命令">2. 系统诊断和修复命令</h3>
 
 <p>这些命令用于检查和修复系统，排查问题。</p>
 
@@ -404,12 +402,10 @@
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net use Z: \\server\sharedfolder
 </code></pre></div>    </div>
   </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">netsh</code></strong>：管理网络配置（如 IP 设置、防火墙规则）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netsh int ip set address "Local Area Connection" static 192.168.1.100 255.255.255.0 192.168.1.1
-</code></pre></div>    </div>
-    <h3 id="4-批处理命令">4. 批处理命令</h3>
-  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">netsh</code></strong>：管理网络配置（如 IP 设置、防火墙规则）。</li>
 </ul>
+
+<h3 id="4-批处理命令">4. 批处理命令</h3>
 
 <p>这些命令经常在批处理脚本（.bat 文件）中使用，以自动化重复任务。</p>
 
@@ -476,10 +472,6 @@
 <p>这些命令用于查看、终止进程或管理系统服务。</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">sc</code></strong>：管理系统服务（启动、停止、查询服务状态）。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sc query wuauserv
-</code></pre></div>    </div>
-  </li>
   <li><strong><code class="language-plaintext highlighter-rouge">shutdown</code></strong>：关闭或重启计算机。
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
 </code></pre></div>    </div>
@@ -829,35 +821,24 @@
 
 <h3 id="3-数据类型">3. 数据类型</h3>
 
-<ul>
-  <li>PowerShell 支持多种数据类型，包括字符串、整数、数组、哈希表等。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$stringVar = "This is a string" $intVar = 42 $arrayVar = @(1, 2, 3, 4) $hashTable = @{"key1" = "value1"; "key2" = "value2"}
-</code></pre></div>    </div>
-  </li>
-</ul>
-
 <h3 id="4-流程控制">4. 流程控制</h3>
 
 <ul>
-  <li><strong>条件语句</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ($condition) {     # Do something } elseif ($otherCondition) {     # Do something else } else {     # Do another thing }
-</code></pre></div>    </div>
+  <li>
+    <p><strong>条件语句</strong>：</p>
   </li>
   <li>
     <p><strong>循环语句</strong>：</p>
 
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">for</code> 循环：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for ($i = 0; $i -lt 10; $i++) {     Write-Host $i }
-</code></pre></div>        </div>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">for</code> 循环：</p>
       </li>
-      <li><code class="language-plaintext highlighter-rouge">foreach</code> 循环：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foreach ($item in $arrayVar) {     Write-Host $item }
-</code></pre></div>        </div>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">foreach</code> 循环：</p>
       </li>
-      <li><code class="language-plaintext highlighter-rouge">while</code> 循环：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$counter = 0 while ($counter -lt 5) {     Write-Host $counter     $counter++ }
-</code></pre></div>        </div>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">while</code> 循环：</p>
       </li>
     </ul>
   </li>
@@ -866,19 +847,13 @@
 <h3 id="5-函数">5. 函数</h3>
 
 <ul>
-  <li><strong>定义函数</strong>：使用 <code class="language-plaintext highlighter-rouge">function</code> 关键字定义一个函数。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function MyFunction {     param ($param1, $param2)     Write-Host "Parameter 1 is $param1"     Write-Host "Parameter 2 is $param2" }  MyFunction "Value1" "Value2"
-</code></pre></div>    </div>
-  </li>
+  <li><strong>定义函数</strong>：使用 <code class="language-plaintext highlighter-rouge">function</code> 关键字定义一个函数。</li>
 </ul>
 
 <h3 id="6-错误处理">6. 错误处理</h3>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">try</code>、<code class="language-plaintext highlighter-rouge">catch</code> 和 <code class="language-plaintext highlighter-rouge">finally</code></strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>try {     # Code that might throw an exception } catch {     Write-Host "An error occurred: $_" } finally {     # Code that runs regardless of success or failure }
-</code></pre></div>    </div>
-  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">try</code>、<code class="language-plaintext highlighter-rouge">catch</code> 和 <code class="language-plaintext highlighter-rouge">finally</code></strong>：</li>
 </ul>
 
 <h3 id="7-模块和导入">7. 模块和导入</h3>
@@ -897,10 +872,7 @@
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write-Host "This is output to the console"
 </code></pre></div>    </div>
   </li>
-  <li><strong>获取用户输入</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$userInput = Read-Host "Enter your name" Write-Host "Hello, $userInput!"
-</code></pre></div>    </div>
-  </li>
+  <li><strong>获取用户输入</strong>：</li>
 </ul>
 
 <h3 id="9-管道">9. 管道</h3>
@@ -928,19 +900,13 @@
 <h3 id="11-对象和属性">11. 对象和属性</h3>
 
 <ul>
-  <li>PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$process = Get-Process | Where-Object { $_.Name -eq "powershell" } Write-Host "Process ID: $($process.Id)"
-</code></pre></div>    </div>
-  </li>
+  <li>PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。</li>
 </ul>
 
 <h3 id="12-自动化和计划任务">12. 自动化和计划任务</h3>
 
 <ul>
-  <li><strong>创建计划任务</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "C:\path\to\script.ps1" $trigger = New-ScheduledTaskTrigger -At 7am -Daily Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "MyTask"
-</code></pre></div>    </div>
-  </li>
+  <li><strong>创建计划任务</strong>：</li>
 </ul>
 
 <h3 id="13-模块的创建与使用">13. 模块的创建与使用</h3>
