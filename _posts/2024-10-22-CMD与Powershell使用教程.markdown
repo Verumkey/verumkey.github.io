@@ -578,8 +578,6 @@ PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结�
 5. **Bypass**：不进行任何检查，允许所有脚本运行。
 6. **Undefined**：没有设置策略，PowerShell 会回到默认策略。
 
-可以通过 PowerShell 中的 Get-ExecutionPolicy 命令查看当前策略，通过 Set-ExecutionPolicy 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。
-
 ### 1.2.运行命令检查执行策略
 
 我这已经提前更改过了，初始是限制的
