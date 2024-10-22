@@ -364,9 +364,7 @@ shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
 time
 ```
 - **`schtasks`**：管理计划任务，自动执行任务。
-```
-schtasks /create /sc daily /tn "Backup" /tr "backup.bat" /st 23:00
-```
+
 ### 9. 高级管理命令
 
 这些命令用于执行更高级的管理操作，通常由系统管理员使用。
