@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T11:34:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T11:39:41+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 
 <h2 id="1cmd">1.CMD</h2>
 
@@ -430,11 +430,12 @@
   <li><strong>系统诊断和修复</strong>：如 <code class="language-plaintext highlighter-rouge">sfc</code>、<code class="language-plaintext highlighter-rouge">chkdsk</code>、<code class="language-plaintext highlighter-rouge">ipconfig</code> 等，用于维护和修复系统。</li>
   <li><strong>网络操作</strong>：如 <code class="language-plaintext highlighter-rouge">ping</code>、<code class="language-plaintext highlighter-rouge">netstat</code>、<code class="language-plaintext highlighter-rouge">tracert</code>，对于网络调试和故障排查非常有用。</li>
   <li><strong>批处理和自动化</strong>：如 <code class="language-plaintext highlighter-rouge">echo</code>、<code class="language-plaintext highlighter-rouge">for</code>、<code class="language-plaintext highlighter-rouge">if</code>，用于编写自动化脚本。</li>
-  <li><strong>用户和权限管理</strong>：如 <code class="language-plaintext highlighter-rouge">net user</code>、<code class="language-plaintext highlighter-rouge">runas</code>，用于管理账户和权限。
-    <h1 id="三bat文件语法"><strong>三.bat文件语法</strong></h1>
-    <p>批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 <code class="language-plaintext highlighter-rouge">.bat</code> 或 <code class="language-plaintext highlighter-rouge">.cmd</code> 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。</p>
-  </li>
+  <li><strong>用户和权限管理</strong>：如 <code class="language-plaintext highlighter-rouge">net user</code>、<code class="language-plaintext highlighter-rouge">runas</code>，用于管理账户和权限。</li>
 </ol>
+
+<h1 id="三bat文件语法"><strong>三.bat文件语法</strong></h1>
+
+<p>批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 <code class="language-plaintext highlighter-rouge">.bat</code> 或 <code class="language-plaintext highlighter-rouge">.cmd</code> 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。</p>
 
 <h3 id="1-基本语法结构">1. 基本语法结构</h3>
 
@@ -588,7 +589,9 @@
 <h3 id="总结-1">总结：</h3>
 
 <p>BAT 文件语法虽然简单，但在系统自动化和维护中非常有用。它结合了条件语句、循环、变量操作等功能，可以编写复杂的脚本来处理各种任务。如果需要实现更复杂的功能或与外部工具交互，批处理脚本也可以作为基础，通过调用其他程序实现更强大的自动化解决方案。</p>
+
 <h1 id="四powershell命令大全"><strong>四.Powershell命令大全</strong></h1>
+
 <p>PowerShell 是一个功能强大的命令行界面和脚本语言，支持多种命令（cmdlets），这些命令用于系统管理、文件操作、网络管理等。以下是按重要性排序的一些常用 PowerShell 命令及其简要说明：</p>
 
 <h3 id="1-基本命令">1. 基本命令</h3>
@@ -697,7 +700,7 @@
 <h3 id="总结-2">总结</h3>
 
 <p>以上列举的是一些重要且常用的 PowerShell 命令，按照其在日常使用中的重要性进行排序。这些命令可以帮助用户完成许多任务，从基础的文件管理到复杂的系统管理和自动化操作。PowerShell 的强大之处在于它的命令组合能力和对象处理能力，用户可以通过管道将一个命令的输出直接传递给另一个命令，从而实现更复杂的操作。</p>
-<h1 id="五ysl文件语法"><strong>五.ysl文件语法</strong></h1>
+<h1 id="五ps1文件语法"><strong>五.ps1文件语法</strong></h1>
 <p>PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 <code class="language-plaintext highlighter-rouge">.ps1</code>。PowerShell 脚本使用 PowerShell 语言编写，支持丰富的语法和功能。以下是对 PowerShell 脚本（PSL 文件）语法的详细介绍：</p>
 
 <h3 id="1-基本结构">1. <strong>基本结构</strong></h3>
