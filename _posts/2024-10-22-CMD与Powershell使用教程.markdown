@@ -393,16 +393,15 @@ BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺�
 
 - **注释：** 使用 REM 或 :: 来注释代码，注释行不会执行。
 ```
-REM This is a comment :: This is also a comment
+REM This is a comment
+::  This is also a comment
 ```
 - **显示消息：** 使用 echo 打印消息或控制命令回显。
 ```
 echo Hello, World!
 ```
 - **变量：** 使用 set 定义和访问变量。变量名用 % 包围来引用。
-```
-set myVar=123 echo %myVar%
-```
+
 - **禁用回显：** 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
 ```
 @echo off
@@ -439,7 +438,7 @@ echo Another line >> output.txt
 
 - **call 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。
 ```
-call otherScript.bat
+call 文件名
 ```
 ### 5. 错误处理
 
@@ -459,7 +458,7 @@ pause
 ```
 - **exit**：终止批处理文件的执行，并可选择返回错误码。
 ```
-exit /b 0
+exit 
 ```
 
 ### 8. 高级功能
