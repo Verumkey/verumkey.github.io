@@ -216,9 +216,6 @@ dir
 ```
 - **`cd`**：改变当前目录，进入指定路径。
 
-```
-cd C:\Users\YourUserName\Documents
-```
 - **`copy`**：复制文件到指定位置。
 ```
 copy source.txt C:\Destination
@@ -352,9 +349,7 @@ format D:
 这些命令用于查看、终止进程或管理系统服务。
 
 - **`shutdown`**：关闭或重启计算机。
-```
-shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
-```
+
 ### 8. 时间与计划任务管理
 
 这些命令用于与系统时间、计划任务有关的操作。
