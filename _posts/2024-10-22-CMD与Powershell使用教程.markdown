@@ -563,67 +563,6 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShe
 
 PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结构，使其能够用于系统管理、自动化任务、文件处理等多种场景。通过合理使用这些语法结构，用户可以编写高效、可维护的脚本来完成复杂的操作。
 
-#  **六.Powershell使用示例**
-
-## 1.配置环境
-
-### 1.1.执行策略介绍
-
-执行策略（Execution Policy）是 PowerShell 中的一个安全功能，用于控制脚本和配置文件的运行权限。它通过限制脚本的执行来保护系统不受潜在恶意代码的影响。主要的执行策略有：
-
-1. **Restricted**：默认策略，不允许任何脚本运行。
-2. **AllSigned**：只允许运行由受信任的发布者签名的脚本。
-3. **RemoteSigned**：本地脚本可以运行，远程脚本必须签名。
-4. **Unrestricted**：允许所有脚本运行，但在执行远程脚本时会有警告。
-5. **Bypass**：不进行任何检查，允许所有脚本运行。
-6. **Undefined**：没有设置策略，PowerShell 会回到默认策略。
-
-可以通过 PowerShell 中的 Get-ExecutionPolicy 命令查看当前策略，通过 Set-ExecutionPolicy 命令更改策略。修改执行策略时需要考虑安全性和系统的需求。
-
-### 1.2.运行命令检查执行策略
-
-我这已经提前更改过了，初始是限制的
-```
-Get-ExecutionPolicy -List
-```
-![](/images/CMD_Powershell-images/cmd_powershell.8.png)
-
-### 1.3.更改CurrentUser 的策略为RemoteSigned
-
-```
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-## 2.批量重命名文件名
-
-### 2.1.需求
-
-我需要对一个目录下的所有png图片按照时间顺序进行指定格式的重命名
-
-### 2.2.编写代码
-
-文件后缀是ps1,不要写成psl了，数字1与字母l很像
-![](/images/CMD_Powershell-images/cmd_powershell.9.png)
-
-### 2.3.在终端中运行
-
-需处理的文件
-![](/images/CMD_Powershell-images/cmd_powershell.10.png)
-运行命令
-![](/images/CMD_Powershell-images/cmd_powershell.11.png)
-完成处理
-![](/images/CMD_Powershell-images/cmd_powershell.12.png)
-
-### 2.4.python实现相同操作
-
-![](/images/CMD_Powershell-images/cmd_powershell.13.png)
-![](/images/CMD_Powershell-images/cmd_powershell.14.png)
-
-## 3.注意事项
-
-### 1.文件名命名最好不要用中文和空格
-
-在**文件路径**中使用**中文字符和空格**可能导致路径**解析错误**，特别是在某些编程语言和工具中。这可能导致文件**无法找到或命令无法执行**，增加了开发和调试的复杂性。因此，使用英文字符和下划线等替代方式更为稳妥
 
 # **七.完结**
  
