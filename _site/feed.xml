@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T21:18:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-22T21:25:55+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 <p>本文会列出大部分CMD和Powershell的命令，但不会演示怎么使用<br />
-仅演示使用频率很高的</p>
+仅演示使用频率很高的<br />
+如果你看到一个单词每个字母被-隔开，那就是这个单词在这里导致了奇怪的bug不得已为之</p>
 <h2 id="1cmd">1.CMD</h2>
 
 <p>CMD（命令提示符）是<strong>Windows 操作系统</strong>中的一个<strong>命令行界面</strong>，用于执行各种命令行任务。它的作用主要集中在基本的<strong>系统操作、文件管理、网络配置和诊断任务</strong>等，尽管功能比 PowerShell 简单，但在日常使用中仍然非常实用。</p>
@@ -241,10 +242,10 @@
     <p><strong>del</strong>：删除一个或多个文件。</p>
   </li>
   <li>
-    <p><strong>mkdir</strong>：创建新目录。</p>
+    <p><strong>m-k-d-i-r</strong>：创建新目录。</p>
   </li>
   <li>
-    <p><strong>rmdir</strong>：删除目录。</p>
+    <p><strong>r-m-d-i-r</strong>：删除目录。</p>
   </li>
 </ul>
 
@@ -294,7 +295,7 @@
     <p><strong>net use</strong>：映射或断开网络驱动器。</p>
   </li>
   <li>
-    <p><strong>netsh</strong>：管理网络配置（如 IP 设置、防火墙规则）。</p>
+    <p><strong>n-e-t-s-h</strong>：管理网络配置（如 IP 设置、防火墙规则）。</p>
   </li>
 </ul>
 
@@ -357,7 +358,7 @@
 <p>这些命令用于查看、终止进程或管理系统服务。</p>
 
 <ul>
-  <li><strong>shutdown</strong>：关闭或重启计算机。</li>
+  <li><strong>s-h-u-t-d-o-w-n</strong>：关闭或重启计算机。</li>
 </ul>
 
 <h3 id="8-时间与计划任务管理">8. 时间与计划任务管理</h3>
@@ -369,7 +370,7 @@
     <p><strong>time</strong>：显示或设置系统时间。</p>
   </li>
   <li>
-    <p><strong>schtasks</strong>：管理计划任务，自动执行任务。</p>
+    <p><strong>s-c-h-t-a-s-k-s</strong>：管理计划任务，自动执行任务。</p>
   </li>
 </ul>
 
