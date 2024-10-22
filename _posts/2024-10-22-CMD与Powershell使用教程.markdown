@@ -320,30 +320,47 @@ for %%f in (*.txt) do echo %%f
 ```
 goto :start
 ```
+
 ### 5. 用户和权限管理
 
 这些命令用于管理用户账户和权限。
 
 - **net user**：管理用户账户（创建、删除、修改用户）。
-
+```
+net user username password /add
+```
 - **net localgroup**：管理本地用户组。
-
+```
+net localgroup administrators username /add
+```
 - **runas**：以其他用户身份执行命令。
-
+```
+runas /user:Administrator cmd
+```
 ### 6. 磁盘管理命令
 
 这些命令用于管理硬盘驱动器和分区。
 
 - **diskpart**：管理磁盘分区（创建、删除、调整大小）。
-
+```
+diskpart
+```
 - **format**：格式化磁盘或分区。
-
+```
+format D:
+```
 ### 7. 进程和服务管理
 
 这些命令用于查看、终止进程或管理系统服务。
 
+- **`sc`**：管理系统服务（启动、停止、查询服务状态）。
+```
+sc query wuauserv
+```
 - **shutdown**：关闭或重启计算机。
-
+```
+shutdown /s /t 0  # 立即关机 shutdown /r /t 0  # 立即重启
+```
 ### 8. 时间与计划任务管理
 
 这些命令用于与系统时间、计划任务有关的操作。
