@@ -1,10 +1,10 @@
-/* 设置页面主要内容容器的最大宽度和自适应宽度 */
+/* 设置页面主要内容容器的宽度和自适应宽度 */
 .container {
-    max-width: 100%; /* 最大宽度 */
+    width: 100%; /* 设置宽度为 100% */
     margin: 0 auto; /* 居中 */
     padding: 0 10px; /* 设置左右内边距 */
-    margin-top: 30px; /* 调整页眉与内容之间的距离，避免内容被页眉遮挡 */
-    display: flex; /* 使用Flexbox布局 */
+    margin-top: 30px; /* 调整页眉与内容之间的距离 */
+    display: flex; /* 使用 Flexbox 布局 */
     flex-direction: column; /* 列方向 */
     align-items: center; /* 居中对齐 */
 }
@@ -15,33 +15,32 @@
     box-sizing: border-box; /* 包含内边距 */
 }
 
-/* 让图片自适应屏幕 */
-img {
+/* 让图片和表格自适应屏幕 */
+img, table {
     max-width: 100%;
-    height: auto;
+    width: 100%; /* 使表格宽度自适应 */
+    height: auto; /* 保持比例 */
 }
 
 /* 让表格自适应屏幕 */
 table {
-    width: 100%;
-    max-width: 100%;
     table-layout: fixed;
     word-wrap: break-word;
 }
 
 .main-content {
     flex: 1; /* 主内容区域自适应 */
-    width: 100%; /* 确保主内容区域占满宽度 */
 }
 
+/* 侧边栏设置 */
 .sidebar {
     flex: 0 0 300px; /* 在桌面上设置侧边栏的固定宽度 */
 }
 
 @media (max-width: 768px) {
     .container {
-        margin-top: 100px; /* 在手机上增加上边距，确保内容不会被页眉遮挡 */
-        padding: 0px; /* 在手机上可以考虑设置左右小的内边距 */
+        margin-top: 80px; /* 在手机上增加上边距 */
+        padding: 0; /* 在手机上设置较小的内边距 */
     }
 
     .sidebar {
@@ -50,7 +49,7 @@ table {
 }
 
 /* 页眉样式 */
-header {
+header, .site-header {
     width: 100%; /* 使页眉宽度占满整个视口 */
     position: fixed; /* 固定页眉在顶部 */
     top: 0; /* 让页眉固定在视口顶部 */
@@ -79,11 +78,6 @@ header .toggle-btn {
     margin-right: 40px;
 }
 
-/* 增加页面内容与页眉之间的间距，防止内容被页眉遮挡 */
-body {
-    padding-top:80px; /* 页眉高度的占位 */
-}
-
 /* 针对移动设备的页眉样式 */
 @media (max-width: 768px) {
     header {
@@ -91,16 +85,7 @@ body {
     }
 }
 
-.site-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* 确保在最上层 */
-    background: white; /* 背景色可根据需要调整 */
-}
-
 .article {
     max-width: 100%; /* 限制宽度为 100% */
     margin: 0 auto; /* 居中 */
 }
-
