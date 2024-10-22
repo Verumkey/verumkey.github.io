@@ -81,7 +81,7 @@ header .toggle-btn {
 
 /* 增加页面内容与页眉之间的间距，防止内容被页眉遮挡 */
 body {
-    padding-top: 70px; /* 页眉高度的占位 */
+    padding-top:20px; /* 页眉高度的占位 */
 }
 
 /* 针对移动设备的页眉样式 */
@@ -89,4 +89,18 @@ body {
     header {
         padding: 10px;
     }
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保在最上层 */
+    background: white; /* 背景色可根据需要调整 */
+}
+
+.article {
+    max-width: 100%; /* 使文章宽度适应屏幕 */
+    margin: 0 auto; /* 居中显示 */
+    overflow: hidden; /* 防止溢出 */
 }
