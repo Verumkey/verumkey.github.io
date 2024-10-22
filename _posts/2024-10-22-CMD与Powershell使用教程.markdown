@@ -785,4 +785,5 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # **七.完结**
 
-**关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索**
+**因为一些奇怪的BUG，有些命令的介绍被我删除了  
+关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索**
