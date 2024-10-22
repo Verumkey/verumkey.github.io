@@ -600,14 +600,7 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 `.ps1`。PowerS
 ### 1. **基本结构**
 
 - **脚本注释**：
-    - 单行注释使用 `#` 符号：
-```
-# This is a comment`
-```
-    - 多行注释使用 `<#` 和 `#>`：
-```
-<# This is a multi-line comment It can span multiple lines #>
-```
+    - 单行注释使用井符号：
 
 ### 2. 变量
 
