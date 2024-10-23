@@ -21,7 +21,7 @@ VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ---
 
-# **一.VS Code概念**
+# **一.VS Code的概述**
 
 ---
 
@@ -235,7 +235,7 @@ VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端
 
 ---
 
-**不需要此语言请跳过五** 
+**不需要此语言请跳过** 
 ## 1.安装插件
 ### 1.2.HTML CSS Support 插件
 ![](/images/vscode-images/vscode.27.png)

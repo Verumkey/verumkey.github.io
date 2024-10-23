@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-23T18:08:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-23T18:22:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<p>本文主要内容： <br />
+1.分别介绍CMD与Powershell的概念<br />
+2.分别列出CMD与Powershell的常用命令<br />
+3.分别演示CMD与Powershell的常见使用<br />
+4.分别举例bat与ps1脚本的一些使用示例</p>
+
+<hr />
+
+<h1 id="一cmd与powershell的概述"><strong>一.CMD与Powershell的概述</strong></h1>
+
+<hr />
 
 <h2 id="1cmd">1.CMD</h2>
 
@@ -54,6 +65,8 @@
 
 <p>Windows批处理是使用CMD运行的一系列命令，通常以.bat或.cmd扩展名的文件保存</p>
 
+<hr />
+
 <h2 id="2powershell">2.Powershell</h2>
 
 <p>PowerShell 是一种基于命令行的任务自动化和配置管理框架，由 Microsoft 开发，专为系统管理员和高级用户设计。它具有以下几个主要功能和作用：</p>
@@ -90,6 +103,8 @@
 </ul>
 
 <p>如果你是开发人员或系统管理员，PowerShell 是非常强大且灵活的工具，适合用于自动化任务和复杂的系统管理。</p>
+
+<hr />
 
 <h2 id="3区别">3.区别</h2>
 
@@ -173,14 +188,23 @@
 </ul>
 
 <p>你可以根据任务的复杂度选择最合适的工具！</p>
+
+<hr />
+
 <h2 id="4winr">4.win+R</h2>
 <p>Win+R用于打开 “运行”对话框<br />
 在这个<strong>对话框</strong>中，你可以输入<strong>程序名、文件名、文档名或互联网地址</strong>，<strong>快速启动</strong>相应的<strong>应用程序</strong>或打开<strong>文件</strong><br />
 你可以输入<strong>cmd打开命令提示符</strong>，也可输入<strong>powershell打开终端</strong>
 <img src="/images/CMD_Powershell-images/cmd_powershell.1.png" alt="" /></p>
-<h1 id="一cmd使用示例"><strong>一.CMD使用示例</strong></h1>
+
+<hr />
+
+<h1 id="二cmd使用示例"><strong>二.CMD使用示例</strong></h1>
+
+<hr />
+
 <p>以我目前使用CMD的经验，主要有三个方面的用法<br />
-关于这些命令和bat中的语法，可以先去看看二和三<br />
+关于这些命令和bat中的语法，可以先去看看后面<br />
 下面演示都只用了最基本的命令与语法<br />
 更高级的目前我还没用到</p>
 <h2 id="1查询信息">1.查询信息</h2>
@@ -215,7 +239,11 @@
 <img src="/images/CMD_Powershell-images/cmd_powershell.7.png" alt="" />
 4.更多的操作我目前并没怎么没有用到，如果有机会用到再更新</p>
 
-<h1 id="二cmd命令大全"><strong>二.CMD命令大全</strong></h1>
+<hr />
+
+<h1 id="三cmd命令大全"><strong>三.CMD命令大全</strong></h1>
+
+<hr />
 
 <p>CMD（命令提示符）有许多命令，用于文件管理、系统诊断、网络操作等。在这里，将根据日常使用的<strong>重要性和频率</strong>对 CMD 命令进行排序和介绍。</p>
 
@@ -427,7 +455,11 @@
   <li><strong>用户和权限管理</strong>：如 net user、runas，用于管理账户和权限。</li>
 </ol>
 
-<h1 id="三bat文件语法"><strong>三.bat文件语法</strong></h1>
+<hr />
+
+<h1 id="四bat文件语法"><strong>四.bat文件语法</strong></h1>
+
+<hr />
 
 <p>批处理文件（BAT 文件）的语法基于 Windows 的命令行工具 CMD。BAT 文件用于自动执行一系列命令，通常以 .bat 或 .cmd 为扩展名。编写 BAT 文件时，使用的是 CMD 中的命令及其特定的控制结构来控制脚本的流程。</p>
 
@@ -555,7 +587,11 @@
 
 <p>BAT 文件语法虽然简单，但在系统自动化和维护中非常有用。它结合了条件语句、循环、变量操作等功能，可以编写复杂的脚本来处理各种任务。如果需要实现更复杂的功能或与外部工具交互，批处理脚本也可以作为基础，通过调用其他程序实现更强大的自动化解决方案。</p>
 
-<h1 id="四powershell命令大全"><strong>四.Powershell命令大全</strong></h1>
+<hr />
+
+<h1 id="五powershell命令大全"><strong>五.Powershell命令大全</strong></h1>
+
+<hr />
 
 <p>PowerShell 是一个功能强大的命令行界面和脚本语言，支持多种命令（cmdlets），这些命令用于系统管理、文件操作、网络管理等。以下是按重要性排序的一些常用 PowerShell 命令及其简要说明：</p>
 
@@ -665,7 +701,13 @@
 <h3 id="总结-2">总结</h3>
 
 <p>以上列举的是一些重要且常用的 PowerShell 命令，按照其在日常使用中的重要性进行排序。这些命令可以帮助用户完成许多任务，从基础的文件管理到复杂的系统管理和自动化操作。PowerShell 的强大之处在于它的命令组合能力和对象处理能力，用户可以通过管道将一个命令的输出直接传递给另一个命令，从而实现更复杂的操作。</p>
-<h1 id="五ps1文件语法"><strong>五.ps1文件语法</strong></h1>
+
+<hr />
+
+<h1 id="六ps1文件语法"><strong>六.ps1文件语法</strong></h1>
+
+<hr />
+
 <p>PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShell 脚本使用 PowerShell 语言编写，支持丰富的语法和功能。以下是对 PowerShell 脚本（PSL 文件）语法的详细介绍：</p>
 
 <h3 id="1-基本结构">1. <strong>基本结构</strong></h3>
@@ -784,7 +826,11 @@
 
 <p>PowerShell 脚本（PSL 文件）语法强大且灵活，支持多种编程结构，使其能够用于系统管理、自动化任务、文件处理等多种场景。通过合理使用这些语法结构，用户可以编写高效、可维护的脚本来完成复杂的操作。</p>
 
-<h1 id="六powershell使用示例"><strong>六.Powershell使用示例</strong></h1>
+<hr />
+
+<h1 id="七powershell使用示例"><strong>七.Powershell使用示例</strong></h1>
+
+<hr />
 
 <h2 id="1配置环境">1.配置环境</h2>
 
@@ -847,7 +893,11 @@
 
 <p>在<strong>文件路径</strong>中使用<strong>中文字符和空格</strong>可能导致路径<strong>解析错误</strong>，特别是在某些编程语言和工具中。这可能导致文件<strong>无法找到或命令无法执行</strong>，增加了开发和调试的复杂性。因此，使用英文字符和下划线等替代方式更为稳妥</p>
 
-<h1 id="七完结"><strong>七.完结</strong></h1>
+<hr />
+
+<h1 id="八完结"><strong>八.完结</strong></h1>
+
+<hr />
 
 <p><strong>关于CMD与Powershell，我目前并没有使用到过多的功能，相比于ps1脚本，更多人应该更喜欢py脚本，本文也仅简要介绍ps1与bat脚本，更多的功能请自行探索</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="CMD" /><category term="Powershell" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用CMD与Powershell]]></summary></entry><entry><title type="html">Git 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Git 使用教程" /><published>2024-10-19T16:02:00+08:00</published><updated>2024-10-19T16:02:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 <p>本文主要内容：<br />
@@ -861,7 +911,7 @@ VS Code官网：<a href="https://code.visualstudio.com/">https://code.visualstud
 
 <hr />
 
-<h1 id="一git概述"><strong>一.Git概述</strong></h1>
+<h1 id="一git的概述"><strong>一.Git的概述</strong></h1>
 <hr />
 <p>Git 是一个<strong>分布式版本控制</strong>系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：</p>
 
@@ -1683,7 +1733,7 @@ VS Code官网：<a href="https://code.visualstudio.com/">https://code.visualstud
 
 <hr />
 
-<h1 id="一vs-code概念"><strong>一.VS Code概念</strong></h1>
+<h1 id="一vs-code的概述"><strong>一.VS Code的概述</strong></h1>
 
 <hr />
 
@@ -1928,7 +1978,7 @@ VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端
 
 <hr />
 
-<p><strong>不需要此语言请跳过五</strong></p>
+<p><strong>不需要此语言请跳过</strong></p>
 <h2 id="1安装插件-1">1.安装插件</h2>
 <h3 id="12html-css-support-插件">1.2.HTML CSS Support 插件</h3>
 <p><img src="/images/vscode-images/vscode.27.png" alt="" /></p>

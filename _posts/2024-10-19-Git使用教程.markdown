@@ -19,7 +19,7 @@ VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ---
 
-# **一.Git概述**
+# **一.Git的概述**
 ---
 Git 是一个**分布式版本控制**系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：
 
