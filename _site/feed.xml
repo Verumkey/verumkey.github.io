@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-23T17:24:13+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-23T18:08:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 
 <h2 id="1cmd">1.CMD</h2>
 
@@ -1471,13 +1471,16 @@ git config --global user.email
 <hr />
 
 <h2 id="2使用vs-code创建项目">2.使用VS Code创建项目</h2>
-<p><strong>VS Code上图形化界面使用Git在源代码管理</strong></p>
+<p><strong>注意：需要先创建一个文件用作Git仓库</strong><br />
+<strong>VS Code上图形化界面使用Git在源代码管理</strong></p>
 
 <p><strong>快捷键：Ctrl+Shift+G</strong></p>
 
 <p><img src="/images/git-images/git.63.png" alt="" />
 <strong>初始化仓库后源代码管理旁边三个点里面有对应的Git 命令相同的操作</strong>
 <img src="/images/git-images/git.65.png" alt="" /></p>
+<h3 id="21使用vs-code打开文件夹">2.1.使用VS Code打开文件夹</h3>
+<p><img src="/images/git-images/git.66.png" alt="" /></p>
 <h3 id="21打开终端">2.1.打开终端</h3>
 <p>快捷键：（反引号一般在键盘左上角，特殊原因这里无法打出）</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Crtl+反引号
@@ -1526,7 +1529,35 @@ git log    #查看本地项目的提交历史
 </code></pre></div></div>
 <p>两个命令任选一个，这里推荐第一个，它默认只显示哈希值的前7位<br />
 使用这种缩写的哈希值已经够了，第二个命令显示完全的哈希值</p>
-<h4 id="命令-git-reset-哈希值">命令： <strong>git reset 哈希值</strong></h4>
+<h4 id="2补充介绍分页器">2.补充介绍分页器</h4>
+<p>当你在命令行运行 <strong>git log</strong>或<strong>git reflog</strong> 时，Git 会进入一种<strong>分页器（pager）</strong>的显示模式，通常是 <strong>less 分页器</strong>。这种模式允许你逐页查看长输出内容，如 Git 提交记录 (log)。由于提交记录可能会非常长，分页器可以方便地滚动和查看历史记录。</p>
+
+<p>具体特性：
+分页显示：git log 的输出通过分页器按页显示，默认一次显示一个屏幕大小的内容，而不是全部输出到终端。</p>
+
+<p>导航：在 less 分页器中，你可以使用以下键进行导航：</p>
+
+<ul>
+  <li><strong>向上滚动</strong>：按 k 或方向键上。</li>
+  <li><strong>向下滚动</strong>：按 j 或方向键下。</li>
+  <li><strong>翻页</strong>：按 空格键 向下翻页，按 b 向上翻页。</li>
+  <li><strong>跳到末尾</strong>：按 G。</li>
+  <li><strong>跳到开头</strong>：按 g。</li>
+  <li><strong>退出分页器</strong>：你按下 q 后，才能退出 less 分页器，回到普通的命令行界面。这是 less 的退出命令。</li>
+</ul>
+
+<p>为什么使用分页器？
+当输出的信息非常多时，直接输出到命令行会导致信息快速滚动，无法看清或逐一阅读。而 less 允许你控制滚动，按页查看长输出。</p>
+
+<p>常见提示：
+如果不想进入分页器，可以在 git log 命令后加上 –oneline 参数，这样每条提交记录只显示一行，通常不会超过终端的可视区域。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --oneline
+</code></pre></div></div>
+<p>你也可以通过 GIT_PAGER 环境变量或者使用 git log –no-pager 禁用分页器：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --no-pager log
+</code></pre></div></div>
+<p>这种分页器模式非常常见，除了 git log，其他长输出的命令（如 man 命令）也会进入 less 或类似的分页模式。</p>
+<h4 id="3命令-git-reset-哈希值">3.命令： <strong>git reset 哈希值</strong></h4>
 <ul>
   <li><strong>作用</strong>：git reset <hash> 用于将当前分支的 HEAD（指向当前分支最新提交的指针）重置为指定的提交。</hash></li>
   <li><strong>状态变化</strong>：这会改变分支的历史记录（对于非共享分支），并且根据所用的选项（如 –soft、–mixed 或 –hard），会影响索引和工作目录的状态：
@@ -1636,13 +1667,85 @@ git log    #查看本地项目的提交历史
 <p><strong>使用VS Code管理Git项目是非常方便的，喜欢使用命令的话<br />
 用VS Code提供的终端也是一样的，本文演示的地方可能一部分是用命令<br />
 一部分是图形界面操作，可能看起来较为混乱，目的是想将两者都介绍一下<br />
-其实专注于一者就能完成所有Git的操作，当然也可两者结合使用</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Git" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Git]]></summary></entry><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="一下载"><strong>一.下载</strong></h1>
+其实专注于一者就能完成所有Git的操作，当然也可两者结合使用</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Git" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Git]]></summary></entry><entry><title type="html">VS Code 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="VS Code 使用教程" /><published>2024-10-17T22:05:01+08:00</published><updated>2024-10-17T22:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS%20Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<p>本文主要内容： <br />
+1.介绍VS Code的概念  <br />
+2.详细演示VS Code对一些编程语言的环境配置：</p>
+<ul>
+  <li>C/C++</li>
+  <li>Python</li>
+  <li>HTML+CSS+JS</li>
+</ul>
+
+<p>3.介绍一些方便的快捷操作<br />
+VS Code官网：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a><br />
+(官网的文档中有对该软件使用的全面介绍)</p>
+
+<hr />
+
+<h1 id="一vs-code概念"><strong>一.VS Code概念</strong></h1>
+
+<hr />
+
+<p>Visual Studio Code (VS Code) 是由微软开发的一个免费、开源、跨平台的源代码编辑器，支持Windows、macOS 和 Linux 系统。它以轻量级、速度快、功能强大著称，特别适合现代编程工作流。VS Code 的主要特点包括：</p>
+
+<ol>
+  <li>
+    <p><strong>多语言支持</strong><br />
+VS Code 支持多种编程语言，包括但不限于：JavaScript、Python、C++、Java、Go、HTML/CSS、TypeScript 等。借助扩展，几乎可以支持任何编程语言。</p>
+  </li>
+  <li>
+    <p><strong>丰富的扩展功能</strong><br />
+VS Code 有一个庞大的扩展市场，用户可以安装各种插件来增强编辑器的功能，例如调试工具、代码片段、代码格式化、版本控制支持等。这些插件使得 VS Code 可以适应各种开发需求。你可以使用这些扩展来定制和优化你的开发环境。</p>
+  </li>
+  <li>
+    <p><strong>集成的终端</strong><br />
+VS Code 提供了一个集成终端，允许你直接在编辑器中运行命令行程序，无需切换窗口。这非常适合开发者进行实时编译、运行、调试程序。</p>
+  </li>
+  <li>
+    <p><strong>调试功能</strong><br />
+VS Code 提供了强大的调试工具，可以轻松设置断点、监控变量、调试前端和后端应用程序。你可以通过配置文件来调试Node.js、Python、C++等多种语言的项目。</p>
+  </li>
+  <li>
+    <p><strong>Git 和版本控制</strong><br />
+VS Code 内置了 Git 支持，可以让你在图形化界面中执行大部分 Git 操作，比如提交、合并分支、查看历史记录等。这对版本管理非常方便，适合与 GitHub 等平台结合使用。</p>
+  </li>
+  <li>
+    <p><strong>智能代码补全</strong><br />
+VS Code 采用了 IntelliSense 技术，能够智能地补全代码，提供语法建议、函数提示、自动导入库等功能，极大提高了编码效率。</p>
+  </li>
+  <li>
+    <p><strong>多平台支持</strong><br />
+VS Code 可以在 Windows、macOS 和 Linux 上运行，开发者可以在任何操作系统上享受一致的开发体验。此外，它还支持远程开发，通过 SSH 或 Docker 直接在远程服务器上编写、调试代码。</p>
+  </li>
+  <li>
+    <p><strong>轻量且高度可定制</strong><br />
+VS Code 虽然功能强大，但仍然保持了轻量的特性。用户可以根据需求定制界面、快捷键、主题等，来创造个性化的开发环境。</p>
+  </li>
+  <li>
+    <p><strong>社区支持和文档</strong><br />
+VS Code 拥有一个活跃的开发者社区，用户可以通过论坛、文档、教程、示例代码等方式获取支持和帮助。</p>
+  </li>
+</ol>
+
+<p><strong>总结</strong><br />
+VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端开发、后端开发到数据科学等各种编程领域。它凭借简洁的界面和强大的扩展性成为了现代开发者的首选工具之一。</p>
+
+<hr />
+
+<h1 id="二下载"><strong>二.下载</strong></h1>
+
+<hr />
 
 <h2 id="1下载vs-code">1.下载VS Code</h2>
 <p>网址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
 <img src="/images/vscode-images/vscode.1.png" alt="" /></p>
 
-<h1 id="二配置环境"><strong>二.配置环境</strong></h1>
+<hr />
+
+<h1 id="三配置中文环境"><strong>三.配置中文环境</strong></h1>
+
+<hr />
 
 <h2 id="1打开扩展">1.打开扩展</h2>
 <p><img src="/images/vscode-images/vscode.2.png" alt="" /></p>
@@ -1654,9 +1757,13 @@ git log    #查看本地项目的提交历史
 <h3 id="23重启">2.3.重启</h3>
 <p><img src="/images/vscode-images/vscode.3.png" alt="" /></p>
 
-<h1 id="三根据所需语言配置环境cc"><strong>三.根据所需语言配置环境（C/C++）</strong></h1>
+<hr />
 
-<p><strong>不需要此语言请跳过三</strong></p>
+<h1 id="四根据所需语言配置环境cc"><strong>四.根据所需语言配置环境（C/C++）</strong></h1>
+
+<hr />
+
+<p><strong>不需要此语言请跳过</strong></p>
 <h2 id="1安装插件">1.安装插件</h2>
 <h3 id="11cc-插件">1.1.C/C++ 插件</h3>
 
@@ -1668,11 +1775,14 @@ git log    #查看本地项目的提交历史
       <li>语法高亮：为 C/C++ 代码提供清晰的语法高亮显示。</li>
       <li>调试支持：通过 VSCode 内置的调试功能，可以使用 GDB、LLDB 或 Visual Studio 调试器来调试 C/C++ 程序。</li>
       <li>IntelliSense：通过提供自动补全、悬停信息和参数提示等功能，提高代码编写的效率。</li>
-      <li>多平台支持：该插件支持在 Windows、Linux 和 macOS 平台上工作。
-<img src="/images/vscode-images/vscode.4.png" alt="" /></li>
+      <li>多平台支持：该插件支持在 Windows、Linux 和 macOS 平台上工作。</li>
     </ul>
   </li>
 </ul>
+
+<p><img src="/images/vscode-images/vscode.4.png" alt="" /></p>
+
+<hr />
 
 <h3 id="12cc-compile-run-插件">1.2.C/C++ Compile Run 插件</h3>
 
@@ -1682,11 +1792,14 @@ git log    #查看本地项目的提交历史
     <ul>
       <li>一键编译和运行：你只需按一个快捷键（通常是 F6），就可以编译并立即运行代码，而不必手动编写终端命令。</li>
       <li>灵活的配置：你可以通过配置文件自定义编译和运行命令。</li>
-      <li>适合小型项目：这个插件更适合快速测试小型 C/C++ 项目，因为它不提供完整的调试功能。
-<img src="/images/vscode-images/vscode.5.png" alt="" /></li>
+      <li>适合小型项目：这个插件更适合快速测试小型 C/C++ 项目，因为它不提供完整的调试功能。</li>
     </ul>
   </li>
 </ul>
+
+<p><img src="/images/vscode-images/vscode.5.png" alt="" /></p>
+
+<hr />
 
 <h3 id="13better-c-syntax-插件">1.3.Better C++ Syntax 插件</h3>
 
@@ -1696,11 +1809,14 @@ git log    #查看本地项目的提交历史
     <ul>
       <li>改进的语法高亮：为 C++ 提供更精确的语法高亮，特别是模板和更复杂的语言特性。</li>
       <li>支持现代 C++：该插件支持 C++11、C++14、C++17 等现代 C++ 标准，确保新的语言特性也能得到良好的高亮。</li>
-      <li>自定义语法高亮：你可以根据自己的需求自定义 C++ 的高亮规则。
-<img src="/images/vscode-images/vscode.6.png" alt="" /></li>
+      <li>自定义语法高亮：你可以根据自己的需求自定义 C++ 的高亮规则。</li>
     </ul>
   </li>
 </ul>
+
+<p><img src="/images/vscode-images/vscode.6.png" alt="" /></p>
+
+<hr />
 
 <h2 id="2配置开发者工具集mingw获得ucrt">2.配置开发者工具集MinGW，获得UCRT</h2>
 
@@ -1710,19 +1826,27 @@ git log    #查看本地项目的提交历史
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
 <img src="/images/vscode-images/vscode.7.png" alt="" /></p>
 <h3 id="22安装后复制网站中的命令输入">2.2.安装后复制网站中的命令输入</h3>
-<p>注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
+<p><strong>pacman -S –needed base-devel mingw-w64-ucrt-x86_64-toolchain</strong><br />
+注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
 <img src="/images/vscode-images/vscode.8.png" alt="" /></p>
-<h3 id="23在电脑文件中找到ucrt64文件下的bin文件就在安装msys2的文件中并复制bin文件的文件地址">2.3.在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址</h3>
-<p><img src="/images/vscode-images/vscode.9.png" alt="" /></p>
-<h3 id="24将ucrt64的bin文件地址到-windows环境变量的path路径中">2.4.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</h3>
-<h4 id="241在搜索栏中搜索系统环境变量并打开">2.4.1.在搜索栏中搜索系统环境变量并打开</h4>
-<p><img src="/images/vscode-images/vscode.10.png" alt="" /></p>
-<h4 id="242-点击环境变量在用户系统变量中选择path变量然后选择编辑">2.4.2. 点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</h4>
-<h4 id="243-点击新建将复制的文件地址复制进去最后点击确定退出">2.4.3. 点击新建，将复制的文件地址复制进去，最后点击确定退出</h4>
+<h3 id="23复制ucrt64文件中的bin文件地址">2.3.复制ucrt64文件中的bin文件地址</h3>
+<p>在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
+<img src="/images/vscode-images/vscode.9.png" alt="" /></p>
+<h3 id="24添加到windows环境变量的path路径中">2.4.添加到Windows环境变量的Path路径中</h3>
+<p>.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</p>
+<h4 id="241打开系统环境变量界面">2.4.1.打开系统环境变量界面</h4>
+<p>在搜索栏中搜索系统环境变量并打开
+<img src="/images/vscode-images/vscode.10.png" alt="" /></p>
+<h4 id="242-进入path变量编辑界面">2.4.2. 进入Path变量编辑界面</h4>
+<p>点击环境变量，在用户/系统变量中，选择Path变量，然后选择编辑</p>
+<h4 id="243-新建并放入复制的地址">2.4.3. 新建并放入复制的地址</h4>
+<p>点击新建，将复制的文件地址复制进去，最后点击确定退出</p>
 <h4 id="244图片演示">2.4.4.图片演示</h4>
 <p><img src="/images/vscode-images/vscode.11.png" alt="" />
 <img src="/images/vscode-images/vscode.12.png" alt="" />
 <img src="/images/vscode-images/vscode.13.png" alt="" /></p>
+
+<hr />
 
 <h2 id="3编写cc程序">3.编写C/C++程序</h2>
 
@@ -1742,9 +1866,13 @@ git log    #查看本地项目的提交历史
 <h4 id="353配置环境完成">3.5.3.配置环境完成</h4>
 <p><img src="/images/vscode-images/vscode.21.png" alt="" /></p>
 
-<h1 id="四根据所需语言配置环境python"><strong>四.根据所需语言配置环境（Python）</strong></h1>
+<hr />
 
-<p><strong>不需要此语言请跳过四</strong></p>
+<h1 id="五根据所需语言配置环境python"><strong>五.根据所需语言配置环境（Python）</strong></h1>
+
+<hr />
+
+<p><strong>不需要此语言请跳过</strong></p>
 <h2 id="1下载python解释器">1下载Python解释器</h2>
 <p>网址：<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
 <img src="/images/vscode-images/vscode.22.png" alt="" />
@@ -1760,11 +1888,13 @@ git log    #查看本地项目的提交历史
   <li><strong>虚拟环境和 Conda 支持</strong>：可以轻松选择和管理不同的 Python 解释器、虚拟环境或 Conda 环境。</li>
   <li><strong>Jupyter 支持</strong>：可以在 VS Code 中直接运行 Jupyter Notebooks，进行交互式的 Python 开发，特别适合数据科学工作流。</li>
   <li><strong>测试集成</strong>：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
-这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。
-    <h3 id="23python-extension-pack-插件">2.3.Python Extension Pack 插件</h3>
-    <p><img src="/images/vscode-images/vscode.26.png" alt="" /></p>
-  </li>
+这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。</li>
 </ul>
+
+<hr />
+
+<h3 id="23python-extension-pack-插件">2.3.Python Extension Pack 插件</h3>
+<p><img src="/images/vscode-images/vscode.26.png" alt="" /></p>
 
 <h3 id="24python-extension-pack-的主要功能">2.4.Python Extension Pack 的主要功能：</h3>
 <p><strong>Python Extension Pack</strong> 是为 Visual Studio Code 的 Python 开发者设计的一组插件包，包含了多个非常有用的扩展，主要包括：</p>
@@ -1779,6 +1909,8 @@ git log    #查看本地项目的提交历史
   <li><strong>Jupyter</strong> - 提供对 Jupyter Notebook 的支持，适用于数据科学、机器学习和科学计算等任务。</li>
 </ol>
 
+<hr />
+
 <h2 id="3编写python程序">3.编写Python程序</h2>
 
 <h3 id="31创建一个文件-1">3.1创建一个文件</h3>
@@ -1790,7 +1922,11 @@ git log    #查看本地项目的提交历史
 <h3 id="34编写代码并运行可以在终端看到输出结果-1">3.4.编写代码并运行，可以在终端看到输出结果</h3>
 <p><img src="/images/vscode-images/vscode.25.png" alt="" /></p>
 
-<h1 id="五根据所需语言配置环境htmlcssjs"><strong>五.根据所需语言配置环境（HTML+CSS+JS）</strong></h1>
+<hr />
+
+<h1 id="六根据所需语言配置环境htmlcssjs"><strong>六.根据所需语言配置环境（HTML+CSS+JS）</strong></h1>
+
+<hr />
 
 <p><strong>不需要此语言请跳过五</strong></p>
 <h2 id="1安装插件-1">1.安装插件</h2>
@@ -1805,6 +1941,8 @@ git log    #查看本地项目的提交历史
 这个插件非常适合在 HTML 和 CSS 开发中频繁切换的开发者。</li>
 </ul>
 
+<hr />
+
 <h3 id="14live-server-插件">1.4.Live Server 插件</h3>
 <p><img src="/images/vscode-images/vscode.28.png" alt="" /></p>
 
@@ -1817,6 +1955,8 @@ git log    #查看本地项目的提交历史
 对于那些进行网页设计和前端开发的用户来说，这个插件非常实用。</li>
 </ul>
 
+<hr />
+
 <h3 id="16auto-rename-tag-插件">1.6.Auto Rename Tag 插件</h3>
 <p><img src="/images/vscode-images/vscode.29.png" alt="" /></p>
 <h3 id="17auto-rename-tag的主要功能">1.7.Auto Rename Tag的主要功能</h3>
@@ -1827,6 +1967,8 @@ git log    #查看本地项目的提交历史
 这个插件对写 HTML 和 XML 时特别有帮助，能有效避免遗漏或错误的闭合标签。</li>
 </ul>
 
+<hr />
+
 <h2 id="2编写html程序">2.编写HTML程序</h2>
 <h3 id="21创建一个文件">2.1.创建一个文件</h3>
 <h3 id="22通过vscode打开你上面创建的文件">2.2.通过VScode打开你上面创建的文件</h3>
@@ -1836,7 +1978,11 @@ git log    #查看本地项目的提交历史
 
 <p><img src="/images/vscode-images/vscode.31.png" alt="" /></p>
 
-<h1 id="六快捷操作"><strong>六.快捷操作</strong></h1>
+<hr />
+
+<h1 id="七快捷操作"><strong>七.快捷操作</strong></h1>
+
+<hr />
 
 <h3 id="1使用编辑器操场">1.使用编辑器操场</h3>
 <p>编辑器操场会提供许多快捷键的使用
@@ -1895,7 +2041,9 @@ git log    #查看本地项目的提交历史
 </code></pre></div></div>
 <p>可以撤销到你的上一步，错删时很好用</p>
 
-<h1 id="四命令搜索栏与其它"><strong>四.命令搜索栏与其它</strong></h1>
+<hr />
+<h1 id="八命令搜索栏与其它"><strong>八.命令搜索栏与其它</strong></h1>
+<hr />
 
 <h2 id="1使用命令">1.使用命令</h2>
 <p>帮助里编辑器操场的上一个显示所有命令，就可以进入可输入命令搜索栏，也可以直接使用快捷键<br />
@@ -1910,7 +2058,11 @@ git log    #查看本地项目的提交历史
 <h2 id="4快捷键参考">4.快捷键参考</h2>
 <p><img src="/images/vscode-images/vscode.37.png" alt="" /></p>
 
-<h1 id="七完结"><strong>七.完结</strong></h1>
+<hr />
+
+<h1 id="八完结"><strong>八.完结</strong></h1>
+
+<hr />
 
 <p><strong>根据上述操作，就能正常使用VS Code<br />
 VS Code还能方便的管理Git项目，详情请见介绍Git的文章</strong></p>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="VS Code" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用VS Code]]></summary></entry><entry><title type="html">Jekyll 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Jekyll 使用教程" /><published>2024-10-17T19:05:01+08:00</published><updated>2024-10-17T19:05:01+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
