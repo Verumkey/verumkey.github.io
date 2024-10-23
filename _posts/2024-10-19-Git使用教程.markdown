@@ -17,6 +17,8 @@ Git官网：[https://git-scm.com/](https://git-scm.com/)
 GitHub官网：[https://github.com/](https://github.com/)  
 VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
+---
+
 # **一.Git概述**
 ---
 Git 是一个**分布式版本控制**系统，用于管理项目中的代码变化，特别适合多人协作开发。它的主要功能包括：
@@ -28,7 +30,7 @@ Git 是一个**分布式版本控制**系统，用于管理项目中的代码变
 3. **分布式**：与传统的版本控制系统不同，Git 是分布式的。每个开发者都有完整的项目历史，可以离线进行代码管理和提交。
     
 4. **协作开发**：Git 很适合团队合作，支持多人并行开发。当开发者提交代码后，可以通过 pull request 合并到主项目中，确保代码的连续性和质量。
-    
+  
 ## 1.Git的核心概念
 - **Repository (仓库)**：存储项目的文件和其历史记录的地方。可以是本地仓库或远程仓库（如 GitHub 上的仓库）。
 - **Commit (提交)**：一次代码变动的快照，包括改动的具体内容和提交说明。
@@ -49,12 +51,16 @@ Git 是一个**分布式版本控制**系统，用于管理项目中的代码变
 - git checkout：切换到另一个分支。  
 通过 Git，开发者能够更好地管理代码版本，尤其是在复杂项目中，它可以极大地提高效率并减少冲突。
 
+---
+
 # **二.配置Git环境**
 ---
 ## 1.下载Git
 网址：[https://git-scm.com/downloads](https://git-scm.com/downloads)
 ![](/images/git-images/git.1.png)
 ![](/images/git-images/git.2.png)
+
+---
 
 ## 2.安装Git
 安装过程有**许多**步骤，**一般来说**全部默认即可，一路**next**直到**install**结束  
@@ -162,6 +168,8 @@ OpenSSH 是目前最常用的 SSH 实现之一，由于其开源和安全性，�
 ![](/images/git-images/git.18.png)
 15..**安装完成**![](/images/git-images/git.19.png)
 
+---
+
 ## 3.设置用户签名
 **Git首次安装必须设置用户签名，否则无法提交代码**  
 鼠标**右键**点击桌面，打开**Open Git Bash Here**  
@@ -181,8 +189,12 @@ git config --global user.email
 上述操作后，C盘的用户的用户下会生成一个.gitconfig文件，里面有你设置的用户名和邮箱
 ![](/images/git-images/git.22.png)
 
-# **三.编辑器常用命令**
 ---
+
+# **三.编辑器常用命令**
+
+---
+
 ## Vim 编辑器常用命令
 ### 1. 模式切换
 
@@ -279,15 +291,17 @@ git config --global user.email
 - Ctrl + H / Cmd + H：替换。
 - Ctrl + Shift + F / Cmd + Shift + F：全局搜索。
 
----
-
 ## 总结
 
 - **Vim** 的命令主要围绕键盘快捷键，操作高效但学习曲线较陡。
 - **VS Code** 则更偏向图形化操作，并提供命令面板，既支持鼠标操作也支持丰富的键盘快捷键，更加适合现代开发者的多任务操作。
 
-# **四.Git常用命令**
 ---
+
+# **四.Git常用命令**
+
+---
+
 ## 1. 基本 Git 操作
 
 ### 1.1. 初始化仓库
@@ -429,8 +443,12 @@ git config --global user.email
 - git config --global user.name "[name]"：设置用户名。
 - git config --global user.email "[email]"：设置邮箱。
 
-# 五.Git Bash使用示范
 ---
+
+# 五.Git Bash使用示范
+
+---
+
 ## 1.初始化本地库
 ### 1.1.创建文件，打开Git Bash
 ![](/images/git-images/git.23.png)
@@ -439,12 +457,18 @@ git config --global user.email
 git init
 ```
 ![](/images/git-images/git.24.png)
+
+---
+
 ## 2.查看本地库状态
 使用命令：
 ```
 git status
 ```
 ![](/images/git-images/git.25.png)
+
+---
+
 ## 3.创建项目
 ### 3.1.使用vim创建文件
 ![](/images/git-images/git.26.png)
@@ -455,8 +479,12 @@ git status
 在VS Code中的终端使用命令与在这里的Git Bash一样  
 而且VS Code中有对于Git命令的图形化操作**
 
-# **六.VS Code中使用Git**
 ---
+
+# **六.VS Code中使用Git**
+
+---
+
 ## 1.安装插件
 ### 1.markdownlint 插件
 ![](/images/git-images/git.29.png)
@@ -473,6 +501,8 @@ git status
 - **可视化 Git 历史**：Git Graph 提供直观的图形界面，展示 Git 仓库的提交历史、分支、合并情况，帮助你快速理解代码的演变和分支结构。
 - **便捷操作**：通过图形化界面，你可以方便地创建和切换分支、提交更改、查看提交差异、解决冲突等，无需输入命令行。
 - **增强的代码审查体验**：通过可视化展示，Git Graph 使得团队成员可以更轻松地进行代码审查和协作，提高团队开发效率。
+
+---
 
 ## 2.使用VS Code创建项目
 **VS Code上图形化界面使用Git在源代码管理**  
@@ -541,6 +571,7 @@ git log    #查看本地项目的提交历史
     - **--soft**：仅重置 HEAD，索引和工作目录保持不变。
     - **--mixed**（默认）：重置 HEAD 和索引，工作目录保持不变。
     - **--hard**：重置 HEAD、索引和工作目录，将所有更改丢弃。
+
 ![](/images/git-images/git.38.png)
 ![](/images/git-images/git.39.png)
 ### 2.6.使用分支
@@ -562,7 +593,13 @@ git checkout 分支名
 ![](/images/git-images/git.42.png)
 选择你需要的合并的分支就能完成合并了
 ![](/images/git-images/git.43.png)
+
+---
+
 # 七.使用代码托管平台（GitHub）
+
+---
+
 GitHub官网：[https://github.com/](https://github.com/)
 ## 1.创建远程仓库
 ![](/images/git-images/git.44.png)
@@ -578,6 +615,9 @@ GitHub官网：[https://github.com/](https://github.com/)
 如果你选择终端使用命令也可以完成这些操作**
 ![](/images/git-images/git.47.png)
 ![](/images/git-images/git.48.png)
+
+---
+
 ## 3.从远程存储库库克隆文件到本地
 **注意：克隆文件不需要登陆**
 **先创建一个存储项目的文件，再到仓库中复制Https地址**
@@ -587,6 +627,9 @@ GitHub官网：[https://github.com/](https://github.com/)
 git clone 地址
 ```
 ![](/images/git-images/git.50.png)![](/images/git-images/git.51.png)
+
+---
+
 ## 4.团队内协作
 ### 4.1.邀请协作的人
 点击add people后，输入你需要邀请的人的**用户名**，就会生成一个**邀请函(网址)**
@@ -599,6 +642,9 @@ git clone 地址
 ![](/images/git-images/git.54.png)
 被邀请人同意后，就能直接修改这个仓库，push不再需要权限
 ![](/images/git-images/git.55.png)
+
+---
+
 ## 5.跨团队协作
 ### 5.1.fork项目
 就是把别人的仓库复制一份到自己账号下
@@ -616,8 +662,13 @@ git clone 地址
 ![](/images/git-images/git.61.png)
 合并成功后内容做出修改，并且贡献者中会多出你的用户名
 ![](/images/git-images/git.62.png)
-# 七.完结
+
 ---
+
+# 七.完结
+
+---
+
 **使用VS Code管理Git项目是非常方便的，喜欢使用命令的话  
 用VS Code提供的终端也是一样的，本文演示的地方可能一部分是用命令  
 一部分是图形界面操作，可能看起来较为混乱，目的是想将两者都介绍一下  
