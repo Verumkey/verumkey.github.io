@@ -235,9 +235,7 @@ BitLocker 是微软 Windows 操作系统中的一个全盘加密功能，用于�
 
 - 假设你有一个外部硬盘，你可以在终端中使用如下命令将其挂载到 /media/external 目录：
 
-```
-sudo mount /dev/sdb1 /media/external
-```
+**sudo mount /dev/sdb1 /media/external**
 
    之后，你可以通过访问 /media/external 来访问外部硬盘中的文件。
 
@@ -259,11 +257,7 @@ sudo mount /dev/sdb1 /media/external
 
  3. **示例**
 
-- 在 Linux 系统中，如果你输入 ls /，将显示根目录下的所有文件和目录列表。例如：
-
-```
-bin   boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-```
+- 在 Linux 系统中，如果你输入 ls /，将显示根目录下的所有文件和目录列表。
 
 - 如果你将一个硬盘分区挂载到 /mnt/data，你可以通过访问 /mnt/data 来查看该分区的内容，而 /mnt 和 /mnt/data 都是根目录的子目录。
 
@@ -527,10 +521,10 @@ Secure Boot的选项一般在安全里，选择Disabled以关闭
 注意：这期间会弹出一些需要确认的窗口  
 **1.打开终端（快捷键：Ctrl+Alt+G）  
 2.运行命令以安装和启动GParted（GParted的简介见上文1.13）**
-```
-sudo apt  install gparted #下载GParted
-gparted #启动GParted
-```
+
+**sudo apt  install gparted  #下载GParted 
+gparted打开GParted**
+
 ![](/images/Linux-images/linux.42.png)
 3.右键点击我们需要扩容的Ubuntu系统的分区
 ![](/images/Linux-images/linux.43.png)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T14:08:59+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T14:14:52+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 1.在Windows系统的基础上演示再安装Ubuntu系统<br />
 2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
@@ -321,8 +321,7 @@
   <li>假设你有一个外部硬盘，你可以在终端中使用如下命令将其挂载到 /media/external 目录：</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount /dev/sdb1 /media/external
-</code></pre></div></div>
+<p><strong>sudo mount /dev/sdb1 /media/external</strong></p>
 
 <p>之后，你可以通过访问 /media/external 来访问外部硬盘中的文件。</p>
 
@@ -355,14 +354,12 @@
 </ol>
 
 <ul>
-  <li>在 Linux 系统中，如果你输入 ls /，将显示根目录下的所有文件和目录列表。例如：</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin   boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-</code></pre></div></div>
-
-<ul>
-  <li>如果你将一个硬盘分区挂载到 /mnt/data，你可以通过访问 /mnt/data 来查看该分区的内容，而 /mnt 和 /mnt/data 都是根目录的子目录。</li>
+  <li>
+    <p>在 Linux 系统中，如果你输入 ls /，将显示根目录下的所有文件和目录列表。</p>
+  </li>
+  <li>
+    <p>如果你将一个硬盘分区挂载到 /mnt/data，你可以通过访问 /mnt/data 来查看该分区的内容，而 /mnt 和 /mnt/data 都是根目录的子目录。</p>
+  </li>
 </ul>
 
 <p>总结：/作为根目录是整个文件系统的起点，所有挂载点都是相对于根目录的路径。通过挂载点，用户可以在统一的文件系统中访问和管理不同的存储设备。</p>
@@ -662,9 +659,10 @@ BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
 <p>注意：这期间会弹出一些需要确认的窗口<br />
 <strong>1.打开终端（快捷键：Ctrl+Alt+G）<br />
 2.运行命令以安装和启动GParted（GParted的简介见上文1.13）</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt  install gparted #下载GParted
-gparted #启动GParted
-</code></pre></div></div>
+
+<p><strong>sudo apt  install gparted  #下载GParted 
+gparted打开GParted</strong></p>
+
 <p><img src="/images/Linux-images/linux.42.png" alt="" />
 3.右键点击我们需要扩容的Ubuntu系统的分区
 <img src="/images/Linux-images/linux.43.png" alt="" />
