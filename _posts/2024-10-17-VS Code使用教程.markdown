@@ -285,19 +285,19 @@ VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端
 
 ---
 
-### 1.使用编辑器操场
+## 1.使用编辑器操场
 编辑器操场会提供许多快捷键的使用
 ![](/images/vscode-images/vscode.32.png)
-### 2.Multi-Cursor Editing（多光标编辑） 
+## 2.Multi-Cursor Editing（多光标编辑） 
 注意：DownArrow就是键盘上的向下箭头，其它同理
-#### 2.1.Box selection
+### 2.1.Box selection
 （选择矩形块）  
 ```
 Shift+Alt再拖动鼠标
 ```
 实现选择一个矩形块
 ![](/images/vscode-images/vscode.33.png)
-#### 2.2.Add a Cursor
+### 2.2.Add a Cursor
 （添加光标）  
 ```
 Crtl+Alt+UpArrow/DownArrow(上/下箭头)
@@ -307,7 +307,7 @@ Crtl+Alt+UpArrow/DownArrow(上/下箭头)
 Alt再点击鼠标
 ```
 可以在点击位置额外添加一个光标
-#### 2.3.Creat curosrs on all occurences of a string
+### 2.3.Creat curosrs on all occurences of a string
 （选择光标所在字符串，并在字符串的所有出现处创建光标）  
 ```
 Crtl+Shift+L
@@ -315,39 +315,42 @@ Crtl+Shift+L
 选中光标所在单词的所有单词，并创建一个光标到单词尾  
 注意：截图不显示光标，实际上每个backgroud的末尾都有一个光标，可以对这个单词进行批量操作
 ![](/images/vscode-images/vscode.34.png)
-### 3.Line Actions（行操作）
-#### 3.1.Copy a line and insert it above or below the current postion
+## 3.Line Actions（行操作）
+### 3.1.Copy a line and insert it above or below the current postion
 （复制一行到上/下一行）  
 ```
 Shift+Alt+UpArrow/DownArrow(上/下箭头)
 ```
 会将光标所在行向上/下复制一行
-#### 3.2.Move an entire line or selection of lines up or downloads
+### 3.2.Move an entire line or selection of lines up or downloads
 （将所在行与上/下行将换位置）  
 ```
 Alt+UpArrow/DownArrow
 ```
-#### 3.3.Delete the entire Line
+### 3.3.Delete the entire Line
 （删除选中或所在行）  
 ```
 Ctrl+Shift+K
 ```
-### 4.Rename Refactoring（重命名一个类或函数名的所有字符串）
+## 4.Rename Refactoring
+（重命名一个类或函数名的所有字符串）
 ```
 F2
 ```
 先选中需要重命名的函数或类的名称，再点击**F2**进行重命名，注意：这对不是类或函数名的字符串不起作用
-### 5.Formatting（格式化代码）
+## 5.Formatting
+（格式化代码）
 ```
 Shift+Alt+F
 ```
 将你的代码格式化，注意：这里的格式化不是删除的意思，而是让你的代码更规范，像是是排布很乱的代码整理的意思
-### 6.Code Folding（代码折叠）
+## 6.Code Folding
+（代码折叠）
 ```
 Ctrl+Shift+[/]
 ```
 将代码折叠/解除折叠，就像这个笔记软件，一个大点下面的小点都可以折叠起来
-### 7.撤销
+## 7.撤销
 ```
 Ctrl+Z
 ```
