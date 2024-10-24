@@ -807,37 +807,70 @@
 <h2 id="1基本结构">1.<strong>基本结构</strong></h2>
 
 <ul>
-  <li><strong>脚本注释</strong>：
-    <ul>
-      <li>单行注释使用井符号</li>
-    </ul>
+  <li>
+    <p><strong>脚本注释</strong>：</p>
+  </li>
+  <li>
+    <p>单行注释使用井符号</p>
   </li>
 </ul>
+
+<p><strong># This is a comment</strong></p>
+
+<ul>
+  <li>多行注释使用 <code class="language-plaintext highlighter-rouge">&lt;#</code> 和 <code class="language-plaintext highlighter-rouge">#&gt;</code>：</li>
+</ul>
+
+<p><strong>&lt;# This is a multi-line comment It can span multiple lines #&gt;</strong></p>
 
 <h2 id="2变量">2.变量</h2>
 
 <ul>
-  <li>
-    <p><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。</p>
-  </li>
-  <li>
-    <p><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。</p>
-  </li>
+  <li><strong>定义变量</strong>：使用 $ 符号定义变量，等号（=）用于赋值。</li>
 </ul>
 
+<p><strong>$myVariable = “Hello, World!”</strong></p>
+
+<ul>
+  <li><strong>使用变量</strong>：在字符串中使用变量时，可用双引号引用。</li>
+</ul>
+
+<p><strong>Write-Host “The message is: $myVariable”</strong></p>
+
 <h2 id="3数据类型">3.数据类型</h2>
+
+<p><strong>$stringVar = “This is a string” $intVar = 42 $arrayVar = @(1, 2, 3, 4) $hashTable = @{“key1” = “value1”; “key2” = “value2”}</strong></p>
 
 <h2 id="4流程控制">4.流程控制</h2>
 
 <ul>
+  <li><strong>条件语句</strong>：</li>
+</ul>
+
+<p><strong>if ($condition) {     # Do something } elseif ($otherCondition) {     # Do something else } else {     # Do another thing }</strong></p>
+
+<ul>
   <li>
-    <p><strong>条件语句</strong>：</p>
+    <p><strong>循环语句</strong>:</p>
   </li>
   <li>
-    <p><strong>循环语句</strong>:
-(for 循环  foreach 循环  while 循环)</p>
+    <p>for 循环：</p>
   </li>
 </ul>
+
+<p><strong>for ($i = 0; $i -lt 10; $i++) {     Write-Host $i }</strong></p>
+
+<ul>
+  <li>foreach 循环：</li>
+</ul>
+
+<p><strong>foreach ($item in $arrayVar) {     Write-Host $item }</strong></p>
+
+<ul>
+  <li>while 循环：</li>
+</ul>
+
+<p><strong>$counter = 0 while ($counter -lt 5) {     Write-Host $counter     $counter++ }</strong></p>
 
 <h2 id="5函数">5.函数</h2>
 
@@ -845,11 +878,15 @@
   <li><strong>定义函数</strong>：使用 function 关键字定义一个函数。</li>
 </ul>
 
+<p><strong>function MyFunction {     param ($param1, $param2)     Write-Host “Parameter 1 is $param1”     Write-Host “Parameter 2 is $param2” }  MyFunction “Value1” “Value2”</strong></p>
+
 <h2 id="6错误处理">6.错误处理</h2>
 
 <ul>
   <li><strong>try、catch 和 finally</strong>：</li>
 </ul>
+
+<p><strong>try {     # Code that might throw an exception } catch {     Write-Host “An error occurred: $_” } finally {     # Code that runs regardless of success or failure }</strong></p>
 
 <h2 id="7模块和导入">7.模块和导入</h2>
 
@@ -857,16 +894,21 @@
   <li><strong>导入模块</strong>：使用 Import-Module 导入 PowerShell 模块。</li>
 </ul>
 
+<p><strong>Import-Module ModuleName</strong></p>
+
 <h2 id="8输入和输出">8.输入和输出</h2>
 
 <ul>
-  <li>
-    <p><strong>输出到控制台</strong></p>
-  </li>
-  <li>
-    <p><strong>获取用户输入</strong></p>
-  </li>
+  <li><strong>输出到控制台</strong></li>
 </ul>
+
+<p><strong>Write-Host “This is output to the console”</strong></p>
+
+<ul>
+  <li><strong>获取用户输入</strong></li>
+</ul>
+
+<p><strong>$userInput = Read-Host “Enter your name” Write-Host “Hello, $userInput!”</strong></p>
 
 <h2 id="9管道">9.管道</h2>
 
@@ -874,16 +916,21 @@
   <li>PowerShell支持管道（<code class="language-plaintext highlighter-rouge">|</code>）将一个命令的输出直接传递给另一个命令。</li>
 </ul>
 
+<p><strong>Get-Process <code class="language-plaintext highlighter-rouge">|</code> Where-Object { $_.CPU -gt 100 }</strong></p>
+
 <h2 id="10文件操作">10.文件操作</h2>
 
 <ul>
-  <li>
-    <p><strong>读取文件</strong></p>
-  </li>
-  <li>
-    <p><strong>写入文件</strong></p>
-  </li>
+  <li><strong>读取文件</strong></li>
 </ul>
+
+<p><strong>$content = Get-Content “C:\path\to\file.txt”</strong></p>
+
+<ul>
+  <li><strong>写入文件</strong></li>
+</ul>
+
+<p><strong>“Hello, World!” <code class="language-plaintext highlighter-rouge">|</code> Out-File “C:\path\to\output.txt”</strong></p>
 
 <h2 id="11-对象和属性">11 对象和属性</h2>
 
@@ -891,11 +938,15 @@
   <li>PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。</li>
 </ul>
 
+<p><strong>$process = Get-Process <code class="language-plaintext highlighter-rouge">|</code> Where-Object { $_.Name -eq “powershell” } Write-Host “Process ID: $($process.Id)”</strong></p>
+
 <h2 id="12自动化和计划任务">12.自动化和计划任务</h2>
 
 <ul>
   <li><strong>创建计划任务</strong>：</li>
 </ul>
+
+<p><strong>$action = New-ScheduledTaskAction -Execute “PowerShell.exe” -Argument “C:\path\to\script.ps1” $trigger = New-ScheduledTaskTrigger -At 7am -Daily Register-ScheduledTask -Action $action -Trigger $trigger -TaskName “MyTask”</strong></p>
 
 <h2 id="13模块的创建与使用">13.模块的创建与使用</h2>
 
@@ -908,7 +959,10 @@
 
 <ul>
   <li>管道允许多个命令连接在一起，可以有效处理数据流。</li>
+  <li><strong>示例</strong>：</li>
 </ul>
+
+<p><strong>Get-Service <code class="language-plaintext highlighter-rouge">|</code> Where-Object { $_.Status -eq ‘Running’ }</strong></p>
 
 <h2 id="15自动完成和参数">15.自动完成和参数</h2>
 

@@ -617,58 +617,104 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShe
 ## 1.**基本结构**
 
 - **脚本注释**：
-    - 单行注释使用井符号
+
+ - 单行注释使用井符号  
+
+**# This is a comment**
+
+ - 多行注释使用 `<#` 和 `#>`：  
+
+**<# This is a multi-line comment It can span multiple lines #>**
 
 ## 2.变量
 
-- **定义变量**：使用 $ 符号定义变量，等号（=）用于赋值。
+- **定义变量**：使用 $ 符号定义变量，等号（=）用于赋值。  
 
-- **使用变量**：在字符串中使用变量时，可用双引号引用。
+**$myVariable = "Hello, World!"**
 
-## 3.数据类型
+- **使用变量**：在字符串中使用变量时，可用双引号引用。  
+
+**Write-Host "The message is: $myVariable"**
+
+## 3.数据类型  
+
+**$stringVar = "This is a string" $intVar = 42 $arrayVar = @(1, 2, 3, 4) $hashTable = @{"key1" = "value1"; "key2" = "value2"}**
 
 ## 4.流程控制
 
 - **条件语句**：
 
+**if ($condition) {     # Do something } elseif ($otherCondition) {     # Do something else } else {     # Do another thing }**
+
 - **循环语句**:
-(for 循环  foreach 循环  while 循环)
+
+ - for 循环：  
+
+**for ($i = 0; $i -lt 10; $i++) {     Write-Host $i }**
+
+ - foreach 循环：  
+
+**foreach ($item in $arrayVar) {     Write-Host $item }**
+
+  - while 循环：  
+
+**$counter = 0 while ($counter -lt 5) {     Write-Host $counter     $counter++ }**
 
 ## 5.函数
 
-- **定义函数**：使用 function 关键字定义一个函数。
+- **定义函数**：使用 function 关键字定义一个函数。  
+
+**function MyFunction {     param ($param1, $param2)     Write-Host "Parameter 1 is $param1"     Write-Host "Parameter 2 is $param2" }  MyFunction "Value1" "Value2"**
 
 ## 6.错误处理
 
-- **try、catch 和 finally**：
+- **try、catch 和 finally**：  
+
+**try {     # Code that might throw an exception } catch {     Write-Host "An error occurred: $_" } finally {     # Code that runs regardless of success or failure }**
 
 ## 7.模块和导入
 
-- **导入模块**：使用 Import-Module 导入 PowerShell 模块。
+- **导入模块**：使用 Import-Module 导入 PowerShell 模块。  
+
+**Import-Module ModuleName**
 
 ## 8.输入和输出
 
-- **输出到控制台**
+- **输出到控制台**  
 
-- **获取用户输入**
+**Write-Host "This is output to the console"**
+
+- **获取用户输入**  
+
+**$userInput = Read-Host "Enter your name" Write-Host "Hello, $userInput!"**
 
 ## 9.管道
 
-- PowerShell支持管道（`|`）将一个命令的输出直接传递给另一个命令。
+- PowerShell支持管道（`|`）将一个命令的输出直接传递给另一个命令。  
+
+**Get-Process `|` Where-Object { $_.CPU -gt 100 }**
 
 ## 10.文件操作
 
-- **读取文件**
+- **读取文件**  
 
-- **写入文件**
+**$content = Get-Content "C:\path\to\file.txt"**
+
+- **写入文件**  
+
+**"Hello, World!" `|` Out-File "C:\path\to\output.txt"**
 
 ## 11 对象和属性
 
-- PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。
+- PowerShell 的强大之处在于对对象的处理，可以访问对象的属性和方法。  
+
+**$process = Get-Process `|` Where-Object { $_.Name -eq "powershell" } Write-Host "Process ID: $($process.Id)"**
 
 ## 12.自动化和计划任务
 
-- **创建计划任务**：
+- **创建计划任务**：  
+
+**$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "C:\path\to\script.ps1" $trigger = New-ScheduledTaskTrigger -At 7am -Daily Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "MyTask"**
 
 ## 13.模块的创建与使用
 
@@ -678,6 +724,9 @@ PSL 文件通常是指 PowerShell 脚本文件，其扩展名为 .ps1。PowerShe
 ## 14.管道和流
 
 - 管道允许多个命令连接在一起，可以有效处理数据流。
+- **示例**：  
+
+**Get-Service `|` Where-Object { $_.Status -eq 'Running' }**
 
 ## 15.自动完成和参数
 
