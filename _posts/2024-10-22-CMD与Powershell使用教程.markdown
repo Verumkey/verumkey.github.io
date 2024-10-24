@@ -425,21 +425,22 @@ format D:
 
 BAT 文件的每一行通常包含一个命令，并且按照自上而下的顺序执行。常用的命令包括文件操作、系统管理、进程控制等。
 
-- **注释：** 使用 REM 或 :: 来注释代码，注释行不会执行。
-```
-REM This is a comment
-::  This is also a comment
-```
-- **显示消息：** 使用 echo 打印消息或控制命令回显。
-```
-echo Hello, World!
-```
-- **变量：** 使用 set 定义和访问变量。变量名用 % 包围来引用。
+- **注释：** 使用 REM 或 :: 来注释代码，注释行不会执行。  
 
-- **禁用回显：** 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。
-```
-@echo off
-```
+**REM This is a comment
+::  This is also a comment**
+
+- **显示消息：** 使用 echo 打印消息或控制命令回显。  
+
+**echo Hello, World!**
+
+- **变量：** 使用 set 定义和访问变量。变量名用 % 包围来引用。  
+
+**set myVar=123 echo %myVar%**
+
+- **禁用回显：** 在脚本开头使用 @echo off 来关闭命令回显，使得脚本只输出你想要的内容，而不是每个命令的执行行。  
+
+**@echo off**
 
 ## 2.流程控制语法
 
@@ -447,60 +448,92 @@ BAT 文件支持基本的流程控制语法，如条件语句、循环等。
 
 ### 条件语句 (if)
 
-- if 用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。 
+- if`用于执行条件判断。可以根据文件是否存在、字符串比较或者数值比较来决定代码的执行。
+
+ - 存在判断：  
+
+**if exist file.txt echo File exists**
+
+ - 字符串比较：  
+
+**if "%myVar%"=="123" echo Variable is 123**
+
+ - 数值比较：  
+
+**if %myVar% GEQ 100 echo Value is greater than or equal to 100**
 
 ### 循环语句 (for)
 
-- for 循环用于遍历文件、目录或变量集合。
+- `for` 循环用于遍历文件、目录或变量集合。
+
+ - 遍历文件：  
+
+**for %%f in (*.txt) do echo %%f**
+
+ - 遍历数字范围：  
+
+**for /L %%i in (1, 1, 10) do echo %%i**
 
 ## 3.输入输出
 
-- **用户输入：** 使用 set /p 提示用户输入，并将输入存储到变量中。
+- **用户输入：** 使用 set /p 提示用户输入，并将输入存储到变量中。  
+
+**set /p userInput=Enter your name:  echo Hello, %userInput%**
 
 - **重定向输出：** 使用 >、>> 将命令的输出重定向到文件。
 
-- 将输出重定向到文件并覆盖该文件的内容。
-```
-echo This is a test > output.txt
-```
-- 将输出附加到文件末尾。
-```
-echo Another line >> output.txt
-```
+- 将输出重定向到文件并覆盖该文件的内容。  
+
+**echo This is a test > output.txt**
+
+- 将输出附加到文件末尾。  
+
+**echo Another line >> output.txt**
+
 
 ## 4.子程序与跳转
 
-- **标签 (:)** 和 **跳转 (goto)**：可以通过标签创建脚本的不同部分，并使用 goto 跳转到某个标签。
+- **标签 (`:`)** 和 **跳转 (`goto`)**：可以通过标签创建脚本的不同部分，并使用 `goto` 跳转到某个标签。  
 
-- **call 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。
-```
-call 文件名
-```
+**goto :start  :start echo This is the start**
+
+- **`call` 语句：** 用于调用另一个批处理文件或调用当前脚本的子例程。  
+
+**call otherScript.bat**
+
 
 ## 5.错误处理
 
 - **errorlevel**：每个命令执行后会设置一个返回码，称为 errorlevel。可以通过检查 errorlevel 来执行错误处理。
 
+**if %errorlevel% neq 0 echo An error occurred**
+
 ## 6.批处理文件常见参数
 
-- **%1 到 %9**：批处理文件可以接收命令行参数，使用 %1 访问第一个参数，%2 访问第二个参数，依次类推。
+- **`%1` 到 `%9`**：批处理文件可以接收命令行参数，使用 `%1` 访问第一个参数，`%2` 访问第二个参数，依次类推。  
 
-- **shift**：用于左移参数，%2 变为 %1，%3 变为 %2。
+**echo First parameter is %1**
+
+- **`shift`**：用于左移参数，`%2` 变为 `%1`，`%3` 变为 `%2`。  
+
+**shift**
 
 ## 7.批处理文件常用命令
 
-- **pause**：暂停脚本执行，等待用户按任意键继续。
-```
-pause
-```
-- **exit**：终止批处理文件的执行，并可选择返回错误码。
-```
-exit 
-```
+- **pause**：暂停脚本执行，等待用户按任意键继续。  
+
+**pause**
+
+- **exit**：终止批处理文件的执行，并可选择返回错误码。  
+
+**exit**
+
 
 ## 8.高级功能
 
 - **setlocal 和 endlocal**：用于限制变量的作用范围，使得在 setlocal 和 endlocal 之间定义的变量在该范围外无效。
+
+**setlocal set myVar=123 endlocal**
 
 - **环境变量操作**：批处理文件可以访问系统环境变量，如 PATH、TEMP 等，并进行修改或使用。
     
