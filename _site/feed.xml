@@ -1,4 +1,688 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T10:45:43+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T14:08:59+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<p>本文主要内容：<br />
+1.在Windows系统的基础上演示再安装Ubuntu系统<br />
+2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
+3.介绍Linux的常用命令</p>
+
+<hr />
+
+<h1 id="二双系统配置ubuntu">二.双系统配置Ubuntu</h1>
+
+<hr />
+
+<p><strong>注意：在安装Ubuntu系统前，我们先需要确定当前Windows系统的引导方式<br />
+安装的Ubuntu系统需要与当前的Windows系统具有相同的引导方式 才能设置双系统菜单<br />
+我已经安装好了一个Ubuntu系统在一个97.66GB的分区<br />
+如果细心，可以发现后面又变成了97.67GB，那是我试验了一下扩充空间<br />
+本文演示压缩一个10GB的硬盘空间去安装Ubuntu系统<br />
+但不会真的安装，会演示到到安装的最后一步<br />
+后面这10GB再拿来演示扩充<br />
+首先考虑好存储Ubuntu系统的初始硬盘空间弄多少GB，当然后面还能扩容<br />
+一些可能陌生的名词在第一点有介绍<br />
+有一些页面不便截屏，只能手机拍摄，将就一下看<br />
+本文的教程引导方式为：UEFI引导<br />
+磁盘分区格式为GPT<br />
+如果你的与我不相同，操作下去可能碰到一些错误</strong></p>
+
+<hr />
+
+<h2 id="1基础知识介绍">1.基础知识介绍</h2>
+<h3 id="11引导的简介">1.1.引导的简介</h3>
+<p>引导（Booting）是指计算机在开机时进行的一系列过程，其目的是加载操作系统，使计算机能够正常工作。引导过程通常包括以下几个主要步骤：</p>
+
+<ol>
+  <li>
+    <p><strong>硬件初始化</strong>：</p>
+
+    <ul>
+      <li>当计算机通电后，首先由固件（BIOS或UEFI）进行硬件自检（POST），确保关键组件（如内存、CPU、硬盘等）正常。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>引导加载程序（Bootloader）</strong>：</p>
+
+    <ul>
+      <li>通过固件找到存储设备上的引导加载程序（如GRUB、LILO等），并将控制权转移给它。引导加载程序负责加载操作系统内核。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>操作系统加载</strong>：</p>
+
+    <ul>
+      <li>引导加载程序从硬盘或其他存储设备加载操作系统的内核到内存中，并启动操作系统。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>系统初始化</strong>：</p>
+
+    <ul>
+      <li>操作系统内核完成初始化，设置硬件驱动程序、文件系统等，为用户和应用程序提供服务。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>引导过程是计算机启动的重要环节，成功引导后，用户可以使用计算机进行各种操作。引导的方式可以分为传统的BIOS引导和现代的UEFI引导，选择合适的引导方式可以提高系统的性能和安全性。</p>
+
+<hr />
+
+<h3 id="12bios模式的简介">1.2.BIOS模式的简介</h3>
+<p>BIOS模式是指基本输入输出系统（Basic Input/Output System）的一种引导方式，它是在计算机启动时加载和执行的固件。BIOS负责硬件初始化和操作系统的加载。它是早期计算机的引导方式，主要用于x86架构的计算机。</p>
+
+<p>引导方式指的是计算机启动时如何加载操作系统的方式。主要的引导方式有：</p>
+
+<ol>
+  <li>
+    <p><strong>BIOS引导</strong>：</p>
+
+    <ul>
+      <li>使用MBR（主引导记录）格式。</li>
+      <li>限制在2TB的磁盘大小，最多支持四个主分区。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>UEFI引导</strong>：</p>
+
+    <ul>
+      <li>是BIOS的继任者，支持更大的硬盘（超过2TB）。</li>
+      <li>使用GPT（GUID分区表）格式，支持更多的分区。</li>
+      <li>提供更快的启动速度和更强的安全性（如Secure Boot）。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="13磁盘分区格式的简介">1.3.磁盘分区格式的简介</h3>
+<p>磁盘分区格式是定义磁盘如何组织和管理存储空间的结构。主要有以下几种分区格式：</p>
+
+<ol>
+  <li>
+    <p><strong>MBR（主引导记录）</strong>：</p>
+
+    <ul>
+      <li>传统分区格式，支持最多四个主分区（或三个主分区和一个扩展分区）。</li>
+      <li>最大支持2TB的磁盘空间。</li>
+      <li>使用较旧的BIOS引导。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>GPT（GUID分区表）</strong>：</p>
+
+    <ul>
+      <li>现代分区格式，支持更大的硬盘（超过2TB）和更多的分区（通常是128个）。</li>
+      <li>采用UEFI引导，提供更强的安全性和灵活性。</li>
+      <li>包含冗余的分区表，提高了数据的可靠性。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>动态磁盘</strong>：</p>
+
+    <ul>
+      <li>Windows系统特有的分区管理方式，可以创建跨多个物理磁盘的卷，支持更复杂的磁盘管理功能，如镜像和条带化。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="14bios模式与分区格式的对应关系">1.4.BIOS模式与分区格式的对应关系</h3>
+
+<ol>
+  <li>
+    <p><strong>传统BIOS模式（Legacy BIOS）</strong>：</p>
+
+    <ul>
+      <li>通常使用<strong>MBR（主引导记录）</strong>分区格式。</li>
+      <li>在这种模式下，支持最多四个主分区，最大磁盘大小为2TB。</li>
+      <li>安装操作系统时，若选择Legacy模式，系统会要求将磁盘格式化为MBR。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>UEFI模式</strong>：</p>
+
+    <ul>
+      <li>通常使用<strong>GPT（GUID分区表）</strong>分区格式。</li>
+      <li>支持更大的磁盘（超过2TB）和更多的分区（通常是128个）。</li>
+      <li>安装操作系统时，若选择UEFI模式，系统会要求将磁盘格式化为GPT。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>一般BIOS模式是传统，磁盘分区格式就是MBR<br />
+一般BIOS模式是UEFI，磁盘分区格式就是GPT</p>
+
+<hr />
+
+<h3 id="15ventoy的简介">1.5.ventoy的简介</h3>
+<p>Ventoy 是一个开源工具，用于创建可启动的 USB 驱动器。与传统的方法不同，Ventoy 允许用户将多个 ISO 文件直接复制到 USB 驱动器上，而无需重新格式化或每次都写入 USB 驱动器。以下是 Ventoy 的一些主要特点：</p>
+
+<ol>
+  <li>
+    <p><strong>多重 ISO 支持</strong>：用户可以在同一个 USB 驱动器上存储多个 ISO 文件，并在启动时选择要加载的 ISO。</p>
+  </li>
+  <li>
+    <p><strong>快速创建</strong>：只需一次性格式化 USB 驱动器并安装 Ventoy，之后可以随意添加、删除或更新 ISO 文件。</p>
+  </li>
+  <li>
+    <p><strong>兼容性</strong>：Ventoy 支持多种操作系统的 ISO，包括 Linux 发行版、Windows 安装镜像等。</p>
+  </li>
+  <li>
+    <p><strong>UEFI 和 BIOS 支持</strong>：Ventoy 支持 UEFI 和传统 BIOS 启动，确保在不同类型的计算机上都能使用。</p>
+  </li>
+  <li>
+    <p><strong>简单易用</strong>：用户界面友好，使用简单，无需复杂的命令行操作。</p>
+  </li>
+  <li>
+    <p><strong>开源</strong>：Ventoy 是开源软件，可以免费使用，并且可以根据需要进行定制。</p>
+  </li>
+</ol>
+
+<p>Ventoy 的使用非常适合需要频繁测试或安装不同操作系统的开发者和系统管理员。</p>
+
+<hr />
+
+<h3 id="16镜像的简介">1.6.镜像的简介</h3>
+<p>镜像（Image）通常是指某个操作系统或软件的完整复制品，通常以文件的形式存在，包含了所有安装文件和配置设置。常见的镜像格式有 ISO 文件，这种文件可以用于创建可启动的 USB 驱动器或光盘。</p>
+
+<hr />
+
+<h3 id="17bitlocker的简介">1.7.BitLocker的简介</h3>
+<p>BitLocker 是微软 Windows 操作系统中的一个全盘加密功能，用于保护存储在计算机上的数据。以下是 BitLocker 的一些关键特点和功能：</p>
+
+<ol>
+  <li>
+    <p><strong>全盘加密</strong>：BitLocker 能够加密整个驱动器，包括系统驱动器和数据驱动器，从而保护存储在其上的所有文件。</p>
+  </li>
+  <li>
+    <p><strong>安全性</strong>：通过使用 AES（高级加密标准）加密算法，BitLocker 提供强大的数据保护，防止未授权访问。</p>
+  </li>
+  <li>
+    <p><strong>TPM 支持</strong>：BitLocker 可以与计算机的 TPM（受信任的平台模块）芯片结合使用，以增强安全性。TPM 存储加密密钥并提供安全启动功能。</p>
+  </li>
+  <li>
+    <p><strong>多种解锁方式</strong>：用户可以通过多种方式解锁加密的驱动器，包括密码、PIN 码、USB 密钥和恢复密钥。</p>
+  </li>
+  <li>
+    <p><strong>数据恢复</strong>：如果用户忘记密码或丢失解锁密钥，可以使用 BitLocker 恢复密钥来访问加密数据。</p>
+  </li>
+  <li>
+    <p><strong>管理工具</strong>：Windows 提供图形界面和命令行工具（如 manage-bde）来管理 BitLocker 加密。</p>
+  </li>
+</ol>
+
+<p>使用场景：</p>
+
+<ul>
+  <li><strong>保护敏感数据</strong>：适用于需要保护机密或敏感信息的个人用户和企业。</li>
+  <li><strong>防止数据泄露</strong>：在设备被盗或丢失的情况下，BitLocker 可以防止未授权访问存储在驱动器上的数据。</li>
+</ul>
+
+<p>要启用 BitLocker，通常需要在 Windows 专业版或企业版上使用。在控制面板的“系统和安全”部分，可以找到 BitLocker 的设置选项。</p>
+
+<hr />
+
+<h3 id="18bios界面的boot的简介">1.8.BIOS界面的Boot的简介</h3>
+<p>在 BIOS（基本输入输出系统）中，“Boot”指的是计算机启动的过程和相关设置。以下是“Boot”在 BIOS 中的几个关键方面：</p>
+
+<p><strong>1. 启动顺序</strong></p>
+
+<ul>
+  <li>引导设备优先级：Boot 设置中包含启动设备的顺序，例如硬盘、光驱、USB 驱动器和网络。这决定了计算机在启动时从哪个设备加载操作系统。</li>
+  <li>可更改顺序：用户可以根据需要调整启动顺序，例如设置 USB 驱动器为首选启动设备，以便从 USB 设备安装操作系统。</li>
+</ul>
+
+<p><strong>2. 引导选项</strong></p>
+
+<ul>
+  <li>引导选项菜单：某些 BIOS 提供了一个引导选项菜单，允许用户在启动时选择特定的引导设备，通常通过按下特定的键（如 F12）访问。</li>
+</ul>
+
+<p><strong>3. 引导模式</strong></p>
+
+<ul>
+  <li>Legacy BIOS 和 UEFI：现代计算机通常使用 UEFI（统一可扩展固件接口）作为替代传统的 BIOS。Boot 设置中可能有选项来选择使用 Legacy 或 UEFI 模式，影响操作系统的引导方式。</li>
+</ul>
+
+<p><strong>4. 安全启动（Secure Boot）</strong></p>
+
+<ul>
+  <li>安全启动设置：一些系统允许启用或禁用安全启动，这是一种防止未授权软件在系统启动时加载的安全功能。</li>
+</ul>
+
+<p><strong>5. 引导记录</strong></p>
+
+<ul>
+  <li>引导记录设置：在某些情况下，用户可以查看或修改与引导相关的记录，以确保系统能够正确加载操作系统。</li>
+</ul>
+
+<p>在 BIOS 中，Boot 设置是配置计算机启动过程的关键部分，确保操作系统能够从正确的设备加载。通过调整这些设置，你可以优化系统的启动顺序和引导方式，以适应不同的需求。</p>
+
+<hr />
+
+<h3 id="19secure-boot的简介">1.9.Secure Boot的简介</h3>
+<p><strong>Secure Boot</strong> 可能会影响双系统安装，特别是当你尝试安装的操作系统不支持或未正确签名以通过 Secure Boot 验证时。以下是一些具体情况：</p>
+
+<p><strong>1. 不支持的操作系统</strong></p>
+
+<ul>
+  <li>某些操作系统（例如某些 Linux 发行版）可能默认情况下不支持 Secure Boot。如果你在 Secure Boot 启用的状态下尝试安装这样的操作系统，可能会遇到启动失败或无法安装的问题。</li>
+</ul>
+
+<p><strong>2. 驱动程序和签名</strong></p>
+
+<ul>
+  <li>如果你要安装的操作系统或其驱动程序未经过签名，Secure Boot 将阻止它们加载，从而影响系统的启动过程。</li>
+</ul>
+
+<p><strong>3. UEFI 和 Legacy 模式</strong></p>
+
+<ul>
+  <li>在安装双系统时，你可能需要根据不同操作系统的需求选择 UEFI 模式或 Legacy 模式。如果 Secure Boot 启用，确保所有操作系统都兼容 UEFI 和 Secure Boot。</li>
+</ul>
+
+<p><strong>4. 需要禁用 Secure Boot</strong></p>
+
+<ul>
+  <li>在某些情况下，特别是当安装的操作系统不支持 Secure Boot 时，你可能需要在 BIOS/UEFI 设置中禁用 Secure Boot。这将允许你安装并运行不受 Secure Boot 保护的操作系统。</li>
+</ul>
+
+<hr />
+
+<h3 id="110挂载点的简介">1.10.挂载点的简介</h3>
+<p><strong>挂载点</strong> 是指在操作系统中用于访问文件系统的目录。它是一个特定的目录路径，系统通过这个路径将外部存储设备（如硬盘驱动器、USB 驱动器、网络共享等）连接到操作系统的文件系统中。通过挂载点，用户可以访问和操作存储在这些设备上的文件和目录。</p>
+
+<ol>
+  <li>
+    <p><strong>文件系统结构</strong>：</p>
+
+    <ul>
+      <li>在 Linux 和类 Unix 系统中，所有文件和目录都以根目录 / 为基础构成一个统一的文件系统结构。任何外部存储设备都需要被“挂载”到这个结构中，才能被访问。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>挂载过程</strong>：</p>
+
+    <ul>
+      <li>当你将设备连接到计算机时，需要通过挂载命令（如 mount）将其挂载到某个目录。例如，你可能将一个 USB 驱动器挂载到 /mnt/usb 目录下，这样就可以通过访问 /mnt/usb 来查看和操作 USB 驱动器中的文件。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>卸载（Unmounting）</strong>：</p>
+
+    <ul>
+      <li>当你不再需要访问该设备时，可以通过卸载命令（如 umount）将其从文件系统中移除。这确保了数据的完整性，并释放系统资源。</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>实际示例：</strong></p>
+
+<ul>
+  <li>假设你有一个外部硬盘，你可以在终端中使用如下命令将其挂载到 /media/external 目录：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount /dev/sdb1 /media/external
+</code></pre></div></div>
+
+<p>之后，你可以通过访问 /media/external 来访问外部硬盘中的文件。</p>
+
+<p>总结：挂载点是访问外部存储设备的关键概念，通过将设备挂载到特定的目录，用户可以在统一的文件系统中管理和操作不同的存储资源。</p>
+
+<hr />
+
+<h3 id="111根挂载点的简介">1.11.根挂载点的简介</h3>
+<p>在文件系统中，/ 代表根目录（root directory），是整个文件系统的起始点。它是 Linux 和类 Unix 系统中所有文件和目录的顶层目录。下面是根目录的一些重要概念：</p>
+
+<ol>
+  <li><strong>文件系统的基础</strong></li>
+</ol>
+
+<ul>
+  <li><strong>树状结构</strong>：所有的文件和目录都从根目录 / 开始，形成一个树状结构。根目录下可以有多个子目录和文件，所有其他目录（如 /home、/usr、/etc 等）都是根目录的子目录。</li>
+</ul>
+
+<ol>
+  <li><strong>挂载点的含义</strong></li>
+</ol>
+
+<ul>
+  <li><strong>挂载点的父级</strong>：当你将设备挂载到某个目录时，那个目录的路径会成为挂载点。例如，假设你将一个 USB 驱动器挂载到 /media/usb，则 /media/usb 就是这个 USB 驱动器的挂载点，而根目录 / 是整个文件系统的根。</li>
+  <li><strong>根目录的重要性</strong>：挂载点可以是根目录下的任意目录，但最终所有的挂载和访问都与根目录相连。</li>
+</ul>
+
+<ol>
+  <li><strong>示例</strong></li>
+</ol>
+
+<ul>
+  <li>在 Linux 系统中，如果你输入 ls /，将显示根目录下的所有文件和目录列表。例如：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin   boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+</code></pre></div></div>
+
+<ul>
+  <li>如果你将一个硬盘分区挂载到 /mnt/data，你可以通过访问 /mnt/data 来查看该分区的内容，而 /mnt 和 /mnt/data 都是根目录的子目录。</li>
+</ul>
+
+<p>总结：/作为根目录是整个文件系统的起点，所有挂载点都是相对于根目录的路径。通过挂载点，用户可以在统一的文件系统中访问和管理不同的存储设备。</p>
+
+<hr />
+
+<h3 id="112软件源和镜像服务器的简介">1.12.软件源和镜像服务器的简介</h3>
+<p>软件源和镜像服务器是 Linux 及其他类 Unix 系统中用于管理和安装软件包的重要概念。
+ 软件源（Software Repository）</p>
+
+<p>软件源是一个集中存储软件包的地方，通常包含了大量可供用户安装和更新的软件。这些软件包会经过审核和测试，以确保它们的安全性和稳定性。软件源的主要功能包括：</p>
+
+<ul>
+  <li><strong>软件安装</strong>：用户可以通过包管理工具（如 apt、yum、dnf 等）从软件源下载并安装软件包。</li>
+  <li><strong>软件更新</strong>：软件源提供了软件的最新版本，用户可以方便地更新已安装的软件。</li>
+  <li><strong>依赖管理</strong>：包管理工具能够自动处理软件包之间的依赖关系，确保所需的库和工具一同安装。</li>
+</ul>
+
+<p>镜像服务器（Mirror Server）</p>
+
+<p>镜像服务器是软件源的复制版本，它们通常分布在不同地理位置，以便于用户更快地下载软件包。镜像服务器的特点包括：</p>
+
+<ul>
+  <li><strong>负载均衡</strong>：多个镜像服务器可以分散用户请求，减少单一服务器的负载，提高下载速度。</li>
+  <li><strong>地理位置优化</strong>：用户可以选择离自己地理位置最近的镜像服务器，以获得更快的下载速度。</li>
+  <li><strong>数据同步</strong>：镜像服务器定期与主软件源同步，以确保提供最新的软件包。</li>
+</ul>
+
+<p>总结:软件源和镜像服务器共同为用户提供了方便的软件管理功能。通过合理配置和选择镜像服务器，用户可以高效地安装和更新所需的软件，提高使用体验。</p>
+
+<hr />
+
+<h3 id="113gparted的简介">1.13.GParted的简介</h3>
+<p>GParted（GNOME Partition Editor）是一个用于管理硬盘分区的图形化工具，通常在 Ubuntu 和其他 Linux 发行版中使用。它的主要功能包括：</p>
+
+<ol>
+  <li>
+    <p><strong>创建、删除和调整分区</strong>：用户可以轻松创建新的分区、删除不再需要的分区，以及调整现有分区的大小。</p>
+  </li>
+  <li>
+    <p><strong>格式化分区</strong>：GParted 支持多种文件系统格式，包括 ext4、NTFS、FAT32 等，用户可以对分区进行格式化。</p>
+  </li>
+  <li>
+    <p><strong>移动分区</strong>：用户可以移动分区位置，以重新组织硬盘上的数据。</p>
+  </li>
+  <li>
+    <p><strong>检查和修复分区</strong>：GParted 允许用户检查分区的完整性，并修复可能出现的错误。</p>
+  </li>
+  <li>
+    <p><strong>支持多种存储设备</strong>：GParted 可以管理硬盘驱动器、SSD、USB 驱动器等多种存储设备。</p>
+  </li>
+</ol>
+
+<p>GParted 的用户界面直观友好，适合用户进行硬盘管理，尤其是在进行系统安装、分区调整或数据备份时。使用 GParted 需要一定的权限，因此通常需要以管理员身份运行。</p>
+
+<hr />
+
+<h2 id="2查看bios模式">2.查看BIOS模式</h2>
+<p>使用<strong>Win+R</strong>打开 <strong>“运行”对话框</strong> <br />
+输入：<strong>Msinfo32</strong><br />
+可以看到我的<strong>BIOS模式</strong>是<strong>UEFI</strong><br />
+如果显示是<strong>传统</strong>，那用的就是<strong>BIOS引导</strong><br />
+如果显示是<strong>UEFI</strong>，用的就是<strong>UEFI引导</strong>
+<img src="/images/Linux-images/linux.1.png" alt="" /></p>
+
+<hr />
+
+<h2 id="3查看磁盘分区格式">3.查看磁盘分区格式</h2>
+<p>一般看到<strong>BIOS模式</strong>是什么就能确定<strong>磁盘分区格式</strong>了，当然也可以去查看  <br />
+右键点击开始，然后点击<strong>磁盘管理</strong>
+<img src="/images/Linux-images/linux.2.png" alt="" />
+鼠标右键点击当前<strong>Windows系统所在的硬盘</strong>，再点击<strong>属性</strong>  <br />
+提前说一下：这些C盘D盘右边<strong>一般会</strong>有一个<strong>Bitlocker已加密</strong>的显示<br />
+我这里没有是因为我已经关掉了，下文会介绍一般需要关掉它
+<img src="/images/Linux-images/linux.3.png" alt="" />
+可以看到我这里的磁盘分区格式是GPT<br />
+<img src="/images/Linux-images/linux.4.png" alt="" /></p>
+
+<hr />
+
+<h2 id="4安装镜像">4.安装镜像</h2>
+<p>Ubuntu镜像：<a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br />
+LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版本的操作系统会获得更长时间的支持和更新，通常是五年，这包括安全更新和软件包更新。
+<img src="/images/Linux-images/linux.5.png" alt="" /></p>
+
+<hr />
+
+<h2 id="5制作ubuntu安装盘">5.制作Ubuntu安装盘</h2>
+<h3 id="51下载ventoy">5.1.下载ventoy</h3>
+<p>ventoy开源项目地址：<a href="https://github.com/ventoy/Ventoy">https://github.com/ventoy/Ventoy</a><br />
+ventoy下载地址：<a href="https://sourceforge.net/projects/ventoy/">Ventoy download | SourceForge.net</a>
+<img src="/images/Linux-images/linux.6.png" alt="" />
+解压并打开
+<img src="/images/Linux-images/linux.7.png" alt="" /></p>
+<h3 id="52插入u盘">5.2.插入U盘</h3>
+<p>注意：制作成安装盘后，U盘<strong>原来的数据</strong>都会被<strong>清空</strong><br />
+在<strong>设备</strong>里选择你的U盘<br />
+<strong>分区格式（MBR 或 GPT）</strong>会影响你在 USB 驱动器上安装系统时，<strong>目标磁盘的分区格式</strong><br />
+可以看到<strong>默认的是MBR</strong>，我的Windows系统所在硬盘分区格式是<strong>GPT</strong>，所以<strong>修改</strong>一下<br />
+如果你的Windows系统所在硬盘分区格式就是MBR，就不用修改<br />
+我这里u盘已经安装了ventoy，没安装时设备内部ventoy版本那是空的
+<img src="/images/Linux-images/linux.8.png" alt="" /></p>
+<h3 id="53在u盘上安装ventoy">5.3.在U盘上安装ventoy</h3>
+<p><strong>点击左上角配置选项-&gt;点击分区类型-&gt;选择GPT-&gt;安装</strong>
+安装成功后会弹出恭喜<strong>安装成功</strong>的窗口，然后U盘名字变为<strong>ventoy</strong></p>
+<h3 id="54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</h3>
+<p>前文下载的<strong>8Ubuntu镜像</strong>直接<strong>复制</strong>过来就成功制作了<strong>Ubuntu安装盘</strong>
+<img src="/images/Linux-images/linux.9.png" alt="" /></p>
+
+<hr />
+
+<h2 id="6关闭bitlocker">6.关闭BitLocker</h2>
+<p>如果启用了<strong>BitLocker</strong>，C盘和D盘右边都会显示<strong>BitLocker已经启用</strong><br />
+如果已经关闭了或没有启用，就跳过这一小点<br />
+BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
+关闭它比较省事，之后再打开就行
+<img src="/images/Linux-images/linux.10.png" alt="" /></p>
+
+<h3 id="61bitlocker可能触发条件">6.1.BitLocker可能触发条件</h3>
+<p>BitLocker 会在以下情况下要求输入 48 位的恢复密码：</p>
+
+<ol>
+  <li>
+    <p><strong>TPM 出现问题</strong>：</p>
+
+    <ul>
+      <li>如果计算机的 TPM（受信任的平台模块）在启动过程中未能正常工作，BitLocker 可能无法验证计算机的安全性，从而要求输入恢复密码。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>系统硬件更改</strong>：</p>
+
+    <ul>
+      <li>当计算机的硬件组件（如主板、TPM 芯片或启动驱动器）发生更改时，BitLocker 可能会要求输入恢复密码以确保数据的安全性。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>BIOS/UEFI 设置更改</strong>：</p>
+
+    <ul>
+      <li>如果更改了 BIOS/UEFI 设置，例如禁用了安全启动或重置了 BIOS/UEFI，BitLocker 也可能会要求输入恢复密码。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Windows 更新或修复</strong>：</p>
+
+    <ul>
+      <li>在进行某些系统更新或修复操作时，BitLocker 可能会触发恢复模式，要求输入密码。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>启动顺序变化</strong>：</p>
+
+    <ul>
+      <li>如果启动顺序更改为尝试从不同的设备启动，BitLocker 可能会要求验证身份。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>未按预期关机</strong>：</p>
+
+    <ul>
+      <li>如果计算机在非正常情况下关机（如断电），下次启动时可能会要求输入恢复密码。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>在启用 BitLocker 时，系统会生成一个 48 位的恢复密码，并提示用户进行备份，以防在上述情况下无法访问数据。</p>
+
+<h3 id="62关闭bitlocker">6.2.关闭BitLocker</h3>
+<p>在搜索栏中搜索设备加密设置或管理BitLocker
+<img src="/images/Linux-images/linux.11.png" alt="" />
+关闭需要一些时间，请耐心等待<br />
+成功后可进入磁盘管理器在C盘、D盘就不会显示有BitLocker已加密的字样了
+<img src="/images/Linux-images/linux.12.png" alt="" /></p>
+
+<hr />
+
+<h2 id="7为ubuntu挤出硬盘空间">7.为Ubuntu挤出硬盘空间</h2>
+<p>鼠标右键点击开始，打开磁盘管理
+<img src="/images/Linux-images/linux.2.png" alt="" />
+挑选一个分区为Ubuntu系统挤出空间<br />
+这里我选择D盘这个分区，然后点击压缩卷
+<img src="/images/Linux-images/linux.13.png" alt="" />
+这里输入压缩空间量就是压缩出来空间的大小<br />
+我这里就填10240MB<br />
+<img src="/images/Linux-images/linux.14.png" alt="" />
+未分配的10GB就是刚才压缩出来的硬盘空间<br />
+补充：1G=1024MB<br />
+压缩出来的分区应该显示的是未分配</p>
+
+<p><img src="/images/Linux-images/linux.15.png" alt="" /></p>
+
+<hr />
+
+<h2 id="8进入bios界面进行设置">8.进入BIOS界面进行设置</h2>
+<p>重启电脑，重启过程中点击F2<br />
+(怕错过一直点也行，不同品牌的电脑快捷键和BIOS界面可能有所不同)
+<img src="/images/Linux-images/linux.16.png" alt="" /></p>
+
+<h3 id="81关闭secure-boot">8.1.关闭Secure Boot</h3>
+<p>Secure Boot的选项一般在安全里，选择Disabled以关闭
+<img src="/images/Linux-images/linux.17.png" alt="" /></p>
+
+<h3 id="82boot-option-priorities">8.2.boot option priorities</h3>
+<p>这是<strong>启动优先级</strong>的意思，在Boot里面，一般来说<strong>默认</strong>启动优先级最高的是<strong>U盘</strong><br />
+如果不是，<strong>需要将U盘设为最优先启动项</strong><br />
+退出时记得保存，退出时会提醒你保存，按<strong>F10可直接保存</strong>
+<img src="/images/Linux-images/linux.18.png" alt="" /></p>
+
+<hr />
+
+<h2 id="9进入u盘的ubuntu系统">9.进入U盘的Ubuntu系统</h2>
+<p>首先插入U盘重启电脑，进入ventoy的界面<br />
+选择我们安装的Ubuntu镜像，回车
+<img src="/images/Linux-images/linux.19.png" alt="" />
+选择第一个以默认Boot启动，回车
+<img src="/images/Linux-images/linux.20.png" alt="" />
+选择第一个，试用或安装Ubuntu，回车
+<img src="/images/Linux-images/linux.21.png" alt="" /></p>
+
+<hr />
+
+<h2 id="10安装ubuntu系统到硬盘">10.安装Ubuntu系统到硬盘</h2>
+<p>1.下滑，选择中文
+<img src="/images/Linux-images/linux.22.png" alt="" />
+2.连接网络
+<img src="/images/Linux-images/linux.23.png" alt="" />
+3.选择安装Ubuntu
+<img src="/images/Linux-images/linux.24.png" alt="" />
+4.选择交互安装
+<img src="/images/Linux-images/linux.25.png" alt="" />
+5.选择默认集合
+<img src="/images/Linux-images/linux.26.png" alt="" />
+6.推荐选择这两个
+<img src="/images/Linux-images/linux.27.png" alt="" />
+7.选择手动分区
+<img src="/images/Linux-images/linux.28.png" alt="" />
+8.选择我们之前为安装Ubuntu系统而<strong>压缩出来的硬盘空间</strong>，并点击<strong>+号</strong> <br />
+注意：这里对<strong>文件大小的计算方式不同</strong>，我们在Windows压缩出来的10个G在这里显示是10.74G <br />
+根据你压缩出来的硬盘空间大概<strong>估算一下选择</strong>，<strong>不要选错了!</strong> <br />
+很容易<strong>辨别</strong>的是，我们这种<strong>压缩出来的空间前面</strong>有个<strong>剩余空间</strong>的标记
+<img src="/images/Linux-images/linux.29.png" alt="" />
+9.<strong>挂载点</strong>选择<strong>根挂载点</strong> ，挂载点介绍见上文1.10
+简而言之就是这个分区拿来储存Ubuntu系统的所有数据
+<img src="/images/Linux-images/linux.30.png" alt="" />
+10.选择用于安装引导程序的设备<br />
+你刚才选的<strong>在哪个硬盘</strong>就选择哪个硬盘
+这里的<strong>nvme0n1</strong>就是指代<strong>我的硬盘</strong>，上面那个是我们的安装盘
+<img src="/images/Linux-images/linux.31.png" alt="" />
+11.进行一些设置
+<img src="/images/Linux-images/linux.32.png" alt="" />
+12.选择时区
+<img src="/images/Linux-images/linux.33.png" alt="" />
+13.安装
+<img src="/images/Linux-images/linux.34.png" alt="" />
+14.安装完成后会提示你<strong>重启</strong><br />
+会有一个界面让你拔掉U盘，再ENTER<br />
+15.安装完成
+<img src="/images/Linux-images/linux.35.png" alt="" /></p>
+
+<hr />
+
+<h2 id="11设置镜像服务器">11.设置镜像服务器</h2>
+<p>软件源和镜像服务器介绍见上文1.12
+<img src="/images/Linux-images/linux.36.png" alt="" /><img src="/images/Linux-images/linux.37.png" alt="" />
+它会自动更新，直接<strong>停止</strong>,再点击<strong>设置</strong>就行
+<img src="/images/Linux-images/linux.38.png" alt="" />
+先点击下载自右边的链接进入下图的界面，然后点击<strong>选择最佳服务器</strong>
+<img src="/images/Linux-images/linux.39.png" alt="" />
+等待一段时间，他会给你选择一个最佳的服务器，然后我们<strong>直接点选择服务器</strong>
+<img src="/images/Linux-images/linux.40.png" alt="" />
+最后你关闭的时候会更新软件缓存，就大功告成
+<img src="/images/Linux-images/linux.41.png" alt="" /></p>
+
+<hr />
+
+<h2 id="12对ubuntu的硬盘空间进行扩容">12.对Ubuntu的硬盘空间进行扩容</h2>
+<p>要是用久了发现硬盘空间不够用，我们就可以进行<strong>扩容</strong></p>
+
+<h3 id="121压缩硬盘空间">12.1.压缩硬盘空间</h3>
+<p>从<strong>多余的分区</strong>中<strong>压缩</strong>出来一些<strong>硬盘空间</strong><br />
+忘了<strong>操作</strong>的可以返回<strong>上文6</strong>，是一样的操作<br />
+我这里压缩了10个G
+<img src="/images/Linux-images/linux.15.png" alt="" /></p>
+
+<h3 id="122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</h3>
+<p>和<strong>上文8的操作</strong>一样</p>
+
+<h3 id="123选择试用ubuntu">12.3.选择试用Ubuntu</h3>
+<p>选择语言为中文，一路到下图这一步就要注意了<br />
+<strong>一定要选择试用Ubuntu</strong><br />
+其实你一进来或选完语言九点右上角的X关闭这个窗口就行<br />
+这本来就是<strong>运行在U盘的Ubuntu系统</strong>
+<img src="/images/Linux-images/linux.49.png" alt="" /></p>
+
+<h3 id="124使用gparted扩容">12.4.使用GParted扩容</h3>
+<p>注意：这期间会弹出一些需要确认的窗口<br />
+<strong>1.打开终端（快捷键：Ctrl+Alt+G）<br />
+2.运行命令以安装和启动GParted（GParted的简介见上文1.13）</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt  install gparted #下载GParted
+gparted #启动GParted
+</code></pre></div></div>
+<p><img src="/images/Linux-images/linux.42.png" alt="" />
+3.右键点击我们需要扩容的Ubuntu系统的分区
+<img src="/images/Linux-images/linux.43.png" alt="" />
+4.可以在<strong>上方拖动</strong>进行扩容，也可以点击<strong>新大小右边的+</strong>进行扩容
+5.扩容完成后点击调整大小，然后确认
+<img src="/images/Linux-images/linux.44.png" alt="" />
+<img src="/images/Linux-images/linux.45.png" alt="" />
+6.点击<strong>绿色的✓</strong>应用全部操作完成扩容
+<img src="/images/Linux-images/linux.46.png" alt="" />
+7.重启退出，<strong>不要提前把U盘拔了</strong>，能<strong>提示的时候再拔</strong>
+<img src="/images/Linux-images/linux.47.png" alt="" />
+安装好Ubuntu系统后，原来显示<strong>未分配</strong>的分区会变为<strong>状态良好</strong><br />
+原来是97.67，可以看到扩容10GB成功了
+<img src="/images/Linux-images/linux.48.png" alt="" /></p>
+
+<hr />
+
+<h1 id="三虚拟机上配置ubuntu">三.虚拟机上配置Ubuntu</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Linux" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Linux]]></summary></entry><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T11:30:00+08:00</published><updated>2024-10-22T11:30:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 <p>本文主要内容： <br />
 1.分别介绍CMD与Powershell的概念<br />
 2.分别列出CMD与Powershell的常用命令<br />
