@@ -86,7 +86,7 @@
 </header>
 
 <div class="toc" id="toc">
-    <ul><li><a href="#简介">简介</a></li><li><a href="#二双系统配置ubuntu">二.双系统配置Ubuntu</a><ul><li><a href="#1基础知识介绍">1.基础知识介绍</a><ul><li><a href="#11引导的简介">1.1.引导的简介</a></li><li><a href="#12bios模式的简介">1.2.BIOS模式的简介</a></li><li><a href="#13磁盘分区格式的简介">1.3.磁盘分区格式的简介</a></li><li><a href="#14bios模式与分区格式的对应关系">1.4.BIOS模式与分区格式的对应关系</a></li><li><a href="#15ventoy的简介">1.5.ventoy的简介</a></li><li><a href="#16镜像的简介">1.6.镜像的简介</a></li><li><a href="#17bitlocker的简介">1.7.BitLocker的简介</a></li><li><a href="#18bios界面的boot的简介">1.8.BIOS界面的Boot的简介</a></li><li><a href="#19secure-boot的简介">1.9.Secure Boot的简介</a></li><li><a href="#110挂载点的简介">1.10.挂载点的简介</a></li><li><a href="#111根挂载点的简介">1.11.根挂载点的简介</a></li><li><a href="#112软件源和镜像服务器的简介">1.12.软件源和镜像服务器的简介</a></li><li><a href="#113gparted的简介">1.13.GParted的简介</a></li><li><a href="#114grub的简介">1.14.GRUB的简介</a><ul><li><a href="#为什么-ubuntu-的启动优先级比-windows-高时才能启动-grub">为什么 Ubuntu 的启动优先级比 Windows 高时才能启动 GRUB？</a></li></ul></li><li><a href="#115uefi-hardndisk-drive-bbs-priorities的简介">1.15.UEFI HardnDisk Drive BBS Priorities的简介</a></li></ul></li><li><a href="#2查看bios模式">2.查看BIOS模式</a></li><li><a href="#3查看磁盘分区格式">3.查看磁盘分区格式</a></li><li><a href="#4安装镜像">4.安装镜像</a></li><li><a href="#5制作ubuntu安装盘">5.制作Ubuntu安装盘</a><ul><li><a href="#51下载ventoy">5.1.下载ventoy</a></li><li><a href="#52插入u盘">5.2.插入U盘</a></li><li><a href="#53在u盘上安装ventoy">5.3.在U盘上安装ventoy</a></li><li><a href="#54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</a></li></ul></li><li><a href="#6关闭bitlocker">6.关闭BitLocker</a><ul><li><a href="#61bitlocker可能触发条件">6.1.BitLocker可能触发条件</a></li><li><a href="#62关闭bitlocker">6.2.关闭BitLocker</a></li></ul></li><li><a href="#7为ubuntu挤出硬盘空间">7.为Ubuntu挤出硬盘空间</a></li><li><a href="#8进入bios界面进行设置">8.进入BIOS界面进行设置</a><ul><li><a href="#81关闭secure-boot">8.1.关闭Secure Boot</a></li><li><a href="#82boot-option-priorities">8.2.boot option priorities</a></li></ul></li><li><a href="#9进入u盘的ubuntu系统">9.进入U盘的Ubuntu系统</a></li><li><a href="#10安装ubuntu系统到硬盘">10.安装Ubuntu系统到硬盘</a></li><li><a href="#11设置镜像服务器">11.设置镜像服务器</a></li><li><a href="#12对ubuntu的硬盘空间进行扩容">12.对Ubuntu的硬盘空间进行扩容</a><ul><li><a href="#121压缩硬盘空间">12.1.压缩硬盘空间</a></li><li><a href="#122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</a></li><li><a href="#123选择试用ubuntu">12.3.选择试用Ubuntu</a></li><li><a href="#124使用gparted扩容">12.4.使用GParted扩容</a></li></ul></li><li><a href="#13启用grub">13.启用GRUB</a></li><li><a href="#14修改grub配置文件">14.修改GRUB配置文件</a><ul><li><a href="#141进入ubuntu系统">14.1.进入Ubuntu系统</a></li><li><a href="#142更新grub配置文件">14.2.更新GRUB配置文件</a></li><li><a href="#143配置成功">14.3.配置成功</a></li></ul></li></ul></li><li><a href="#三虚拟机中安装ubuntu">三.虚拟机中安装Ubuntu</a><ul><li><a href="#1虚拟机基础知识介绍">1.虚拟机基础知识介绍</a><ul><li><a href="#11内存">1.1.内存</a></li><li><a href="#12处理器数量和每个处理器的内核数量">1.2.处理器数量和每个处理器的内核数量</a><ul><li><a href="#1-处理器数量vcpu数量">1. 处理器数量（vCPU数量）</a></li><li><a href="#2-每个处理器的内核数量">2. 每个处理器的内核数量</a></li><li><a href="#3-vcpu数量和内核数量的关系">3. vCPU数量和内核数量的关系</a></li><li><a href="#4-实际应用场景">4. 实际应用场景</a></li><li><a href="#5-资源分配与权衡">5. 资源分配与权衡</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#13软盘设备和-cddvd设备">1.3.软盘设备和 CD/DVD设备</a><ul><li><a href="#是否可以移除">是否可以移除：</a></li></ul></li><li><a href="#14网络适配器的常见模式">1.4.网络适配器的常见模式</a><ul><li><a href="#1-桥接模式bridged-mode">1. 桥接模式（Bridged Mode）</a></li><li><a href="#2-nat模式network-address-translation-mode">2. NAT模式（Network Address Translation Mode）</a></li><li><a href="#3-仅主机模式host-only-mode">3. 仅主机模式（Host-only Mode）</a></li><li><a href="#4-自定义模式custom-mode">4. 自定义模式（Custom Mode）</a></li><li><a href="#5-内网模式internal-network-mode">5. 内网模式（Internal Network Mode）</a></li><li><a href="#6-nat网络模式nat-network-mode">6. NAT网络模式（NAT Network Mode）</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#15加速3d图形">1.5.加速3D图形</a><ul><li><a href="#1-加速3d图形的作用">1. 加速3D图形的作用</a></li><li><a href="#2-适用场景">2. 适用场景</a></li><li><a href="#3-硬件要求">3. 硬件要求</a></li><li><a href="#4-如何启用加速3d图形">4. 如何启用加速3D图形</a></li><li><a href="#5-可能的限制和注意事项">5. 可能的限制和注意事项</a></li><li><a href="#总结-2">总结</a></li></ul></li><li><a href="#16虚拟机中的磁盘">1.6.虚拟机中的磁盘</a><ul><li><a href="#1-擦除磁盘并安装-ubuntu">1. 擦除磁盘并安装 Ubuntu</a></li><li><a href="#2-虚拟机硬盘空间是哪里来的">2. 虚拟机硬盘空间是哪里来的？</a></li><li><a href="#3-虚拟硬盘空间是否实际占用物理硬盘空间">3. 虚拟硬盘空间是否实际占用物理硬盘空间？</a></li><li><a href="#4-硬盘空间是如何管理的">4. 硬盘空间是如何管理的？</a></li><li><a href="#5-未使用的虚拟磁盘空间还在原来的地方吗">5. 未使用的虚拟磁盘空间还在原来的地方吗？</a></li><li><a href="#总结-3">总结</a></li></ul></li></ul></li><li><a href="#2下载vmware">2.下载VMware</a></li><li><a href="#3下载ubuntu镜像">3.下载Ubuntu镜像</a></li><li><a href="#4创建虚拟机">4.创建虚拟机</a><ul><li><a href="#41打开vmware">4.1.打开VMware</a></li><li><a href="#42创建新的虚拟机">4.2.创建新的虚拟机</a></li><li><a href="#43编辑虚拟机">4.3.编辑虚拟机</a></li></ul></li><li><a href="#5开启虚拟机">5.开启虚拟机</a></li><li><a href="#6设置镜像服务器">6.设置镜像服务器</a></li></ul></li><li><a href="#四linux常见命令">四.Linux常见命令</a></li></ul>
+    <ul><li><a href="#简介">简介</a></li><li><a href="#二双系统配置ubuntu">二.双系统配置Ubuntu</a><ul><li><a href="#1基础知识介绍">1.基础知识介绍</a><ul><li><a href="#11引导的简介">1.1.引导的简介</a></li><li><a href="#12bios模式的简介">1.2.BIOS模式的简介</a></li><li><a href="#13磁盘分区格式的简介">1.3.磁盘分区格式的简介</a></li><li><a href="#14bios模式与分区格式的对应关系">1.4.BIOS模式与分区格式的对应关系</a></li><li><a href="#15ventoy的简介">1.5.ventoy的简介</a></li><li><a href="#16镜像的简介">1.6.镜像的简介</a></li><li><a href="#17bitlocker的简介">1.7.BitLocker的简介</a></li><li><a href="#18bios界面的boot的简介">1.8.BIOS界面的Boot的简介</a></li><li><a href="#19secure-boot的简介">1.9.Secure Boot的简介</a></li><li><a href="#110挂载点的简介">1.10.挂载点的简介</a></li><li><a href="#111根挂载点的简介">1.11.根挂载点的简介</a></li><li><a href="#112软件源和镜像服务器的简介">1.12.软件源和镜像服务器的简介</a></li><li><a href="#113gparted的简介">1.13.GParted的简介</a></li><li><a href="#114grub的简介">1.14.GRUB的简介</a><ul><li><a href="#为什么-ubuntu-的启动优先级比-windows-高时才能启动-grub">为什么 Ubuntu 的启动优先级比 Windows 高时才能启动 GRUB？</a></li></ul></li><li><a href="#115uefi-hardndisk-drive-bbs-priorities的简介">1.15.UEFI HardnDisk Drive BBS Priorities的简介</a></li></ul></li><li><a href="#2查看bios模式">2.查看BIOS模式</a></li><li><a href="#3查看磁盘分区格式">3.查看磁盘分区格式</a></li><li><a href="#4安装镜像">4.安装镜像</a></li><li><a href="#5制作ubuntu安装盘">5.制作Ubuntu安装盘</a><ul><li><a href="#51下载ventoy">5.1.下载ventoy</a></li><li><a href="#52插入u盘">5.2.插入U盘</a></li><li><a href="#53在u盘上安装ventoy">5.3.在U盘上安装ventoy</a></li><li><a href="#54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</a></li></ul></li><li><a href="#6关闭bitlocker">6.关闭BitLocker</a><ul><li><a href="#61bitlocker可能触发条件">6.1.BitLocker可能触发条件</a></li><li><a href="#62关闭bitlocker">6.2.关闭BitLocker</a></li></ul></li><li><a href="#7为ubuntu挤出硬盘空间">7.为Ubuntu挤出硬盘空间</a></li><li><a href="#8进入bios界面进行设置">8.进入BIOS界面进行设置</a><ul><li><a href="#81关闭secure-boot">8.1.关闭Secure Boot</a></li><li><a href="#82boot-option-priorities">8.2.boot option priorities</a></li></ul></li><li><a href="#9进入u盘的ubuntu系统">9.进入U盘的Ubuntu系统</a></li><li><a href="#10安装ubuntu系统到硬盘">10.安装Ubuntu系统到硬盘</a></li><li><a href="#11设置镜像服务器">11.设置镜像服务器</a></li><li><a href="#12对ubuntu的硬盘空间进行扩容">12.对Ubuntu的硬盘空间进行扩容</a><ul><li><a href="#121压缩硬盘空间">12.1.压缩硬盘空间</a></li><li><a href="#122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</a></li><li><a href="#123选择试用ubuntu">12.3.选择试用Ubuntu</a></li><li><a href="#124使用gparted扩容">12.4.使用GParted扩容</a></li></ul></li><li><a href="#13启用grub">13.启用GRUB</a></li><li><a href="#14修改grub配置文件">14.修改GRUB配置文件</a><ul><li><a href="#141进入ubuntu系统">14.1.进入Ubuntu系统</a></li><li><a href="#142更新grub配置文件">14.2.更新GRUB配置文件</a></li><li><a href="#143配置成功">14.3.配置成功</a></li></ul></li></ul></li><li><a href="#三虚拟机中安装ubuntu">三.虚拟机中安装Ubuntu</a><ul><li><a href="#1虚拟机基础知识介绍">1.虚拟机基础知识介绍</a><ul><li><a href="#11内存">1.1.内存</a></li><li><a href="#12处理器数量和每个处理器的内核数量">1.2.处理器数量和每个处理器的内核数量</a><ul><li><a href="#1-处理器数量vcpu数量">1. 处理器数量（vCPU数量）</a></li><li><a href="#2-每个处理器的内核数量">2. 每个处理器的内核数量</a></li><li><a href="#3-vcpu数量和内核数量的关系">3. vCPU数量和内核数量的关系</a></li><li><a href="#4-实际应用场景">4. 实际应用场景</a></li><li><a href="#5-资源分配与权衡">5. 资源分配与权衡</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#13软盘设备和-cddvd设备">1.3.软盘设备和 CD/DVD设备</a><ul><li><a href="#是否可以移除">是否可以移除：</a></li></ul></li><li><a href="#14网络适配器的常见模式">1.4.网络适配器的常见模式</a><ul><li><a href="#1-桥接模式bridged-mode">1. 桥接模式（Bridged Mode）</a></li><li><a href="#2-nat模式network-address-translation-mode">2. NAT模式（Network Address Translation Mode）</a></li><li><a href="#3-仅主机模式host-only-mode">3. 仅主机模式（Host-only Mode）</a></li><li><a href="#4-自定义模式custom-mode">4. 自定义模式（Custom Mode）</a></li><li><a href="#5-内网模式internal-network-mode">5. 内网模式（Internal Network Mode）</a></li><li><a href="#6-nat网络模式nat-network-mode">6. NAT网络模式（NAT Network Mode）</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#15加速3d图形">1.5.加速3D图形</a><ul><li><a href="#1-加速3d图形的作用">1. 加速3D图形的作用</a></li><li><a href="#2-适用场景">2. 适用场景</a></li><li><a href="#3-硬件要求">3. 硬件要求</a></li><li><a href="#4-如何启用加速3d图形">4. 如何启用加速3D图形</a></li><li><a href="#5-可能的限制和注意事项">5. 可能的限制和注意事项</a></li><li><a href="#总结-2">总结</a></li></ul></li><li><a href="#16虚拟机中的磁盘">1.6.虚拟机中的磁盘</a><ul><li><a href="#1-擦除磁盘并安装-ubuntu">1. 擦除磁盘并安装 Ubuntu</a></li><li><a href="#2-虚拟机硬盘空间是哪里来的">2. 虚拟机硬盘空间是哪里来的？</a></li><li><a href="#3-虚拟硬盘空间是否实际占用物理硬盘空间">3. 虚拟硬盘空间是否实际占用物理硬盘空间？</a></li><li><a href="#4-硬盘空间是如何管理的">4. 硬盘空间是如何管理的？</a></li><li><a href="#5-未使用的虚拟磁盘空间还在原来的地方吗">5. 未使用的虚拟磁盘空间还在原来的地方吗？</a></li><li><a href="#总结-3">总结</a></li></ul></li></ul></li><li><a href="#2下载vmware">2.下载VMware</a></li><li><a href="#3下载ubuntu镜像">3.下载Ubuntu镜像</a></li><li><a href="#4创建虚拟机">4.创建虚拟机</a><ul><li><a href="#41打开vmware">4.1.打开VMware</a></li><li><a href="#42创建新的虚拟机">4.2.创建新的虚拟机</a></li><li><a href="#43编辑虚拟机">4.3.编辑虚拟机</a></li></ul></li><li><a href="#5开启虚拟机">5.开启虚拟机</a></li><li><a href="#6设置镜像服务器">6.设置镜像服务器</a></li></ul></li><li><a href="#四使用linux">四.使用Linux</a><ul><li><a href="#1关于linux的一些网站">1.关于Linux的一些网站</a></li><li><a href="#2shell的简介">2.Shell的简介</a><ul><li><a href="#终端与-shell-的关系">终端与 Shell 的关系</a></li><li><a href="#linux-命令">Linux 命令</a></li><li><a href="#总结-4">总结</a></li></ul></li><li><a href="#3linux的常用快捷键">3.Linux的常用快捷键</a><ul><li><a href="#终端快捷键">终端快捷键</a></li><li><a href="#系统快捷键">系统快捷键</a></li><li><a href="#文本编辑器如-vim-或-nano">文本编辑器（如 Vim 或 Nano）</a></li><li><a href="#其他常用快捷键">其他常用快捷键</a></li></ul></li><li><a href="#4linux目录的简介">4.Linux目录的简介</a><ul><li><a href="#1--根目录">1. <strong>/</strong> (根目录)</a></li><li><a href="#2-bin">2. <strong>/bin</strong></a></li><li><a href="#3-sbin">3. <strong>/sbin</strong></a></li><li><a href="#4-etc">4. <strong>/etc</strong></a></li><li><a href="#5-dev">5. <strong>/dev</strong></a></li><li><a href="#6-proc">6. <strong>/proc</strong></a></li><li><a href="#7-var">7. <strong>/var</strong></a></li><li><a href="#8-tmp">8. <strong>/tmp</strong></a></li><li><a href="#9-usr">9. <strong>/usr</strong></a></li><li><a href="#10-home">10. <strong>/home</strong></a></li><li><a href="#11-root">11. <strong>/root</strong></a></li><li><a href="#12-media">12. <strong>/media</strong></a></li><li><a href="#13-mnt">13. <strong>/mnt</strong></a></li><li><a href="#14-opt">14. <strong>/opt</strong></a></li><li><a href="#15-boot">15. <strong>/boot</strong></a></li><li><a href="#总结-5">总结</a></li></ul></li><li><a href="#5linux终端各种颜色的含义">5.Linux终端各种颜色的含义</a><ul><li><a href="#常见颜色及其含义">常见颜色及其含义</a></li><li><a href="#颜色配置">颜色配置</a></li><li><a href="#使用-ls-命令">使用 <strong>ls</strong> 命令</a></li></ul></li><li><a href="#6linux的一些辅助操作">6.Linux的一些辅助操作</a><ul><li><a href="#tab-键的作用">Tab 键的作用</a></li><li><a href="#man-命令"><strong>man</strong> 命令</a><ul><li><a href="#示例">示例：</a></li><li><a href="#手册页的简介">手册页的简介</a></li><li><a href="#手册页结构">手册页结构</a></li><li><a href="#常用选项">常用选项</a></li></ul></li><li><a href="#whatis-命令"><strong>whatis</strong> 命令</a><ul><li><a href="#示例-1">示例：</a></li><li><a href="#注意事项">注意事项</a></li></ul></li><li><a href="#总结-6">总结</a></li></ul></li><li><a href="#7linux常用命令">7.Linux常用命令</a><ul><li><a href="#1-ls-list">1. ls (List)</a></li><li><a href="#2-cd-change-directory">2. cd (Change Directory)</a></li><li><a href="#3-pwd-print-working-directory">3. pwd (Print Working Directory)</a></li><li><a href="#4-mkdir-make-directory">4. mkdir (Make Directory)</a></li><li><a href="#5-rm-remove">5. rm (Remove)</a></li><li><a href="#6-cp-copy">6. cp (Copy)</a></li><li><a href="#7-mv-move">7. mv (Move)</a></li><li><a href="#8-cat-concatenate">8. cat (Concatenate)</a></li><li><a href="#9-touch">9. touch</a></li><li><a href="#10-chmod-change-mode">10. chmod (Change Mode)</a></li><li><a href="#11-chown-change-owner">11. chown (Change Owner)</a></li><li><a href="#12-find">12. find</a></li><li><a href="#13-grep">13. grep</a></li><li><a href="#14-echo">14. echo</a></li><li><a href="#15-df-disk-free">15. df (Disk Free)</a></li><li><a href="#16-du-disk-usage">16. du (Disk Usage)</a></li><li><a href="#17-ps-process-status">17. ps (Process Status)</a></li><li><a href="#18-top">18. top</a></li><li><a href="#19-kill">19. kill</a></li><li><a href="#20-nano--vim--vi">20. nano / vim / vi</a></li><li><a href="#21-sudo-superuser-do">21. sudo (Superuser Do)</a></li><li><a href="#22-apt--yum--dnf">22. apt / yum / dnf</a></li><li><a href="#23-wget">23. wget</a></li><li><a href="#24-curl">24. curl</a></li><li><a href="#25-tar">25. tar</a></li><li><a href="#26-zipunzip">26. zip/unzip</a></li><li><a href="#27-ssh-secure-shell">27. ssh (Secure Shell)</a></li><li><a href="#28-scp-secure-copy">28. scp (Secure Copy)</a></li><li><a href="#29-history">29. history</a></li><li><a href="#30-reboot--shutdown">30. reboot / *shutdown</a></li><li><a href="#31-alias">31. alias</a></li><li><a href="#32-unalias">32. unalias</a></li><li><a href="#33-awk">33. awk</a></li><li><a href="#34-sed-stream-editor">34. sed (Stream Editor)</a></li><li><a href="#35-head">35. head</a></li><li><a href="#36-tail">36. tail</a></li><li><a href="#37-sort">37. sort</a></li><li><a href="#38-uniq">38. uniq</a></li><li><a href="#39-wc-word-count">39. wc (Word Count)</a></li><li><a href="#40-basename">40. basename</a></li><li><a href="#41-dirname">41. dirname</a></li><li><a href="#42-diff">42. diff</a></li><li><a href="#43-ln">43. ln</a></li><li><a href="#44-locate">44. locate</a></li><li><a href="#45-updatedb">45. updatedb</a></li><li><a href="#46-mount">46. mount</a></li><li><a href="#47-umount">47. umount</a></li><li><a href="#48-dd">48. dd</a></li><li><a href="#49-fdisk">49. fdisk</a></li><li><a href="#50-df-disk-free">50. df (Disk Free)</a></li><li><a href="#51-du">51. du</a></li><li><a href="#52-nc-netcat">52. nc (Netcat)</a></li><li><a href="#53-ifconfig">53. ifconfig</a></li><li><a href="#54-ip">54. ip</a></li><li><a href="#55-ping">55. ping</a></li><li><a href="#56-traceroute">56. traceroute</a></li><li><a href="#57-netstat">57. netstat</a></li><li><a href="#58-ss">58. ss</a></li><li><a href="#59-uptime">59. uptime</a></li><li><a href="#60-htop">60. htop</a></li><li><a href="#61-dmesg">61. dmesg</a></li><li><a href="#62-journalctl">62. journalctl</a></li><li><a href="#63-who">63. who</a></li><li><a href="#64-w">64. w</a></li><li><a href="#65-useradd">65. useradd</a></li><li><a href="#66-usermod">66. usermod</a></li><li><a href="#67-userdel">67. userdel</a></li><li><a href="#68-passwd">68. passwd</a></li><li><a href="#69-groupadd">69. groupadd</a></li><li><a href="#70-groups">70. groups</a></li><li><a href="#71-tar">71. tar</a></li><li><a href="#72-gzip">72. gzip</a></li><li><a href="#73-gunzip">73. gunzip</a></li><li><a href="#74-bzip2">74. bzip2</a></li><li><a href="#74-bzip2-1">74. bzip2</a></li><li><a href="#75-bunzip2">75. bunzip2</a></li><li><a href="#76-xargs">76. xargs</a></li><li><a href="#77-find">77. find</a></li><li><a href="#78-locate">78. locate</a></li><li><a href="#79-chown">79. chown</a></li><li><a href="#80-chgrp">80. chgrp</a></li><li><a href="#81-chmod">81. chmod</a></li><li><a href="#82-umask">82. umask</a></li><li><a href="#83-scp">83. scp</a></li><li><a href="#84-rsync">84. rsync</a></li><li><a href="#85-ssh">85. ssh</a></li><li><a href="#86-wget">86. wget</a></li><li><a href="#87-curl">87. curl</a></li><li><a href="#88-uptime">88. uptime</a></li><li><a href="#89-free">89. free</a></li><li><a href="#90-vmstat">90. vmstat</a></li><li><a href="#91-lsof">91. lsof</a></li><li><a href="#92-top">92. top</a></li><li><a href="#93-kill">93. kill</a></li><li><a href="#94-pkill">94. pkill</a></li><li><a href="#95-killall">95. killall</a></li><li><a href="#96-cron">96. cron</a></li><li><a href="#97-at">97. at</a></li><li><a href="#98-batch">98. batch</a></li><li><a href="#99-hostname">99. hostname</a></li><li><a href="#100-whoami">100. whoami</a></li><li><a href="#101-uptime">101. uptime</a></li><li><a href="#102-dstat">102. dstat</a></li><li><a href="#103-passwd">103. passwd</a></li><li><a href="#104-groupadd">104. groupadd</a></li><li><a href="#105useradd">105.useradd</a></li><li><a href="#106-usermod">106. usermod</a></li><li><a href="#107-deluser">107. deluser</a></li><li><a href="#108-modprobe">108. modprobe</a></li><li><a href="#109-lsmod">109. lsmod</a></li><li><a href="#110-rmmod">110. rmmod</a></li><li><a href="#111-depmod">111. depmod</a></li><li><a href="#112-iwconfig">112. iwconfig</a></li><li><a href="#113-ifup">113. ifup</a></li><li><a href="#114-ifdown">114. ifdown</a></li><li><a href="#115-dhclient">115. dhclient</a></li><li><a href="#116-host">116. host</a></li><li><a href="#117-dig">117. dig</a></li><li><a href="#118-nslookup">118. nslookup</a></li></ul></li></ul></li></ul>
 </div>
 
 
@@ -96,7 +96,7 @@
 <p>本文主要内容：<br />
 1.在Windows系统的基础上演示再安装Ubuntu系统<br />
 2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
-3.介绍Linux的常用命令  <br />
+3.介绍Linux的相关知识和常用命令  <br />
 Linux镜像大全：<a href="https://www.linux.org/pages/download/">https://www.linux.org/pages/download/</a></p>
 
 <hr />
@@ -601,7 +601,7 @@ LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版�
 <h2 id="5制作ubuntu安装盘">5.制作Ubuntu安装盘</h2>
 <h3 id="51下载ventoy">5.1.下载ventoy</h3>
 <p>ventoy开源项目地址：<a href="https://github.com/ventoy/Ventoy">https://github.com/ventoy/Ventoy</a><br />
-ventoy下载地址：<a href="https://sourceforge.net/projects/ventoy/">Ventoy download | SourceForge.net</a>
+ventoy下载地址：<a href="https://sourceforge.net/projects/ventoy/">https://sourceforge.net/projects/ventoy/</a>
 <img src="/images/Linux-images/linux.6.png" alt="" />
 解压并打开
 <img src="/images/Linux-images/linux.7.png" alt="" /></p>
@@ -1308,7 +1308,1344 @@ LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版�
 
 <hr />
 
-<h1 id="四linux常见命令">四.Linux常见命令</h1>
+<h1 id="四使用linux">四.使用Linux</h1>
+
+<hr />
+
+<h2 id="1关于linux的一些网站">1.关于Linux的一些网站</h2>
+<p>有几个网站提供了详细的 Linux 命令及其介绍：</p>
+
+<ol>
+  <li>
+    <p><strong>Linux Command</strong> (<a href="https://linuxcommand.org/">https://linuxcommand.org/</a>)<br />
+ 这个网站提供了大量的 Linux 命令及其用法，适合初学者和有经验的用户。</p>
+  </li>
+  <li>
+    <p><strong>SS64</strong> <a href="https://ss64.com/bash/">https://ss64.com/bash/ </a>
+ 这个网站包含了 Bash 命令的完整列表，每个命令都有详细的说明和用法示例。</p>
+  </li>
+  <li>
+    <p><strong>TLDP</strong> (The Linux Documentation Project) <a href="https://tldp.org/">https://tldp.org/</a><br />
+ 提供各种文档和指南，包括 Linux 命令和系统管理的手册。</p>
+  </li>
+  <li>
+    <p><strong>Cheat Sheet</strong> <a href="https://www.cheat-sheets.org/">https://www.cheat-sheets.org/</a> 
+ 这个网站提供了多个主题的备忘单，包括常用的 Linux 命令，方便快速查找。</p>
+  </li>
+  <li>
+    <p><strong>Die.net</strong> <a href="https://linux.die.net/">https://linux.die.net/</a><br />
+ 这是一个提供 Linux 命令及其手册页的网站，可以查找特定命令的详细信息。</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2shell的简介">2.Shell的简介</h2>
+<h3 id="终端与-shell-的关系">终端与 Shell 的关系</h3>
+
+<ul>
+  <li>
+    <p><strong>终端</strong>: 这是一个用于输入和输出的界面，用户通过终端与操作系统交互。在现代 Linux 系统中，终端通常指的是图形界面的终端模拟器（如 GNOME Terminal、Konsole、xterm 等）或纯文本的控制台（TTY）。</p>
+  </li>
+  <li>
+    <p><strong>Shell</strong>: 这是一个在终端中运行的程序，用户通过它输入命令并接收结果。常见的 Shell 包括 Bash、Zsh 和 Fish 等。</p>
+  </li>
+</ul>
+
+<h3 id="linux-命令">Linux 命令</h3>
+
+<ul>
+  <li>
+    <p><strong>Linux 命令</strong>: 通常指的是可以在 Shell 中执行的命令。这些命令用于各种任务，如文件管理、系统监控和网络操作等。例如，<strong>ls</strong>、<strong>cp</strong>、<strong>mv</strong>、<strong>grep</strong> 等都是常见的 Linux 命令。</p>
+  </li>
+  <li>
+    <p><strong>Shell 命令</strong>: 更准确地说，Linux 命令实际上是 Shell 命令，因为它们是在特定的 Shell 环境中执行的。因此，当人们提到“Linux 命令”时，通常是指 Shell 中可用的命令。</p>
+  </li>
+</ul>
+
+<h3 id="总结-4">总结</h3>
+
+<ul>
+  <li><strong>终端</strong> 是与用户交互的界面。</li>
+  <li><strong>Shell</strong> 是终端中的命令解释器，执行用户输入的命令。</li>
+  <li><strong>Linux 命令</strong> 是在 Shell 中执行的命令。</li>
+</ul>
+
+<p>所以，Linux 终端通常与 Shell 是密切相关的，Linux 命令指的就是在 Shell 中可以执行的命令。</p>
+
+<hr />
+
+<h2 id="3linux的常用快捷键">3.Linux的常用快捷键</h2>
+<p>在 Linux 中，尤其是在使用终端时，有许多快捷键可以提高效率。以下是一些常用的 Linux 快捷键及其功能：</p>
+<h3 id="终端快捷键">终端快捷键</h3>
+
+<ol>
+  <li>
+    <p><strong>基本操作</strong></p>
+
+    <ul>
+      <li><strong>Ctrl + C</strong>: 终止当前运行的命令。</li>
+      <li><strong>Ctrl + Z</strong>: 将当前运行的命令暂停并放入后台。</li>
+      <li><strong>fg</strong>: 将最近放入后台的命令恢复到前台运行。</li>
+      <li><strong>bg</strong>: 将最近放入后台的命令在后台继续运行。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>命令行编辑</strong></p>
+
+    <ul>
+      <li><strong>Ctrl + A</strong>: 移动光标到命令行的开头。</li>
+      <li><strong>Ctrl + E</strong>: 移动光标到命令行的结尾。</li>
+      <li><strong>Ctrl + U</strong>: 删除光标前的所有文本。</li>
+      <li><strong>Ctrl + K</strong>: 删除光标后的所有文本。</li>
+      <li><strong>Ctrl + W</strong>: 删除光标前一个单词。</li>
+      <li><strong>Ctrl + Y</strong>: 粘贴之前删除的文本（来自 <strong>Ctrl + U</strong>、<strong>Ctrl + K</strong> 或 <strong>Ctrl + W</strong>）。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>命令历史</strong></p>
+
+    <ul>
+      <li><strong>Ctrl + R</strong>: 启动反向搜索命令历史，可以输入命令的一部分来查找。</li>
+      <li><strong>Ctrl + N</strong>: 向下浏览命令历史。</li>
+      <li><strong>Ctrl + P</strong>: 向上浏览命令历史。</li>
+      <li><strong>!!</strong>: 执行上一条命令。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>光标移动</strong></p>
+
+    <ul>
+      <li><strong>左箭头</strong> / <strong>右箭头</strong>: 在命令行中移动光标。</li>
+      <li><strong>Ctrl + 左箭头</strong> / <strong>Ctrl + 右箭头</strong>: 在命令行中按单词移动光标。</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="系统快捷键">系统快捷键</h3>
+
+<ol>
+  <li>
+    <p><strong>桌面环境快捷键（如 GNOME 或 KDE）</strong></p>
+
+    <ul>
+      <li><strong>Alt + F2</strong>: 打开运行对话框，可以输入命令直接运行。</li>
+      <li><strong>Ctrl + Alt + T</strong>: 打开新的终端窗口。</li>
+      <li><strong>Super (Windows 键) + D</strong>: 最小化所有窗口并显示桌面。</li>
+      <li><strong>Alt + Tab</strong>: 在打开的应用程序之间切换。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>文件管理器快捷键</strong></p>
+
+    <ul>
+      <li><strong>Ctrl + N</strong>: 打开新窗口。</li>
+      <li><strong>Ctrl + Shift + N</strong>: 创建新文件夹。</li>
+      <li><strong>Delete</strong>: 删除选中的文件或文件夹。</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="文本编辑器如-vim-或-nano">文本编辑器（如 Vim 或 Nano）</h3>
+
+<ul>
+  <li>
+    <p><strong>Vim 快捷键</strong></p>
+
+    <ul>
+      <li><strong>i</strong>: 进入插入模式。</li>
+      <li><strong>Esc</strong>: 退出插入模式。</li>
+      <li><strong>:w</strong>: 保存文件。</li>
+      <li><strong>:q</strong>: 退出 Vim。</li>
+      <li><strong>:wq</strong>: 保存并退出。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Nano 快捷键</strong></p>
+
+    <ul>
+      <li><strong>Ctrl + O</strong>: 保存文件。</li>
+      <li><strong>Ctrl + X</strong>: 退出 Nano。</li>
+      <li><strong>Ctrl + G</strong>: 显示帮助。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="其他常用快捷键">其他常用快捷键</h3>
+
+<ul>
+  <li><strong>Ctrl + Alt + F1</strong> 到 <strong>Ctrl + Alt + F6</strong>: 切换到不同的 TTY（文本终端）。</li>
+  <li><strong>Ctrl + Alt + F7</strong>: 返回到图形界面。</li>
+</ul>
+
+<hr />
+
+<h2 id="4linux目录的简介">4.Linux目录的简介</h2>
+<p>Linux 文件系统采用树状结构，所有文件和目录都从根目录（<strong>/</strong>）开始。以下是一些主要的 Linux 目录及其功能：</p>
+
+<h3 id="1--根目录">1. <strong>/</strong> (根目录)</h3>
+
+<ul>
+  <li>文件系统的顶层目录，所有其他目录都从这里开始。</li>
+</ul>
+
+<h3 id="2-bin">2. <strong>/bin</strong></h3>
+
+<ul>
+  <li>存放基本的用户命令和可执行文件，如 <strong>ls</strong>、<strong>cp</strong>、<strong>mv</strong>、<strong>cat</strong> 等。</li>
+</ul>
+
+<h3 id="3-sbin">3. <strong>/sbin</strong></h3>
+
+<ul>
+  <li>存放系统管理命令和可执行文件，通常需要管理员权限才能执行，如 <strong>shutdown</strong>、<strong>reboot</strong>、<strong>ifconfig</strong> 等。</li>
+</ul>
+
+<h3 id="4-etc">4. <strong>/etc</strong></h3>
+
+<ul>
+  <li>存放系统配置文件。这里的文件通常是纯文本格式，可以编辑和修改系统设置。</li>
+</ul>
+
+<h3 id="5-dev">5. <strong>/dev</strong></h3>
+
+<ul>
+  <li>存放设备文件，包括所有的硬件设备，如硬盘、终端、打印机等。在 Linux 中，设备也被视为文件。</li>
+</ul>
+
+<h3 id="6-proc">6. <strong>/proc</strong></h3>
+
+<ul>
+  <li>虚拟文件系统，提供关于系统和进程的信息。文件是动态生成的，包含内存使用、CPU 状态等信息，如 <strong>/proc/cpuinfo</strong> 和 <strong>/proc/meminfo</strong>。</li>
+</ul>
+
+<h3 id="7-var">7. <strong>/var</strong></h3>
+
+<ul>
+  <li>存放可变数据文件，如日志文件（在 <strong>/var/log</strong> 中）、邮件、缓存和临时文件等。</li>
+</ul>
+
+<h3 id="8-tmp">8. <strong>/tmp</strong></h3>
+
+<ul>
+  <li>存放临时文件，通常在系统重启后会被清空。</li>
+</ul>
+
+<h3 id="9-usr">9. <strong>/usr</strong></h3>
+
+<ul>
+  <li>存放用户级别的程序和文件，通常包含以下子目录：
+    <ul>
+      <li><strong>/usr/bin</strong>: 存放大多数用户命令的可执行文件。</li>
+      <li><strong>/usr/sbin</strong>: 存放系统管理命令。</li>
+      <li><strong>/usr/lib</strong>: 存放库文件和共享库。</li>
+      <li><strong>/usr/share</strong>: 存放共享数据，如文档和图标。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="10-home">10. <strong>/home</strong></h3>
+
+<ul>
+  <li>每个用户的个人目录，用户的文件、配置和数据存储在这里。例如，用户 <strong>user1</strong> 的家目录通常是 <strong>/home/user1</strong>。</li>
+</ul>
+
+<h3 id="11-root">11. <strong>/root</strong></h3>
+
+<ul>
+  <li>超级用户（root 用户）的家目录，通常是 <strong>/root</strong>。</li>
+</ul>
+
+<h3 id="12-media">12. <strong>/media</strong></h3>
+
+<ul>
+  <li>挂载点，用于临时挂载可移动设备（如 USB 驱动器、CD-ROM 等）。</li>
+</ul>
+
+<h3 id="13-mnt">13. <strong>/mnt</strong></h3>
+
+<ul>
+  <li>通常用于临时挂载文件系统的地方，管理员可以在这里手动挂载额外的设备。</li>
+</ul>
+
+<h3 id="14-opt">14. <strong>/opt</strong></h3>
+
+<ul>
+  <li>存放额外的、可选的应用程序和软件包，通常用于大型软件包或应用程序。</li>
+</ul>
+
+<h3 id="15-boot">15. <strong>/boot</strong></h3>
+
+<ul>
+  <li>存放启动加载程序和内核文件。这里的文件在系统启动时被使用。</li>
+</ul>
+
+<h3 id="总结-5">总结</h3>
+
+<p>Linux 目录结构清晰、层次分明，使得系统的管理和操作更为高效。理解这些目录及其功能是使用和管理 Linux 系统的重要基础。</p>
+
+<hr />
+
+<h2 id="5linux终端各种颜色的含义">5.Linux终端各种颜色的含义</h2>
+<p>在 Linux 终端中，文件和目录的颜色编码提供了视觉上的帮助，帮助用户快速识别不同类型的文件和目录。颜色的具体表示可能因终端的配置而有所不同，但以下是常见的颜色及其代表的含义：</p>
+<h3 id="常见颜色及其含义">常见颜色及其含义</h3>
+
+<ol>
+  <li>
+    <p><strong>蓝色</strong></p>
+
+    <ul>
+      <li><strong>目录</strong>: 代表普通目录。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>绿色</strong></p>
+
+    <ul>
+      <li><strong>可执行文件</strong>: 代表可执行的程序或脚本。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>红色</strong></p>
+
+    <ul>
+      <li><strong>压缩文件</strong>: 代表压缩文件（如 <strong>.zip</strong>、<strong>.tar.gz</strong> 等）。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>紫色（洋红色）</strong></p>
+
+    <ul>
+      <li><strong>图像文件</strong>: 代表图像文件（如 <strong>.jpg</strong>、<strong>.png</strong> 等）。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>青色（青蓝色）</strong></p>
+
+    <ul>
+      <li><strong>符号链接</strong>: 代表指向其他文件或目录的符号链接。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>黄色</strong></p>
+
+    <ul>
+      <li><strong>设备文件</strong>: 代表设备文件，通常位于 <strong>/dev</strong> 目录下。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>白色</strong></p>
+
+    <ul>
+      <li><strong>普通文件</strong>: 代表普通文件。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>亮蓝色</strong></p>
+
+    <ul>
+      <li><strong>目录（特殊目录）</strong>: 可能用于标识系统的特殊目录。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>亮绿色</strong></p>
+
+    <ul>
+      <li><strong>可执行文件（特别的）</strong>: 可能用于标识系统的特殊可执行文件。</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="颜色配置">颜色配置</h3>
+
+<p>终端中的颜色设置通常由环境变量 <strong>LS_COLORS</strong> 控制。你可以通过以下命令查看当前的颜色设置：</p>
+
+<p><strong>echo $LS_COLORS</strong></p>
+
+<p>如果需要自定义颜色，你可以编辑 <strong>~/.bashrc</strong> 或 <strong>~/.bash_profile</strong> 文件，并设置 <strong>LS_COLORS</strong> 变量。例如：</p>
+
+<p><strong>export LS_COLORS=’di=34:fi=0:ln=36:pi=33:so=35:bd=33;01:cd=33;01;’</strong></p>
+<h3 id="使用-ls-命令">使用 <strong>ls</strong> 命令</h3>
+
+<p>默认情况下，使用 <strong>ls</strong> 命令时，通常会带有 <strong>–color</strong> 选项，显示带颜色的文件和目录。示例如下：</p>
+
+<p><strong>ls –color=auto</strong></p>
+
+<p>这将自动根据文件类型使用颜色。</p>
+
+<hr />
+
+<h2 id="6linux的一些辅助操作">6.Linux的一些辅助操作</h2>
+<h3 id="tab-键的作用">Tab 键的作用</h3>
+
+<p>在 Linux 终端中，<strong>Tab 键</strong>主要用于自动补全功能，具体作用如下：</p>
+
+<ol>
+  <li>
+    <p><strong>命令补全</strong>: 当你开始输入一个命令时，按下 Tab 键会自动补全命令。例如，输入 <strong>ls</strong> 后按 Tab，终端会尝试补全该命令。</p>
+  </li>
+  <li>
+    <p><strong>文件和目录补全</strong>: 当输入文件或目录名时，按 Tab 键会自动补全输入。例如，输入 <strong>cd Doc</strong> 后按 Tab，如果当前目录下有名为 <strong>Documents</strong> 的目录，终端会自动补全为 <strong>cd Documents</strong>。</p>
+  </li>
+  <li>
+    <p><strong>显示可选项</strong>: 如果有多个可能的补全选项，按下 Tab 键两次，终端会显示所有匹配的选项。例如，输入 <strong>ls /u</strong> 后按 Tab 两次，可能会显示 <strong>/usr/</strong> 和 <strong>/var/</strong> 等可选目录。</p>
+  </li>
+</ol>
+
+<h3 id="man-命令"><strong>man</strong> 命令</h3>
+
+<p><strong>man</strong>（manual的缩写）命令用于查看系统中的手册页（man pages），提供关于命令、系统调用和库函数的详细说明。使用格式如下：</p>
+
+<p><strong>man [命令]</strong></p>
+
+<h4 id="示例">示例：</h4>
+
+<ul>
+  <li>
+    <p>查看 <strong>ls</strong> 命令的手册：</p>
+
+    <p><strong>man ls</strong></p>
+  </li>
+  <li>
+    <p>查看 <strong>man</strong> 命令本身的手册：</p>
+
+    <p><strong>man man</strong></p>
+  </li>
+</ul>
+
+<h4 id="手册页的简介">手册页的简介</h4>
+<p>在 Linux 的 <strong>man</strong> 命令查看手册页时，有几个基本的键盘操作可以用来翻页、滚动和退出。以下是常用的操作键：</p>
+
+<p><strong>翻页和滚动：</strong></p>
+
+<ul>
+  <li><strong>空格键 (Space)</strong>: 向下翻一页。</li>
+  <li><strong>Enter</strong>: 向下滚动一行。</li>
+  <li><strong>上箭头</strong>: 向上滚动一行。</li>
+  <li><strong>下箭头</strong>: 向下滚动一行。</li>
+  <li><strong>Ctrl + B</strong>: 向上翻一页（Back）。</li>
+  <li><strong>Ctrl + F</strong>: 向下翻一页（Forward）。</li>
+  <li><strong>Ctrl + U</strong>: 向上滚动半页（Up）。</li>
+  <li><strong>Ctrl + D</strong>: 向下滚动半页（Down）。</li>
+</ul>
+
+<p><strong>搜索：</strong></p>
+
+<ul>
+  <li><strong>/</strong>: 启动向前搜索，可以输入你要搜索的关键词并按 Enter。</li>
+  <li><strong>?</strong>: 启动向后搜索，同样输入关键词并按 Enter。</li>
+  <li><strong>n</strong>: 跳转到下一个搜索结果。</li>
+  <li><strong>N</strong>: 跳转到上一个搜索结果。</li>
+</ul>
+
+<p><strong>退出：</strong></p>
+
+<ul>
+  <li><strong>q</strong>: 退出手册页。</li>
+</ul>
+
+<p><strong>其他操作：</strong></p>
+
+<ul>
+  <li><strong>h</strong>: 显示帮助信息，提供常用的命令和快捷键的总结。</li>
+</ul>
+
+<h4 id="手册页结构">手册页结构</h4>
+
+<p>手册页通常分为多个部分，包括：</p>
+
+<ul>
+  <li><strong>NAME</strong>: 命令的名称和简短描述。</li>
+  <li><strong>SYNOPSIS</strong>: 命令的使用语法。</li>
+  <li><strong>DESCRIPTION</strong>: 命令的详细描述和选项。</li>
+  <li><strong>EXAMPLES</strong>: 使用命令的示例（并非所有手册都有）。</li>
+  <li><strong>SEE ALSO</strong>: 相关命令或手册的参考。</li>
+</ul>
+
+<h4 id="常用选项">常用选项</h4>
+
+<ul>
+  <li><strong>man -k [关键词]</strong>: 根据关键词搜索手册页。</li>
+  <li><strong>man -f [命令]</strong>: 显示命令的简短描述。
+    <h3 id="whatis-命令"><strong>whatis</strong> 命令</h3>
+  </li>
+</ul>
+
+<p><strong>whatis</strong> 命令用于显示指定命令或主题的简短描述。它通常用来快速了解某个命令的功能。使用格式如下：</p>
+
+<p><strong>whatis [命令]</strong></p>
+
+<h4 id="示例-1">示例：</h4>
+
+<ul>
+  <li>
+    <p>查询 <strong>ls</strong> 命令的简短描述：</p>
+
+    <p><strong>whatis ls</strong></p>
+  </li>
+  <li>
+    <p>查询 <strong>grep</strong> 命令的简短描述：</p>
+
+    <p><strong>whatis grep</strong></p>
+  </li>
+</ul>
+
+<h4 id="注意事项">注意事项</h4>
+
+<ul>
+  <li>
+    <p><strong>whatis</strong> 命令依赖于 man 数据库，通常在系统更新后需要更新手册数据库，可以通过以下命令更新：</p>
+
+    <p><strong>mandb</strong></p>
+  </li>
+</ul>
+
+<h3 id="总结-6">总结</h3>
+
+<ul>
+  <li><strong>Tab 键</strong>: 在 Linux 终端中用于命令和文件的自动补全。</li>
+  <li><strong>man</strong> 命令**: 用于查看详细的命令手册。</li>
+  <li><strong>whatis</strong> 命令**: 用于快速查看命令的简短描述。</li>
+</ul>
+
+<p>这些工具和功能可以大大提高在 Linux 系统中工作和操作的效率。</p>
+
+<hr />
+
+<h2 id="7linux常用命令">7.Linux常用命令</h2>
+<p>以下是按使用频率排序的常用 Linux 命令，并简要介绍了它们的功能：</p>
+<h3 id="1-ls-list">1. ls (List)</h3>
+
+<ul>
+  <li><strong>功能</strong>：列出当前目录下的文件和文件夹。</li>
+  <li><strong>示例</strong>：<strong>ls -l</strong> 显示详细的文件信息（权限、大小、日期等）。</li>
+</ul>
+
+<h3 id="2-cd-change-directory">2. cd (Change Directory)</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于在文件系统中更改当前目录。</li>
+  <li><strong>示例</strong>：<strong>cd /home/user</strong> 切换到用户的主目录。</li>
+</ul>
+
+<h3 id="3-pwd-print-working-directory">3. pwd (Print Working Directory)</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前所在的工作目录。</li>
+  <li><strong>示例</strong>：<strong>pwd</strong> 返回当前路径，比如 <strong>/home/user</strong>。</li>
+</ul>
+
+<h3 id="4-mkdir-make-directory">4. mkdir (Make Directory)</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建新的文件夹。</li>
+  <li><strong>示例</strong>：<strong>mkdir new_folder</strong> 创建名为 <strong>new_folder</strong> 的目录。</li>
+</ul>
+
+<h3 id="5-rm-remove">5. rm (Remove)</h3>
+
+<ul>
+  <li><strong>功能</strong>：删除文件或目录。</li>
+  <li><strong>示例</strong>：<strong>rm file.txt</strong> 删除文件，<strong>rm -r folder</strong> 递归删除文件夹及其内容。</li>
+</ul>
+
+<h3 id="6-cp-copy">6. cp (Copy)</h3>
+
+<ul>
+  <li><strong>功能</strong>：复制文件或目录。</li>
+  <li><strong>示例</strong>：<strong>cp file.txt /home/user/</strong> 将 <strong>file.txt</strong> 复制到 <strong>/home/user/</strong> 目录。</li>
+</ul>
+
+<h3 id="7-mv-move">7. mv (Move)</h3>
+
+<ul>
+  <li><strong>功能</strong>：移动或重命名文件。</li>
+  <li><strong>示例</strong>：<strong>mv file.txt /home/user/</strong> 移动文件，或 <strong>mv old_name.txt new_name.txt</strong> 重命名文件。</li>
+</ul>
+
+<h3 id="8-cat-concatenate">8. cat (Concatenate)</h3>
+
+<ul>
+  <li><strong>功能</strong>：查看文件内容，或将多个文件合并输出。</li>
+  <li><strong>示例</strong>：<strong>cat file.txt</strong> 显示文件内容。</li>
+</ul>
+
+<h3 id="9-touch">9. touch</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建空文件或更新现有文件的时间戳。</li>
+  <li><strong>示例</strong>：<strong>touch newfile.txt</strong> 创建空文件 <strong>newfile.txt</strong>。</li>
+</ul>
+
+<h3 id="10-chmod-change-mode">10. chmod (Change Mode)</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改文件或目录的权限。</li>
+  <li><strong>示例</strong>：<strong>chmod 755 script.sh</strong> 设置 <strong>script.sh</strong> 为可执行权限。</li>
+</ul>
+
+<h3 id="11-chown-change-owner">11. chown (Change Owner)</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改文件或目录的所有者。</li>
+  <li><strong>示例</strong>：<strong>chown user:group file.txt</strong> 更改文件的所有者和组。</li>
+</ul>
+
+<h3 id="12-find">12. find</h3>
+
+<ul>
+  <li><strong>功能</strong>：在文件系统中搜索文件或目录。</li>
+  <li><strong>示例</strong>：<strong>find /home -name “file.txt”</strong> 在 <strong>/home</strong> 目录下查找 <strong>file.txt</strong> 文件。</li>
+</ul>
+
+<h3 id="13-grep">13. grep</h3>
+
+<ul>
+  <li><strong>功能</strong>：从文件中搜索匹配的文本。</li>
+  <li><strong>示例</strong>：<strong>grep “keyword” file.txt</strong> 在 <strong>file.txt</strong> 中搜索包含 “keyword” 的行。</li>
+</ul>
+
+<h3 id="14-echo">14. echo</h3>
+
+<ul>
+  <li><strong>功能</strong>：输出文本或变量的值。</li>
+  <li><strong>示例</strong>：<strong>echo “Hello, World!”</strong> 输出文本，<strong>echo $PATH</strong> 显示环境变量 <strong>PATH</strong>。</li>
+</ul>
+
+<h3 id="15-df-disk-free">15. df (Disk Free)</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示文件系统的磁盘使用情况。</li>
+  <li><strong>示例</strong>：<strong>df -h</strong> 以人类可读的格式显示磁盘使用情况。</li>
+</ul>
+
+<h3 id="16-du-disk-usage">16. du (Disk Usage)</h3>
+
+<ul>
+  <li><strong>功能</strong>：查看文件或目录占用的磁盘空间。</li>
+  <li><strong>示例</strong>：<strong>du -sh /home/user/</strong> 查看用户目录的大小。</li>
+</ul>
+
+<h3 id="17-ps-process-status">17. ps (Process Status)</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前系统运行的进程。</li>
+  <li><strong>示例</strong>：<strong>ps aux</strong> 列出所有进程的详细信息。</li>
+</ul>
+
+<h3 id="18-top">18. top</h3>
+
+<ul>
+  <li><strong>功能</strong>：实时显示系统进程和资源使用情况。</li>
+  <li><strong>示例</strong>：<strong>top</strong> 显示 CPU、内存使用等进程状态。</li>
+</ul>
+
+<h3 id="19-kill">19. kill</h3>
+
+<ul>
+  <li><strong>功能</strong>：结束进程。</li>
+  <li><strong>示例</strong>：<strong>kill 1234</strong> 结束进程号为 <strong>1234</strong> 的进程，<strong>kill -9 1234</strong> 强制结束。</li>
+</ul>
+
+<h3 id="20-nano--vim--vi">20. nano / vim / vi</h3>
+
+<ul>
+  <li><strong>功能</strong>：文本编辑器，<strong>nano</strong> 是易用的命令行文本编辑器，<strong>vim</strong> 和 <strong>vi</strong> 功能更强大，适合高级用户。</li>
+  <li><strong>示例</strong>：<strong>nano file.txt</strong> 或 <strong>vim file.txt</strong> 编辑文件。</li>
+</ul>
+
+<h3 id="21-sudo-superuser-do">21. sudo (Superuser Do)</h3>
+
+<ul>
+  <li><strong>功能</strong>：以超级用户权限执行命令。</li>
+  <li><strong>示例</strong>：<strong>sudo apt update</strong> 更新软件包信息。</li>
+</ul>
+
+<h3 id="22-apt--yum--dnf">22. apt / yum / dnf</h3>
+
+<ul>
+  <li><strong>功能</strong>：包管理器，用于安装、更新、删除软件包。<strong>apt</strong> 用于基于 Debian 的系统（如 Ubuntu），<strong>yum</strong> 和 <strong>dnf</strong> 用于基于 RedHat 的系统。</li>
+  <li><strong>示例</strong>：<strong>sudo apt install package</strong> 安装软件包。</li>
+</ul>
+
+<h3 id="23-wget">23. wget</h3>
+
+<ul>
+  <li><strong>功能</strong>：从网络下载文件。</li>
+  <li><strong>示例</strong>：<strong>wget http://example.com/file.zip</strong> 下载文件。</li>
+</ul>
+
+<h3 id="24-curl">24. curl</h3>
+
+<ul>
+  <li><strong>功能</strong>：传输数据，支持多种协议（HTTP、FTP等），通常用于 API 调用或文件下载。</li>
+  <li><strong>示例</strong>：<strong>curl https://api.example.com</strong> 发送 GET 请求。</li>
+</ul>
+
+<h3 id="25-tar">25. tar</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于压缩和解压缩文件。</li>
+  <li><strong>示例</strong>：<strong>tar -czvf archive.tar.gz /path/to/directory</strong> 压缩目录，<strong>tar -xvzf archive.tar.gz</strong> 解压缩。</li>
+</ul>
+
+<h3 id="26-zipunzip">26. zip/unzip</h3>
+
+<ul>
+  <li><strong>功能</strong>：压缩和解压缩 ZIP 文件。</li>
+  <li><strong>示例</strong>：<strong>zip -r archive.zip folder</strong> 压缩目录，<strong>unzip archive.zip</strong> 解压缩文件。</li>
+</ul>
+
+<h3 id="27-ssh-secure-shell">27. ssh (Secure Shell)</h3>
+
+<ul>
+  <li><strong>功能</strong>：远程登录到另一台 Linux 服务器。</li>
+  <li><strong>示例</strong>：<strong>ssh user@hostname</strong> 通过 SSH 登录远程服务器。</li>
+</ul>
+
+<h3 id="28-scp-secure-copy">28. scp (Secure Copy)</h3>
+
+<ul>
+  <li><strong>功能</strong>：通过 SSH 进行安全的文件传输。</li>
+  <li><strong>示例</strong>：<strong>scp file.txt user@remote:/path/to/destination</strong> 将文件传输到远程服务器。</li>
+</ul>
+
+<h3 id="29-history">29. history</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示用户输入过的命令历史记录。</li>
+  <li><strong>示例</strong>：<strong>history</strong> 列出最近的命令，<strong>!123</strong> 执行历史记录中第 123 个命令。</li>
+</ul>
+
+<h3 id="30-reboot--shutdown">30. reboot / *shutdown</h3>
+
+<ul>
+  <li><strong>功能</strong>：重新启动或关闭系统。</li>
+  <li><strong>示例</strong>：<strong>sudo reboot</strong> 重新启动系统，<strong>sudo shutdown -h now</strong> 立即关闭系统。</li>
+</ul>
+
+<h3 id="31-alias">31. alias</h3>
+
+<ul>
+  <li><strong>功能</strong>：为命令创建别名。</li>
+  <li><strong>示例</strong>：<strong>alias ll=’ls -l’</strong> 将 <strong>ll</strong> 设置为 <strong>ls -l</strong> 的别名。</li>
+</ul>
+
+<h3 id="32-unalias">32. unalias</h3>
+
+<ul>
+  <li><strong>功能</strong>：删除命令别名。</li>
+  <li><strong>示例</strong>：<strong>unalias ll</strong> 删除 <strong>ll</strong> 的别名。</li>
+</ul>
+
+<h3 id="33-awk">33. awk</h3>
+
+<ul>
+  <li><strong>功能</strong>：一个强大的文本处理工具，用于模式匹配和文本过滤。</li>
+  <li><strong>示例</strong>：<strong>awk ‘{print $1}’ file.txt</strong> 输出每行的第一个字段。</li>
+</ul>
+
+<h3 id="34-sed-stream-editor">34. sed (Stream Editor)</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于对文件内容进行文本替换、删除等操作。</li>
+  <li><strong>示例</strong>：<strong>sed ‘s/old/new/g’ file.txt</strong> 将文件中所有的 “old” 替换为 “new”。</li>
+</ul>
+
+<h3 id="35-head">35. head</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示文件的前几行。</li>
+  <li><strong>示例</strong>：<strong>head -n 10 file.txt</strong> 显示文件的前 10 行。</li>
+</ul>
+
+<h3 id="36-tail">36. tail</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示文件的最后几行。</li>
+  <li><strong>示例</strong>：<strong>tail -n 10 file.txt</strong> 显示文件的最后 10 行，<strong>tail -f file.txt</strong> 实时监视文件更新。</li>
+</ul>
+
+<h3 id="37-sort">37. sort</h3>
+
+<ul>
+  <li><strong>功能</strong>：对文件内容进行排序。</li>
+  <li><strong>示例</strong>：<strong>sort file.txt</strong> 对文件的行进行排序。</li>
+</ul>
+
+<h3 id="38-uniq">38. uniq</h3>
+
+<ul>
+  <li><strong>功能</strong>：删除文件中的重复行。</li>
+  <li><strong>示例</strong>：<strong>uniq file.txt</strong> 去除重复的行。</li>
+</ul>
+
+<h3 id="39-wc-word-count">39. wc (Word Count)</h3>
+
+<ul>
+  <li><strong>功能</strong>：计算文件中的行数、单词数、字符数。</li>
+  <li><strong>示例</strong>：<strong>wc file.txt</strong> 输出文件的行数、单词数和字符数。</li>
+</ul>
+
+<h3 id="40-basename">40. basename</h3>
+
+<ul>
+  <li><strong>功能</strong>：获取路径中去掉目录部分的文件名。</li>
+  <li><strong>示例</strong>：<strong>basename /home/user/file.txt</strong> 输出 <strong>file.txt</strong>。</li>
+</ul>
+
+<h3 id="41-dirname">41. dirname</h3>
+
+<ul>
+  <li><strong>功能</strong>：获取文件的目录路径。</li>
+  <li><strong>示例</strong>：<strong>dirname /home/user/file.txt</strong> 输出 <strong>/home/user</strong>。</li>
+</ul>
+
+<h3 id="42-diff">42. diff</h3>
+
+<ul>
+  <li><strong>功能</strong>：比较两个文件的不同。</li>
+  <li><strong>示例</strong>：<strong>diff file1.txt file2.txt</strong> 显示两个文件之间的差异。</li>
+</ul>
+
+<h3 id="43-ln">43. ln</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建文件或目录的符号链接或硬链接。</li>
+  <li><strong>示例</strong>：<strong>ln -s file.txt link_to_file.txt</strong> 创建一个符号链接。</li>
+</ul>
+
+<h3 id="44-locate">44. locate</h3>
+
+<ul>
+  <li><strong>功能</strong>：快速查找文件。</li>
+  <li><strong>示例</strong>：<strong>locate file.txt</strong> 查找系统中所有名为 <strong>file.txt</strong> 的文件。</li>
+</ul>
+
+<h3 id="45-updatedb">45. updatedb</h3>
+
+<ul>
+  <li><strong>功能</strong>：更新 <strong>locate</strong> 命令使用的数据库。</li>
+  <li><strong>示例</strong>：<strong>sudo updatedb</strong> 更新文件索引。</li>
+</ul>
+
+<h3 id="46-mount">46. mount</h3>
+
+<ul>
+  <li><strong>功能</strong>：挂载文件系统到指定目录。</li>
+  <li><strong>示例</strong>：<strong>sudo mount /dev/sdb1 /mnt</strong> 将 <strong>/dev/sdb1</strong> 分区挂载到 <strong>/mnt</strong> 目录。</li>
+</ul>
+
+<h3 id="47-umount">47. umount</h3>
+
+<ul>
+  <li><strong>功能</strong>：卸载文件系统。</li>
+  <li><strong>示例</strong>：<strong>sudo umount /mnt</strong> 卸载挂载的文件系统。</li>
+</ul>
+
+<h3 id="48-dd">48. dd</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于低级别复制和转换文件或设备数据，通常用于创建磁盘映像。</li>
+  <li><strong>示例</strong>：<strong>dd if=/dev/sda of=/dev/sdb</strong> 复制磁盘。</li>
+</ul>
+
+<h3 id="49-fdisk">49. fdisk</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于查看和管理磁盘分区表。</li>
+  <li><strong>示例</strong>：<strong>sudo fdisk -l</strong> 列出所有分区信息。</li>
+</ul>
+
+<h3 id="50-df-disk-free">50. df (Disk Free)</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示文件系统的磁盘空间使用情况。</li>
+  <li><strong>示例</strong>：<strong>df -h</strong> 以人类可读的格式显示磁盘使用情况。</li>
+</ul>
+
+<h3 id="51-du">51. du</h3>
+
+<ul>
+  <li><strong>功能</strong>：查看文件或目录占用的磁盘空间。</li>
+  <li><strong>示例</strong>：<strong>du -sh /home/user/</strong> 查看用户目录的大小。</li>
+</ul>
+
+<h3 id="52-nc-netcat">52. nc (Netcat)</h3>
+
+<ul>
+  <li><strong>功能</strong>：网络工具，用于调试和通信。</li>
+  <li><strong>示例</strong>：<strong>nc -l 12345</strong> 启动监听端口 12345。</li>
+</ul>
+
+<h3 id="53-ifconfig">53. ifconfig</h3>
+
+<ul>
+  <li><strong>功能</strong>：配置或显示网络接口。</li>
+  <li><strong>示例</strong>：<strong>ifconfig</strong> 显示网络接口信息。</li>
+</ul>
+
+<h3 id="54-ip">54. ip</h3>
+
+<ul>
+  <li><strong>功能</strong>：更现代的网络接口管理工具，替代 <strong>ifconfig</strong>。</li>
+  <li><strong>示例</strong>：<strong>ip addr</strong> 显示网络接口及 IP 地址。</li>
+</ul>
+
+<h3 id="55-ping">55. ping</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于测试网络连接和延迟。</li>
+  <li><strong>示例</strong>：<strong>ping google.com</strong> 测试到 Google 的网络连接。</li>
+</ul>
+
+<h3 id="56-traceroute">56. traceroute</h3>
+
+<ul>
+  <li><strong>功能</strong>：追踪数据包从源到目的地经过的路径。</li>
+  <li><strong>示例</strong>：<strong>traceroute google.com</strong> 查看数据包的传输路径。</li>
+</ul>
+
+<h3 id="57-netstat">57. netstat</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示网络连接、路由表和接口统计信息。</li>
+  <li><strong>示例</strong>：<strong>netstat -an</strong> 显示所有网络连接。</li>
+</ul>
+
+<h3 id="58-ss">58. ss</h3>
+
+<ul>
+  <li><strong>功能</strong>：类似于 <strong>netstat</strong>，用于显示网络连接。</li>
+  <li><strong>示例</strong>：<strong>ss -tuln</strong> 显示监听的套接字。</li>
+</ul>
+
+<h3 id="59-uptime">59. uptime</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示系统已运行的时间、当前时间和负载。</li>
+  <li><strong>示例</strong>：<strong>uptime</strong> 显示系统运行时长。</li>
+</ul>
+
+<h3 id="60-htop">60. htop</h3>
+
+<ul>
+  <li><strong>功能</strong>：一个增强版的 <strong>top</strong>，用于实时查看系统资源使用情况。</li>
+  <li><strong>示例</strong>：<strong>htop</strong> 启动 htop 监控工具。</li>
+</ul>
+
+<h3 id="61-dmesg">61. dmesg</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示内核环缓冲区的消息，通常用于调试系统问题。</li>
+  <li><strong>示例</strong>：<strong>dmesg</strong> 查看启动日志。</li>
+</ul>
+
+<h3 id="62-journalctl">62. journalctl</h3>
+
+<ul>
+  <li><strong>功能</strong>：查看和过滤系统日志。</li>
+  <li><strong>示例</strong>：<strong>journalctl -xe</strong> 查看系统日志中最新的错误。</li>
+</ul>
+
+<h3 id="63-who">63. who</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前登录到系统的用户。</li>
+  <li><strong>示例</strong>：<strong>who</strong> 列出当前在线用户。</li>
+</ul>
+
+<h3 id="64-w">64. w</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前登录用户及其活动。</li>
+  <li><strong>示例</strong>：<strong>w</strong> 列出用户的登录时间和活动。</li>
+</ul>
+
+<h3 id="65-useradd">65. useradd</h3>
+
+<ul>
+  <li><strong>功能</strong>：添加新用户。</li>
+  <li><strong>示例</strong>：<strong>sudo useradd username</strong> 添加新用户。</li>
+</ul>
+
+<h3 id="66-usermod">66. usermod</h3>
+
+<ul>
+  <li><strong>功能</strong>：修改用户帐户信息。</li>
+  <li><strong>示例</strong>：<strong>sudo usermod -aG sudo username</strong> 将用户添加到 sudo 组。</li>
+</ul>
+
+<h3 id="67-userdel">67. userdel</h3>
+
+<ul>
+  <li><strong>功能</strong>：删除用户。</li>
+  <li><strong>示例</strong>：<strong>sudo userdel username</strong> 删除用户帐户。</li>
+</ul>
+
+<h3 id="68-passwd">68. passwd</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改用户密码。</li>
+  <li><strong>示例</strong>：<strong>passwd username</strong> 为 <strong>username</strong> 更改密码。</li>
+</ul>
+
+<h3 id="69-groupadd">69. groupadd</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建新用户组。</li>
+  <li><strong>示例</strong>：<strong>sudo groupadd groupname</strong> 创建新组。</li>
+</ul>
+
+<h3 id="70-groups">70. groups</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示用户所属的组。</li>
+  <li><strong>示例</strong>：<strong>groups username</strong> 查看用户所属的组。</li>
+</ul>
+
+<h3 id="71-tar">71. tar</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于打包和解压缩文件。</li>
+  <li><strong>示例</strong>：<strong>tar -czvf archive.tar.gz folder/</strong> 压缩目录。</li>
+</ul>
+
+<h3 id="72-gzip">72. gzip</h3>
+
+<ul>
+  <li><strong>功能</strong>：压缩文件。</li>
+  <li><strong>示例</strong>：<strong>gzip file.txt</strong> 将文件压缩为 <strong>file.txt.gz</strong>。</li>
+</ul>
+
+<h3 id="73-gunzip">73. gunzip</h3>
+
+<ul>
+  <li><strong>功能</strong>：解压缩 gzip 文件。</li>
+  <li><strong>示例</strong>：<strong>gunzip file.txt.gz</strong> 解压缩文件。</li>
+</ul>
+
+<h3 id="74-bzip2">74. bzip2</h3>
+
+<ul>
+  <li><strong>功能</strong>：使用 bzip2 压缩文件。</li>
+  <li><strong>示例</strong>：<strong>bzip2 file.txt</strong> 将文件压缩为 **fileHere is the continuation of 70 additional Linux commands, completing the list:</li>
+</ul>
+
+<h3 id="74-bzip2-1">74. bzip2</h3>
+
+<ul>
+  <li><strong>功能</strong>：使用 bzip2 压缩文件。</li>
+  <li><strong>示例</strong>：<strong>bzip2 file.txt</strong> 将文件压缩为 <strong>file.txt.bz2</strong>。</li>
+</ul>
+
+<h3 id="75-bunzip2">75. bunzip2</h3>
+
+<ul>
+  <li><strong>功能</strong>：解压缩 bzip2 文件。</li>
+  <li><strong>示例</strong>：<strong>bunzip2 file.txt.bz2</strong> 解压缩文件。</li>
+</ul>
+
+<h3 id="76-xargs">76. xargs</h3>
+
+<ul>
+  <li><strong>功能</strong>：将标准输入的输出作为命令的参数。</li>
+  <li><strong>示例</strong>：<strong>cat files.txt <code class="language-plaintext highlighter-rouge">|</code> xargs rm</strong> 删除列表中的文件。</li>
+</ul>
+
+<h3 id="77-find">77. find</h3>
+
+<ul>
+  <li><strong>功能</strong>：查找文件或目录。</li>
+  <li><strong>示例</strong>：<strong>find /home -name “file.txt”</strong> 在 <strong>/home</strong> 目录下查找名为 <strong>file.txt</strong> 的文件。</li>
+</ul>
+
+<h3 id="78-locate">78. locate</h3>
+
+<ul>
+  <li><strong>功能</strong>：基于数据库快速查找文件。</li>
+  <li><strong>示例</strong>：<strong>locate file.txt</strong> 查找文件。</li>
+</ul>
+
+<h3 id="79-chown">79. chown</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改文件的所有者。</li>
+  <li><strong>示例</strong>：<strong>sudo chown user:group file.txt</strong> 更改文件的所有者为 <strong>user</strong>，组为 <strong>group</strong>。</li>
+</ul>
+
+<h3 id="80-chgrp">80. chgrp</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改文件的组。</li>
+  <li><strong>示例</strong>：<strong>sudo chgrp groupname file.txt</strong> 将文件的组更改为 <strong>groupname</strong>。</li>
+</ul>
+
+<h3 id="81-chmod">81. chmod</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改文件权限。</li>
+  <li><strong>示例</strong>：<strong>chmod 755 file.txt</strong> 设置文件权限为所有者可读写执行，组和其他人可读执行。</li>
+</ul>
+
+<h3 id="82-umask">82. umask</h3>
+
+<ul>
+  <li><strong>功能</strong>：设置文件创建时的默认权限掩码。</li>
+  <li><strong>示例</strong>：<strong>umask 022</strong> 创建文件的默认权限为 755。</li>
+</ul>
+
+<h3 id="83-scp">83. scp</h3>
+
+<ul>
+  <li><strong>功能</strong>：通过 SSH 安全地复制文件。</li>
+  <li><strong>示例</strong>：<strong>scp file.txt user@server:/path</strong> 将文件复制到远程服务器。</li>
+</ul>
+
+<h3 id="84-rsync">84. rsync</h3>
+
+<ul>
+  <li><strong>功能</strong>：高效地同步文件和目录。</li>
+  <li><strong>示例</strong>：<strong>rsync -avz /source/ /destination/</strong> 同步源目录到目标目录。</li>
+</ul>
+
+<h3 id="85-ssh">85. ssh</h3>
+
+<ul>
+  <li><strong>功能</strong>：通过 SSH 连接到远程服务器。</li>
+  <li><strong>示例</strong>：<strong>ssh user@server</strong> 连接到远程服务器。</li>
+</ul>
+
+<h3 id="86-wget">86. wget</h3>
+
+<ul>
+  <li><strong>功能</strong>：从网络下载文件。</li>
+  <li><strong>示例</strong>：<strong>wget http://example.com/file.txt</strong> 下载文件。</li>
+</ul>
+
+<h3 id="87-curl">87. curl</h3>
+
+<ul>
+  <li><strong>功能</strong>：从网络传输数据，支持多种协议。</li>
+  <li><strong>示例</strong>：<strong>curl http://example.com</strong> 从网页获取内容。</li>
+</ul>
+
+<h3 id="88-uptime">88. uptime</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示系统已运行时间和负载。</li>
+  <li><strong>示例</strong>：<strong>uptime</strong> 显示系统正常运行的时间。</li>
+</ul>
+
+<h3 id="89-free">89. free</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示系统内存的使用情况。</li>
+  <li><strong>示例</strong>：<strong>free -h</strong> 以人类可读格式显示内存使用。</li>
+</ul>
+
+<h3 id="90-vmstat">90. vmstat</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示系统的虚拟内存统计。</li>
+  <li><strong>示例</strong>：<strong>vmstat</strong> 实时监控系统性能。</li>
+</ul>
+
+<h3 id="91-lsof">91. lsof</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前打开的文件。</li>
+  <li><strong>示例</strong>：<strong>lsof <code class="language-plaintext highlighter-rouge">|</code> grep filename</strong> 查看哪些进程打开了特定文件。</li>
+</ul>
+
+<h3 id="92-top">92. top</h3>
+
+<ul>
+  <li><strong>功能</strong>：实时显示系统进程的运行情况。</li>
+  <li><strong>示例</strong>：<strong>top</strong> 显示进程及资源使用情况。</li>
+</ul>
+
+<h3 id="93-kill">93. kill</h3>
+
+<ul>
+  <li><strong>功能</strong>：终止指定进程。</li>
+  <li><strong>示例</strong>：<strong>kill -9 PID</strong> 强制终止进程。</li>
+</ul>
+
+<h3 id="94-pkill">94. pkill</h3>
+
+<ul>
+  <li><strong>功能</strong>：根据进程名终止进程。</li>
+  <li><strong>示例</strong>：<strong>pkill firefox</strong> 关闭所有 Firefox 进程。</li>
+</ul>
+
+<h3 id="95-killall">95. killall</h3>
+
+<ul>
+  <li><strong>功能</strong>：终止所有匹配的进程。</li>
+  <li><strong>示例</strong>：<strong>killall apache2</strong> 终止所有 <strong>apache2</strong> 进程。</li>
+</ul>
+
+<h3 id="96-cron">96. cron</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于定时执行任务的守护进程。</li>
+  <li><strong>示例</strong>：<strong>crontab -e</strong> 编辑定时任务。</li>
+</ul>
+
+<h3 id="97-at">97. at</h3>
+
+<ul>
+  <li><strong>功能</strong>：用于计划在特定时间运行一次性任务。</li>
+  <li><strong>示例</strong>：<strong>echo “sh backup.sh” <code class="language-plaintext highlighter-rouge">|</code> at 2pm</strong> 计划在下午 2 点运行备份脚本。</li>
+</ul>
+
+<h3 id="98-batch">98. batch</h3>
+
+<ul>
+  <li><strong>功能</strong>：在系统负载较低时运行批处理任务。</li>
+  <li><strong>示例</strong>：<strong>echo “tar -czf backup.tar.gz /data” <code class="language-plaintext highlighter-rouge">|</code> batch</strong> 任务将在系统负载较低时执行。</li>
+</ul>
+
+<h3 id="99-hostname">99. hostname</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示或设置系统的主机名。</li>
+  <li><strong>示例</strong>：<strong>hostname</strong> 显示当前主机名。</li>
+</ul>
+
+<h3 id="100-whoami">100. whoami</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示当前登录用户的用户名。</li>
+  <li><strong>示例</strong>：<strong>whoami</strong> 输出当前用户名称。</li>
+</ul>
+
+<h3 id="101-uptime">101. uptime</h3>
+
+<ul>
+  <li><strong>功能</strong>：显示系统启动时间及负载。</li>
+  <li><strong>示例</strong>：<strong>uptime</strong> 显示系统运行时长。</li>
+</ul>
+
+<h3 id="102-dstat">102. dstat</h3>
+
+<ul>
+  <li><strong>功能</strong>：实时显示系统的资源使用情况。</li>
+  <li><strong>示例</strong>：<strong>dstat</strong> 实时监控 CPU、内存和网络使用。</li>
+</ul>
+
+<h3 id="103-passwd">103. passwd</h3>
+
+<ul>
+  <li><strong>功能</strong>：更改用户密码。</li>
+  <li><strong>示例</strong>：<strong>passwd</strong> 为当前用户更改密码。</li>
+</ul>
+
+<h3 id="104-groupadd">104. groupadd</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建一个新的用户组。</li>
+  <li><strong>示例</strong>：<strong>sudo groupadd developers</strong> 创建一个名为 <strong>developers</strong> 的用户组。</li>
+</ul>
+
+<h3 id="105useradd">105.useradd</h3>
+
+<ul>
+  <li><strong>功能</strong>：创建一个新用户。</li>
+  <li><strong>示例</strong>：<strong>sudo useradd username</strong> 创建新用户。</li>
+</ul>
+
+<h3 id="106-usermod">106. usermod</h3>
+
+<ul>
+  <li><strong>功能</strong>：修改现有用户的属性。</li>
+  <li><strong>示例</strong>：<strong>sudo usermod -aG groupname username</strong> 将用户添加到一个组中。</li>
+</ul>
+
+<h3 id="107-deluser">107. deluser</h3>
+
+<ul>
+  <li><strong>功能</strong>：删除用户。</li>
+  <li><strong>示例</strong>：<strong>sudo deluser username</strong> 删除用户账户。</li>
+</ul>
+
+<h3 id="108-modprobe">108. modprobe</h3>
+
+<ul>
+  <li><strong>功能</strong>：加载或移除内核模块。</li>
+  <li><strong>示例</strong>：<strong>sudo modprobe module_name</strong> 加载内核模块。</li>
+</ul>
+
+<h3 id="109-lsmod">109. lsmod</h3>
+
+<ul>
+  <li><strong>功能</strong>：列出已加载的内核模块。</li>
+  <li><strong>示例</strong>：<strong>lsmod</strong> 显示当前加载的内核模块。</li>
+</ul>
+
+<h3 id="110-rmmod">110. rmmod</h3>
+
+<ul>
+  <li><strong>功能</strong>：卸载内核模块。</li>
+  <li><strong>示例</strong>：<strong>sudo rmmod module_name</strong> 卸载指定的内核模块。</li>
+</ul>
+
+<h3 id="111-depmod">111. depmod</h3>
+
+<ul>
+  <li><strong>功能</strong>：生成模块依赖信息。</li>
+  <li><strong>示例</strong>：<strong>sudo depmod</strong> 生成模块依赖信息文件。</li>
+</ul>
+
+<h3 id="112-iwconfig">112. iwconfig</h3>
+
+<ul>
+  <li><strong>功能</strong>：配置无线网络接口。</li>
+  <li><strong>示例</strong>：<strong>iwconfig wlan0 essid “network_name”</strong> 配置无线网络。</li>
+</ul>
+
+<h3 id="113-ifup">113. ifup</h3>
+
+<ul>
+  <li><strong>功能</strong>：启动网络接口。</li>
+  <li><strong>示例</strong>：<strong>sudo ifup eth0</strong> 启动以太网接口。</li>
+</ul>
+
+<h3 id="114-ifdown">114. ifdown</h3>
+
+<ul>
+  <li><strong>功能</strong>：关闭网络接口。</li>
+  <li><strong>示例</strong>：<strong>sudo ifdown eth0</strong> 关闭以太网接口。</li>
+</ul>
+
+<h3 id="115-dhclient">115. dhclient</h3>
+
+<ul>
+  <li><strong>功能</strong>：获取或释放 DHCP 分配的 IP 地址。</li>
+  <li><strong>示例</strong>：<strong>sudo dhclient eth0</strong> 获取新的 IP 地址。</li>
+</ul>
+
+<h3 id="116-host">116. host</h3>
+
+<ul>
+  <li><strong>功能</strong>：DNS 查找工具，用于解析域名到 IP。</li>
+  <li><strong>示例</strong>：<strong>host google.com</strong> 获取 Google 的 IP 地址。</li>
+</ul>
+
+<h3 id="117-dig">117. dig</h3>
+
+<ul>
+  <li><strong>功能</strong>：更高级的 DNS 查找工具。</li>
+  <li><strong>示例</strong>：<strong>dig example.com</strong> 查询 DNS 信息。</li>
+</ul>
+
+<h3 id="118-nslookup">118. nslookup</h3>
+
+<ul>
+  <li><strong>功能</strong>：查询域名或 IP 地址的 DNS 记录。</li>
+  <li><strong>示例</strong>：<strong>nslookup google.com</strong> 查询 DNS 记录。</li>
+</ul>
  <!-- 显示页面内容 -->
         </div>
     </div>
