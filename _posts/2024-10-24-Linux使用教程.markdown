@@ -21,16 +21,11 @@ excerpt: "本篇文章演示如何从0开始使用Linux"
 
 **注意：在安装Ubuntu系统前，我们先需要确定当前Windows系统的引导方式  
 安装的Ubuntu系统需要与当前的Windows系统具有相同的引导方式 才能设置双系统菜单  
-我已经安装好了一个Ubuntu系统在一个97.66GB的分区  
-如果细心，可以发现后面又变成了97.67GB，那是我试验了一下扩充空间  
-本文演示压缩一个10GB的硬盘空间去安装Ubuntu系统  
-但不会真的安装，会演示到到安装的最后一步  
-后面这10GB再拿来演示扩充  
-首先考虑好存储Ubuntu系统的初始硬盘空间弄多少GB，当然后面还能扩容  
 一些可能陌生的名词在第1点有介绍   
-本文的教程引导方式为：UEFI引导  
+演示中的电脑配置：  
+引导方式为：UEFI引导  
 磁盘分区格式为GPT  
-如果你的胚子与我不相同，操作下去可能碰到一些错误**  
+如果你的电脑配置与我不相同，操作下去可能有些不同**  
 
 ---
 
@@ -519,15 +514,16 @@ Secure Boot的选项一般在安全里，选择Disabled以关闭
 ### 12.4.使用GParted扩容
 注意：这期间会弹出一些需要确认的窗口  
 **1.打开终端（快捷键：Ctrl+Alt+G）  
-2.运行命令以安装和启动GParted（GParted的简介见上文1.13）**
+2.运行命令以安装和启动GParted  
+（GParted的简介见上文1.13）**
 
-**sudo apt  install gparted  #下载GParted 
+**sudo apt  install gparted  #下载GParted   
 gparted打开GParted**
 
 ![](/images/Linux-images/linux.42.png)
 3.右键点击我们需要扩容的Ubuntu系统的分区
 ![](/images/Linux-images/linux.43.png)
-4.可以在**上方拖动**进行扩容，也可以点击**新大小右边的+**进行扩容
+4.可以在**上方拖动**进行扩容，也可以点击**新大小右边的+**进行扩容  
 5.扩容完成后点击调整大小，然后确认
 ![](/images/Linux-images/linux.44.png)
 ![](/images/Linux-images/linux.45.png)
@@ -536,7 +532,7 @@ gparted打开GParted**
 7.重启退出，**不要提前把U盘拔了**，能**提示的时候再拔**
 ![](/images/Linux-images/linux.47.png)
 安装好Ubuntu系统后，原来显示**未分配**的分区会变为**状态良好**  
-原来是97.67，可以看到扩容10GB成功了
+原来是97.67GB，可以看到扩容10GB成功了
 ![](/images/Linux-images/linux.48.png)
 
 ---
