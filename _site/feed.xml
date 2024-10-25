@@ -1,27 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T14:54:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T13:35:48+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 1.在Windows系统的基础上演示再安装Ubuntu系统<br />
 2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
-3.介绍Linux的常用命令</p>
-
-<hr />
+3.介绍Linux的常用命令  <br />
+Linux镜像大全：<a href="https://www.linux.org/pages/download/">https://www.linux.org/pages/download/</a>
+—</p>
 
 <h1 id="二双系统配置ubuntu">二.双系统配置Ubuntu</h1>
 
 <hr />
 
 <p><strong>注意：在安装Ubuntu系统前，我们先需要确定当前Windows系统的引导方式<br />
-安装的Ubuntu系统需要与当前的Windows系统具有相同的引导方式 才能设置双系统菜单<br />
-我已经安装好了一个Ubuntu系统在一个97.66GB的分区<br />
-如果细心，可以发现后面又变成了97.67GB，那是我试验了一下扩充空间<br />
-本文演示压缩一个10GB的硬盘空间去安装Ubuntu系统<br />
-但不会真的安装，会演示到到安装的最后一步<br />
-后面这10GB再拿来演示扩充<br />
-首先考虑好存储Ubuntu系统的初始硬盘空间弄多少GB，当然后面还能扩容<br />
+安装的Ubuntu系统需要与当前的Windows系统具有相同的引导方式，才能设置双系统菜单<br />
 一些可能陌生的名词在第1点有介绍 <br />
-本文的教程引导方式为：UEFI引导<br />
+演示中的电脑配置：<br />
+引导方式为：UEFI引导<br />
 磁盘分区格式为GPT<br />
-如果你的胚子与我不相同，操作下去可能碰到一些错误</strong></p>
+如果你的电脑配置与我不相同，操作下去可能有些不同</strong></p>
 
 <hr />
 
@@ -657,15 +652,16 @@ BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
 <h3 id="124使用gparted扩容">12.4.使用GParted扩容</h3>
 <p>注意：这期间会弹出一些需要确认的窗口<br />
 <strong>1.打开终端（快捷键：Ctrl+Alt+G）<br />
-2.运行命令以安装和启动GParted（GParted的简介见上文1.13）</strong></p>
+2.运行命令以安装和启动GParted<br />
+（GParted的简介见上文1.13）</strong></p>
 
-<p><strong>sudo apt  install gparted  #下载GParted 
+<p><strong>sudo apt  install gparted  #下载GParted <br />
 gparted打开GParted</strong></p>
 
 <p><img src="/images/Linux-images/linux.42.png" alt="" />
 3.右键点击我们需要扩容的Ubuntu系统的分区
 <img src="/images/Linux-images/linux.43.png" alt="" />
-4.可以在<strong>上方拖动</strong>进行扩容，也可以点击<strong>新大小右边的+</strong>进行扩容
+4.可以在<strong>上方拖动</strong>进行扩容，也可以点击<strong>新大小右边的+</strong>进行扩容<br />
 5.扩容完成后点击调整大小，然后确认
 <img src="/images/Linux-images/linux.44.png" alt="" />
 <img src="/images/Linux-images/linux.45.png" alt="" />
@@ -674,12 +670,441 @@ gparted打开GParted</strong></p>
 7.重启退出，<strong>不要提前把U盘拔了</strong>，能<strong>提示的时候再拔</strong>
 <img src="/images/Linux-images/linux.47.png" alt="" />
 安装好Ubuntu系统后，原来显示<strong>未分配</strong>的分区会变为<strong>状态良好</strong><br />
-原来是97.67，可以看到扩容10GB成功了
+原来是97.67GB，可以看到扩容10GB成功了
 <img src="/images/Linux-images/linux.48.png" alt="" /></p>
 
 <hr />
 
-<h1 id="三虚拟机上配置ubuntu">三.虚拟机上配置Ubuntu</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Linux" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Linux]]></summary></entry><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T00:00:00+08:00</published><updated>2024-10-22T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
+<h1 id="三虚拟机中安装ubuntu">三.虚拟机中安装Ubuntu</h1>
+
+<hr />
+
+<h2 id="1虚拟机基础知识介绍">1.虚拟机基础知识介绍</h2>
+<h3 id="11内存">1.1.内存</h3>
+<p>虚拟机（VM）的内存作用与物理计算机中的内存类似，用于存储操作系统、应用程序以及正在运行的进程的临时数据。虚拟机的内存主要用于以下几个方面：</p>
+
+<ol>
+  <li>
+    <p><strong>操作系统和应用程序的运行</strong>：虚拟机的内存会分配给操作系统和应用程序，以确保它们能够正常运行。操作系统使用这部分内存来管理进程和任务，应用程序则使用它来存储当前运行的数据和变量。</p>
+  </li>
+  <li>
+    <p><strong>进程管理</strong>：每个正在运行的进程都会占用一部分虚拟内存空间。操作系统通过调度算法将这些进程管理在内存中，使其能够快速响应用户操作。</p>
+  </li>
+  <li>
+    <p><strong>虚拟内存技术</strong>：虚拟机也使用虚拟内存技术，将物理内存与硬盘上的交换空间（或页面文件）结合使用。这使得虚拟机可以处理比分配给它的物理内存更多的数据。</p>
+  </li>
+  <li>
+    <p><strong>缓存和缓冲区</strong>：虚拟机会将常用的数据存储在内存中，以减少对磁盘的访问，提高性能。例如，文件系统的缓存、数据库的查询结果等都会被存放在内存中，以提高数据读取的速度。</p>
+  </li>
+  <li>
+    <p><strong>共享内存</strong>：在一些情况下，虚拟机可能需要与宿主机或其他虚拟机进行通信，内存也可以用于共享数据，尤其是通过共享内存机制来实现高效的数据交换。</p>
+  </li>
+</ol>
+
+<p>总之，虚拟机的内存决定了它可以运行多么复杂的操作系统和应用程序，内存越大，虚拟机的性能通常也越好，尤其是当同时运行多个任务时。</p>
+
+<hr />
+
+<h3 id="12处理器数量和每个处理器的内核数量">1.2.处理器数量和每个处理器的内核数量</h3>
+<p>虚拟机（VM）的处理器数量和每个处理器的内核数量是决定其计算性能的重要参数，它们直接影响虚拟机的并发处理能力和整体性能表现。以下是处理器数量和内核数量的具体作用：</p>
+
+<h4 id="1-处理器数量vcpu数量">1. 处理器数量（vCPU数量）</h4>
+
+<p>虚拟机的“处理器”通常指虚拟中央处理单元（vCPU），它是由宿主机的物理CPU资源虚拟化后分配给虚拟机的计算单元。vCPU的数量表示虚拟机可以利用多少个并行计算资源。vCPU数量越多，虚拟机能同时处理更多的并发任务。</p>
+
+<ul>
+  <li>
+    <p><strong>多任务处理</strong>：更多的vCPU可以让虚拟机同时处理多个任务或线程。例如，当多个应用程序或进程在虚拟机上同时运行时，虚拟机可以将它们分配到不同的vCPU上进行并行处理，提升效率。</p>
+  </li>
+  <li>
+    <p><strong>提高性能</strong>：对于并行计算密集型任务（如多线程应用、数据库服务器、大型Web应用等），增加vCPU数量可以显著提高性能。虚拟机可以利用多个vCPU分担计算负载，减少单个处理器的负载压力。</p>
+  </li>
+  <li>
+    <p><strong>资源分配与隔离</strong>：在虚拟化环境中，宿主机可以将其物理CPU资源分配给多个虚拟机，而每个虚拟机有自己的vCPU。这使得可以在同一台物理服务器上运行多个独立的虚拟机，彼此隔离并独立分配计算资源。</p>
+  </li>
+</ul>
+
+<h4 id="2-每个处理器的内核数量">2. 每个处理器的内核数量</h4>
+
+<p>处理器的“内核”指的是每个vCPU中的物理或虚拟处理单元。一个多核处理器可以在同一时间执行多个独立的计算任务，核心数量决定了vCPU的内部并行处理能力。</p>
+
+<ul>
+  <li>
+    <p><strong>提高并行计算能力</strong>：更多的内核意味着可以同时执行更多的线程或进程。多核虚拟机可以更好地处理需要并行计算的任务（如视频编码、科学计算、数据处理等），每个核心可以同时运行不同的线程，提高执行效率。</p>
+  </li>
+  <li>
+    <p><strong>提升多线程性能</strong>：现代应用程序，尤其是多线程应用，可以有效利用多核处理器。每个线程可以分配到不同的核心上运行，这样可以加速任务完成时间。</p>
+  </li>
+  <li>
+    <p><strong>负载分担</strong>：多核心处理器可以将计算负载均匀分布在多个核心上，避免单一核心的过载，从而提升系统的响应速度和整体性能。</p>
+  </li>
+</ul>
+
+<h4 id="3-vcpu数量和内核数量的关系">3. vCPU数量和内核数量的关系</h4>
+
+<p>虚拟机的vCPU数量和每个vCPU的内核数量往往一起决定了虚拟机的计算能力。一般来说：</p>
+
+<ul>
+  <li><strong>更多的vCPU</strong>：能够同时处理更多的任务，提高并行处理能力，适合多任务、并发较高的场景。</li>
+  <li><strong>更多的内核</strong>：能够提高每个vCPU的内部处理能力，适合计算密集型、多线程的应用。</li>
+</ul>
+
+<h4 id="4-实际应用场景">4. 实际应用场景</h4>
+
+<ul>
+  <li><strong>Web服务器</strong>：对于负载较高的Web服务器，增加vCPU和每个vCPU的内核数量可以应对大量的并发请求，提高吞吐量。</li>
+  <li><strong>数据库服务器</strong>：数据库操作通常涉及大量的计算和IO操作，更多的vCPU和内核可以显著提高查询和事务处理速度。</li>
+  <li><strong>开发与测试</strong>：虚拟机常用于开发和测试环境，多vCPU和多内核配置可以快速构建复杂的应用环境并进行高并发测试。</li>
+</ul>
+
+<h4 id="5-资源分配与权衡">5. 资源分配与权衡</h4>
+
+<p>在配置虚拟机时，需要在性能需求与资源分配之间做平衡。虽然增加vCPU和内核数量可以提高虚拟机的性能，但它们消耗的宿主机资源也会相应增加。如果分配的vCPU或内核数量超过宿主机的实际物理资源，可能会导致资源争用，影响整体性能。</p>
+
+<h4 id="总结">总结</h4>
+
+<ul>
+  <li><strong>vCPU数量</strong>决定了虚拟机能够并行处理多少个任务或线程。</li>
+  <li><strong>每个vCPU的内核数量</strong>决定了虚拟机处理每个任务时的效率，尤其是在处理多线程应用时表现明显。</li>
+</ul>
+
+<hr />
+
+<h3 id="13软盘设备和-cddvd设备">1.3.软盘设备和 CD/DVD设备</h3>
+<ol>
+  <li>
+    <p><strong>软盘（autoinst.flp）</strong>：软盘驱动器（floppy disk）在现代操作系统中已经基本被淘汰。这个虚拟软盘驱动器可能是在虚拟机创建时自动添加的。如果你不需要使用软盘镜像（如 autoinst.flp 文件），通常可以将其移除，以简化虚拟机配置。</p>
+  </li>
+  <li>
+    <p><strong>CD/DVD 1 (SATA) - autoinst.iso</strong>：这个光驱设备正在使用名为 autoinst.iso 的ISO镜像文件，通常这个文件可能与自动化安装脚本或配置相关。如果你已经安装了操作系统或不再需要这个ISO镜像，可以选择移除这个CD/DVD设备。</p>
+  </li>
+  <li>
+    <p><strong>CD/DVD 2 (SATA) - ubuntu.iso</strong>：第二个光驱设备挂载了一个 ubuntu.iso 文件。这应该是你用来安装 Ubuntu 操作系统的ISO文件。如果你已经安装完成了操作系统，并且不再需要使用安装介质，也可以选择移除这个设备。</p>
+    <h4 id="是否可以移除">是否可以移除：</h4>
+  </li>
+</ol>
+
+<ul>
+  <li><strong>软盘设备</strong>：如果你不需要软盘镜像，可以安全移除。</li>
+  <li><strong>CD/DVD设备</strong>：如果虚拟机已经完成系统安装，且你不再需要这些ISO镜像文件，可以移除它们，减少虚拟机的硬件设备数量。</li>
+</ul>
+
+<p>移除这些设备不会影响虚拟机的正常运行，尤其是在系统已经安装好的情况下。只要虚拟机在使用这些设备时不会加载镜像文件，就可以自由移除。</p>
+
+<hr />
+
+<h3 id="14网络适配器的常见模式">1.4.网络适配器的常见模式</h3>
+<p>在虚拟机中，网络适配器的网络连接模式决定了虚拟机与宿主机、其他虚拟机以及外部网络之间的通信方式。常见的几种网络连接模式包括：</p>
+
+<h4 id="1-桥接模式bridged-mode">1. 桥接模式（Bridged Mode）</h4>
+
+<p>桥接模式允许虚拟机直接连接到宿主机所在的物理网络，就像它是网络中的一台独立的物理计算机。</p>
+
+<ul>
+  <li><strong>工作原理</strong>：虚拟机通过宿主机的物理网卡与局域网（LAN）直接通信。虚拟机会从局域网中的路由器或DHCP服务器获取自己的IP地址，与宿主机和其他物理设备在同一网络段上。</li>
+  <li><strong>优点</strong>：虚拟机可以像其他物理设备一样与网络上的其他设备直接通信。适用于需要与宿主机和局域网中的其他设备通信的场景，如服务器虚拟化、测试网络设备等。</li>
+  <li><strong>缺点</strong>：需要网络中有可用的IP地址，可能受限于局域网的配置。</li>
+</ul>
+
+<h4 id="2-nat模式network-address-translation-mode">2. NAT模式（Network Address Translation Mode）</h4>
+
+<p>NAT模式通过宿主机共享网络连接，虚拟机在宿主机的网络环境下访问外部网络。虚拟机使用的是宿主机的IP地址，通过网络地址转换来实现外部访问。</p>
+
+<ul>
+  <li><strong>工作原理</strong>：虚拟机通过宿主机的网络连接访问外部网络，但它使用宿主机的IP地址进行通信，而虚拟机本身处于私有IP地址空间内。</li>
+  <li><strong>优点</strong>：虚拟机可以轻松访问外部网络（如互联网），而不需要独立的IP地址配置。适合需要访问外部网络，但不需要与局域网内其他设备通信的场景。</li>
+  <li><strong>缺点</strong>：虚拟机只能通过宿主机访问外部网络，局域网内的其他设备无法直接访问虚拟机，除非手动设置端口转发。</li>
+</ul>
+
+<h4 id="3-仅主机模式host-only-mode">3. 仅主机模式（Host-only Mode）</h4>
+
+<p>仅主机模式将虚拟机与宿主机隔离在一个虚拟网络中，虚拟机与宿主机可以通信，但无法访问外部网络。</p>
+
+<ul>
+  <li><strong>工作原理</strong>：虚拟机与宿主机在一个独立的虚拟局域网中通信，虚拟机无法通过宿主机的物理网卡访问外部网络。</li>
+  <li><strong>优点</strong>：适合虚拟机与宿主机或其他虚拟机进行独立网络通信的场景，例如用于测试和开发不需要外部网络连接的应用。</li>
+  <li><strong>缺点</strong>：虚拟机无法访问外部网络（如互联网），如果需要访问，需要额外配置NAT或端口转发。</li>
+</ul>
+
+<h4 id="4-自定义模式custom-mode">4. 自定义模式（Custom Mode）</h4>
+
+<p>有时，虚拟机管理工具会提供自定义的网络配置选项，让用户可以在不同的虚拟网络（例如多个虚拟网卡或不同的虚拟交换机）之间进行配置。</p>
+
+<ul>
+  <li><strong>工作原理</strong>：用户可以定义不同的虚拟交换机或网络，虚拟机可以连接到这些自定义的网络中。适合复杂的虚拟网络拓扑场景，如测试多种网络配置或跨虚拟机的专用网络通信。</li>
+</ul>
+
+<h4 id="5-内网模式internal-network-mode">5. 内网模式（Internal Network Mode）</h4>
+
+<p>一些虚拟化工具（如VirtualBox）提供内网模式，虚拟机可以在一个完全隔离的内部虚拟网络中通信，而与宿主机和外部网络没有任何联系。</p>
+
+<ul>
+  <li>
+    <p><strong>工作原理</strong>：所有连接到内网模式的虚拟机可以互相通信，但它们无法访问宿主机或外部网络。适合用于模拟完全隔离的网络环境，如测试局域网内的通信协议或安全配置。</p>
+  </li>
+  <li>
+    <p><strong>优点</strong>：用于虚拟机之间的私有通信，确保虚拟机之间的网络流量不会泄露到外部网络。</p>
+  </li>
+  <li>
+    <p><strong>缺点</strong>：虚拟机无法访问外部网络或宿主机，需要配置其他网络适配器来实现访问。</p>
+  </li>
+</ul>
+
+<h4 id="6-nat网络模式nat-network-mode">6. NAT网络模式（NAT Network Mode）</h4>
+
+<p>与普通NAT模式类似，但NAT网络模式允许多个虚拟机共享同一个NAT网络，同时还能彼此通信。</p>
+
+<ul>
+  <li><strong>工作原理</strong>：多个虚拟机通过宿主机的网络访问外部网络，并且可以在NAT网络中互相通信。类似于NAT模式，但适合多个虚拟机共享一个虚拟网络。</li>
+  <li><strong>优点</strong>：虚拟机可以访问外部网络，并且多个虚拟机在同一虚拟网络中可以互相通信。</li>
+  <li><strong>缺点</strong>：虚拟机无法直接被局域网或宿主机以外的设备访问。</li>
+</ul>
+
+<h4 id="总结-1">总结</h4>
+
+<ul>
+  <li><strong>桥接模式</strong>：虚拟机作为网络中独立的节点，适合需要局域网通信的场景。</li>
+  <li><strong>NAT模式</strong>：适合需要虚拟机访问外部网络但不需要局域网通信的场景。</li>
+  <li><strong>仅主机模式</strong>：适合虚拟机与宿主机或其他虚拟机之间的网络通信，不需要外部网络。</li>
+  <li><strong>自定义/内网模式</strong>：用于创建复杂或完全隔离的网络环境。</li>
+</ul>
+
+<p>根据你的使用场景，可以选择合适的网络模式进行配置。</p>
+
+<hr />
+
+<h3 id="15加速3d图形">1.5.加速3D图形</h3>
+<p>“加速3D图形”是指虚拟机中的3D图形硬件加速功能，这个功能允许虚拟机通过宿主机的物理GPU（图形处理单元）来处理三维图形渲染任务，从而提高虚拟机中运行的应用程序或操作系统的图形性能。以下是“加速3D图形”的作用及其意义：</p>
+
+<h4 id="1-加速3d图形的作用">1. 加速3D图形的作用</h4>
+
+<p>在虚拟机中启用3D图形加速后，虚拟机中的应用程序可以利用宿主机的GPU来处理3D渲染任务，而不只是依赖虚拟机本身的虚拟CPU进行图形处理。这可以显著提升虚拟机中的图形性能。</p>
+
+<ul>
+  <li>
+    <p><strong>图形性能提升</strong>：启用加速3D图形后，虚拟机中的图形计算任务（如游戏、3D设计软件、图形密集型应用）可以由物理GPU处理，使得图形渲染速度更快、画面更流畅。</p>
+  </li>
+  <li>
+    <p><strong>减少CPU负担</strong>：没有3D加速时，虚拟机依赖于虚拟CPU来进行图形处理，这通常导致性能较差，尤其是在运行图形密集型任务时。而启用3D加速后，图形计算转移到宿主机的GPU上，可以释放CPU资源用于其他任务，提升整体系统性能。</p>
+  </li>
+  <li>
+    <p><strong>更好的用户体验</strong>：启用3D加速后，虚拟机能够更流畅地显示现代操作系统的图形界面（如Windows、Linux的3D桌面效果），例如Aero效果、窗口动画和透明效果等。</p>
+  </li>
+</ul>
+
+<h4 id="2-适用场景">2. 适用场景</h4>
+
+<p>加速3D图形功能主要用于以下几类场景：</p>
+
+<ul>
+  <li>
+    <p><strong>3D应用程序和游戏</strong>：如果你在虚拟机中运行需要强大图形处理能力的3D软件（如AutoCAD、Blender等3D建模软件）或游戏，启用3D加速可以显著提高运行效果。</p>
+  </li>
+  <li>
+    <p><strong>现代操作系统图形界面</strong>：一些操作系统（如Windows 10/11、某些Linux发行版）采用复杂的桌面环境和用户界面，3D加速有助于确保这些操作系统在虚拟机中运行时的界面流畅度。</p>
+  </li>
+  <li>
+    <p><strong>视频处理和图像编辑</strong>：视频编辑软件和一些高级图像处理工具会使用GPU加速来提升处理速度。在虚拟机中启用3D加速可以让这些软件更快完成渲染、编码等操作。</p>
+  </li>
+</ul>
+
+<h4 id="3-硬件要求">3. 硬件要求</h4>
+
+<p>要启用3D图形加速，宿主机需要满足以下条件：</p>
+
+<ul>
+  <li>
+    <p><strong>宿主机支持硬件加速</strong>：宿主机的GPU必须支持硬件加速功能。现代的独立显卡（如NVIDIA、AMD）和部分集成显卡（如Intel Iris系列）都支持硬件加速。</p>
+  </li>
+  <li>
+    <p><strong>虚拟机软件支持</strong>：虚拟化软件（如VMware Workstation、VirtualBox）需要支持3D加速功能，并且在虚拟机设置中启用该功能。</p>
+  </li>
+  <li>
+    <p><strong>宿主机GPU驱动</strong>：确保宿主机的GPU驱动是最新版本，并支持虚拟化的硬件加速功能。</p>
+  </li>
+</ul>
+
+<h4 id="4-如何启用加速3d图形">4. 如何启用加速3D图形</h4>
+
+<p>通常，你可以在虚拟机的设置中找到启用3D加速的选项。例如，在VMware Workstation中：</p>
+
+<ol>
+  <li>打开虚拟机的设置。</li>
+  <li>选择“显示器”选项。</li>
+  <li>勾选“加速3D图形”复选框。</li>
+</ol>
+
+<p>类似地，在其他虚拟化平台中（如VirtualBox），你也可以在显示器设置中启用3D加速。</p>
+
+<h4 id="5-可能的限制和注意事项">5. 可能的限制和注意事项</h4>
+
+<ul>
+  <li>
+    <p><strong>性能受限于宿主机的GPU</strong>：虚拟机中的图形性能仍然取决于宿主机的GPU能力。如果宿主机的GPU较弱，启用3D加速的效果可能不明显。</p>
+  </li>
+  <li>
+    <p><strong>宿主机资源占用</strong>：启用3D加速后，虚拟机会占用宿主机的GPU资源。如果虚拟机与宿主机同时运行图形密集型任务，宿主机的性能可能会受到影响。</p>
+  </li>
+  <li>
+    <p><strong>驱动兼容性</strong>：虚拟机中的操作系统需要正确的虚拟图形驱动才能充分利用3D加速功能。如果虚拟机中的驱动不兼容或版本过旧，3D加速可能无法正常工作。</p>
+  </li>
+</ul>
+
+<h4 id="总结-2">总结</h4>
+
+<p>“加速3D图形”功能使虚拟机能够通过宿主机的GPU处理3D图形任务，提升图形性能，特别是在需要运行3D软件、图形密集型应用、现代操作系统界面时有显著效果。如果你在虚拟机中运行这些任务，启用3D加速将会大幅改善用户体验。</p>
+
+<hr />
+
+<h3 id="16虚拟机中的磁盘">1.6.虚拟机中的磁盘</h3>
+<p>在虚拟机中安装Ubuntu时，选项 <strong>“擦除磁盘并安装 Ubuntu”</strong> 所指的“磁盘”是<strong>虚拟机的磁盘</strong>，而不是你物理计算机上的硬盘。这是虚拟机软件为这个虚拟机创建的一个虚拟硬盘（VHD或VMDK等格式），它相当于是虚拟机的独立存储设备。</p>
+<h4 id="1-擦除磁盘并安装-ubuntu">1. 擦除磁盘并安装 Ubuntu</h4>
+
+<p>当你选择“擦除磁盘并安装 Ubuntu”时，Ubuntu会格式化并使用<strong>虚拟机创建的虚拟硬盘</strong>。它并不会影响到你物理主机（真实电脑）的硬盘，只是清空了虚拟机内部的虚拟硬盘。如果之前安装了其他系统或文件，这个选项会删除它们并进行全新安装。</p>
+
+<h4 id="2-虚拟机硬盘空间是哪里来的">2. 虚拟机硬盘空间是哪里来的？</h4>
+
+<p>虚拟机的硬盘是在你<strong>创建虚拟机</strong>时，<strong>手动分配的空间</strong>。例如，你可以为虚拟机分配一个50GB的虚拟硬盘空间。这个硬盘并不是真实的物理硬盘，它只是虚拟机软件（如 VMware 或 VirtualBox）在你物理硬盘上的一个文件（虚拟磁盘文件）。</p>
+
+<h4 id="3-虚拟硬盘空间是否实际占用物理硬盘空间">3. 虚拟硬盘空间是否实际占用物理硬盘空间？</h4>
+
+<ul>
+  <li><strong>动态分配（Thin Provisioning）</strong>：如果你在虚拟机中选择了“动态分配”硬盘，虚拟磁盘文件不会立即占用你分配的所有空间。例如，你给虚拟机分配了50GB硬盘，但只有当你在虚拟机里逐步使用硬盘时，它才会逐渐增长。例如，如果Ubuntu系统仅用了10GB，虚拟磁盘文件只会占用物理硬盘上的10GB。</li>
+  <li><strong>固定分配（Thick Provisioning）</strong>：如果你选择了“固定分配”硬盘，虚拟机会立即占用你分配的全部空间。比如你分配了50GB，虚拟磁盘文件会立即在物理硬盘上占用50GB的空间，即使虚拟机里面只用了2GB。</li>
+</ul>
+
+<h4 id="4-硬盘空间是如何管理的">4. 硬盘空间是如何管理的？</h4>
+
+<p>虚拟机的硬盘空间是作为一个<strong>独立文件</strong>存在的，这个文件存储在你物理机的硬盘上。当你启动虚拟机时，操作系统（如Ubuntu）会将其视为正常的硬盘空间，和在真实电脑上操作没有差别。你分配给虚拟机的硬盘空间实际占用了你物理电脑的存储。</p>
+
+<h4 id="5-未使用的虚拟磁盘空间还在原来的地方吗">5. 未使用的虚拟磁盘空间还在原来的地方吗？</h4>
+
+<ul>
+  <li>如果你采用了<strong>动态分配</strong>，那么未使用的虚拟硬盘空间<strong>不会立即占用</strong>物理硬盘的空间，物理机上的硬盘依然保留这些空间。</li>
+  <li>如果你采用了<strong>固定分配</strong>，即使没有用到虚拟硬盘中的所有空间，这部分硬盘也已经被分配出去，占用了物理硬盘的空间。</li>
+</ul>
+
+<h4 id="总结-3">总结</h4>
+
+<ul>
+  <li>虚拟机中的“擦除磁盘并安装 Ubuntu”指的是虚拟机中的<strong>虚拟硬盘</strong>，不影响物理主机上的真实磁盘。</li>
+  <li>虚拟硬盘是在创建虚拟机时分配的，它的空间来源于物理硬盘，但可以选择<strong>动态</strong>或者<strong>固定</strong>分配，动态分配下未使用的部分不会占用物理空间，固定分配则会立即占用。</li>
+</ul>
+
+<hr />
+
+<h2 id="2下载vmware">2.下载VMware</h2>
+<p>Broadcom官网：<a href="https://support.broadcom.com/">https://support.broadcom.com/</a><br />
+1.VMware是这家公司的产品，需要先登录才能下载<br />
+没有账号就先注册，注册需要一个邮箱，再填一些信息<br />
+(邮箱需真实，会给你邮箱发验证码，信息可以随便填)
+<img src="/images/Linux-images/linux.50.png" alt="" />
+2.点击Software-&gt;VMware Cloud Foundation-&gt;My Downloads
+<img src="/images/Linux-images/linux.51.png" alt="" />
+3.下滑找到VMware Workstation Pro
+<img src="/images/Linux-images/linux.52.png" alt="" />
+4.选择个人版
+<img src="/images/Linux-images/linux.53.png" alt="" />
+5.第一次下载需要填一些信息，随便填
+<img src="/images/Linux-images/linux.54.png" alt="" />
+6.打开下载的安装包进行安装
+<img src="/images/Linux-images/linux.55.png" alt="" />
+7.选择安装位置，是否需要添加到系统PATH看你需求<br />
+<img src="/images/Linux-images/linux.56.png" alt="" />
+8.如果你自定义了安装目录就会弹出这个警告<br />
+简单来说就是如果是推荐的目录，进行一些对VMware的操作需要管理员权限<br />
+现在对VMware的操作不需要什么权限了
+<img src="/images/Linux-images/linux.57.png" alt="" />
+9.这也看你需不要，不需要就不勾选<br />
+10.后面还有个快捷方式，可以勾上
+<img src="/images/Linux-images/linux.58.png" alt="" />
+11.如果你自定义了安装位置，可能会遇到下图的情况<br />
+这是系统找不到该文件的默认位置<br />
+你在浏览里找到要求的这个文件再点确定就行
+<img src="/images/Linux-images/linux.59.png" alt="" /></p>
+
+<p>12.安装完成
+<img src="/images/Linux-images/linux.60.png" alt="" /></p>
+
+<hr />
+
+<h2 id="3下载ubuntu镜像">3.下载Ubuntu镜像</h2>
+<p>ubantu镜像：<a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br />
+LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版本的操作系统会获得更长时间的支持和更新，通常是五年，这包括安全更新和软件包更新。
+<img src="/images/Linux-images/linux.5.png" alt="" /></p>
+
+<hr />
+
+<h2 id="4创建虚拟机">4.创建虚拟机</h2>
+<h3 id="41打开vmware">4.1.打开VMware</h3>
+<p>有密钥可以输一下，没有就选第一个
+<img src="/images/Linux-images/linux.61.png" alt="" /></p>
+<h3 id="42创建新的虚拟机">4.2.创建新的虚拟机</h3>
+<p><img src="/images/Linux-images/linux.62.png" alt="" />
+下一步
+<img src="/images/Linux-images/linux.63.png" alt="" />
+选择我们下载好的光盘映像文件，再点下一步
+<img src="/images/Linux-images/linux.64.png" alt="" />
+填写信息
+<img src="/images/Linux-images/linux.65.png" alt="" />
+<img src="/images/Linux-images/linux.66.png" alt="" />
+根据需要设置虚拟磁盘的大小
+<img src="/images/Linux-images/linux.67.png" alt="" />
+取消这个创建后打开(因为我们还需要进行其它设置)，再点击完成
+<img src="/images/Linux-images/linux.68.png" alt="" /></p>
+<h3 id="43编辑虚拟机">4.3.编辑虚拟机</h3>
+<p>内存，处理器，网路i适配器这些概念见上文(三.1基础知识介绍)<br />
+1.打开点击虚拟机设置
+<img src="/images/Linux-images/linux.69.png" alt="" />
+2.可以修改内存
+<img src="/images/Linux-images/linux.70.png" alt="" />
+3.可以修改处理器数量和每个处理器内核
+<img src="/images/Linux-images/linux.71.png" alt="" />
+4.可以移除软盘和CD/DVD (SATA)<br />
+5.网络链接选择桥接模式
+<img src="/images/Linux-images/linux.72.png" alt="" />
+6.确定</p>
+
+<hr />
+
+<h2 id="5开启虚拟机">5.开启虚拟机</h2>
+<p>1.开机虚拟机
+<img src="/images/Linux-images/linux.73.png" alt="" />
+2.不管什么界面，就是顺着安装走
+<img src="/images/Linux-images/linux.74.png" alt="" />
+3.选择语言
+<img src="/images/Linux-images/linux.75.png" alt="" />
+4.一路默认即可<br />
+5.这里默认擦除磁盘并安装Ubuntu即可
+<img src="/images/Linux-images/linux.76.png" alt="" />
+6.设置信息
+<img src="/images/Linux-images/linux.77.png" alt="" />
+7.选择时区
+<img src="/images/Linux-images/linux.78.png" alt="" />
+8.安装
+<img src="/images/Linux-images/linux.79.png" alt="" />
+9.安装完成后重启
+<img src="/images/Linux-images/linux.80.png" alt="" />
+10.会让你回车进入
+<img src="/images/Linux-images/linux.81.png" alt="" />
+11.可以调节一些分辨率吧
+先点击显示设置
+<img src="/images/Linux-images/linux.82.png" alt="" />
+我这里选择与我的电脑一样的分辨率
+<img src="/images/Linux-images/linux.83.png" alt="" /></p>
+
+<hr />
+
+<h2 id="6设置镜像服务器">6.设置镜像服务器</h2>
+<p>具体操作与(上文一.10.设置镜像服务器)一样，这里不再赘述
+<img src="/images/Linux-images/linux.84.png" alt="" />
+<img src="/images/Linux-images/linux.85.png" alt="" />
+上面栏目的按键的作用，在把鼠标移上去后有解释
+<img src="/images/Linux-images/linux.86.png" alt="" /></p>
+
+<hr />
+
+<h1 id="四linux常见命令">四.Linux常见命令</h1>]]></content><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><category term="技术，编程" /><category term="Linux" /><category term="博客" /><summary type="html"><![CDATA[本篇文章演示如何从0开始使用Linux]]></summary></entry><entry><title type="html">CMD与Powershell 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="CMD与Powershell 使用教程" /><published>2024-10-22T00:00:00+08:00</published><updated>2024-10-22T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介"><strong>简介</strong></h1>
 <p>本文主要内容： <br />
 1.分别介绍CMD与Powershell的概念<br />
 2.分别列出CMD与Powershell的常用命令<br />
