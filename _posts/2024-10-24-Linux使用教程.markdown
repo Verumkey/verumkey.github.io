@@ -13,6 +13,7 @@ excerpt: "本篇文章演示如何从0开始使用Linux"
 2.演示在vmare上运行一个Ubuntu系统的虚拟机  
 3.介绍Linux的常用命令    
 Linux镜像大全：[https://www.linux.org/pages/download/](https://www.linux.org/pages/download/)
+
 ---
 
 # 二.双系统配置Ubuntu
