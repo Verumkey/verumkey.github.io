@@ -300,6 +300,57 @@ GParted 的用户界面直观友好，适合用户进行硬盘管理，尤其是
 
 ---
 
+### 1.14.GRUB的简介
+
+GRUB (Grand Unified Bootloader) 是一款开源的启动引导程序，主要用于在计算机启动时加载操作系统。它常见于 Linux 和其他 Unix 类系统中，但也可以引导 Windows 等操作系统。GRUB 的主要功能是让用户在系统启动时选择加载的操作系统或内核，特别适合多系统或双系统环境，例如 Linux 和 Windows 并存的情况下。
+
+GRUB 的工作流程分为以下几步：
+
+1. **阶段1：加载启动引导器**  
+    在 BIOS 或 UEFI 完成硬件初始化后，GRUB 的第一阶段代码会被加载。它通常存储在磁盘的主引导记录（MBR）或 UEFI 分区中，负责将控制权传递给 GRUB 阶段2。
+    
+2. **阶段2：加载核心程序**  
+    GRUB 阶段2会显示启动菜单，让用户选择操作系统或特定内核版本。用户也可以通过 GRUB 命令行手动输入内核参数或进行系统修复。
+    
+3. **加载内核并启动操作系统**  
+    一旦选定了内核，GRUB 会将内核和相关的初始 RAM 磁盘 (initramfs) 加载到内存，并将控制权交给操作系统内核以启动系统。
+    
+
+当你安装 Ubuntu 作为双系统时，Ubuntu 会默认安装 **GRUB（Grand Unified Bootloader）**。GRUB 是一个启动引导程序，它能够检测并列出系统上已安装的所有操作系统，允许你在启动时选择要加载的操作系统。通常在双系统中，GRUB 会被配置为引导菜单的默认管理程序，负责启动 Ubuntu 和 Windows 等系统。
+
+#### 为什么 Ubuntu 的启动优先级比 Windows 高时才能启动 GRUB？
+
+1. **GRUB 安装位置**：GRUB 通常安装在硬盘的主引导记录（MBR）或 EFI 分区中。GRUB 负责接管启动过程，因此当 BIOS/UEFI 设置中指定 Ubuntu（或带有 GRUB 的分区）为启动优先级更高时，GRUB 就会运行并显示启动菜单，供你选择启动 Ubuntu 或 Windows。
+    
+2. **启动顺序的影响**：如果你在 BIOS/UEFI 设置中将 Windows 的引导项放在优先级更高的位置，系统会直接使用 Windows 自带的启动引导程序，而不是 GRUB。Windows 启动引导程序通常不会列出 Ubuntu，除非进行特别配置（例如使用第三方引导管理器）。因此，只有在 Ubuntu 的启动项优先级高于 Windows 时，GRUB 才会被加载并展示选择菜单，从而引导任意一个操作系统。
+    
+
+简而言之，GRUB 作为默认的引导管理器，只有在它先于 Windows 的启动项被执行时，才能发挥作用并展示操作系统选择菜单。如果优先启动 Windows，则会跳过 GRUB
+。
+GRUB 具有灵活的配置能力，通过编辑其配置文件（通常位于 /boot/grub/grub.cfg）可以设置默认启动项、超时时间、图形界面等。其支持的文件系统也非常多，如 ext4、NTFS 和 FAT 等，确保了多系统兼容性。
+
+在 GRUB 启动菜单中，序号是从 **0** 开始的。这意味着菜单中的第一个启动项对应于序号 0，第二个是序号 1，以此类推。这种从 0 开始的计数方式在配置文件中也保持一致，比如当你在 GRUB 配置文件中设置 GRUB_DEFAULT=0 时，它将默认选择第一个启动项。
+
+GRUB 目前有两个主要版本：Legacy GRUB 和 GRUB 2。GRUB 2 是更现代的版本，具有更好的模块化和扩展性，广泛用于主流 Linux 发行版中。
+
+---
+
+### 1.15.UEFI HardnDisk Drive BBS Priorities的简介
+UEFI Hard Disk Drive BBS Priorities 是主板 BIOS/UEFI 设置中的一项功能，用来配置硬盘的启动优先级。它决定了计算机在启动时，从哪些硬盘或者存储设备中加载操作系统，并按照优先级顺序依次尝试启动。
+
+在这个设置中，你可以：
+
+1. 设定不同硬盘的启动顺序：如果你有多块硬盘（例如一个固态硬盘和一个机械硬盘），可以在此调整启动的先后顺序。
+
+
+2. 影响操作系统加载顺序：计算机会根据设定的优先级，尝试从首选硬盘启动操作系统。如果首选硬盘不可用，会自动切换到下一个硬盘。
+
+
+
+这种设置对多系统配置（如 Windows 和 Linux 的双系统）以及多硬盘系统特别重要。
+
+---
+
 ## 2.查看BIOS模式
 使用**Win+R**打开 **“运行”对话框**   
 输入：**Msinfo32**  
@@ -346,7 +397,7 @@ ventoy下载地址：[Ventoy download | SourceForge.net](https://sourceforge.net
 我这里u盘已经安装了ventoy，没安装时设备内部ventoy版本那是空的
 ![](/images/Linux-images/linux.8.png)
 ### 5.3.在U盘上安装ventoy
-**点击左上角配置选项->点击分区类型->选择GPT->安装**
+**点击左上角配置选项->点击分区类型->选择GPT->安装**  
 安装成功后会弹出恭喜**安装成功**的窗口，然后U盘名字变为**ventoy**
 ### 5.4.将Ubuntu镜像复制到安装盘
 前文下载的**8Ubuntu镜像**直接**复制**过来就成功制作了**Ubuntu安装盘**
@@ -473,7 +524,7 @@ Secure Boot的选项一般在安全里，选择Disabled以关闭
 13.安装
 ![](/images/Linux-images/linux.34.png)
 14.安装完成后会提示你**重启**  
-会有一个界面让你拔掉U盘，再ENTER  
+会有一个界面让你拔掉U盘，再回车  
 15.安装完成
 ![](/images/Linux-images/linux.35.png)
 
@@ -498,12 +549,12 @@ Secure Boot的选项一般在安全里，选择Disabled以关闭
 
 ### 12.1.压缩硬盘空间
 从**多余的分区**中**压缩**出来一些**硬盘空间**  
-忘了**操作**的可以返回**上文6**，是一样的操作  
+忘了**操作**的可以返回上文**(一.7.为Ubuntu挤出硬盘空间)**，是一样的操作  
 我这里压缩了10个G
 ![](/images/Linux-images/linux.15.png)
 
 ### 12.2.进入U盘的Ubuntu系统
-和**上文8的操作**一样
+和上文**(一.9.进入U盘的Ubuntu系统)**一样
 
 ### 12.3.选择试用Ubuntu
 选择语言为中文，一路到下图这一步就要注意了  
@@ -515,11 +566,11 @@ Secure Boot的选项一般在安全里，选择Disabled以关闭
 ### 12.4.使用GParted扩容
 注意：这期间会弹出一些需要确认的窗口  
 **1.打开终端（快捷键：Ctrl+Alt+G）  
-2.运行命令以安装和启动GParted  
-（GParted的简介见上文1.13）**
+2.运行命令以安装和启动GParted**  
+GParted的简介见上文**(一.1.13.GParted的简介)**  
 
 **sudo apt  install gparted  #下载GParted   
-gparted打开GParted**
+gparted   #打开GParted**
 
 ![](/images/Linux-images/linux.42.png)
 3.右键点击我们需要扩容的Ubuntu系统的分区
@@ -535,6 +586,53 @@ gparted打开GParted**
 安装好Ubuntu系统后，原来显示**未分配**的分区会变为**状态良好**  
 原来是97.67GB，可以看到扩容10GB成功了
 ![](/images/Linux-images/linux.48.png)
+
+---
+
+## 13.启用GRUB
+不同电脑的操作可能不同  
+关键在于**把Ubuntu高的启动优级设置的比Windows系统的高**  
+如果你细心一些，会发现一个问题  
+有两个操作系统，该怎么选择进入哪一个操作系统？  
+如果你直接重启，会发现直接进入Windows系统，看不到Ubuntu系统在哪  
+这时候就需要启用GRUB了  
+介绍见上文**(一.1.14.GRUB的简介)**  
+还是重启电脑进入BIOS设置界面  
+操作与上文**(一.8.进入BIOS设置界面进行设置)**相同  
+1.找到**UEFI Hard Disk Drive BBS Priorities**  
+介绍见上文**(一.1.15.UEFI HardnDisk Drive BBS Priorities的简介)**
+![](/images/Linux-images/linux.87.png)
+将Boot Option 1设置为Ubuntu
+![](/images/Linux-images/linux.88.png)
+2.现在退出，在启动时会进入GRUB的界面  
+这是完全的界面  
+![](/images/Linux-images/linux.89.png)
+
+---
+
+## 14.修改GRUB配置文件
+接下来我们要设置默认选择Windows系统，10s倒计时自动进入  
+这是启动的菜单，你没修改GRUB配置文件时默认进的时Ubuntu  
+这个**菜单的序号是从0开始**的，比如第五个Windows的序号是4
+![](/images/Linux-images/linux.90.png)
+这是页尾，可以看到我设计了一个倒计时
+![](/images/Linux-images/linux.91.png)
+### 14.1.进入Ubuntu系统
+1.打开**终端**（快捷键**Ctrl+Alt+t**）  
+2.输入**命令**用nano文本编辑器打开**GRUB配置的模板文件**：  
+**sudo nano /etc/default/grub**
+![](/images/Linux-images/linux.92.png)
+设置**默认启动的序号**和**启动倒计时**  
+再次强调：**序号是从0开始的！**  
+**^是指Ctrl键**，比如退出就是Ctrl+C
+![](/images/Linux-images/linux.93.png)
+### 14.2.更新GRUB配置文件
+上文修改的是**GRUB配置的模板文件**，我们还要更新到**实际的GRUB配置文件**  
+使用**命令**更新到实际的GRUB配置文件：  
+**sudo update-grub**
+![](/images/Linux-images/linux.94.png)
+### 14.3.配置成功
+现在重启就能进入GRUB界面，可以选择进入Ubuntu系统，也可以倒计时结束默认进入Windows系统
 
 ---
 

@@ -86,7 +86,7 @@
 </header>
 
 <div class="toc" id="toc">
-    <ul><li><a href="#简介">简介</a></li><li><a href="#二双系统配置ubuntu">二.双系统配置Ubuntu</a><ul><li><a href="#1基础知识介绍">1.基础知识介绍</a><ul><li><a href="#11引导的简介">1.1.引导的简介</a></li><li><a href="#12bios模式的简介">1.2.BIOS模式的简介</a></li><li><a href="#13磁盘分区格式的简介">1.3.磁盘分区格式的简介</a></li><li><a href="#14bios模式与分区格式的对应关系">1.4.BIOS模式与分区格式的对应关系</a></li><li><a href="#15ventoy的简介">1.5.ventoy的简介</a></li><li><a href="#16镜像的简介">1.6.镜像的简介</a></li><li><a href="#17bitlocker的简介">1.7.BitLocker的简介</a></li><li><a href="#18bios界面的boot的简介">1.8.BIOS界面的Boot的简介</a></li><li><a href="#19secure-boot的简介">1.9.Secure Boot的简介</a></li><li><a href="#110挂载点的简介">1.10.挂载点的简介</a></li><li><a href="#111根挂载点的简介">1.11.根挂载点的简介</a></li><li><a href="#112软件源和镜像服务器的简介">1.12.软件源和镜像服务器的简介</a></li><li><a href="#113gparted的简介">1.13.GParted的简介</a></li></ul></li><li><a href="#2查看bios模式">2.查看BIOS模式</a></li><li><a href="#3查看磁盘分区格式">3.查看磁盘分区格式</a></li><li><a href="#4安装镜像">4.安装镜像</a></li><li><a href="#5制作ubuntu安装盘">5.制作Ubuntu安装盘</a><ul><li><a href="#51下载ventoy">5.1.下载ventoy</a></li><li><a href="#52插入u盘">5.2.插入U盘</a></li><li><a href="#53在u盘上安装ventoy">5.3.在U盘上安装ventoy</a></li><li><a href="#54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</a></li></ul></li><li><a href="#6关闭bitlocker">6.关闭BitLocker</a><ul><li><a href="#61bitlocker可能触发条件">6.1.BitLocker可能触发条件</a></li><li><a href="#62关闭bitlocker">6.2.关闭BitLocker</a></li></ul></li><li><a href="#7为ubuntu挤出硬盘空间">7.为Ubuntu挤出硬盘空间</a></li><li><a href="#8进入bios界面进行设置">8.进入BIOS界面进行设置</a><ul><li><a href="#81关闭secure-boot">8.1.关闭Secure Boot</a></li><li><a href="#82boot-option-priorities">8.2.boot option priorities</a></li></ul></li><li><a href="#9进入u盘的ubuntu系统">9.进入U盘的Ubuntu系统</a></li><li><a href="#10安装ubuntu系统到硬盘">10.安装Ubuntu系统到硬盘</a></li><li><a href="#11设置镜像服务器">11.设置镜像服务器</a></li><li><a href="#12对ubuntu的硬盘空间进行扩容">12.对Ubuntu的硬盘空间进行扩容</a><ul><li><a href="#121压缩硬盘空间">12.1.压缩硬盘空间</a></li><li><a href="#122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</a></li><li><a href="#123选择试用ubuntu">12.3.选择试用Ubuntu</a></li><li><a href="#124使用gparted扩容">12.4.使用GParted扩容</a></li></ul></li></ul></li><li><a href="#三虚拟机中安装ubuntu">三.虚拟机中安装Ubuntu</a><ul><li><a href="#1虚拟机基础知识介绍">1.虚拟机基础知识介绍</a><ul><li><a href="#11内存">1.1.内存</a></li><li><a href="#12处理器数量和每个处理器的内核数量">1.2.处理器数量和每个处理器的内核数量</a><ul><li><a href="#1-处理器数量vcpu数量">1. 处理器数量（vCPU数量）</a></li><li><a href="#2-每个处理器的内核数量">2. 每个处理器的内核数量</a></li><li><a href="#3-vcpu数量和内核数量的关系">3. vCPU数量和内核数量的关系</a></li><li><a href="#4-实际应用场景">4. 实际应用场景</a></li><li><a href="#5-资源分配与权衡">5. 资源分配与权衡</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#13软盘设备和-cddvd设备">1.3.软盘设备和 CD/DVD设备</a><ul><li><a href="#是否可以移除">是否可以移除：</a></li></ul></li><li><a href="#14网络适配器的常见模式">1.4.网络适配器的常见模式</a><ul><li><a href="#1-桥接模式bridged-mode">1. 桥接模式（Bridged Mode）</a></li><li><a href="#2-nat模式network-address-translation-mode">2. NAT模式（Network Address Translation Mode）</a></li><li><a href="#3-仅主机模式host-only-mode">3. 仅主机模式（Host-only Mode）</a></li><li><a href="#4-自定义模式custom-mode">4. 自定义模式（Custom Mode）</a></li><li><a href="#5-内网模式internal-network-mode">5. 内网模式（Internal Network Mode）</a></li><li><a href="#6-nat网络模式nat-network-mode">6. NAT网络模式（NAT Network Mode）</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#15加速3d图形">1.5.加速3D图形</a><ul><li><a href="#1-加速3d图形的作用">1. 加速3D图形的作用</a></li><li><a href="#2-适用场景">2. 适用场景</a></li><li><a href="#3-硬件要求">3. 硬件要求</a></li><li><a href="#4-如何启用加速3d图形">4. 如何启用加速3D图形</a></li><li><a href="#5-可能的限制和注意事项">5. 可能的限制和注意事项</a></li><li><a href="#总结-2">总结</a></li></ul></li><li><a href="#16虚拟机中的磁盘">1.6.虚拟机中的磁盘</a><ul><li><a href="#1-擦除磁盘并安装-ubuntu">1. 擦除磁盘并安装 Ubuntu</a></li><li><a href="#2-虚拟机硬盘空间是哪里来的">2. 虚拟机硬盘空间是哪里来的？</a></li><li><a href="#3-虚拟硬盘空间是否实际占用物理硬盘空间">3. 虚拟硬盘空间是否实际占用物理硬盘空间？</a></li><li><a href="#4-硬盘空间是如何管理的">4. 硬盘空间是如何管理的？</a></li><li><a href="#5-未使用的虚拟磁盘空间还在原来的地方吗">5. 未使用的虚拟磁盘空间还在原来的地方吗？</a></li><li><a href="#总结-3">总结</a></li></ul></li></ul></li><li><a href="#2下载vmware">2.下载VMware</a></li><li><a href="#3下载ubuntu镜像">3.下载Ubuntu镜像</a></li><li><a href="#4创建虚拟机">4.创建虚拟机</a><ul><li><a href="#41打开vmware">4.1.打开VMware</a></li><li><a href="#42创建新的虚拟机">4.2.创建新的虚拟机</a></li><li><a href="#43编辑虚拟机">4.3.编辑虚拟机</a></li></ul></li><li><a href="#5开启虚拟机">5.开启虚拟机</a></li><li><a href="#6设置镜像服务器">6.设置镜像服务器</a></li></ul></li><li><a href="#四linux常见命令">四.Linux常见命令</a></li></ul>
+    <ul><li><a href="#简介">简介</a></li><li><a href="#二双系统配置ubuntu">二.双系统配置Ubuntu</a><ul><li><a href="#1基础知识介绍">1.基础知识介绍</a><ul><li><a href="#11引导的简介">1.1.引导的简介</a></li><li><a href="#12bios模式的简介">1.2.BIOS模式的简介</a></li><li><a href="#13磁盘分区格式的简介">1.3.磁盘分区格式的简介</a></li><li><a href="#14bios模式与分区格式的对应关系">1.4.BIOS模式与分区格式的对应关系</a></li><li><a href="#15ventoy的简介">1.5.ventoy的简介</a></li><li><a href="#16镜像的简介">1.6.镜像的简介</a></li><li><a href="#17bitlocker的简介">1.7.BitLocker的简介</a></li><li><a href="#18bios界面的boot的简介">1.8.BIOS界面的Boot的简介</a></li><li><a href="#19secure-boot的简介">1.9.Secure Boot的简介</a></li><li><a href="#110挂载点的简介">1.10.挂载点的简介</a></li><li><a href="#111根挂载点的简介">1.11.根挂载点的简介</a></li><li><a href="#112软件源和镜像服务器的简介">1.12.软件源和镜像服务器的简介</a></li><li><a href="#113gparted的简介">1.13.GParted的简介</a></li><li><a href="#114grub的简介">1.14.GRUB的简介</a><ul><li><a href="#为什么-ubuntu-的启动优先级比-windows-高时才能启动-grub">为什么 Ubuntu 的启动优先级比 Windows 高时才能启动 GRUB？</a></li></ul></li><li><a href="#115uefi-hardndisk-drive-bbs-priorities的简介">1.15.UEFI HardnDisk Drive BBS Priorities的简介</a></li></ul></li><li><a href="#2查看bios模式">2.查看BIOS模式</a></li><li><a href="#3查看磁盘分区格式">3.查看磁盘分区格式</a></li><li><a href="#4安装镜像">4.安装镜像</a></li><li><a href="#5制作ubuntu安装盘">5.制作Ubuntu安装盘</a><ul><li><a href="#51下载ventoy">5.1.下载ventoy</a></li><li><a href="#52插入u盘">5.2.插入U盘</a></li><li><a href="#53在u盘上安装ventoy">5.3.在U盘上安装ventoy</a></li><li><a href="#54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</a></li></ul></li><li><a href="#6关闭bitlocker">6.关闭BitLocker</a><ul><li><a href="#61bitlocker可能触发条件">6.1.BitLocker可能触发条件</a></li><li><a href="#62关闭bitlocker">6.2.关闭BitLocker</a></li></ul></li><li><a href="#7为ubuntu挤出硬盘空间">7.为Ubuntu挤出硬盘空间</a></li><li><a href="#8进入bios界面进行设置">8.进入BIOS界面进行设置</a><ul><li><a href="#81关闭secure-boot">8.1.关闭Secure Boot</a></li><li><a href="#82boot-option-priorities">8.2.boot option priorities</a></li></ul></li><li><a href="#9进入u盘的ubuntu系统">9.进入U盘的Ubuntu系统</a></li><li><a href="#10安装ubuntu系统到硬盘">10.安装Ubuntu系统到硬盘</a></li><li><a href="#11设置镜像服务器">11.设置镜像服务器</a></li><li><a href="#12对ubuntu的硬盘空间进行扩容">12.对Ubuntu的硬盘空间进行扩容</a><ul><li><a href="#121压缩硬盘空间">12.1.压缩硬盘空间</a></li><li><a href="#122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</a></li><li><a href="#123选择试用ubuntu">12.3.选择试用Ubuntu</a></li><li><a href="#124使用gparted扩容">12.4.使用GParted扩容</a></li></ul></li><li><a href="#13启用grub">13.启用GRUB</a></li><li><a href="#14修改grub配置文件">14.修改GRUB配置文件</a><ul><li><a href="#141进入ubuntu系统">14.1.进入Ubuntu系统</a></li><li><a href="#142更新grub配置文件">14.2.更新GRUB配置文件</a></li><li><a href="#143配置成功">14.3.配置成功</a></li></ul></li></ul></li><li><a href="#三虚拟机中安装ubuntu">三.虚拟机中安装Ubuntu</a><ul><li><a href="#1虚拟机基础知识介绍">1.虚拟机基础知识介绍</a><ul><li><a href="#11内存">1.1.内存</a></li><li><a href="#12处理器数量和每个处理器的内核数量">1.2.处理器数量和每个处理器的内核数量</a><ul><li><a href="#1-处理器数量vcpu数量">1. 处理器数量（vCPU数量）</a></li><li><a href="#2-每个处理器的内核数量">2. 每个处理器的内核数量</a></li><li><a href="#3-vcpu数量和内核数量的关系">3. vCPU数量和内核数量的关系</a></li><li><a href="#4-实际应用场景">4. 实际应用场景</a></li><li><a href="#5-资源分配与权衡">5. 资源分配与权衡</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#13软盘设备和-cddvd设备">1.3.软盘设备和 CD/DVD设备</a><ul><li><a href="#是否可以移除">是否可以移除：</a></li></ul></li><li><a href="#14网络适配器的常见模式">1.4.网络适配器的常见模式</a><ul><li><a href="#1-桥接模式bridged-mode">1. 桥接模式（Bridged Mode）</a></li><li><a href="#2-nat模式network-address-translation-mode">2. NAT模式（Network Address Translation Mode）</a></li><li><a href="#3-仅主机模式host-only-mode">3. 仅主机模式（Host-only Mode）</a></li><li><a href="#4-自定义模式custom-mode">4. 自定义模式（Custom Mode）</a></li><li><a href="#5-内网模式internal-network-mode">5. 内网模式（Internal Network Mode）</a></li><li><a href="#6-nat网络模式nat-network-mode">6. NAT网络模式（NAT Network Mode）</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#15加速3d图形">1.5.加速3D图形</a><ul><li><a href="#1-加速3d图形的作用">1. 加速3D图形的作用</a></li><li><a href="#2-适用场景">2. 适用场景</a></li><li><a href="#3-硬件要求">3. 硬件要求</a></li><li><a href="#4-如何启用加速3d图形">4. 如何启用加速3D图形</a></li><li><a href="#5-可能的限制和注意事项">5. 可能的限制和注意事项</a></li><li><a href="#总结-2">总结</a></li></ul></li><li><a href="#16虚拟机中的磁盘">1.6.虚拟机中的磁盘</a><ul><li><a href="#1-擦除磁盘并安装-ubuntu">1. 擦除磁盘并安装 Ubuntu</a></li><li><a href="#2-虚拟机硬盘空间是哪里来的">2. 虚拟机硬盘空间是哪里来的？</a></li><li><a href="#3-虚拟硬盘空间是否实际占用物理硬盘空间">3. 虚拟硬盘空间是否实际占用物理硬盘空间？</a></li><li><a href="#4-硬盘空间是如何管理的">4. 硬盘空间是如何管理的？</a></li><li><a href="#5-未使用的虚拟磁盘空间还在原来的地方吗">5. 未使用的虚拟磁盘空间还在原来的地方吗？</a></li><li><a href="#总结-3">总结</a></li></ul></li></ul></li><li><a href="#2下载vmware">2.下载VMware</a></li><li><a href="#3下载ubuntu镜像">3.下载Ubuntu镜像</a></li><li><a href="#4创建虚拟机">4.创建虚拟机</a><ul><li><a href="#41打开vmware">4.1.打开VMware</a></li><li><a href="#42创建新的虚拟机">4.2.创建新的虚拟机</a></li><li><a href="#43编辑虚拟机">4.3.编辑虚拟机</a></li></ul></li><li><a href="#5开启虚拟机">5.开启虚拟机</a></li><li><a href="#6设置镜像服务器">6.设置镜像服务器</a></li></ul></li><li><a href="#四linux常见命令">四.Linux常见命令</a></li></ul>
 </div>
 
 
@@ -506,6 +506,68 @@ Linux镜像大全：<a href="https://www.linux.org/pages/download/">https://www.
 
 <hr />
 
+<h3 id="114grub的简介">1.14.GRUB的简介</h3>
+
+<p>GRUB (Grand Unified Bootloader) 是一款开源的启动引导程序，主要用于在计算机启动时加载操作系统。它常见于 Linux 和其他 Unix 类系统中，但也可以引导 Windows 等操作系统。GRUB 的主要功能是让用户在系统启动时选择加载的操作系统或内核，特别适合多系统或双系统环境，例如 Linux 和 Windows 并存的情况下。</p>
+
+<p>GRUB 的工作流程分为以下几步：</p>
+
+<ol>
+  <li>
+    <p><strong>阶段1：加载启动引导器</strong><br />
+ 在 BIOS 或 UEFI 完成硬件初始化后，GRUB 的第一阶段代码会被加载。它通常存储在磁盘的主引导记录（MBR）或 UEFI 分区中，负责将控制权传递给 GRUB 阶段2。</p>
+  </li>
+  <li>
+    <p><strong>阶段2：加载核心程序</strong><br />
+ GRUB 阶段2会显示启动菜单，让用户选择操作系统或特定内核版本。用户也可以通过 GRUB 命令行手动输入内核参数或进行系统修复。</p>
+  </li>
+  <li>
+    <p><strong>加载内核并启动操作系统</strong><br />
+ 一旦选定了内核，GRUB 会将内核和相关的初始 RAM 磁盘 (initramfs) 加载到内存，并将控制权交给操作系统内核以启动系统。</p>
+  </li>
+</ol>
+
+<p>当你安装 Ubuntu 作为双系统时，Ubuntu 会默认安装 <strong>GRUB（Grand Unified Bootloader）</strong>。GRUB 是一个启动引导程序，它能够检测并列出系统上已安装的所有操作系统，允许你在启动时选择要加载的操作系统。通常在双系统中，GRUB 会被配置为引导菜单的默认管理程序，负责启动 Ubuntu 和 Windows 等系统。</p>
+
+<h4 id="为什么-ubuntu-的启动优先级比-windows-高时才能启动-grub">为什么 Ubuntu 的启动优先级比 Windows 高时才能启动 GRUB？</h4>
+
+<ol>
+  <li>
+    <p><strong>GRUB 安装位置</strong>：GRUB 通常安装在硬盘的主引导记录（MBR）或 EFI 分区中。GRUB 负责接管启动过程，因此当 BIOS/UEFI 设置中指定 Ubuntu（或带有 GRUB 的分区）为启动优先级更高时，GRUB 就会运行并显示启动菜单，供你选择启动 Ubuntu 或 Windows。</p>
+  </li>
+  <li>
+    <p><strong>启动顺序的影响</strong>：如果你在 BIOS/UEFI 设置中将 Windows 的引导项放在优先级更高的位置，系统会直接使用 Windows 自带的启动引导程序，而不是 GRUB。Windows 启动引导程序通常不会列出 Ubuntu，除非进行特别配置（例如使用第三方引导管理器）。因此，只有在 Ubuntu 的启动项优先级高于 Windows 时，GRUB 才会被加载并展示选择菜单，从而引导任意一个操作系统。</p>
+  </li>
+</ol>
+
+<p>简而言之，GRUB 作为默认的引导管理器，只有在它先于 Windows 的启动项被执行时，才能发挥作用并展示操作系统选择菜单。如果优先启动 Windows，则会跳过 GRUB
+。
+GRUB 具有灵活的配置能力，通过编辑其配置文件（通常位于 /boot/grub/grub.cfg）可以设置默认启动项、超时时间、图形界面等。其支持的文件系统也非常多，如 ext4、NTFS 和 FAT 等，确保了多系统兼容性。</p>
+
+<p>在 GRUB 启动菜单中，序号是从 <strong>0</strong> 开始的。这意味着菜单中的第一个启动项对应于序号 0，第二个是序号 1，以此类推。这种从 0 开始的计数方式在配置文件中也保持一致，比如当你在 GRUB 配置文件中设置 GRUB_DEFAULT=0 时，它将默认选择第一个启动项。</p>
+
+<p>GRUB 目前有两个主要版本：Legacy GRUB 和 GRUB 2。GRUB 2 是更现代的版本，具有更好的模块化和扩展性，广泛用于主流 Linux 发行版中。</p>
+
+<hr />
+
+<h3 id="115uefi-hardndisk-drive-bbs-priorities的简介">1.15.UEFI HardnDisk Drive BBS Priorities的简介</h3>
+<p>UEFI Hard Disk Drive BBS Priorities 是主板 BIOS/UEFI 设置中的一项功能，用来配置硬盘的启动优先级。它决定了计算机在启动时，从哪些硬盘或者存储设备中加载操作系统，并按照优先级顺序依次尝试启动。</p>
+
+<p>在这个设置中，你可以：</p>
+
+<ol>
+  <li>
+    <p>设定不同硬盘的启动顺序：如果你有多块硬盘（例如一个固态硬盘和一个机械硬盘），可以在此调整启动的先后顺序。</p>
+  </li>
+  <li>
+    <p>影响操作系统加载顺序：计算机会根据设定的优先级，尝试从首选硬盘启动操作系统。如果首选硬盘不可用，会自动切换到下一个硬盘。</p>
+  </li>
+</ol>
+
+<p>这种设置对多系统配置（如 Windows 和 Linux 的双系统）以及多硬盘系统特别重要。</p>
+
+<hr />
+
 <h2 id="2查看bios模式">2.查看BIOS模式</h2>
 <p>使用<strong>Win+R</strong>打开 <strong>“运行”对话框</strong> <br />
 输入：<strong>Msinfo32</strong><br />
@@ -552,7 +614,7 @@ ventoy下载地址：<a href="https://sourceforge.net/projects/ventoy/">Ventoy d
 我这里u盘已经安装了ventoy，没安装时设备内部ventoy版本那是空的
 <img src="/images/Linux-images/linux.8.png" alt="" /></p>
 <h3 id="53在u盘上安装ventoy">5.3.在U盘上安装ventoy</h3>
-<p><strong>点击左上角配置选项-&gt;点击分区类型-&gt;选择GPT-&gt;安装</strong>
+<p><strong>点击左上角配置选项-&gt;点击分区类型-&gt;选择GPT-&gt;安装</strong><br />
 安装成功后会弹出恭喜<strong>安装成功</strong>的窗口，然后U盘名字变为<strong>ventoy</strong></p>
 <h3 id="54将ubuntu镜像复制到安装盘">5.4.将Ubuntu镜像复制到安装盘</h3>
 <p>前文下载的<strong>8Ubuntu镜像</strong>直接<strong>复制</strong>过来就成功制作了<strong>Ubuntu安装盘</strong>
@@ -705,7 +767,7 @@ BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
 13.安装
 <img src="/images/Linux-images/linux.34.png" alt="" />
 14.安装完成后会提示你<strong>重启</strong><br />
-会有一个界面让你拔掉U盘，再ENTER<br />
+会有一个界面让你拔掉U盘，再回车<br />
 15.安装完成
 <img src="/images/Linux-images/linux.35.png" alt="" /></p>
 
@@ -730,12 +792,12 @@ BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
 
 <h3 id="121压缩硬盘空间">12.1.压缩硬盘空间</h3>
 <p>从<strong>多余的分区</strong>中<strong>压缩</strong>出来一些<strong>硬盘空间</strong><br />
-忘了<strong>操作</strong>的可以返回<strong>上文6</strong>，是一样的操作<br />
+忘了<strong>操作</strong>的可以返回上文<strong>(一.7.为Ubuntu挤出硬盘空间)</strong>，是一样的操作<br />
 我这里压缩了10个G
 <img src="/images/Linux-images/linux.15.png" alt="" /></p>
 
 <h3 id="122进入u盘的ubuntu系统">12.2.进入U盘的Ubuntu系统</h3>
-<p>和<strong>上文8的操作</strong>一样</p>
+<p>和上文<strong>(一.9.进入U盘的Ubuntu系统)</strong>一样</p>
 
 <h3 id="123选择试用ubuntu">12.3.选择试用Ubuntu</h3>
 <p>选择语言为中文，一路到下图这一步就要注意了<br />
@@ -747,11 +809,11 @@ BitLocker的密码一般在你第一次激活Windows系统的账号里<br />
 <h3 id="124使用gparted扩容">12.4.使用GParted扩容</h3>
 <p>注意：这期间会弹出一些需要确认的窗口<br />
 <strong>1.打开终端（快捷键：Ctrl+Alt+G）<br />
-2.运行命令以安装和启动GParted<br />
-（GParted的简介见上文1.13）</strong></p>
+2.运行命令以安装和启动GParted</strong><br />
+GParted的简介见上文<strong>(一.1.13.GParted的简介)</strong></p>
 
 <p><strong>sudo apt  install gparted  #下载GParted <br />
-gparted打开GParted</strong></p>
+gparted   #打开GParted</strong></p>
 
 <p><img src="/images/Linux-images/linux.42.png" alt="" />
 3.右键点击我们需要扩容的Ubuntu系统的分区
@@ -767,6 +829,53 @@ gparted打开GParted</strong></p>
 安装好Ubuntu系统后，原来显示<strong>未分配</strong>的分区会变为<strong>状态良好</strong><br />
 原来是97.67GB，可以看到扩容10GB成功了
 <img src="/images/Linux-images/linux.48.png" alt="" /></p>
+
+<hr />
+
+<h2 id="13启用grub">13.启用GRUB</h2>
+<p>不同电脑的操作可能不同<br />
+关键在于<strong>把Ubuntu高的启动优级设置的比Windows系统的高</strong><br />
+如果你细心一些，会发现一个问题<br />
+有两个操作系统，该怎么选择进入哪一个操作系统？<br />
+如果你直接重启，会发现直接进入Windows系统，看不到Ubuntu系统在哪<br />
+这时候就需要启用GRUB了<br />
+介绍见上文<strong>(一.1.14.GRUB的简介)</strong><br />
+还是重启电脑进入BIOS设置界面<br />
+操作与上文<strong>(一.8.进入BIOS设置界面进行设置)</strong>相同<br />
+1.找到<strong>UEFI Hard Disk Drive BBS Priorities</strong><br />
+介绍见上文<strong>(一.1.15.UEFI HardnDisk Drive BBS Priorities的简介)</strong>
+<img src="/images/Linux-images/linux.87.png" alt="" />
+将Boot Option 1设置为Ubuntu
+<img src="/images/Linux-images/linux.88.png" alt="" />
+2.现在退出，在启动时会进入GRUB的界面<br />
+这是完全的界面<br />
+<img src="/images/Linux-images/linux.89.png" alt="" /></p>
+
+<hr />
+
+<h2 id="14修改grub配置文件">14.修改GRUB配置文件</h2>
+<p>接下来我们要设置默认选择Windows系统，10s倒计时自动进入<br />
+这是启动的菜单，你没修改GRUB配置文件时默认进的时Ubuntu<br />
+这个<strong>菜单的序号是从0开始</strong>的，比如第五个Windows的序号是4
+<img src="/images/Linux-images/linux.90.png" alt="" />
+这是页尾，可以看到我设计了一个倒计时
+<img src="/images/Linux-images/linux.91.png" alt="" /></p>
+<h3 id="141进入ubuntu系统">14.1.进入Ubuntu系统</h3>
+<p>1.打开<strong>终端</strong>（快捷键<strong>Ctrl+Alt+t</strong>）<br />
+2.输入<strong>命令</strong>用nano文本编辑器打开<strong>GRUB配置的模板文件</strong>：<br />
+<strong>sudo nano /etc/default/grub</strong>
+<img src="/images/Linux-images/linux.92.png" alt="" />
+设置<strong>默认启动的序号</strong>和<strong>启动倒计时</strong><br />
+再次强调：<strong>序号是从0开始的！</strong><br />
+<strong>^是指Ctrl键</strong>，比如退出就是Ctrl+C
+<img src="/images/Linux-images/linux.93.png" alt="" /></p>
+<h3 id="142更新grub配置文件">14.2.更新GRUB配置文件</h3>
+<p>上文修改的是<strong>GRUB配置的模板文件</strong>，我们还要更新到<strong>实际的GRUB配置文件</strong><br />
+使用<strong>命令</strong>更新到实际的GRUB配置文件：<br />
+<strong>sudo update-grub</strong>
+<img src="/images/Linux-images/linux.94.png" alt="" /></p>
+<h3 id="143配置成功">14.3.配置成功</h3>
+<p>现在重启就能进入GRUB界面，可以选择进入Ubuntu系统，也可以倒计时结束默认进入Windows系统</p>
 
 <hr />
 
