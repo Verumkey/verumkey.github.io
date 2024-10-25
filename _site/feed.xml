@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T11:55:14+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T12:26:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 1.在Windows系统的基础上演示再安装Ubuntu系统<br />
 2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
@@ -5044,6 +5044,24 @@ Markdown 是一种轻量级的标记语言，常用于格式化文本。它的�
 <h2 id="5查看网站">5.查看网站</h2>
 <p>我这里仅改了下标题
 <img src="/images/Jekyll-images/jekyll.34.png" alt="" /></p>
+<h2 id="6自定义域名">6.自定义域名</h2>
+<p>1.在你的域名的域名商那里添加<strong>五条DNS记录</strong><br />
+<strong>1个CNAME记录</strong>，<strong>主机记录为www</strong>，<strong>记录值为你的仓库名</strong><br />
+(我这里就是verumkey.github.io)<br />
+<strong>4个A记录</strong>，<strong>主机记录选@</strong><br />
+<strong>记录值填写GitHub的ip地址<br />
+一.185.199.109.153<br />
+二.185.199.111.153<br />
+三.185.199.110.153<br />
+四.	185.199.108.153<br />
+解析请求来源和TTL默认即可</strong>
+<img src="/images/Jekyll-images/jekyll.36.png" alt="" />
+<img src="/images/Jekyll-images/jekyll.35.png" alt="" /></p>
+
+<p>2.然后去你的<strong>仓库的Settings</strong>的<strong>Pages</strong>里找到<strong>Custon Domain</strong><br />
+3.设置你刚才添加了DNS记录的域名的<strong>主域名</strong><br />
+4.等待验证成功
+<img src="/images/Jekyll-images/jekyll.37.png" alt="" /></p>
 
 <hr />
 
