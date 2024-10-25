@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T11:51:48+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T11:55:14+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>A blog dedicated to tutorials and insights on technology, coding, and more.</subtitle><author><name>secrecy</name><email>verumkeys@gmail.com</email></author><entry><title type="html">Linux 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Linux 使用教程" /><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 1.在Windows系统的基础上演示再安装Ubuntu系统<br />
 2.演示在vmare上运行一个Ubuntu系统的虚拟机<br />
@@ -1227,7 +1227,7 @@ LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版�
  这个网站提供了大量的 Linux 命令及其用法，适合初学者和有经验的用户。</p>
   </li>
   <li>
-    <p><strong>SS64</strong> <a href="https://ss64.com/bash/">https://ss64.com/bash/ </a>
+    <p><strong>SS64</strong> <a href="https://ss64.com/bash/">https://ss64.com/bash/</a><br />
  这个网站包含了 Bash 命令的完整列表，每个命令都有详细的说明和用法示例。</p>
   </li>
   <li>
@@ -1235,7 +1235,7 @@ LTS 是 “Long Term Support” 的简写，意为“长期支持”。LTS 版�
  提供各种文档和指南，包括 Linux 命令和系统管理的手册。</p>
   </li>
   <li>
-    <p><strong>Cheat Sheet</strong> <a href="https://www.cheat-sheets.org/">https://www.cheat-sheets.org/</a> 
+    <p><strong>Cheat Sheet</strong> <a href="https://www.cheat-sheets.org/">https://www.cheat-sheets.org/</a><br />
  这个网站提供了多个主题的备忘单，包括常用的 Linux 命令，方便快速查找。</p>
   </li>
   <li>
