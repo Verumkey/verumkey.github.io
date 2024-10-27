@@ -4,7 +4,7 @@ title: "CMD与Powershell 使用教程"
 date: 2024-10-22 
 categories: [技术，编程]
 tags: [CMD,Powershell]
-excerpt: "本篇文章演示如何从0开始使用CMD与Powershell"
+excerpt: "CMD（命令提示符）是 Windows 操作系统中的基本命令行界面，允许用户执行文件管理和系统操作，而 PowerShell 则是一个更为强大的跨平台命令行和脚本语言，支持对象导向处理和复杂的系统自动化，广泛用于系统管理任务"
 ---
 
 # **简介**

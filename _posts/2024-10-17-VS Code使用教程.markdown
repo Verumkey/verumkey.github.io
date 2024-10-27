@@ -4,7 +4,7 @@ title:  "VS Code 使用教程"
 date: 2024-10-17 
 categories: [技术，编程]
 tags: [VS Code]
-excerpt: "本篇文章演示如何从0开始使用VS Code"
+excerpt: "VSCode 是由 Microsoft 开发的一款开源代码编辑器，支持多种编程语言，具备智能代码补全、调试工具、插件扩展和 Git 集成等强大功能，适用于不同开发者的需求"
 ---
 
 # **简介**

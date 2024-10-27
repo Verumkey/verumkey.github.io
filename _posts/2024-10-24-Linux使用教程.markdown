@@ -4,7 +4,7 @@ title: "Linux 使用教程"
 date: 2024-10-24 
 categories: [技术，编程]
 tags: [Linux]
-excerpt: "本篇文章演示如何从0开始使用Linux"
+excerpt: "Linux 是一个开源的类 Unix 操作系统，以其自由、开源、多任务处理和安全性而闻名，广泛应用于服务器和个人计算机，具有强大的命令行工具和社区支持"
 ---
 
 # 简介

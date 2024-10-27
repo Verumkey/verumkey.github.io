@@ -4,7 +4,7 @@ title: "Jekyll 使用教程"
 date: 2024-10-17 
 categories: [技术，编程]
 tags: [Jekyll]
-excerpt: "本篇文章演示如何获得一个静态网站"
+excerpt: "Jekyll 是一个静态网站生成器，尤其适合创建个人博客和项目网站，支持 Markdown 格式编写内容，可以方便地部署到 GitHub Pages，提供自定义化的布局和样式选项"
 ---
 
 # **简介**
