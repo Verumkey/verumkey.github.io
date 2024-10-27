@@ -109,5 +109,25 @@ h2 {
     margin-bottom: 15px;
 }
 
+.post-card {
+    background-color: #ffffff; /* 每篇文章的背景颜色 */
+    border: 1px solid #ddd; /* 边框样式 */
+    border-radius: 8px; /* 边角圆润 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 20px; /* 块之间的间距 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
 
+.post-card h2 {
+    margin: 0 0 10px; /* 标题与下方的间距 */
+}
+
+.post-meta {
+    font-size: 0.9em; /* 文章元信息的字体大小 */
+    color: #666; /* 元信息的颜色 */
+}
+
+.post-excerpt {
+    margin-top: 10px; /* 摘要与上方的间距 */
+}
 

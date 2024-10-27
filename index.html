@@ -2,36 +2,33 @@
 layout: default
 title: Home|水镜的博客
 ---
-  <main class="page-content" aria-label="Content">
+<main class="page-content" aria-label="Content">
     <div class="wrapper">
-  
         <img src="/images/Background/star_sky.jpeg" alt="星空" class="fit-img">
 
+        <section class="articles">
+            <h1>Recent Posts</h1>
+            {% for post in site.posts %}
+                <div class="post-card">
+                    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                    <p class="post-meta">
+                        <span class="post-date">{{ post.date | date: "%Y年%-m月%-d日" }}</span> |
+                        <span class="post-category">{{ post.categories | join: ", " }}</span> |
+                        <span class="post-tags">
+                            {% for tag in post.tags %}
+                                <span class="post-tag">{{ tag }}</span>
+                            {% endfor %}
+                        </span>
+                    </p>
+                    <p class="post-excerpt">{{ post.excerpt | truncatewords: 20 }}</p>
+                </div>
+            {% endfor %}
+        </section>
 
-      <section class="articles">
-        <h1>Recent Posts</h1>
-          {% for post in site.posts %}
-            <div class="post-card">
-              <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-              <p class="post-meta">
-                <span class="post-date"> {{ post.date | date: "%Y年%-m月%-d日" }}</span> |
-                <span class="post-category">{{ post.categories | join: ", " }}</span> |
-                <span class="post-tags">
-                  {% for tag in post.tags %}
-                    <span class="post-tag">{{ tag }}</span>
-                  {% endfor %}
-                </span>
-              </p>
-              <p class="post-excerpt">{{ post.excerpt | truncatewords: 20 }}</p>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section class="about">
-        <h1>About This Blog</h1>
-        <p>文章中使用的浏览器一般是Chrome，操作都在科学环境下进行，小部分操作可能因为环境问题无法进行，请自行解决</p>
-      </section>
+        <section class="about">
+            <h1>About This Blog</h1>
+            <p>文章中使用的浏览器一般是Chrome，操作都在科学环境下进行，小部分操作可能因为环境问题无法进行，请自行解决</p>
+        </section>
     </div>
-  </main>
-
+</main>
 
