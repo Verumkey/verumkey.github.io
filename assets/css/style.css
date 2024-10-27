@@ -37,17 +37,6 @@ table {
     flex: 0 0 300px; /* 在桌面上设置侧边栏的固定宽度 */
 }
 
-@media (max-width: 768px) {
-    .container {
-        margin-top: 80px; /* 在手机上增加上边距 */
-        padding: 0; /* 在手机上设置较小的内边距 */
-    }
-
-    .sidebar {
-        width: 100%; /* 在手机上侧边栏占满宽度 */
-    }
-}
-
 /* 页眉样式 */
 header, .site-header {
     width: 100%; /* 使页眉宽度占满整个视口 */
@@ -79,19 +68,46 @@ header .toggle-btn {
     margin-right: 40px;
 }
 
+/* 主体内容样式 */
+
+.fit-img {
+    width: 100%; /* 根据需求设置宽度 */
+    height: 200px; /* 固定高度 */
+    object-fit: cover; /* 确保填满并保持比例 */
+}
+
 /* 针对移动设备的页眉样式 */
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
+    .container {
+        margin-top: 80px; /* 在手机上增加上边距 */
+        padding: 0; /* 在手机上设置较小的内边距 */
+    }
+
+    .sidebar {
+        width: 100%; /* 在手机上侧边栏占满宽度 */
     }
 }
 
-.article {
-    max-width: 100%; /* 限制宽度为 100% */
-    margin: 0 auto; /* 居中 */
+.articles, .about, .post-list {
+    max-width: 800px; /* 最大宽度，适用于桌面设备 */
+    margin: 0 auto; /* 自动边距使内容居中 */
+    padding: 20px; /* 内边距，避免内容贴边 */
+    text-align: left; /* 左对齐文本 */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 防止页面在小屏幕上横向溢出 */
 body {
     overflow-x: hidden; /* 防止横向滚动条 */
 }
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+

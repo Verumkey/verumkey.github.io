@@ -3,7 +3,7 @@ layout: post
 title: "CMD与Powershell 使用教程"
 date: 2024-10-22 
 categories: [技术，编程]
-tags: [CMD,Powershell,博客]
+tags: [CMD,Powershell]
 excerpt: "本篇文章演示如何从0开始使用CMD与Powershell"
 ---
 
