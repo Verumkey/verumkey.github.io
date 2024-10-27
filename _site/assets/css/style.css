@@ -131,3 +131,7 @@ h2 {
     margin-top: 10px; /* 摘要与上方的间距 */
 }
 
+a {
+    color: #00f;
+    text-decoration:none;
+}
