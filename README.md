@@ -3,7 +3,7 @@
 
 ---
 # 目前的页面：
-![](/images/readme_images/blog.1.png)
+![](/images/readme_images/blog.4.png)
 ![](/images/readme_images/blog.2.png)
 ![](/images/readme_images/blog.3.png)
 
