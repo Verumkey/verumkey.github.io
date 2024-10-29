@@ -5,73 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VS Code 使用教程</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px; /* 设置最大宽度 */
-            margin: 0 auto; /* 居中 */
-            padding: 20px; /* 内边距 */
-            margin-top: 60px; /* 留出页眉的空间 */
-            position: relative; /* 确保绝对定位的元素相对于容器 */
-        }
-        .toc {
-            width: 100%; /* 侧边栏宽度为100% */
-            position: fixed; /* 固定位置 */
-            top: 60px; /* 距离顶部的距离 */
-            left: 0; /* 默认隐藏 */
-            transition: transform 0.3s; /* 动画效果 */
-            background: #f9f9f9; /* 背景色 */
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
-            max-height: 80vh; /* 设置最大高度 */
-            overflow-y: auto; /* 允许纵向滚动 */
-            z-index: 1000; /* 确保在上层 */
-            transform: translateX(-100%); /* 初始隐藏 */
-        }
-
-        .toc.open {
-            transform: translateX(0); /* 打开时显示 */
-        }
-
-        .toggle-btn {
-            cursor: pointer; /* 鼠标指针样式 */
-            z-index: 1001; /* 确保在上层 */
-        }
-
-        .content {
-            margin: 0 auto; /* 居中显示内容 */
-            max-width: 800px; /* 限制最大宽度 */
-            padding: 20px; /* 内边距 */
-            position: relative; /* 确保绝对定位的元素相对于内容 */
-        }
-
-        img {
-            display: block; /* 图片作为块级元素 */
-            max-width: 100%; /* 使图片自适应宽度 */
-            height: auto; /* 保持图片比例 */
-            margin: 20px auto; /* 上下边距 */
-        }
-
-        /* 响应式样式 */
-        @media (max-width: 768px) {
-            .container {
-                width: 100%; /* 容器宽度100% */
-                padding: 10px; /* 较小内边距 */
-            }
-            .content {
-                width: 100%; /* 内容占满宽度 */
-                padding: 10px; /* 较小内边距 */
-            }
-            img {
-                margin: 20px 0; /* 图片上下边距，左右不留空 */
-            }
-        }
-    </style>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
     <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon"> 
 </head>
 <body>
@@ -79,11 +14,16 @@
     <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<header class="site-header">
-    <a href="https://verumkey.com" class="home-link">Home</a>
+<header class="header">
+    <nav>
+     <ul>
+      <li><a href="https://verumkey.com" target="_self" class="home-link">Home</a></li>
+     </ul>
+    </nav>
     <button class="toggle-btn" onclick="toggleToc()">
         <i class="fas fa-list"></i>
     </button>
+    
 </header>
 
 <div class="toc" id="toc">
@@ -501,30 +441,13 @@ VS Code还能方便的管理Git项目，详情请见介绍Git的文章</strong><
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
     <p>Contact me via email: verumkeys@gmail.com</p >
     <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. Stay tuned for interesting insights!</p >
-  </footer>
+</footer>
   
-  <style>
-    footer {
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid #e7e7e7;
-    }
-    footer p {
-      margin: 10px 0;
-    }
-    footer a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+
 
     <script>
         function toggleToc() {
