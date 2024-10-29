@@ -2,7 +2,7 @@
 
 # Site settings
 title: 水镜的博客
-description: A blog dedicated to tutorials and insights on technology, coding, and more.
+description: Save my study notes here, I hope it will be helpful to you
 url: "htpps://www.verumkey.com" # 你的网站地址，如果部署后会替换为实际网址
 baseurl: "" # 如果你将网站部署在子目录下，设置为"/your-repo"
 
@@ -47,5 +47,6 @@ defaults:
     values:
       layout: default
 
+favicon: /images/ico/favicon-32.png
 # Additional settings
 # You can add more configurations as needed
