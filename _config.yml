@@ -47,6 +47,6 @@ defaults:
     values:
       layout: default
 
-favicon: /images/ico/favicon-32.png
+favicon: /images/icon/favicon.ico
 # Additional settings
 # You can add more configurations as needed
