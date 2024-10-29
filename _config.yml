@@ -6,23 +6,17 @@ description: Save my study notes here, I hope it will be helpful to you
 url: "htpps://www.verumkey.com" # 你的网站地址，如果部署后会替换为实际网址
 baseurl: "" # 如果你将网站部署在子目录下，设置为"/your-repo"
 
-# Author settings
 author:
-  name: secrecy
-  email: verumkeys@gmail.com
+  # Biographic information
+  avatar           : "profile.png"
+  name             : "Your Sidebar Name"
+  email            : "none@example.org" 
+  github           : "academicpages"  
+  twitter          : # Username for X / Twitter
+  youtube          : # Username
 
 # Build settings
 markdown: kramdown # 使用的 Markdown 渲染器
-theme: minima # 主题设置，可以根据需求更改
-
-# Social settings
-social:
-  github: https://github.com/Verumkey
-  email: verumkeys@gmail.com
-
-# Plugins
-# plugins:
-# - jekyll-feed # RSS 订阅支持
 
 # Permalinks
 permalink: pretty # 设置固定链接格式为漂亮的链接
@@ -33,19 +27,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - _config.yml
-
-# Build settings
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
 
 favicon: /images/icon/favicon.ico
 # Additional settings
