@@ -27,10 +27,6 @@
         max-width: 100%;
         padding: 0; /* 在手机上设置较小的内边距 */
     }
-
-    .sidebar {
-        width: 100%; /* 在手机上侧边栏占满宽度 */
-    }
 }
 
 .fit-img {
