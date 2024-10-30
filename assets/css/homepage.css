@@ -24,11 +24,8 @@
 /* 针对移动设备的页眉样式 */
 @media (max-width: 768px) {
     .container {
+        max-width: 100%;
         padding: 0; /* 在手机上设置较小的内边距 */
-    }
-
-    .sidebar {
-        width: 100%; /* 在手机上侧边栏占满宽度 */
     }
 }
 
