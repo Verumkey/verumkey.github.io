@@ -16,8 +16,11 @@
     align-items: center; /* 居中对齐 */
 }
 
-.footer{
-    width: 100%;
+.footer {
+    width: 100%; /* 设置宽度为100% */
+    display: block; /* 确保是块级元素 */
+    padding: 10px; /* 可选：添加内边距 */
+    position: relative; /* 可选：为绝对定位的元素提供上下文 */
     margin-top: 10px;
 }
 
