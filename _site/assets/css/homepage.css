@@ -24,7 +24,6 @@
 /* 针对移动设备的页眉样式 */
 @media (max-width: 768px) {
     .container {
-        margin-top: 80px; /* 在手机上增加上边距 */
         padding: 0; /* 在手机上设置较小的内边距 */
     }
 
