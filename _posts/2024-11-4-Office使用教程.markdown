@@ -703,6 +703,7 @@ cd "C:\Program Files\Microsoft Office\Office16"
 ### 1. 激活和状态检查命令
 
 - **激活 Office**：
+
 ```
 cscript ospp.vbs /act
 ```
@@ -719,12 +720,14 @@ cscript ospp.vbs /dstatus
 ### 2. 设置 KMS 服务器
 
 - **设置 KMS 服务器**：
+
 ```
 cscript ospp.vbs /sethst:<KMS_Server_Address>
 ```
 替换 <KMS_Server_Address> 为 KMS 服务器的地址，比如 kms.server.com。
 
 - **设置 KMS 服务器的端口**（如果需要）：
+
 ```
 cscript ospp.vbs /setprt:<port_number>
 ```
@@ -733,12 +736,14 @@ cscript ospp.vbs /setprt:<port_number>
 ### 3. 许可证管理
 
 - **添加或更换产品密钥**：
+
 ```
 cscript ospp.vbs /inpku:<Product_Key>
 ```
 替换 <Product_Key> 为有效的 Office 产品密钥。
 
 - **卸载产品密钥**：
+
 ```
 cscript ospp.vbs /dinstid
 ```
@@ -746,6 +751,7 @@ cscript ospp.vbs /dinstid
 ### 4. 重置许可证
 
 - **重置 Office 许可证**：
+
 ```
 cscript ospp.vbs /rearm
 ```
@@ -753,6 +759,7 @@ cscript ospp.vbs /rearm
 ### 5. 获取帮助
 
 - **查看所有可用的命令**：
+
 ```
 cscript ospp.vbs /?
 ```
