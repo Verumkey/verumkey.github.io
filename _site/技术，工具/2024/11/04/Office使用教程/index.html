@@ -998,11 +998,14 @@ cscript ospp.vbs /dstatus
 <h3 id="1-激活和状态检查命令">1. 激活和状态检查命令</h3>
 
 <ul>
-  <li><strong>激活 Office</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /act
-</code></pre></div>    </div>
-    <p>这个命令用于激活 Office 产品。</p>
-  </li>
+  <li><strong>激活 Office</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /act
+</code></pre></div></div>
+<p>这个命令用于激活 Office 产品。</p>
+
+<ul>
   <li><strong>检查激活状态</strong>：</li>
 </ul>
 
@@ -1014,44 +1017,56 @@ cscript ospp.vbs /dstatus
 <h3 id="2-设置-kms-服务器">2. 设置 KMS 服务器</h3>
 
 <ul>
-  <li><strong>设置 KMS 服务器</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /sethst:&lt;KMS_Server_Address&gt;
-</code></pre></div>    </div>
-    <p>替换 <KMS_Server_Address> 为 KMS 服务器的地址，比如 kms.server.com。</KMS_Server_Address></p>
-  </li>
-  <li><strong>设置 KMS 服务器的端口</strong>（如果需要）：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /setprt:&lt;port_number&gt;
-</code></pre></div>    </div>
-    <p>替换 <port_number> 为相应的端口号，通常为 1688。</port_number></p>
-  </li>
+  <li><strong>设置 KMS 服务器</strong>：</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /sethst:&lt;KMS_Server_Address&gt;
+</code></pre></div></div>
+<p>替换 <KMS_Server_Address> 为 KMS 服务器的地址，比如 kms.server.com。</KMS_Server_Address></p>
+
+<ul>
+  <li><strong>设置 KMS 服务器的端口</strong>（如果需要）：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /setprt:&lt;port_number&gt;
+</code></pre></div></div>
+<p>替换 <port_number> 为相应的端口号，通常为 1688。</port_number></p>
 
 <h3 id="3-许可证管理">3. 许可证管理</h3>
 
 <ul>
-  <li><strong>添加或更换产品密钥</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /inpku:&lt;Product_Key&gt;
-</code></pre></div>    </div>
-    <p>替换 <Product_Key> 为有效的 Office 产品密钥。</Product_Key></p>
-  </li>
-  <li><strong>卸载产品密钥</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /dinstid
-</code></pre></div>    </div>
-    <p>用于卸载已安装的产品密钥。</p>
-    <h3 id="4-重置许可证">4. 重置许可证</h3>
-  </li>
-  <li><strong>重置 Office 许可证</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /rearm
-</code></pre></div>    </div>
-    <p>这个命令用于重置 Office 的激活状态，通常在许可证到期后使用。</p>
-    <h3 id="5-获取帮助">5. 获取帮助</h3>
-  </li>
-  <li><strong>查看所有可用的命令</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /?
-</code></pre></div>    </div>
-    <p>此命令可以查看 ospp.vbs 的所有可用命令和参数。</p>
-  </li>
+  <li><strong>添加或更换产品密钥</strong>：</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /inpku:&lt;Product_Key&gt;
+</code></pre></div></div>
+<p>替换 <Product_Key> 为有效的 Office 产品密钥。</Product_Key></p>
+
+<ul>
+  <li><strong>卸载产品密钥</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /dinstid
+</code></pre></div></div>
+<p>用于卸载已安装的产品密钥。</p>
+<h3 id="4-重置许可证">4. 重置许可证</h3>
+
+<ul>
+  <li><strong>重置 Office 许可证</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /rearm
+</code></pre></div></div>
+<p>这个命令用于重置 Office 的激活状态，通常在许可证到期后使用。</p>
+<h3 id="5-获取帮助">5. 获取帮助</h3>
+
+<ul>
+  <li><strong>查看所有可用的命令</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /?
+</code></pre></div></div>
+<p>此命令可以查看 ospp.vbs 的所有可用命令和参数。</p>
 
 <hr />
 

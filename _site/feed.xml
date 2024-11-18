@@ -1,4 +1,792 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-04T21:54:07+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>Save my study notes here, I hope it will be helpful to you</subtitle><author><name>Your Sidebar Name</name><email>none@example.org</email></author><entry><title type="html">Office 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Office 使用教程" /><published>2024-11-04T00:00:00+08:00</published><updated>2024-11-04T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-18T22:55:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>Save my study notes here, I hope it will be helpful to you</subtitle><author><name>Your Sidebar Name</name><email>none@example.org</email></author><entry><title type="html">Python 使用教程</title><link href="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Python 使用教程" /><published>2024-11-18T00:00:00+08:00</published><updated>2024-11-18T00:00:00+08:00</updated><id>http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<p>本文主要内容：<br />
+1.介绍Python的概念<br />
+2.演示配置常用的两者Python环境<br />
+一种是VS Code<br />
+一种是PyCharm(<del>提供一种专业版激活方式</del>)<br />
+3.介绍Python的部分语法<br />
+4.演示一些Python项目的实现<br />
+5.在Python项目演示中使用VS Code编写Python程序<br />
+Python官网：<a href="https://www.python.org/">https://www.python.org/</a></p>
+
+<hr />
+
+<h1 id="一python的概述">一.Python的概述</h1>
+<p>Python 是一种广泛使用的高级编程语言，因其简洁、易读和高效而受到开发者的喜爱。Python 由 <strong>Guido van Rossum</strong> 于 1980 年代末期设计，并在 1991 年首次发布。它是一种解释型语言，支持多种编程范式，包括面向对象编程、命令式编程、函数式编程和程序化编程。</p>
+
+<h2 id="1python的主要特点">1.Python的主要特点</h2>
+
+<ol>
+  <li>
+    <p><strong>简洁易学</strong>：</p>
+
+    <ul>
+      <li>Python 的语法非常简洁，接近自然语言，因此适合初学者学习。它有明确的缩进规则，避免了使用大量的括号或花括号来分隔代码块。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>跨平台支持</strong>：</p>
+
+    <ul>
+      <li>Python 可以运行在多种操作系统上，包括 Windows、Linux、macOS 等。只要安装了 Python 解释器，几乎所有平台都能运行 Python 程序。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>解释型语言</strong>：</p>
+
+    <ul>
+      <li>Python 是一种解释型语言，意味着代码在运行时逐行解释执行，不需要编译步骤。这样可以加速开发流程，并且方便调试和交互式操作。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>动态类型</strong>：</p>
+
+    <ul>
+      <li>Python 是动态类型语言，在程序运行时确定数据类型，不需要提前声明变量的类型。这使得 Python 更加灵活，但也可能导致一些运行时错误。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>广泛的标准库和第三方库</strong>：</p>
+
+    <ul>
+      <li>Python 提供了大量的标准库，涵盖了从文件操作、网络通信到数据库交互等各种功能。此外，还有丰富的第三方库和框架，像 NumPy（科学计算）、Pandas（数据分析）、Flask 和 Django（Web 开发）等，这些库扩展了 Python 的应用范围。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>面向对象</strong>：</p>
+
+    <ul>
+      <li>Python 支持面向对象编程（OOP），允许创建类和对象，支持继承、多态、封装等 OOP 特性。尽管如此，Python 也支持其他编程范式，因此在 Python 中，你可以使用面向过程的方式进行开发。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>社区支持</strong>：</p>
+
+    <ul>
+      <li>Python 拥有一个活跃的开发者社区，提供了大量的教程、论坛、开源项目和文档支持。这使得学习和解决问题变得更加容易。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>适用于多种应用领域</strong>：</p>
+
+    <ul>
+      <li>Python 在多种领域有广泛的应用，包括但不限于：
+        <ul>
+          <li><strong>Web 开发</strong>（Flask, Django）</li>
+          <li><strong>数据科学与机器学习</strong>（NumPy, Pandas, TensorFlow, Scikit-Learn）</li>
+          <li><strong>自动化脚本</strong>（文件操作、网络请求等）</li>
+          <li><strong>软件开发</strong>（桌面应用、游戏开发等）</li>
+          <li><strong>系统管理与运维</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2python的优势">2.Python的优势</h2>
+
+<ul>
+  <li><strong>易于学习和使用</strong>：Python 以其简单的语法和明确的结构而闻名，非常适合编程初学者。</li>
+  <li><strong>开发效率高</strong>：Python 的高级语法和丰富的库使得开发者能够快速开发功能强大的应用程序。</li>
+  <li><strong>丰富的社区资源</strong>：Python 拥有一个非常活跃的开发社区，开发者可以轻松获取大量的文档、教程和开源项目。</li>
+  <li><strong>广泛的应用场景</strong>：从Web开发到科学计算，Python 适用于几乎所有类型的应用开发。</li>
+</ul>
+
+<hr />
+
+<h2 id="3python的缺点">3.Python的缺点</h2>
+
+<ul>
+  <li><strong>运行速度相对较慢</strong>：作为解释型语言，Python 的执行速度比编译型语言（如 C++ 或 Java）要慢。这对于一些对性能要求极高的应用（如游戏开发、嵌入式系统）可能是一个限制。</li>
+  <li><strong>GIL（全局解释器锁）</strong>：由于 Python 的 GIL 特性，多线程编程时只能同时运行一个线程，这在处理 CPU 密集型任务时可能会影响性能。</li>
+</ul>
+
+<hr />
+
+<h2 id="4python主要应用领域">4.Python主要应用领域</h2>
+
+<ol>
+  <li>
+    <p><strong>Web 开发</strong>：</p>
+
+    <ul>
+      <li>Python 拥有强大的 Web 开发框架，如 Django 和 Flask，它们让 Web 开发更加简洁高效。Python 可以用于构建网站、Web 应用以及 API 服务。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>数据分析与数据科学</strong>：</p>
+
+    <ul>
+      <li>Python 是数据科学领域的首选语言之一。它通过库如 <strong>NumPy</strong>、<strong>Pandas</strong>、<strong>Matplotlib</strong> 等提供强大的数据处理和分析功能。同时，Python 在机器学习和人工智能领域也有着广泛的应用，库如 <strong>TensorFlow</strong>、<strong>Keras</strong>、<strong>Scikit-learn</strong> 提供了易于使用的接口。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>自动化脚本和任务调度</strong>：</p>
+
+    <ul>
+      <li>Python 常用于编写自动化脚本，帮助开发者处理日常任务，如文件处理、自动化测试、Web 数据抓取等。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>人工智能与机器学习</strong>：</p>
+
+    <ul>
+      <li>由于其简洁的语法和强大的第三方库，Python 已成为机器学习、深度学习和人工智能的主要编程语言之一。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>科学计算与数值分析</strong>：</p>
+
+    <ul>
+      <li>Python 提供了大量的数学和科学计算库，如 <strong>SciPy</strong>、<strong>SymPy</strong> 和 <strong>Matplotlib</strong>，非常适合用于物理学、工程学等领域的研究。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>桌面应用开发</strong>：</p>
+
+    <ul>
+      <li>虽然 Python 不是开发高性能桌面应用的首选，但它依然可以用于开发桌面应用程序。框架如 <strong>Tkinter</strong>、<strong>PyQt</strong> 和 <strong>Kivy</strong> 可以帮助开发跨平台的桌面应用。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="5总结">5.总结</h2>
+
+<p>Python 是一种非常灵活和强大的编程语言，凭借其简洁的语法和丰富的库，已成为各个领域（如 Web 开发、数据科学、自动化等）的首选语言。无论是初学者还是经验丰富的开发者，Python 都是一个很好的编程选择。</p>
+
+<hr />
+
+<h1 id="二python解释器">二.Python解释器</h1>
+
+<hr />
+
+<h2 id="1python-解释器的作用">1.Python 解释器的作用</h2>
+
+<ol>
+  <li>
+    <p><strong>执行 Python 代码</strong>：</p>
+
+    <ul>
+      <li>解释器将 Python 程序的源代码转换为机器能够理解的指令，并逐行执行。与编译型语言（如 C 或 C++）不同，解释型语言直接逐行解释和执行代码，而不是先将整个程序编译成可执行文件。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>语法检查和错误报告</strong>：</p>
+
+    <ul>
+      <li>解释器在执行代码时，会检查代码的语法错误。如果 Python 程序有语法错误，解释器会在执行过程中抛出错误并提供错误信息，帮助开发者修正代码。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>内存管理</strong>：</p>
+
+    <ul>
+      <li>Python 解释器负责管理内存。它会自动为对象分配内存，并使用垃圾回收机制来清理不再使用的内存空间，从而减少内存泄漏的可能。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>提供交互式环境</strong>：</p>
+
+    <ul>
+      <li>Python 解释器可以提供一个交互式的命令行环境（也叫 REPL 环境：Read-Eval-Print Loop），允许开发者直接输入代码并立即看到结果。这对于快速测试、调试和学习 Python 很有帮助。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>跨平台支持</strong>：</p>
+
+    <ul>
+      <li>Python 解释器使得 Python 程序能够在不同的平台（如 Windows、macOS 和 Linux）上运行，而不需要做太多的修改。开发者只需要安装对应操作系统的 Python 解释器。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2下载python解释器">2.下载python解释器</h2>
+<p>官网：<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a><br />
+从Python官网下载的 Python 解释器通常是 <strong>CPython</strong>，即 Python 的官方实现。CPython 是最常用和最流行的 Python 解释器，它由 C 语言编写，并且是 Python 官方推荐的版本。<br />
+<strong>1.下载并打开安装包</strong>
+<img src="/images/vscode-images/vscode.22.png" alt="" />
+<img src="/images/Python-images/python.1.png" alt="" /><strong>2.勾选下面两个选项</strong>,至少第二个要勾选<br />
+<strong>3.然后选择Customize installation(自定义安装)</strong><br />
+<strong>注释：</strong><br />
+<strong>Install Now</strong>就是默认安装到当前用户下<br />
+<strong>Customize installation</strong>可以自定义安装路径和一些选项<br />
+<strong>第一个选项是使用管理员权限安装 py.exe</strong>(python启动器,用于在 Windows 上更方便地管理和运行不同版本的 Python),会将它安装到系统目录(C:\Windows),否则安装到当前用户目录下<br />
+<strong>第二个选项是把解释器添加到系统路径</strong>，能够使得你在任何命令行窗口中直接运行python命令,而不需要指定 Python 的完整安装路径<br />
+<strong>4.这是默认的配置，不用修改，点击Next</strong>
+<img src="/images/Python-images/python.2.png" alt="" />
+<strong>5.这里可以选择安装到所有用户，这时安装路径就会变成一个公共文件夹</strong>
+<img src="/images/Python-images/python.3.png" alt="" />
+<strong>6.安装</strong>
+<img src="/images/Python-images/python.4.png" alt="" /></p>
+
+<hr />
+
+<h1 id="三配置python环境vs-code">三.配置Python环境(VS Code)</h1>
+
+<hr />
+
+<h2 id="1下载vs-code">1.下载VS Code</h2>
+<p>网址：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+<img src="/images/vscode-images/vscode.1.png" alt="" /></p>
+
+<hr />
+
+<h2 id="2配置中文环境">2.配置中文环境</h2>
+<p><strong>1.打开扩展</strong>
+<img src="/images/vscode-images/vscode.2.png" alt="" />
+<strong>2.在搜索栏中搜索Chinese<br />
+3.选择简体中文安装<br />
+4.重启</strong>
+<img src="/images/vscode-images/vscode.3.png" alt="" /></p>
+
+<hr />
+
+<h2 id="3安装插件">3.安装插件</h2>
+<h3 id="31python-插件">3.1.python 插件</h3>
+<p><img src="/images/vscode-images/vscode.24.png" alt="" />
+<strong>主要功能:</strong></p>
+<ul>
+  <li><strong>代码智能提示</strong>：提供 Python 代码的自动补全、函数参数提示、变量/函数定义跳转等功能。</li>
+  <li><strong>调试支持</strong>：集成调试器，可以直接在 VS Code 中进行 Python 代码的调试，设置断点、变量监视和调用堆栈查看等。</li>
+  <li><strong>代码检查</strong>：支持代码静态分析工具，如 Pylint 和 Flake8，帮助你发现代码中的潜在错误和格式问题。</li>
+  <li><strong>虚拟环境和 Conda 支持</strong>：可以轻松选择和管理不同的 Python 解释器、虚拟环境或 Conda 环境。</li>
+  <li><strong>Jupyter 支持</strong>：可以在 VS Code 中直接运行 Jupyter Notebooks，进行交互式的 Python 开发，特别适合数据科学工作流。</li>
+  <li><strong>测试集成</strong>：支持常用的测试框架（如 unittest、pytest），便于运行和调试测试用例。
+这个插件是 Python 开发者在 VS Code 中工作的基础工具，帮助进行代码编写、调试、测试和管理开发环境。</li>
+</ul>
+
+<hr />
+
+<h3 id="32python-extension-pack-插件">3.2.Python Extension Pack 插件</h3>
+<p><img src="/images/vscode-images/vscode.26.png" alt="" />
+<strong>主要功能:</strong><br />
+<strong>Python Extension Pack</strong> 是为 Visual Studio Code 的 Python 开发者设计的一组插件包，包含了多个非常有用的扩展，主要包括：</p>
+<ol>
+  <li><strong>Python</strong> - 提供核心功能，如代码检查（linting）、调试（包括多线程和远程调试）、智能感知（IntelliSense）、代码格式化、重构、单元测试，以及用于数据科学任务的 Jupyter Notebook 支持。</li>
+  <li><strong>Jinja</strong> - 提供 Jinja 模板语言的语法高亮和代码片段。</li>
+  <li><strong>Django</strong> - 为 Django Web 开发添加了特定的语法和代码片段。</li>
+  <li><strong>IntelliCode</strong> - 基于机器学习的 AI 辅助工具，帮助提供智能代码补全和建议。</li>
+  <li><strong>Python Environment Manager</strong> - 帮助你在 VS Code 中查看和管理 Python 环境及其依赖包。</li>
+  <li><strong>Python Docstring Generator</strong> - 辅助自动生成 Python 函数和类的文档注释。</li>
+  <li><strong>Python Indent</strong> - 自动纠正 Python 代码的缩进。</li>
+</ol>
+
+<hr />
+
+<h2 id="4编写python程序">4.编写Python程序</h2>
+
+<p><strong>1.创建一个文件</strong>
+<img src="/images/vscode-images/vscode.15.png" alt="" />
+<strong>2.通过VScode打开你上面创建的文件</strong>
+<img src="/images/vscode-images/vscode.16.png" alt="" />
+<strong>3.新建文件，后缀需为.py</strong>
+<img src="/images/vscode-images/vscode.17.png" alt="" />
+<strong>4.编写代码并运行,可以在终端看到输出结果</strong>
+<img src="/images/vscode-images/vscode.25.png" alt="" /></p>
+
+<hr />
+
+<h1 id="四配置python环境pycharm">四.配置Python环境(PyCharm)</h1>
+
+<hr />
+
+<p><strong>可以选择下载免费的社区版，仅用于学习是绰绰有余</strong><br />
+<strong>当然也可使用专业版，可以购买正版获得许可证</strong>，也能通过其他方式低成本获得激活(<del>网上购买激活码或让商家激活账号</del>，当然这些是不正规的)，<strong>接下来会演示一位大神提出的激活方式，仅为交流学习，并不提倡使用盗版</strong><br />
+<strong>如果你选择使用社区版，就在下载时选择社区版，并跳过激活专业版的教程</strong><br />
+<del>理论上该方法可以激活Jetbrains全家桶的每个软件</del></p>
+<h2 id="1pycharm专业版与社区版的区别">1.PyCharm专业版与社区版的区别</h2>
+<p><strong>PyCharm</strong> 是由 JetBrains 开发的一款广受欢迎的 Python 集成开发环境（IDE）。它有两个版本：<strong>专业版（Professional）</strong> 和 <strong>社区版（Community）</strong>。这两个版本在功能上有所不同，下面是它们的主要区别：</p>
+
+<h3 id="11-价格">1.1. 价格</h3>
+
+<ul>
+  <li><strong>社区版（Community）</strong>：免费，开源。适合个人开发者、学习者或者对功能需求较少的用户。</li>
+  <li><strong>专业版（Professional）</strong>：收费版本，需要购买许可证。它提供了更多的高级功能，适用于企业用户、专业开发者和需要高级功能的团队。</li>
+</ul>
+
+<h3 id="12-支持的开发环境">1.2. 支持的开发环境</h3>
+
+<ul>
+  <li>
+    <p><strong>社区版</strong>：</p>
+
+    <ul>
+      <li>主要支持 Python 开发。</li>
+      <li>支持基本的编辑、调试和版本控制。</li>
+      <li>提供 Python 项目的基本功能，如代码补全、语法高亮、代码导航、调试等。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>专业版</strong>：</p>
+
+    <ul>
+      <li><strong>完整的 Python 开发支持</strong>，包括 Flask、Django 等框架的支持。</li>
+      <li>支持<strong>Web 开发</strong>（HTML、CSS、JavaScript 和前端开发的功能）。</li>
+      <li>提供<strong>数据库工具</strong>，可以与数据库进行交互，如连接、查询和编辑数据库。</li>
+      <li>支持<strong>科学计算和数据分析</strong>，包括与 Jupyter Notebooks 的集成。</li>
+      <li>支持 <strong>Docker</strong> 和 <strong>远程开发</strong>，适合容器化开发和使用远程开发环境。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="13-web-开发支持">1.3. Web 开发支持</h3>
+
+<ul>
+  <li><strong>社区版</strong>：不支持 Web 开发框架。</li>
+  <li><strong>专业版</strong>：支持 Web 开发框架，如 <strong>Django</strong>、<strong>Flask</strong>、<strong>Pyramid</strong> 等，且包含 Web 调试、模板编辑、前端开发等功能。</li>
+</ul>
+
+<h3 id="14-数据库支持">1.4. 数据库支持</h3>
+
+<ul>
+  <li><strong>社区版</strong>：没有内置数据库支持。</li>
+  <li><strong>专业版</strong>：提供强大的数据库工具，允许你连接、编辑和查询关系型数据库（如 MySQL、PostgreSQL、SQLite、Oracle 等），并且能够在 IDE 内部直接执行 SQL 查询。</li>
+</ul>
+
+<h3 id="15-科学计算与数据科学支持">1.5. 科学计算与数据科学支持</h3>
+
+<ul>
+  <li><strong>社区版</strong>：不支持数据科学的相关功能。</li>
+  <li><strong>专业版</strong>：提供对数据科学、科学计算的支持，包括对 <strong>Jupyter Notebooks</strong>、<strong>Pandas</strong>、<strong>NumPy</strong> 等库的集成，方便数据科学家和研究人员使用。</li>
+</ul>
+
+<h3 id="16-远程开发和部署">1.6. 远程开发和部署</h3>
+
+<ul>
+  <li><strong>社区版</strong>：不支持远程开发和容器化部署。</li>
+  <li><strong>专业版</strong>：支持远程开发、部署和调试，支持使用 <strong>Docker</strong>、<strong>Vagrant</strong>、<strong>SSH</strong> 等技术进行远程开发，适用于在云服务器或虚拟机上进行开发。</li>
+</ul>
+
+<h3 id="17-支持的框架">1.7. 支持的框架</h3>
+
+<ul>
+  <li><strong>社区版</strong>：支持基本的 Python 语言开发。</li>
+  <li><strong>专业版</strong>：支持更多的开发框架和技术栈，包括：
+    <ul>
+      <li><strong>Web 框架</strong>：如 Django、Flask、Pyramid。</li>
+      <li><strong>数据科学工具</strong>：如 Jupyter、Matplotlib、Pandas 等。</li>
+      <li><strong>更多的数据库支持</strong>：包括关系型数据库的查询和管理工具。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="18-编辑器与调试工具">1.8. 编辑器与调试工具</h3>
+
+<ul>
+  <li><strong>社区版</strong>：提供基本的代码编辑、调试、版本控制支持。</li>
+  <li><strong>专业版</strong>：提供更为强大的调试工具，包括对 <strong>多线程调试</strong>、<strong>Web 应用调试</strong>、<strong>数据库调试</strong>等的支持。</li>
+</ul>
+
+<h3 id="19-集成工具">1.9. 集成工具</h3>
+
+<ul>
+  <li><strong>社区版</strong>：集成 Git 和 GitHub，支持基础的版本控制。</li>
+  <li><strong>专业版</strong>：集成了更多的版本控制系统，如 Git、Mercurial、Subversion（SVN），并且支持更多的工具集成（例如 Docker 和 Kubernetes 等）。</li>
+</ul>
+
+<h3 id="110总结">1.10.总结</h3>
+
+<ul>
+  <li><strong>社区版</strong>适合学习、基础的 Python 开发、简单的项目和个人开发者。它涵盖了 Python 开发的基础功能，且免费。</li>
+  <li><strong>专业版</strong>适合需要更强大功能的专业开发者和团队，特别是涉及 Web 开发、数据科学、数据库和远程开发等领域。它提供了更全面的功能，但需要付费。</li>
+</ul>
+
+<p>如果你只是学习 Python 或者进行简单的项目开发，<strong>社区版</strong>完全足够。而如果你从事 Web 开发、数据科学或复杂的企业级开发，或者需要与数据库进行交互，<strong>专业版</strong>将为你提供更多的工具和支持。</p>
+
+<hr />
+
+<h2 id="2下载pycharm">2.下载PyCharm</h2>
+<p>官网：<a href="https://www.jetbrains.com/zh-cn/pycharm/">https://www.jetbrains.com/zh-cn/pycharm/</a><br />
+<strong>1.点击下载</strong>
+<img src="/images/Python-images/python.5.png" alt="" />
+<strong>这个是专业版，需要付费</strong>
+<img src="/images/Python-images/python.6.png" alt="" />
+<strong>下滑可以看到免费的社区版</strong>
+<img src="/images/Python-images/python.7.png" alt="" />
+<strong>1.选择下载哪个版本，下载后打开安装包(这里是专业版)</strong>
+<img src="/images/Python-images/python.8.png" alt="" />
+<strong>2.可以自定义安装路径</strong>
+<img src="/images/Python-images/python.9.png" alt="" />
+<strong>3.推荐将这四个都勾选</strong>
+<img src="/images/Python-images/python.10.png" alt="" />
+<strong>4.可选择将快捷方式安装在哪，然后安装</strong>
+<img src="/images/Python-images/python.11.png" alt="" /></p>
+
+<hr />
+
+<h2 id="3激活专业版">3.激活专业版</h2>
+<p>如果选择使用社区版，可以跳过<br />
+关于激活原理，仅给出自己的理解作为参考：<br />
+这个过程通过修改 PyCharm 的启动参数，使用 Java 代理（<code class="language-plaintext highlighter-rouge">ja-netfilter.jar</code>）绕过激活检查，同时提供了一种手动或自动配置方式来完成激活。通过使用指定的激活密钥和更改 Java 环境的访问权限，这种方法可以让用户在没有正式许可证的情况下继续使用软件。<br />
+<strong>1.进入网址：</strong><a href="https://3.jetbra.in/">https://3.jetbra.in/</a><br />
+<strong>2.随便选择一个可用的网站进入</strong>
+<img src="/images/Python-images/python.12.png" alt="" />
+<strong>3.下载这个文件并解压缩</strong>
+<img src="/images/Python-images/python.13.png" alt="" />
+<strong>4.打开解压后的文件</strong>
+<img src="/images/Python-images/python.14.png" alt="" />
+<strong>5.关于如何激活，我们可以看看作者给出的方法，打开readme.txt</strong>
+<img src="/images/Python-images/python.15.png" alt="" />
+这里激活的核心是绕过软件的许可证验证<br />
+作者给出了一个自动完成配置的脚本<br />
+<img src="/images/Python-images/python.16.png" alt="" />
+<strong>6.打开scripts(脚本)</strong>
+<img src="/images/Python-images/python.17.png" alt="" />
+<strong>7.运行安装到所有用户的脚本</strong>，安装到当前用户的脚本也可以<br />
+<strong>注释：</strong><br />
+<strong>VMOptions 文件</strong>（通常称为 <strong><code class="language-plaintext highlighter-rouge">vmoptions</code></strong> 文件）是一个配置文件，它包含用于定制和配置 <strong>JVM</strong>（Java 虚拟机）运行时行为的启动参数。它允许用户调整 JVM 的内存使用、性能优化、调试设置、代理配置等。</p>
+
+<p>JetBrains 产品（如 <strong>PyCharm</strong>）是基于 Java 的，因此它们也使用 JVM。通过编辑 <code class="language-plaintext highlighter-rouge">vmoptions</code> 文件，用户可以修改这些参数来优化应用程序的运行，例如设置内存大小、启用代理等。</p>
+
+<p>该脚本通过修改 JetBrains 产品（如 PyCharm、IntelliJ IDEA 等）的 <code class="language-plaintext highlighter-rouge">vmoptions</code> 文件，注入 <code class="language-plaintext highlighter-rouge">ja-netfilter.jar</code> Java 代理，通常用于绕过授权验证或进行其他定制操作。它首先确保以管理员权限运行，删除旧的配置，然后将新的代理配置应用到目标产品的环境变量中，最终在启动时加载代理文件。
+<img src="/images/Python-images/python.18.png" alt="" />
+<img src="/images/Python-images/python.19.png" alt="" />
+<strong>8.等待完成</strong>
+<img src="/images/Python-images/python.20.png" alt="" />
+<strong>9.回到之前的网站，找到PyCharm，复制激活码</strong>
+<img src="/images/Python-images/python.21.png" alt="" />
+<strong>10.运行安装好的PyCharm</strong><br />
+<strong>11.激活许可证的三个选项中选择激活码，然后将激活码粘贴进去，点击激活</strong>
+<img src="/images/Python-images/python.22.png" alt="" />
+<strong>12.可以看到激活完成</strong><br />
+<strong>可以看到有效期是到2026年9月14日，根据作者的说法，到了有效期后仍可一直使用</strong><br />
+<strong>到时若不能继续使用，我再回来更新其它方法</strong>
+<img src="/images/Python-images/python.23.png" alt="" /></p>
+
+<hr />
+
+<h2 id="4编写python程序-1">4.编写python程序</h2>
+<p>在Customize(定制)中可将语言设置为中文
+<img src="/images/Python-images/python.24.png" alt="" />
+<img src="/images/Python-images/python.25.png" alt="" />
+<img src="/images/Python-images/python.26.png" alt="" /></p>
+
+<hr />
+
+<h1 id="五python的语法">五.Python的语法</h1>
+
+<hr />
+
+<p>这里有许多python书籍的电子版:<a href="https://github.com/square1979/Some_Books">https://github.com/square1979/Some_Books</a><br />
+Python 的语法结构是简洁和易读的。以下是 Python 中常见的语法元素和规则的详细概述：</p>
+<h2 id="1-注释">1. 注释</h2>
+
+<ul>
+  <li>单行注释：使用 <code class="language-plaintext highlighter-rouge">#</code> 进行注释。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 这是一个注释
+</span></code></pre></div></div>
+
+<ul>
+  <li>多行注释：使用三引号（<code class="language-plaintext highlighter-rouge">'''</code> 或 <code class="language-plaintext highlighter-rouge">"""</code>）进行注释。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sh">'''</span><span class="s">这是多行注释</span><span class="sh">'''</span>
+<span class="sh">"""</span><span class="s">
+这也是多行注释
+</span><span class="sh">"""</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="2-变量和数据类型">2. 变量和数据类型</h2>
+
+<ul>
+  <li>变量赋值：Python 是动态类型语言，变量不需要显式声明类型。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 整数 
+</span><span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>  <span class="c1"># 浮动数 
+</span><span class="n">name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">John</span><span class="sh">"</span>  <span class="c1"># 字符串 
+</span><span class="n">is_active</span> <span class="o">=</span> <span class="bp">True</span>  <span class="c1"># 布尔值
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="3-数据结构">3. 数据结构</h2>
+
+<ul>
+  <li><strong>列表（List）</strong>：有序、可变的集合。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>元组（Tuple）</strong>：有序、不可变的集合。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>字典（Dictionary）</strong>：键值对的无序集合。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">John</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">age</span><span class="sh">"</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>集合（Set）</strong>：无序、唯一元素的集合。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="4-控制结构">4. 控制结构</h2>
+
+<ul>
+  <li><strong>条件语句（if-elif-else）</strong>：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x是正数</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x是零</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x是负数</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>循环语句（for 和 while）</strong>：</li>
+  <li><code class="language-plaintext highlighter-rouge">for</code> 循环：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">while</code> 循环：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="5-函数">5. 函数</h2>
+
+<ul>
+  <li>定义函数使用 <code class="language-plaintext highlighter-rouge">def</code>：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="sh">"</span><span class="s">Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">!</span><span class="sh">"</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>调用函数：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="nf">greet</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="6-异常处理">6. 异常处理</h2>
+
+<ul>
+  <li>使用 <code class="language-plaintext highlighter-rouge">try-except</code> 语句处理异常：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="nb">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">不能除以零</span><span class="sh">"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="7-类和对象">7. 类和对象</h2>
+
+<ul>
+  <li>定义类：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Hello, my name is </span><span class="si">{</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s"> and I am </span><span class="si">{</span><span class="n">self</span><span class="p">.</span><span class="n">age</span><span class="si">}</span><span class="s"> years old.</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>创建对象：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">John</span><span class="sh">"</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">person</span><span class="p">.</span><span class="nf">greet</span><span class="p">()</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="8-模块和包">8. 模块和包</h2>
+
+<ul>
+  <li>导入模块：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">math</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>  <span class="c1"># 4.0
+</span></code></pre></div></div>
+
+<ul>
+  <li>从模块中导入特定函数或类：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>  <span class="c1"># 4.0
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="9-列表推导式">9. 列表推导式</h2>
+
+<ul>
+  <li>列表推导式是用于创建新列表的一种简洁方法：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># [0, 1, 4, 9, 16]
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="10-lambda-表达式">10. Lambda 表达式</h2>
+
+<ul>
+  <li>使用 <code class="language-plaintext highlighter-rouge">lambda</code> 定义匿名函数：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 5
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="11-文件操作">11. 文件操作</h2>
+
+<ul>
+  <li>读取文件：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">file.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>写入文件：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">file.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">w</span><span class="sh">'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="12-列表操作">12. 列表操作</h2>
+
+<ul>
+  <li><strong>连接</strong>：使用 <code class="language-plaintext highlighter-rouge">+</code> 连接列表。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4]
+</span></code></pre></div></div>
+
+<ul>
+  <li><strong>重复</strong>：使用 <code class="language-plaintext highlighter-rouge">*</code> 重复列表。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">repeated</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">repeated</span><span class="p">)</span>  <span class="c1"># [1, 2, 1, 2, 1, 2]
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="13-迭代器与生成器">13. 迭代器与生成器</h2>
+
+<ul>
+  <li>迭代器：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">iter_nums</span> <span class="o">=</span> <span class="nf">iter</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">iter_nums</span><span class="p">))</span>  <span class="c1"># 1
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">next</span><span class="p">(</span><span class="n">iter_nums</span><span class="p">))</span>  <span class="c1"># 2
+</span></code></pre></div></div>
+
+<ul>
+  <li>生成器：使用 <code class="language-plaintext highlighter-rouge">yield</code> 创建生成器。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">count_up_to</span><span class="p">(</span><span class="nb">max</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">count</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="14-python-特性">14. Python 特性</h2>
+
+<ul>
+  <li><strong>动态类型</strong>：Python 在运行时决定变量的类型。</li>
+  <li><strong>自动内存管理</strong>：Python 使用垃圾回收机制自动管理内存。</li>
+  <li><strong>缩进</strong>：Python 使用缩进来表示代码块，而不是大括号 <code class="language-plaintext highlighter-rouge">{}</code>。</li>
+</ul>
+
+<hr />
+
+<h2 id="15-其他常用功能">15. 其他常用功能</h2>
+
+<ul>
+  <li><strong>字符串格式化</strong>：Python 3.6 引入了 f-string：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s"> and I am </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s"> years old.</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>枚举（Enum）</strong>：定义一组常量：</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div></div>
+
+<p>这只是 Python 语法的一部分。Python 的语法非常丰富，涵盖了从基础到高级的多种特性和功能。在实际编码中，你会根据需求选择使用不同的语法结构和功能。</p>
+
+<hr />
+
+<h1 id="六python项目">六.Python项目</h1>]]></content><author><name>Your Sidebar Name</name><email>none@example.org</email></author><category term="编程语言" /><category term="Python" /><summary type="html"><![CDATA[Python是一种高级编程语言，因其简洁易读的语法和强大的功能而广泛应用于数据分析、人工智能、网络开发、自动化脚本等多个领域。它支持面向对象、函数式编程，并拥有丰富的第三方库。Python具有跨平台的特性，可以在Windows、Linux和macOS等操作系统上运行。]]></summary></entry><entry><title type="html">Office 使用教程</title><link href="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Office 使用教程" /><published>2024-11-04T00:00:00+08:00</published><updated>2024-11-04T00:00:00+08:00</updated><id>http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 <strong>1.介绍Office的概念<br />
 2.演示如何安装并激活Office<br />
@@ -963,11 +1751,14 @@ cscript ospp.vbs /dstatus
 <h3 id="1-激活和状态检查命令">1. 激活和状态检查命令</h3>
 
 <ul>
-  <li><strong>激活 Office</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /act
-</code></pre></div>    </div>
-    <p>这个命令用于激活 Office 产品。</p>
-  </li>
+  <li><strong>激活 Office</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /act
+</code></pre></div></div>
+<p>这个命令用于激活 Office 产品。</p>
+
+<ul>
   <li><strong>检查激活状态</strong>：</li>
 </ul>
 
@@ -979,44 +1770,56 @@ cscript ospp.vbs /dstatus
 <h3 id="2-设置-kms-服务器">2. 设置 KMS 服务器</h3>
 
 <ul>
-  <li><strong>设置 KMS 服务器</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /sethst:&lt;KMS_Server_Address&gt;
-</code></pre></div>    </div>
-    <p>替换 <KMS_Server_Address> 为 KMS 服务器的地址，比如 kms.server.com。</KMS_Server_Address></p>
-  </li>
-  <li><strong>设置 KMS 服务器的端口</strong>（如果需要）：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /setprt:&lt;port_number&gt;
-</code></pre></div>    </div>
-    <p>替换 <port_number> 为相应的端口号，通常为 1688。</port_number></p>
-  </li>
+  <li><strong>设置 KMS 服务器</strong>：</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /sethst:&lt;KMS_Server_Address&gt;
+</code></pre></div></div>
+<p>替换 <KMS_Server_Address> 为 KMS 服务器的地址，比如 kms.server.com。</KMS_Server_Address></p>
+
+<ul>
+  <li><strong>设置 KMS 服务器的端口</strong>（如果需要）：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /setprt:&lt;port_number&gt;
+</code></pre></div></div>
+<p>替换 <port_number> 为相应的端口号，通常为 1688。</port_number></p>
 
 <h3 id="3-许可证管理">3. 许可证管理</h3>
 
 <ul>
-  <li><strong>添加或更换产品密钥</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /inpku:&lt;Product_Key&gt;
-</code></pre></div>    </div>
-    <p>替换 <Product_Key> 为有效的 Office 产品密钥。</Product_Key></p>
-  </li>
-  <li><strong>卸载产品密钥</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /dinstid
-</code></pre></div>    </div>
-    <p>用于卸载已安装的产品密钥。</p>
-    <h3 id="4-重置许可证">4. 重置许可证</h3>
-  </li>
-  <li><strong>重置 Office 许可证</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /rearm
-</code></pre></div>    </div>
-    <p>这个命令用于重置 Office 的激活状态，通常在许可证到期后使用。</p>
-    <h3 id="5-获取帮助">5. 获取帮助</h3>
-  </li>
-  <li><strong>查看所有可用的命令</strong>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /?
-</code></pre></div>    </div>
-    <p>此命令可以查看 ospp.vbs 的所有可用命令和参数。</p>
-  </li>
+  <li><strong>添加或更换产品密钥</strong>：</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /inpku:&lt;Product_Key&gt;
+</code></pre></div></div>
+<p>替换 <Product_Key> 为有效的 Office 产品密钥。</Product_Key></p>
+
+<ul>
+  <li><strong>卸载产品密钥</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /dinstid
+</code></pre></div></div>
+<p>用于卸载已安装的产品密钥。</p>
+<h3 id="4-重置许可证">4. 重置许可证</h3>
+
+<ul>
+  <li><strong>重置 Office 许可证</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /rearm
+</code></pre></div></div>
+<p>这个命令用于重置 Office 的激活状态，通常在许可证到期后使用。</p>
+<h3 id="5-获取帮助">5. 获取帮助</h3>
+
+<ul>
+  <li><strong>查看所有可用的命令</strong>：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cscript ospp.vbs /?
+</code></pre></div></div>
+<p>此命令可以查看 ospp.vbs 的所有可用命令和参数。</p>
 
 <hr />
 
