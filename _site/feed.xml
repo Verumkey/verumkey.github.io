@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-20T20:35:04+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>Save my study notes here, I hope it will be helpful to you</subtitle><author><name>Your Sidebar Name</name><email>none@example.org</email></author><entry><title type="html">Python 使用教程</title><link href="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Python 使用教程" /><published>2024-11-18T00:00:00+08:00</published><updated>2024-11-18T00:00:00+08:00</updated><id>http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-01T20:16:19+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">水镜的博客</title><subtitle>Save my study notes here, I hope it will be helpful to you</subtitle><author><name>Your Sidebar Name</name><email>none@example.org</email></author><entry><title type="html">Python 使用教程</title><link href="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html" title="Python 使用教程" /><published>2024-11-18T00:00:00+08:00</published><updated>2024-11-18T00:00:00+08:00</updated><id>http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><![CDATA[<h1 id="简介">简介</h1>
 <p>本文主要内容：<br />
 1.介绍Python的概念<br />
 2.演示配置常用的两者Python环境<br />
@@ -3468,6 +3468,590 @@ print(f"Hello, {full_name.title()}!")
     </ul>
   </li>
 </ol>
+
+<hr />
+
+<h2 id="13第三方库"><strong>13.第三方库</strong></h2>
+<h3 id="131-什么是第三方库">13.1. 什么是第三方库？</h3>
+
+<ul>
+  <li><strong>第三方库</strong> 是指非 Python 标准库中的模块或包，由社区开发和维护。</li>
+  <li>例如：<code class="language-plaintext highlighter-rouge">numpy</code>（数值计算）、<code class="language-plaintext highlighter-rouge">pandas</code>（数据分析）、<code class="language-plaintext highlighter-rouge">requests</code>（网络请求）、<code class="language-plaintext highlighter-rouge">matplotlib</code>（数据可视化）等。</li>
+</ul>
+
+<hr />
+
+<h3 id="132-第三方库的安装">13.2. 第三方库的安装</h3>
+
+<h4 id="安装工具pip">安装工具：pip</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pip</code> 是 Python 的包管理工具，用于安装和管理第三方库。</li>
+</ul>
+
+<h4 id="安装第三方库">安装第三方库</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>库名
+</code></pre></div></div>
+
+<p>例如，安装 requests：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>requests
+</code></pre></div></div>
+
+<h4 id="指定版本安装">指定版本安装</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>库名<span class="o">==</span>版本号
+</code></pre></div></div>
+
+<p>例如，安装 <code class="language-plaintext highlighter-rouge">numpy</code> 的 1.21.0 版本：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span><span class="nv">numpy</span><span class="o">==</span>1.21.0
+</code></pre></div></div>
+
+<h4 id="升级库">升级库</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> 库名
+</code></pre></div></div>
+
+<h4 id="卸载库">卸载库</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip uninstall 库名
+</code></pre></div></div>
+
+<h4 id="列出已安装的库">列出已安装的库</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip list
+</code></pre></div></div>
+
+<h4 id="查看特定库的信息">查看特定库的信息</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip show 库名
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="133-第三方库的导入与使用">13.3. 第三方库的导入与使用</h3>
+
+<h4 id="导入库">导入库</h4>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">import</code> 关键字导入库：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span>  <span class="c1"># 导入整个库
+</span><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>  <span class="c1"># 使用别名
+</span><span class="kn">from</span> <span class="n">math</span> <span class="kn">import</span> <span class="n">sqrt</span>  <span class="c1"># 从模块中导入特定函数
+</span></code></pre></div></div>
+
+<h4 id="检查是否安装">检查是否安装</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="n">numpy</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">库已安装</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">库未安装</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="134-管理项目依赖">13.4. 管理项目依赖</h3>
+
+<h4 id="生成依赖文件requirementstxt">生成依赖文件：requirements.txt</h4>
+
+<p>开发项目时可以记录所有依赖库及其版本：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip freeze <span class="o">&gt;</span> requirements.txt
+</code></pre></div></div>
+
+<p>生成的 <code class="language-plaintext highlighter-rouge">requirements.txt</code> 内容可能如下：</p>
+
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">numpy</span><span class="o">==</span>1.21.0
+<span class="nv">pandas</span><span class="o">==</span>1.3.3
+<span class="nv">requests</span><span class="o">==</span>2.26.0
+</code></pre></div></div>
+
+<h4 id="通过依赖文件安装库">通过依赖文件安装库</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="135-常用第三方库及示例">13.5. 常用第三方库及示例</h3>
+
+<h4 id="1-数据处理numpy">(1) 数据处理：numpy</h4>
+
+<ul>
+  <li>用于数值计算和矩阵操作。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="nf">mean</span><span class="p">())</span>  <span class="c1"># 求平均值
+</span></code></pre></div></div>
+
+<h4 id="2-数据分析pandas">(2) 数据分析：pandas</h4>
+
+<ul>
+  <li>用于数据清洗和分析。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">Name</span><span class="sh">'</span><span class="p">:</span> <span class="p">[</span><span class="sh">'</span><span class="s">Alice</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">Bob</span><span class="sh">'</span><span class="p">],</span> <span class="sh">'</span><span class="s">Age</span><span class="sh">'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="nf">head</span><span class="p">())</span>  <span class="c1"># 查看数据表的前几行
+</span></code></pre></div></div>
+
+<h4 id="3-网络请求requests">(3) 网络请求：requests</h4>
+
+<ul>
+  <li>用于发送 HTTP 请求。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">https://api.github.com</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>  <span class="c1"># 查看状态码
+</span><span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">())</span>  <span class="c1"># 解析 JSON 响应
+</span></code></pre></div></div>
+
+<h4 id="4-数据可视化matplotlib">(4) 数据可视化：matplotlib</h4>
+
+<ul>
+  <li>用于生成图表。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h4 id="5-机器学习scikit-learn">(5) 机器学习：scikit-learn</h4>
+
+<ul>
+  <li>提供多种机器学习算法。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">LinearRegression</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">([[</span><span class="mi">4</span><span class="p">]]))</span>  <span class="c1"># 预测值
+</span></code></pre></div></div>
+
+<h4 id="6-爬虫工具beautifulsoup">(6) 爬虫工具：BeautifulSoup</h4>
+
+<ul>
+  <li>用于解析 HTML 页面。</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="n">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">https://example.com</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="sh">'</span><span class="s">html.parser</span><span class="sh">'</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">string</span><span class="p">)</span>  <span class="c1"># 打印页面标题
+</span></code></pre></div></div>
+
+<hr />
+
+<h3 id="136-虚拟环境的使用">13.6. 虚拟环境的使用</h3>
+
+<p>虚拟环境可以隔离项目依赖，防止不同项目之间的库版本冲突。</p>
+
+<h4 id="创建虚拟环境">创建虚拟环境</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> venv 环境名
+</code></pre></div></div>
+
+<h4 id="激活虚拟环境">激活虚拟环境</h4>
+
+<ul>
+  <li>Windows:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>环境名<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</code></pre></div></div>
+
+<ul>
+  <li>macOS/Linux:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>环境名/bin/activate
+</code></pre></div></div>
+
+<h4 id="退出虚拟环境">退出虚拟环境</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deactivate
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="137-第三方库的开发与发布">13.7. 第三方库的开发与发布</h3>
+
+<h4 id="开发库">开发库</h4>
+
+<ol>
+  <li>编写模块代码，组织功能。</li>
+  <li>创建 <code class="language-plaintext highlighter-rouge">setup.py</code> 文件定义库信息。</li>
+</ol>
+
+<p>示例 <code class="language-plaintext highlighter-rouge">setup.py</code>：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+
+<span class="nf">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">my_package</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="sh">"</span><span class="s">0.1</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="nf">find_packages</span><span class="p">(),</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="sh">"</span><span class="s">numpy</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">pandas</span><span class="sh">"</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="发布库">发布库</h4>
+
+<ul>
+  <li>将库上传到 <a href="https://pypi.org/">PyPI</a>。</li>
+</ul>
+
+<ol>
+  <li>打包项目：</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py sdist
+</code></pre></div></div>
+
+<ol>
+  <li>安装 <code class="language-plaintext highlighter-rouge">twine</code>：</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>twine
+</code></pre></div></div>
+
+<ol>
+  <li>上传项目：</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>twine upload dist/<span class="k">*</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="138-常见问题及解决方案">13.8. 常见问题及解决方案</h3>
+
+<h4 id="1-安装失败">(1) 安装失败</h4>
+
+<ul>
+  <li>错误信息：<code class="language-plaintext highlighter-rouge">No matching distribution found</code>
+    <ul>
+      <li>解决方案：检查库名称是否正确，或升级 <code class="language-plaintext highlighter-rouge">pip</code>：</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+</code></pre></div></div>
+
+<h4 id="2-版本冲突">(2) 版本冲突</h4>
+
+<ul>
+  <li>错误信息：<code class="language-plaintext highlighter-rouge">Cannot install package due to conflicting versions</code>
+    <ul>
+      <li>解决方案：使用虚拟环境或指定兼容版本。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3-运行时找不到库">(3) 运行时找不到库</h4>
+
+<ul>
+  <li>错误信息：<code class="language-plaintext highlighter-rouge">ModuleNotFoundError</code>
+    <ul>
+      <li>解决方案：检查库是否已正确安装。</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="14测试"><strong>14.测试</strong></h2>
+<h3 id="141-python-测试的分类">14.1. Python 测试的分类</h3>
+
+<ul>
+  <li><strong>单元测试（Unit Test）</strong>：测试单个功能或模块。</li>
+  <li><strong>集成测试（Integration Test）</strong>：测试多个模块的交互是否正常。</li>
+  <li><strong>功能测试（Functional Test）</strong>：模拟用户行为以验证系统是否符合预期。</li>
+  <li><strong>性能测试（Performance Test）</strong>：评估代码在特定条件下的性能表现。</li>
+</ul>
+
+<hr />
+
+<h3 id="142-测试框架的选择">14.2. 测试框架的选择</h3>
+
+<p>Python 提供多种测试框架，以下是常用框架及其特点：</p>
+
+<h4 id="1内置框架unittest">（1）内置框架：unittest</h4>
+
+<ul>
+  <li>Python 内置的测试框架。</li>
+  <li>适合单元测试，支持测试套件和断言。</li>
+</ul>
+
+<h4 id="2第三方框架">（2）第三方框架</h4>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">pytest</code></strong>：功能强大，支持插件，简洁易用。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">nose2</code></strong>：<code class="language-plaintext highlighter-rouge">unittest</code> 的扩展，支持发现和运行测试。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">tox</code></strong>：用于多环境测试。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">hypothesis</code></strong>：基于属性的测试，用于生成测试用例。</li>
+</ul>
+
+<hr />
+
+<h3 id="143-使用-unittest-测试">14.3. 使用 unittest 测试</h3>
+
+<h4 id="1基本用法">（1）基本用法</h4>
+
+<p>创建一个测试文件，使用 <code class="language-plaintext highlighter-rouge">unittest.TestCase</code> 定义测试类和测试方法：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">unittest</span>
+
+<span class="c1"># 待测试代码
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># 测试类
+</span><span class="k">class</span> <span class="nc">TestMathFunctions</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">assertEqual</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">assertEqual</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">assertNotEqual</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># 运行测试
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="p">.</span><span class="nf">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>断言方法</strong>：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">assertEqual(a, b)</code>：断言 <code class="language-plaintext highlighter-rouge">a == b</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">assertNotEqual(a, b)</code>：断言 <code class="language-plaintext highlighter-rouge">a != b</code>。</li>
+      <li><code class="language-plaintext highlighter-rouge">assertTrue(x)</code> / <code class="language-plaintext highlighter-rouge">assertFalse(x)</code>：断言布尔值。</li>
+      <li><code class="language-plaintext highlighter-rouge">assertRaises(Exception, func, *args)</code>：断言代码抛出指定异常。</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h4 id="2测试套件">（2）测试套件</h4>
+
+<p>使用测试套件将多个测试组合在一起运行：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">suite</span><span class="p">():</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="p">.</span><span class="nc">TestSuite</span><span class="p">()</span>
+    <span class="n">suite</span><span class="p">.</span><span class="nf">addTest</span><span class="p">(</span><span class="nc">TestMathFunctions</span><span class="p">(</span><span class="sh">"</span><span class="s">test_add</span><span class="sh">"</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">suite</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="p">.</span><span class="nc">TextTestRunner</span><span class="p">()</span>
+    <span class="n">runner</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="nf">suite</span><span class="p">())</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="3组织测试">（3）组织测试</h4>
+
+<p>将测试文件放置在单独的目录（如 <code class="language-plaintext highlighter-rouge">tests</code>），通过 <code class="language-plaintext highlighter-rouge">unittest</code> 自动发现并运行测试：</p>
+
+<p>目录结构：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project/
+├── my_module.py
+└── tests/
+    ├── test_my_module.py
+</code></pre></div></div>
+
+<p>运行命令：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> unittest discover <span class="nt">-s</span> tests
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="144-使用-pytest-测试">14.4. 使用 pytest 测试</h3>
+
+<h4 id="1基本用法-1">（1）基本用法</h4>
+
+<p><code class="language-plaintext highlighter-rouge">pytest</code> 具有更简洁的语法：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># test_math.py
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">test_add</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+    <span class="k">assert</span> <span class="nf">add</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p>运行测试：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="2测试失败时的调试">（2）测试失败时的调试</h4>
+
+<ul>
+  <li>如果测试失败，<code class="language-plaintext highlighter-rouge">pytest</code> 会自动显示详细的错误信息：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assert 5 == 6
+</code></pre></div></div>
+
+<ul>
+  <li>使用 <code class="language-plaintext highlighter-rouge">-v</code> 参数查看详细信息：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest -v
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="3使用参数化">（3）使用参数化</h4>
+
+<p><code class="language-plaintext highlighter-rouge">pytest</code> 支持参数化测试，用于测试多个输入组合：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pytest</span>
+
+<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="sh">"</span><span class="s">a, b, expected</span><span class="sh">"</span><span class="p">,</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="4运行特定测试">（4）运行特定测试</h4>
+
+<p>通过关键字运行某个测试：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest <span class="nt">-k</span> <span class="s2">"test_add"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="145-测试覆盖率">14.5. 测试覆盖率</h3>
+
+<h4 id="安装-coverage-工具">安装 coverage 工具</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>coverage
+</code></pre></div></div>
+
+<h4 id="生成覆盖率报告">生成覆盖率报告</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coverage run <span class="nt">-m</span> pytest
+coverage report
+</code></pre></div></div>
+
+<p>生成 HTML 报告：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coverage html
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="146-mock-测试">14.6. Mock 测试</h3>
+
+<h4 id="基本用法-1">基本用法</h4>
+
+<p><code class="language-plaintext highlighter-rouge">unittest.mock</code> 模块可用于模拟依赖对象或外部服务：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">unittest.mock</span> <span class="kn">import</span> <span class="n">MagicMock</span>
+
+<span class="k">def</span> <span class="nf">fetch_data</span><span class="p">(</span><span class="n">api_client</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">api_client</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">/data</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_fetch_data</span><span class="p">():</span>
+    <span class="n">mock_api_client</span> <span class="o">=</span> <span class="nc">MagicMock</span><span class="p">()</span>
+    <span class="n">mock_api_client</span><span class="p">.</span><span class="n">get</span><span class="p">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">key</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">}</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="nf">fetch_data</span><span class="p">(</span><span class="n">mock_api_client</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="p">{</span><span class="sh">"</span><span class="s">key</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="147-测试异常和边界情况">14.7. 测试异常和边界情况</h3>
+
+<h4 id="断言异常">断言异常</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pytest</span>
+
+<span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">"</span><span class="s">Cannot divide by zero</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">test_divide</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="p">.</span><span class="nf">raises</span><span class="p">(</span><span class="nb">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="sh">"</span><span class="s">Cannot divide by zero</span><span class="sh">"</span><span class="p">):</span>
+        <span class="nf">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="148-性能测试">14.8. 性能测试</h3>
+
+<h4 id="测量性能">测量性能</h4>
+
+<p>使用 <code class="language-plaintext highlighter-rouge">timeit</code> 模块测试代码运行时间：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">timeit</span>
+
+<span class="k">def</span> <span class="nf">slow_function</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+
+<span class="n">execution_time</span> <span class="o">=</span> <span class="n">timeit</span><span class="p">.</span><span class="nf">timeit</span><span class="p">(</span><span class="n">slow_function</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Execution time: </span><span class="si">{</span><span class="n">execution_time</span><span class="si">}</span><span class="s"> seconds</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="149-自动化测试工具">14.9. 自动化测试工具</h3>
+
+<h4 id="集成测试工具">集成测试工具</h4>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">tox</code></strong>：自动化测试多个 Python 环境。</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">pytest</code> + CI</strong>：结合 CI/CD 工具（如 GitHub Actions）实现自动化测试。</li>
+</ul>
+
+<hr />
+
+<h3 id="1410-测试最佳实践">14.10. 测试最佳实践</h3>
+
+<ul>
+  <li>使用虚拟环境确保依赖隔离。</li>
+  <li>测试用例覆盖所有代码路径，包括边界条件。</li>
+  <li>定期运行测试，确保代码稳定性。</li>
+  <li>将测试集成到 CI/CD 流程中。</li>
+</ul>
 
 <hr />
 
@@ -9932,19 +10516,19 @@ VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端
 
 <hr />
 
-<h2 id="2配置开发者工具集mingw获得ucrt">2.配置开发者工具集MinGW，获得UCRT</h2>
+<h2 id="2安装mingw-w64工具链">2.安装MinGW-w64工具链</h2>
 
-<p>注意：UCRT是为C和C++设计的标准运行时库，通过MSYS2安装ucrt64工具链时，实际上安装了一个基于UCRT的GCC工具链(这个工具链中包括编译器(gcc,c++),链接器，库文件等)</p>
+<p>注意：传统的MinGW自带一个运行时库，UCRT是新为C和C++设计的标准运行时库，MinGW-w64是一个MinGW的改进版，在这里我们通过MSYS2(一个用于Window平台的开发工具环境)安装一个基于UCRT的MinGW-w64工具链</p>
 <h3 id="21下载msys2">2.1.下载MSYS2</h3>
 <p>网址：<a href="https://code.visualstudio.com/docs/cpp/config-mingw">https://code.visualstudio.com/docs/cpp/config-mingw</a><br />
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
 <img src="/images/vscode-images/vscode.7.png" alt="" /></p>
-<h3 id="22安装后复制网站中的命令输入">2.2.安装后复制网站中的命令输入</h3>
+<h3 id="22安装后打开并复制网站中的命令输入">2.2.安装后打开并复制网站中的命令输入</h3>
 <p><strong>pacman -S –needed base-devel mingw-w64-ucrt-x86_64-toolchain</strong><br />
 注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
 <img src="/images/vscode-images/vscode.8.png" alt="" /></p>
 <h3 id="23复制ucrt64文件中的bin文件地址">2.3.复制ucrt64文件中的bin文件地址</h3>
-<p>在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
+<p>刚才我们用命令安装的文件都保存到了ucrt64这个文件夹下，在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
 <img src="/images/vscode-images/vscode.9.png" alt="" /></p>
 <h3 id="24添加到windows环境变量的path路径中">2.4.添加到Windows环境变量的Path路径中</h3>
 <p>.将ucrt64的bin文件地址到 Windows环境变量的Path路径中</p>

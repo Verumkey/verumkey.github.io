@@ -3162,4 +3162,568 @@ except ZeroDivisionError as e:
 
 ---
 
+## **13.第三方库**
+### 13.1. 什么是第三方库？
+
+- **第三方库** 是指非 Python 标准库中的模块或包，由社区开发和维护。
+- 例如：`numpy`（数值计算）、`pandas`（数据分析）、`requests`（网络请求）、`matplotlib`（数据可视化）等。
+
+---
+
+### 13.2. 第三方库的安装
+
+#### 安装工具：pip
+
+- `pip` 是 Python 的包管理工具，用于安装和管理第三方库。
+
+#### 安装第三方库
+
+```bash
+pip install 库名
+```
+
+例如，安装 requests：
+
+```bash
+pip install requests
+```
+
+#### 指定版本安装
+
+```bash
+pip install 库名==版本号
+```
+
+例如，安装 `numpy` 的 1.21.0 版本：
+
+```bash
+pip install numpy==1.21.0
+```
+
+#### 升级库
+
+```bash
+pip install --upgrade 库名
+```
+
+#### 卸载库
+
+```bash
+pip uninstall 库名
+```
+
+#### 列出已安装的库
+
+```bash
+pip list
+```
+
+#### 查看特定库的信息
+
+```bash
+pip show 库名
+```
+
+---
+
+### 13.3. 第三方库的导入与使用
+
+#### 导入库
+
+使用 `import` 关键字导入库：
+
+```python
+import numpy  # 导入整个库
+import pandas as pd  # 使用别名
+from math import sqrt  # 从模块中导入特定函数
+```
+
+#### 检查是否安装
+
+```python
+try:
+    import numpy
+    print("库已安装")
+except ImportError:
+    print("库未安装")
+```
+
+---
+
+### 13.4. 管理项目依赖
+
+#### 生成依赖文件：requirements.txt
+
+开发项目时可以记录所有依赖库及其版本：
+
+```bash
+pip freeze > requirements.txt
+```
+
+生成的 `requirements.txt` 内容可能如下：
+
+```makefile
+numpy==1.21.0
+pandas==1.3.3
+requests==2.26.0
+```
+
+#### 通过依赖文件安装库
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 13.5. 常用第三方库及示例
+
+#### (1) 数据处理：numpy
+
+- 用于数值计算和矩阵操作。
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr.mean())  # 求平均值
+```
+
+#### (2) 数据分析：pandas
+
+- 用于数据清洗和分析。
+
+```python
+import pandas as pd
+
+data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+df = pd.DataFrame(data)
+print(df.head())  # 查看数据表的前几行
+```
+
+#### (3) 网络请求：requests
+
+- 用于发送 HTTP 请求。
+
+```python
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)  # 查看状态码
+print(response.json())  # 解析 JSON 响应
+```
+
+#### (4) 数据可视化：matplotlib
+
+- 用于生成图表。
+
+```python
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+plt.plot(x, y)
+plt.show()
+```
+
+#### (5) 机器学习：scikit-learn
+
+- 提供多种机器学习算法。
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+model = LinearRegression()
+x = np.array([[1], [2], [3]])
+y = np.array([1, 2, 3])
+model.fit(x, y)
+print(model.predict([[4]]))  # 预测值
+```
+
+#### (6) 爬虫工具：BeautifulSoup
+
+- 用于解析 HTML 页面。
+
+```python
+from bs4 import BeautifulSoup
+import requests
+
+response = requests.get("https://example.com")
+soup = BeautifulSoup(response.text, 'html.parser')
+print(soup.title.string)  # 打印页面标题
+```
+
+---
+
+### 13.6. 虚拟环境的使用
+
+虚拟环境可以隔离项目依赖，防止不同项目之间的库版本冲突。
+
+#### 创建虚拟环境
+
+```bash
+python -m venv 环境名
+```
+
+#### 激活虚拟环境
+
+- Windows:
+
+```bash
+环境名\Scripts\activate
+```
+
+- macOS/Linux:
+
+```bash
+source 环境名/bin/activate
+```
+
+#### 退出虚拟环境
+
+```bash
+deactivate
+```
+
+---
+
+### 13.7. 第三方库的开发与发布
+
+#### 开发库
+
+1. 编写模块代码，组织功能。
+2. 创建 `setup.py` 文件定义库信息。
+
+示例 `setup.py`：
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name="my_package",
+    version="0.1",
+    packages=find_packages(),
+    install_requires=[
+        "numpy",
+        "pandas"
+    ],
+)
+```
+
+#### 发布库
+
+- 将库上传到 [PyPI](https://pypi.org/)。
+
+1. 打包项目：
+
+```bash
+python setup.py sdist
+```
+
+2. 安装 `twine`：
+
+```bash
+pip install twine
+```
+
+3. 上传项目：
+
+```bash
+twine upload dist/*
+```
+
+---
+
+### 13.8. 常见问题及解决方案
+
+#### (1) 安装失败
+
+- 错误信息：`No matching distribution found`
+    - 解决方案：检查库名称是否正确，或升级 `pip`：
+
+```bash
+pip install --upgrade pip
+```
+
+#### (2) 版本冲突
+
+- 错误信息：`Cannot install package due to conflicting versions`
+    - 解决方案：使用虚拟环境或指定兼容版本。
+
+#### (3) 运行时找不到库
+
+- 错误信息：`ModuleNotFoundError`
+    - 解决方案：检查库是否已正确安装。
+
+---
+
+## **14.测试**
+### 14.1. Python 测试的分类
+
+- **单元测试（Unit Test）**：测试单个功能或模块。
+- **集成测试（Integration Test）**：测试多个模块的交互是否正常。
+- **功能测试（Functional Test）**：模拟用户行为以验证系统是否符合预期。
+- **性能测试（Performance Test）**：评估代码在特定条件下的性能表现。
+
+---
+
+### 14.2. 测试框架的选择
+
+Python 提供多种测试框架，以下是常用框架及其特点：
+
+#### （1）内置框架：unittest
+
+- Python 内置的测试框架。
+- 适合单元测试，支持测试套件和断言。
+
+#### （2）第三方框架
+
+- **`pytest`**：功能强大，支持插件，简洁易用。
+- **`nose2`**：`unittest` 的扩展，支持发现和运行测试。
+- **`tox`**：用于多环境测试。
+- **`hypothesis`**：基于属性的测试，用于生成测试用例。
+
+---
+
+### 14.3. 使用 unittest 测试
+
+#### （1）基本用法
+
+创建一个测试文件，使用 `unittest.TestCase` 定义测试类和测试方法：
+
+```python
+import unittest
+
+# 待测试代码
+def add(a, b):
+    return a + b
+
+# 测试类
+class TestMathFunctions(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertNotEqual(add(2, 3), 4)
+
+# 运行测试
+if __name__ == "__main__":
+    unittest.main()
+```
+
+- **断言方法**：
+    - `assertEqual(a, b)`：断言 `a == b`。
+    - `assertNotEqual(a, b)`：断言 `a != b`。
+    - `assertTrue(x)` / `assertFalse(x)`：断言布尔值。
+    - `assertRaises(Exception, func, *args)`：断言代码抛出指定异常。
+
+---
+
+#### （2）测试套件
+
+使用测试套件将多个测试组合在一起运行：
+
+```python
+def suite():
+    suite = unittest.TestSuite()
+    suite.addTest(TestMathFunctions("test_add"))
+    return suite
+
+if __name__ == "__main__":
+    runner = unittest.TextTestRunner()
+    runner.run(suite())
+```
+
+---
+
+#### （3）组织测试
+
+将测试文件放置在单独的目录（如 `tests`），通过 `unittest` 自动发现并运行测试：
+
+目录结构：
+
+```
+project/
+├── my_module.py
+└── tests/
+    ├── test_my_module.py
+```
+
+运行命令：
+
+```bash
+python -m unittest discover -s tests
+```
+
+---
+
+### 14.4. 使用 pytest 测试
+
+#### （1）基本用法
+
+`pytest` 具有更简洁的语法：
+
+```python
+# test_math.py
+def add(a, b):
+    return a + b
+
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+```
+
+运行测试：
+
+```bash
+pytest
+```
+
+---
+
+#### （2）测试失败时的调试
+
+- 如果测试失败，`pytest` 会自动显示详细的错误信息：
+
+```
+assert 5 == 6
+```
+
+- 使用 `-v` 参数查看详细信息：
+
+```
+pytest -v
+```
+
+---
+
+#### （3）使用参数化
+
+`pytest` 支持参数化测试，用于测试多个输入组合：
+
+```python
+import pytest
+
+@pytest.mark.parametrize("a, b, expected", [
+    (1, 2, 3),
+    (0, 0, 0),
+    (-1, -1, -2)
+])
+def test_add(a, b, expected):
+    assert add(a, b) == expected
+```
+
+---
+
+#### （4）运行特定测试
+
+通过关键字运行某个测试：
+
+```bash
+pytest -k "test_add"
+```
+
+---
+
+### 14.5. 测试覆盖率
+
+#### 安装 coverage 工具
+
+```bash
+pip install coverage
+```
+
+#### 生成覆盖率报告
+
+```bash
+coverage run -m pytest
+coverage report
+```
+
+生成 HTML 报告：
+
+```bash
+coverage html
+```
+
+---
+
+### 14.6. Mock 测试
+
+#### 基本用法
+
+`unittest.mock` 模块可用于模拟依赖对象或外部服务：
+
+```python
+from unittest.mock import MagicMock
+
+def fetch_data(api_client):
+    return api_client.get("/data")
+
+def test_fetch_data():
+    mock_api_client = MagicMock()
+    mock_api_client.get.return_value = {"key": "value"}
+
+    result = fetch_data(mock_api_client)
+    assert result == {"key": "value"}
+```
+
+---
+
+### 14.7. 测试异常和边界情况
+
+#### 断言异常
+
+```python
+import pytest
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+def test_divide():
+    with pytest.raises(ValueError, match="Cannot divide by zero"):
+        divide(1, 0)
+```
+
+---
+
+### 14.8. 性能测试
+
+#### 测量性能
+
+使用 `timeit` 模块测试代码运行时间：
+
+```python
+import timeit
+
+def slow_function():
+    return sum(range(1000000))
+
+execution_time = timeit.timeit(slow_function, number=10)
+print(f"Execution time: {execution_time} seconds")
+```
+
+---
+
+### 14.9. 自动化测试工具
+
+#### 集成测试工具
+
+- **`tox`**：自动化测试多个 Python 环境。
+- **`pytest` + CI**：结合 CI/CD 工具（如 GitHub Actions）实现自动化测试。
+
+---
+
+### 14.10. 测试最佳实践
+
+- 使用虚拟环境确保依赖隔离。
+- 测试用例覆盖所有代码路径，包括边界条件。
+- 定期运行测试，确保代码稳定性。
+- 将测试集成到 CI/CD 流程中。
+  
+---
+
 # 六.Python项目

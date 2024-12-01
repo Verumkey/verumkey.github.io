@@ -129,19 +129,19 @@ VS Code 是一个功能强大且高度可定制的编辑器，适用于从前端
 
 ---
 
-## 2.配置开发者工具集MinGW，获得UCRT
+## 2.安装MinGW-w64工具链
 
-注意：UCRT是为C和C++设计的标准运行时库，通过MSYS2安装ucrt64工具链时，实际上安装了一个基于UCRT的GCC工具链(这个工具链中包括编译器(gcc,c++),链接器，库文件等)
+注意：传统的MinGW自带一个运行时库，UCRT是新为C和C++设计的标准运行时库，MinGW-w64是一个MinGW的改进版，在这里我们通过MSYS2(一个用于Window平台的开发工具环境)安装一个基于UCRT的MinGW-w64工具链
 ### 2.1.下载MSYS2
 网址：[https://code.visualstudio.com/docs/cpp/config-mingw](https://code.visualstudio.com/docs/cpp/config-mingw)  
 注：该网站是英文的，可以使用浏览器自带翻译，翻译成中文，后续配置内容在网站下也有讲解
 ![](/images/vscode-images/vscode.7.png)
-### 2.2.安装后复制网站中的命令输入
+### 2.2.安装后打开并复制网站中的命令输入
 **pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain**  
 注意：安装时碰到Enter a selection (default=all):，回车就行，网站上说的也有
 ![](/images/vscode-images/vscode.8.png)
 ### 2.3.复制ucrt64文件中的bin文件地址
-在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
+刚才我们用命令安装的文件都保存到了ucrt64这个文件夹下，在电脑文件中找到ucrt64文件下的bin文件(就在安装MSYS2的文件中)，并复制bin文件的文件地址
 ![](/images/vscode-images/vscode.9.png)
 ### 2.4.添加到Windows环境变量的Path路径中
 .将ucrt64的bin文件地址到 Windows环境变量的Path路径中
