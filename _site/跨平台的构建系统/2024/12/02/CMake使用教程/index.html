@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CMake 使用教程</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<header class="header">
+    <nav>
+     <ul>
+      <li><a href="https://verumkey.com" target="_self" class="home-link">Home</a></li>
+     </ul>
+    </nav>
+    <button class="toggle-btn" onclick="toggleToc()">
+        <i class="fas fa-list"></i>
+    </button>
+    
+</header>
+
+<div class="toc" id="toc">
+    <ul><li><a href="#简介">简介</a></li><li><a href="#一cmake概述">一.CMake概述</a><ul><li><a href="#1什么是-cmake">1.什么是 CMake？</a></li><li><a href="#2cmake-的作用">2.CMake 的作用</a></li><li><a href="#3cmake-的主要特点">3.CMake 的主要特点</a></li><li><a href="#4cmake-基本工作流程">4.CMake 基本工作流程</a></li><li><a href="#5例子cmakeliststxt-文件">5.例子：CMakeLists.txt 文件</a></li><li><a href="#6cmake-常见指令">6.CMake 常见指令</a></li><li><a href="#7cmake-生成的构建文件">7.CMake 生成的构建文件</a></li><li><a href="#8使用-cmake-构建项目">8.使用 CMake 构建项目</a></li><li><a href="#9高级功能">9.高级功能</a></li><li><a href="#10总结">10.总结</a></li></ul></li><li><a href="#二安装mingw-w64工具链">二.安装MinGW-w64工具链</a></li><li><a href="#三安装cmake">三.安装CMake</a></li><li><a href="#四在vscode中使用cmake">四.在VSCode中使用CMake</a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1cmake-tools-插件">1.CMake Tools 插件</a><ul><li><a href="#主要功能">主要功能</a></li><li><a href="#常用功能和快捷方式">常用功能和快捷方式</a></li></ul></li><li><a href="#2卸载捆绑cmake-tools插件的cmake插件">2.卸载捆绑CMake Tools插件的CMake插件</a></li><li><a href="#3cmake-language-support-插件">3.CMake Language Support 插件</a><ul><li><a href="#主要功能-1">主要功能：</a></li></ul></li></ul></li><li><a href="#2安装生成器ninja">2.安装生成器Ninja</a></li><li><a href="#3将生成器ninja所在目录添加到path">3.将生成器ninja所在目录添加到PATH</a></li><li><a href="#4检验是否配置成功">4.检验是否配置成功</a><ul><li><a href="#1-cmake_minimum_requiredversion-3311">1. cmake_minimum_required(VERSION 3.31.1)</a></li><li><a href="#2-projecttest">2. project(test)</a></li><li><a href="#3-add_executabletest-maincpp">3. add_executable(test main.cpp)</a></li></ul></li></ul></li><li><a href="#五cmake语法">五.CMake语法</a></li></ul>
+</div>
+
+
+    <div class="container">
+        <div class="content">
+            <h1 id="简介">简介</h1>
+<p>本文主要内容：<br />
+1.介绍CMake的概念<br />
+2.演示如何安装Office，并在VSCode中配置CMake环境<br />
+3.介绍CMake的一些语法<br />
+4.本文主要是在VSCode中使用CMake<br />
+5.关于VSCode中c/c++环境的配置，请看另一篇文章VSCode使用教程<br />
+6.如果不用VSCode，除了CMake，还需要安装MinGW<br />
+CMake官网: <a href="https://cmake.org">https://cmake.org</a></p>
+
+<hr />
+
+<h1 id="一cmake概述">一.CMake概述</h1>
+
+<hr />
+
+<h2 id="1什么是-cmake">1.什么是 CMake？</h2>
+
+<p><strong>CMake</strong> 是一个跨平台的自动化构建工具，广泛用于 C/C++ 项目的构建管理。它生成平台特定的构建文件（例如 Makefile、Visual Studio 工程文件等），使得开发人员能够在不同的操作系统和编译器上构建项目。CMake 本身不是编译工具，而是一个生成工具，它根据你的项目配置生成编译系统需要的文件。</p>
+
+<h2 id="2cmake-的作用">2.CMake 的作用</h2>
+
+<p>CMake 的主要作用是帮助开发者管理和简化项目的构建过程。它允许开发者在不同的平台上使用统一的配置文件来构建项目，而不必为每个平台编写特定的构建脚本。例如，在 Linux 上可能使用 Makefile 构建，而在 Windows 上则使用 Visual Studio 项目文件，CMake 会根据不同的平台自动选择合适的构建方式。</p>
+
+<h2 id="3cmake-的主要特点">3.CMake 的主要特点</h2>
+
+<ol>
+  <li>
+    <p><strong>跨平台支持</strong>：CMake 支持多种平台，包括 Windows、Linux、macOS 等。它能够生成适应不同平台的构建文件，例如：</p>
+
+    <ul>
+      <li><strong>Unix/Linux</strong>：Makefile</li>
+      <li><strong>Windows</strong>：Visual Studio、MinGW、Ninja</li>
+      <li><strong>macOS</strong>：Xcode、Makefile</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>可扩展性</strong>：CMake 允许用户通过添加模块、脚本等进行扩展，支持包括第三方库的自动发现和配置。</p>
+  </li>
+  <li>
+    <p><strong>支持外部项目</strong>：CMake 支持将外部项目和依赖集成到构建过程中，可以通过 <code class="language-plaintext highlighter-rouge">ExternalProject</code> 来下载并构建第三方依赖。</p>
+  </li>
+  <li>
+    <p><strong>项目配置管理</strong>：CMake 使用 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 文件来描述项目的构建过程。这个文件包含了有关源文件、编译选项、目标设置、依赖库等的信息。</p>
+  </li>
+  <li>
+    <p><strong>构建类型支持</strong>：CMake 可以生成多种类型的构建文件，支持不同的构建选项，如调试版本、发布版本等。</p>
+  </li>
+  <li>
+    <p><strong>支持多种构建系统</strong>：CMake 生成的文件可以用于多种构建系统，如 Make、Ninja、Xcode 等。</p>
+  </li>
+</ol>
+
+<h2 id="4cmake-基本工作流程">4.CMake 基本工作流程</h2>
+
+<ol>
+  <li><strong>创建 CMakeLists.txt 文件</strong>：这是 CMake 项目的核心文件，描述了构建过程和项目配置。</li>
+  <li><strong>运行 CMake</strong>：CMake 使用 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 来生成适用于目标平台的构建文件。例如，它可以生成 <code class="language-plaintext highlighter-rouge">Makefile</code> 或 Visual Studio 项目文件。</li>
+  <li><strong>构建项目</strong>：根据生成的构建文件，使用相应的构建工具（如 <code class="language-plaintext highlighter-rouge">make</code> 或 <code class="language-plaintext highlighter-rouge">msbuild</code>）来编译代码。</li>
+</ol>
+
+<h2 id="5例子cmakeliststxt-文件">5.例子：CMakeLists.txt 文件</h2>
+
+<p>一个简单的 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 文件示例：</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 设置最低版本要求</span>
+<span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.10<span class="p">)</span>
+
+<span class="c1"># 项目名称</span>
+<span class="nb">project</span><span class="p">(</span>MyProject<span class="p">)</span>
+
+<span class="c1"># 设置 C++ 标准</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 11<span class="p">)</span>
+
+<span class="c1"># 查找源文件</span>
+<span class="nb">set</span><span class="p">(</span>SOURCES
+    main.cpp
+    MyClass.cpp
+<span class="p">)</span>
+
+<span class="c1"># 定义可执行文件</span>
+<span class="nb">add_executable</span><span class="p">(</span>MyProject <span class="si">${</span><span class="nv">SOURCES</span><span class="si">}</span><span class="p">)</span>
+
+<span class="c1"># 如果有依赖库，可以链接</span>
+<span class="c1"># target_link_libraries(MyProject SomeLibrary)</span>
+</code></pre></div></div>
+
+<h2 id="6cmake-常见指令">6.CMake 常见指令</h2>
+
+<ul>
+  <li><strong>cmake_minimum_required(VERSION)</strong>: 设置 CMake 的最低版本要求。</li>
+  <li><strong>project(ProjectName)</strong>: 定义项目的名称。</li>
+  <li><strong>set(variable value)</strong>: 设置一个 CMake 变量。</li>
+  <li><strong>add_executable(name source_files)</strong>: 创建一个可执行文件。</li>
+  <li><strong>add_library(name source_files)</strong>: 创建一个库文件。</li>
+  <li><strong>target_link_libraries(target library)</strong>: 将库文件链接到目标（可执行文件或库）。</li>
+</ul>
+
+<h2 id="7cmake-生成的构建文件">7.CMake 生成的构建文件</h2>
+
+<p>CMake 会根据你指定的构建工具生成对应的构建文件。比如：</p>
+
+<ul>
+  <li><strong>Makefile</strong>：用于 GNU Make 构建系统。</li>
+  <li><strong>Visual Studio 工程文件</strong>：用于 Windows 下的 Visual Studio。</li>
+  <li><strong>Xcode 工程文件</strong>：用于 macOS 上的 Xcode。</li>
+</ul>
+
+<p>这些构建文件是由 CMake 根据 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 配置自动生成的，你只需要运行 CMake 工具即可。</p>
+
+<h2 id="8使用-cmake-构建项目">8.使用 CMake 构建项目</h2>
+
+<p>假设你有一个 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 文件，你可以按照以下步骤使用 CMake 构建项目：</p>
+
+<ol>
+  <li><strong>创建构建目录</strong>：通常建议在项目外部创建一个单独的构建目录，这样可以保持源代码目录的干净。例如：</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>build
+<span class="nb">cd </span>build
+</code></pre></div></div>
+
+<ol>
+  <li><strong>运行 CMake</strong>：在构建目录中运行 CMake 来生成构建文件。</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake ..
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>构建项目</strong>：根据你使用的构建系统运行构建命令：</p>
+
+    <ul>
+      <li>对于 Makefile：</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 对于 Visual Studio： 打开生成的 `.sln` 文件，使用 Visual Studio 进行构建。
+</code></pre></div></div>
+
+<h2 id="9高级功能">9.高级功能</h2>
+
+<ul>
+  <li><strong>查找库和包</strong>：CMake 支持通过 <code class="language-plaintext highlighter-rouge">find_package()</code> 来查找外部库和工具包。比如：</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">find_package</span><span class="p">(</span>OpenGL REQUIRED<span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>MyProject OpenGL::GL<span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>条件编译</strong>：可以根据平台或其他条件指定不同的编译选项：</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">if</span><span class="p">(</span>WIN32<span class="p">)</span>
+    <span class="nb">message</span><span class="p">(</span><span class="s2">"This is Windows"</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+    <span class="nb">message</span><span class="p">(</span><span class="s2">"This is not Windows"</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>创建安装包</strong>：CMake 可以生成安装包，例如 <code class="language-plaintext highlighter-rouge">.deb</code> 或 <code class="language-plaintext highlighter-rouge">.rpm</code> 文件。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>install(TARGETS MyProject DESTINATION /usr/local/bin)
+</code></pre></div></div>
+
+<h2 id="10总结">10.总结</h2>
+
+<p>CMake 是一个强大的工具，简化了跨平台构建过程，支持自动生成多种构建系统的文件，方便开发人员管理和构建复杂的项目。通过使用 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 文件，CMake 可以自动处理项目的源文件、库依赖和构建过程，使得开发者可以集中精力编写代码，而不需要手动配置各个平台的构建系统。</p>
+
+<hr />
+
+<h1 id="二安装mingw-w64工具链">二.安装MinGW-w64工具链</h1>
+
+<hr />
+
+<p>CMake还需要一个编译器才能使用，然后它是来管理c/c++代码的，还需要对应的环境<br />
+如何安装MinGW-w64工具链，如何在VS Code中配置c/c++环境，推荐去看另一篇文章VS Code使用教程<br />
+<img src="/images/CMake-images/cmake.1.png" alt="" /></p>
+
+<hr />
+
+<h1 id="三安装cmake">三.安装CMake</h1>
+
+<hr />
+
+<p>官网: <a href="https://cmake.org/download/">https://cmake.org/download/</a></p>
+
+<p><img src="/images/CMake-images/cmake.2.png" alt="" />
+<img src="/images/CMake-images/cmake.3.png" alt="" />
+<img src="/images/CMake-images/cmake.4.png" alt="" />
+<img src="/images/CMake-images/cmake.5.png" alt="" />
+<img src="/images/CMake-images/cmake.6.png" alt="" />
+可以在终端使用cmake –version检验cmake是否配置成功
+<img src="/images/CMake-images/cmake.7.png" alt="" /></p>
+
+<hr />
+
+<h1 id="四在vscode中使用cmake">四.在VSCode中使用CMake</h1>
+
+<hr />
+
+<h2 id="1安装插件">1.安装插件</h2>
+<h3 id="1cmake-tools-插件">1.CMake Tools 插件</h3>
+<h4 id="主要功能">主要功能</h4>
+
+<ol>
+  <li>
+    <p><strong>自动发现 CMake 项目</strong>： 插件会自动检测 CMakeLists.txt 文件，并将项目与 CMake 工具链配置相关联。</p>
+  </li>
+  <li>
+    <p><strong>配置和生成构建系统</strong>： 插件提供了一个界面来设置构建类型（如 Debug 或 Release）以及选择不同的 CMake 工具链文件。通过点击按钮或使用命令面板，你可以轻松配置并生成构建文件。</p>
+  </li>
+  <li>
+    <p><strong>集成 CMake 构建系统</strong>： 通过 <code class="language-plaintext highlighter-rouge">CMake Tools</code>，你可以直接在 VS Code 中运行 CMake 构建命令（如 <code class="language-plaintext highlighter-rouge">cmake --build</code>）。插件集成了 CMake 的构建过程，使得你不需要跳出 VS Code 就能进行编译和构建。</p>
+  </li>
+  <li>
+    <p><strong>调试支持</strong>： 插件允许你在 VS Code 内部配置和启动调试会话。你可以设置断点并调试 CMake 项目中的 C++ 代码，集成了调试器（如 GDB 或 LLDB）来帮助你调试程序。</p>
+  </li>
+  <li>
+    <p><strong>显示 CMake 输出和日志</strong>： 插件提供了 CMake 的构建输出、配置和诊断日志的可视化界面，使你可以查看详细的错误信息和构建过程。</p>
+  </li>
+  <li>
+    <p><strong>多平台支持</strong>： <code class="language-plaintext highlighter-rouge">CMake Tools</code> 支持 Linux、macOS 和 Windows 平台，能够帮助开发者在多平台上使用相同的配置进行构建。</p>
+  </li>
+  <li>
+    <p><strong>支持 CMake Presets</strong>： 插件支持 CMake 预设（Presets）功能，可以轻松切换不同的构建配置，而无需手动编辑 CMake 文件。</p>
+  </li>
+  <li>
+    <p><strong>集成测试和清理工具</strong>： 插件支持 CMake 的测试框架，可以直接在 VS Code 中运行测试，并查看结果。同时，你还可以轻松清理构建文件（<code class="language-plaintext highlighter-rouge">cmake --clean</code>）。</p>
+  </li>
+</ol>
+
+<h4 id="常用功能和快捷方式">常用功能和快捷方式</h4>
+
+<ul>
+  <li><strong>配置 CMake 项目</strong>：点击底部状态栏中的 CMake 配置按钮，或者使用命令面板运行 <code class="language-plaintext highlighter-rouge">CMake: Configure</code>。</li>
+  <li><strong>构建项目</strong>：在命令面板中选择 <code class="language-plaintext highlighter-rouge">CMake: Build</code>，或者点击状态栏的构建按钮。</li>
+  <li><strong>切换构建目标和配置</strong>：可以从状态栏快速选择不同的构建目标（例如 Debug 或 Release）。</li>
+  <li><strong>调试程序</strong>：点击状态栏的调试按钮，或使用命令面板选择 <code class="language-plaintext highlighter-rouge">CMake: Debug</code>。</li>
+  <li><strong>查看构建日志</strong>：通过查看 <code class="language-plaintext highlighter-rouge">CMake: View Log</code>，可以直接查看 CMake 输出的日志，帮助调试构建问题。</li>
+</ul>
+
+<p><img src="/images/CMake-images/cmake.8.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2卸载捆绑cmake-tools插件的cmake插件">2.卸载捆绑CMake Tools插件的CMake插件</h3>
+<p>这个插件上次更新都是2017年了，长时间没有维护，推荐卸载后替换成
+<img src="/images/CMake-images/cmake.9.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3cmake-language-support-插件">3.CMake Language Support 插件</h3>
+<p>这个插件安装后，直接在 VS Code 中打开 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 或其他 CMake 脚本文件时，即可自动启用语法高亮和代码补全功能。</p>
+<h4 id="主要功能-1">主要功能：</h4>
+
+<ol>
+  <li>
+    <p><strong>语法高亮</strong>： 插件为 CMake 脚本提供了语法高亮显示，使得关键字、变量和函数更加突出，提高代码可读性。</p>
+  </li>
+  <li>
+    <p><strong>代码补全</strong>： 提供 CMake 关键字、命令、函数和变量的自动补全，减少了输入错误并加速了编辑过程。</p>
+  </li>
+  <li>
+    <p><strong>代码片段</strong>： 插件内置了一些常用的 CMake 代码片段（如 <code class="language-plaintext highlighter-rouge">project()</code>, <code class="language-plaintext highlighter-rouge">add_executable()</code> 等），使得开发者可以快速插入常用命令。</p>
+  </li>
+  <li>
+    <p><strong>命令提示</strong>： 当输入 CMake 命令时，插件会提供相应的命令提示和参数建议，帮助开发者理解每个命令的用法。</p>
+  </li>
+  <li>
+    <p><strong>错误检测</strong>： 提供对 CMake 脚本的基本错误检查，能帮助开发者在编辑时发现潜在的语法错误。</p>
+  </li>
+  <li>
+    <p><strong>集成 VS Code 调试工具</strong>： 虽然插件本身不提供直接的 CMake 构建和调试功能，但它与 <code class="language-plaintext highlighter-rouge">CMake Tools</code> 插件可以配合使用，提供一个完整的 CMake 开发环境。</p>
+  </li>
+</ol>
+
+<p><img src="/images/CMake-images/cmake.10.png" alt="" /></p>
+
+<hr />
+
+<h2 id="2安装生成器ninja">2.安装生成器Ninja</h2>
+<p>Ninja开源仓库: <a href="https://github.com/ninja-build/ninja/releases/tag/v1.12.1">https://github.com/ninja-build/ninja/releases/tag/v1.12.1</a><br />
+<strong>下载对应压缩包，解压保存到某个目录</strong><br />
+注释:在 CMake 中，生成器（Generator） 是一种用于指定如何生成目标构建文件（例如 Makefile、Visual Studio 工程文件、Xcode 项目等）的机制。<br />
+使用什么生成器，就生成对应的构建文件,例如:使用Visual Studio生成器就生成Visual Studio构建文件<br />
+Ninja 生成器 会生成适用于 Ninja 构建系统 的构建文件。具体来说，CMake 使用 Ninja 生成器时，会生成一个 build.ninja 文件。</p>
+
+<p><img src="/images/CMake-images/cmake.11.png" alt="" />
+<img src="/images/CMake-images/cmake.12.png" alt="" /></p>
+
+<hr />
+
+<h2 id="3将生成器ninja所在目录添加到path">3.将生成器ninja所在目录添加到PATH</h2>
+<p>复制这个可执行文件所在的目录的路径
+<img src="/images/CMake-images/cmake.13.png" alt="" />
+<img src="/images/vscode-images/vscode.10.png" alt="" />
+<img src="/images/vscode-images/vscode.11.png" alt="" />
+<img src="/images/vscode-images/vscode.12.png" alt="" />
+<img src="/images/CMake-images/cmake.14.png" alt="" />
+可以在终端使用ninja –version看看是否配置成功
+<img src="/images/CMake-images/cmake.15.png" alt="" /></p>
+
+<hr />
+
+<h2 id="4检验是否配置成功">4.检验是否配置成功</h2>
+<p><strong>创建一个文件夹</strong>，用VS Code打开，然后<strong>添加一个c++源文件</strong>，随便写点代码，再添加一个文件，<strong>名称一定要为CMakeLists.txt</strong>，一个字母都不能错，包括大小写，错了就识别不出来
+<img src="/images/CMake-images/cmake.16.png" alt="" />
+最简单的CMakeList.txt要包含以下三行代码</p>
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.31.1<span class="p">)</span>//指定 CMake 的最低版本
+<span class="nb">project</span><span class="p">(</span>test<span class="p">)</span>//项目名称
+<span class="nb">add_executable</span><span class="p">(</span>test main.cpp<span class="p">)</span>//可执行文件的名称以及要用到的源文件
+</code></pre></div></div>
+<p>这三行 CMake 代码的功能分别是：</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">cmake_minimum_required(VERSION 3.31.1)</code>：指定 CMake 的最低版本要求。</li>
+  <li><code class="language-plaintext highlighter-rouge">project(test)</code>：定义项目名称为 <code class="language-plaintext highlighter-rouge">test</code>。</li>
+  <li><code class="language-plaintext highlighter-rouge">add_executable(test main.cpp)</code>：指定生成名为 <code class="language-plaintext highlighter-rouge">test</code> 的可执行文件，使用 <code class="language-plaintext highlighter-rouge">main.cpp</code> 作为源文件。</li>
+</ol>
+
+<h3 id="1-cmake_minimum_requiredversion-3311">1. cmake_minimum_required(VERSION 3.31.1)</h3>
+
+<p>这行代码指定了 <strong>CMake 的最低版本要求</strong>。它告诉 CMake 构建系统使用的最低版本是 <code class="language-plaintext highlighter-rouge">3.31.1</code>，也就是说，只有版本等于或高于此版本的 CMake 才能正确处理项目的构建。</p>
+
+<ul>
+  <li>
+    <p><strong>作用</strong>：确保你的项目在使用 CMake 时，至少使用指定的版本（或者更高版本）。如果当前安装的 CMake 版本低于这个版本，CMake 会抛出错误并停止执行。</p>
+  </li>
+  <li>
+    <p>例如：</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CMake Error at CMakeLists.txt:1 <span class="o">(</span>cmake_minimum_required<span class="o">)</span>:
+CMake 3.31.1 or higher is required. You are running version 3.20.0
+</code></pre></div></div>
+
+<ul>
+  <li>一般来说，<code class="language-plaintext highlighter-rouge">cmake_minimum_required</code> 语句位于 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 的开头，它是用来控制构建工具版本兼容性的，避免在较旧版本的 CMake 上出现不可预知的错误。</li>
+</ul>
+
+<hr />
+
+<h3 id="2-projecttest">2. project(test)</h3>
+
+<p>这行代码定义了 <strong>项目的名称</strong>。<code class="language-plaintext highlighter-rouge">project</code> 命令通常会在 CMake 项目的 <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> 文件中使用，它指定了项目的名称、支持的语言等。</p>
+
+<ul>
+  <li>
+    <p><strong>作用</strong>：<code class="language-plaintext highlighter-rouge">test</code> 是项目的名称，可以在构建过程中使用。例如，生成的输出目录可能会以这个名称命名，或者它会影响一些默认行为。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">project()</code> 命令还会自动设置一些与该项目相关的变量。例如：</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PROJECT_NAME</code>：项目名称（在这个例子中是 <code class="language-plaintext highlighter-rouge">test</code>）。</li>
+      <li><code class="language-plaintext highlighter-rouge">PROJECT_SOURCE_DIR</code>：源代码根目录。</li>
+      <li><code class="language-plaintext highlighter-rouge">PROJECT_BINARY_DIR</code>：构建输出根目录。</li>
+    </ul>
+  </li>
+  <li>
+    <p>这个命令的可选参数还可以设置支持的编程语言，例如 <code class="language-plaintext highlighter-rouge">C CXX</code>，表示该项目支持 C 和 C++ 语言（默认为 C 和 C++）。</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="3-add_executabletest-maincpp">3. add_executable(test main.cpp)</h3>
+
+<p>这行代码定义了 <strong>生成可执行文件</strong>。<code class="language-plaintext highlighter-rouge">add_executable()</code> 命令用于指定生成的可执行文件的名称及其源代码文件。</p>
+
+<ul>
+  <li>
+    <p><strong>作用</strong>：它告诉 CMake 生成一个名为 <code class="language-plaintext highlighter-rouge">test</code> 的可执行文件，并且使用 <code class="language-plaintext highlighter-rouge">main.cpp</code> 作为源代码文件来编译该可执行文件。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">test</code> 是可执行文件的名称。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">main.cpp</code> 是源文件，它将被编译并链接成 <code class="language-plaintext highlighter-rouge">test</code> 可执行文件。</p>
+  </li>
+</ul>
+
+<p>这行命令在构建过程中会被转换成类似以下命令的操作：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ main.cpp <span class="nt">-o</span> <span class="nb">test</span>
+</code></pre></div></div>
+
+<p>其中，<code class="language-plaintext highlighter-rouge">g++</code> 是编译器，<code class="language-plaintext highlighter-rouge">main.cpp</code> 是源代码文件，<code class="language-plaintext highlighter-rouge">-o test</code> 指定输出文件名为 <code class="language-plaintext highlighter-rouge">test</code>。</p>
+
+<hr />
+
+<p>如果你之前编写了CMakeList.txt这个文件，打开VSCode时就会自动生成一个build文件<br />
+即<strong>构建文件</strong>，这些文件是 CMake 配置和构建过程中自动生成的
+<img src="/images/CMake-images/cmake.17.png" alt="" />
+右键点击CMakeList.txt这个文件，点击生成所有项目
+<img src="/images/CMake-images/cmake.18.png" alt="" />
+然后当前目录下就会生成build文件，并在其中生成可执行文件
+<img src="/images/CMake-images/cmake.19.png" alt="" />
+在文件中打开，可以正常运行
+<img src="/images/CMake-images/cmake.20.png" alt="" /></p>
+
+<hr />
+
+<h1 id="五cmake语法">五.CMake语法</h1>
+
+<hr />
+
+<p>官方文档: <a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">https://cmake.org/cmake/help/latest/guide/tutorial/index.html</a><br />
+如果看英文废力，可以用浏览器自带的翻译，翻译成中文
+<img src="/images/CMake-images/cmake.21.png" alt="" /></p>
+ <!-- 显示页面内容 -->
+        </div>
+    </div>
+
+    <footer class="footer">
+    <p>Contact me via email: verumkeys@gmail.com</p >
+    <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
+    <p>This website is a personal blog where I share my thoughts on technology, programming, and more. </P>
+    <p>Stay tuned for interesting insights!</p ></p>
+    
+</footer>
+  
+
+
+    <script>
+        function toggleToc() {
+            const toc = document.getElementById('toc');
+            toc.classList.toggle('open'); // 切换大纲显示状态
+            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
+        }
+    </script>
+
+</body>
+</html>
