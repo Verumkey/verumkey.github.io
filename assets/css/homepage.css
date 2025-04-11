@@ -81,7 +81,7 @@ h2 {
   font-family: Arial, sans-serif; /* 选用简洁通用的无衬线字体 */
   font-weight: 500; /* 稍加重字体粗细，突出显示 */
   font-size: 16px; /* 设置合适的字体大小 */
-  padding: 5px 10px; /* 内边距，让链接有一定的点击区域 */
+  padding: 10px 10px; /* 内边距，让链接有一定的点击区域 */
   border-radius: 5px; /* 圆角，让外观更柔和 */
   transition: all 0.3s ease; /* 过渡效果，使交互更流畅美观 */
 }
