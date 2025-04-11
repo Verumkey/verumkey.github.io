@@ -1,58 +1,12 @@
-/* 设置页面主要内容容器的宽度和自适应宽度 */
-.container {
-    width: 100%; /* 设置宽度为 100% */  
-    margin-top: 65px; /* 调整页眉与内容之间的距离 */
+a {
+    text-decoration: none; /* 去掉链接下划线 */
 }
-
 
 .main-content {
-    flex: 1; /* 主内容区域自适应 */
-    width: 100%; /* 设置宽度为 100% */
-    margin: 0 auto; /* 居中 */
-    
-    margin-top: 65px; /* 调整页眉与内容之间的距离 */
-    display: flex; /* 使用 Flexbox 布局 */
-    flex-direction: column; /* 列方向 */
-    align-items: center; /* 居中对齐 */
-}
-
-.footer {
-    width: 100%; /* 设置宽度为100% */
-    display: block; /* 确保是块级元素 */
-    padding: 10px; /* 可选：添加内边距 */
-    position: relative; /* 可选：为绝对定位的元素提供上下文 */
-    margin-top: 10px;
-}
-
-/* 针对移动设备的页眉样式 */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        padding: 0; /* 在手机上设置较小的内边距 */
-    }
-}
-
-.fit-img {
-    width: 100%; /* 根据需求设置宽度 */
-    height: 200px; /* 固定高度 */
-    object-fit: cover; /* 确保填满并保持比例 */
-}
-
-.articles, .about, .post-list {
-    max-width: 800px; /* 最大宽度，适用于桌面设备 */
-    margin: 0 auto; /* 自动边距使内容居中 */
-    padding: 20px; /* 内边距，避免内容贴边 */
-    text-align: left; /* 左对齐文本 */
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-}
-
-h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 65px;
+    text-align: center; /* 让行内元素（如图片）水平居中 */
+   
 }
 
 .post-card {
@@ -63,17 +17,157 @@ h2 {
     margin-bottom: 20px; /* 块之间的间距 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
 }
-
-.post-card h2 {
-    margin: 0 0 10px; /* 标题与下方的间距 */
-}
-
-.post-meta {
-    font-size: 0.9em; /* 文章元信息的字体大小 */
-    color: #666; /* 元信息的颜色 */
-}
-
 .post-excerpt {
-    margin-top: 10px; /* 摘要与上方的间距 */
+    line-height: 1.6em;
+}
+.articles {
+    width: 100%;           /* 小屏下自动占满 */
+    max-width: 840px;      /* 大屏下最多宽 800px */
+    margin: 0 auto;        /* 水平居中 */
+    padding: 0 15px;       /* 左右留白防止贴边（可选） */
+    box-sizing: border-box;/* 包含 padding 计算宽度，防止撑破 */
+  
+    text-align: left; /* 左对齐文本 */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    
 }
 
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    width: 100%; /* 设置宽度为100% */
+    display: block; /* 确保是块级元素 */
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 10px;
+}
+
+/* 页眉样式 */
+.header {
+    width: 100%; /* 使页眉宽度占满整个视口 */
+    height: 60px; /* 设置固定高度 */
+    position: fixed; /* 固定页眉在顶部 */
+    top: 0; /* 让页眉固定在视口顶部 */
+    left: 0; /* 确保没有左右偏移 */
+    background-color: white; /* 设置背景色 */
+    z-index: 1000; /* 确保页眉位于最上层 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background-color: #f8f9fa;
+}
+
+/* 调整页眉内的链接和按钮样式 */
+.home-link {
+    text-decoration: none;
+    color: black;
+    margin-left: 130px;
+}
+
+.log-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+  
+.back_img {
+    width: 840px; /* 使图片自适应宽度 */
+    height: 200px; /* 保持图片比例 */
+}
+
+.spacer{
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.home-link-submit {
+    display: inline - block;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #F4F4F4; 
+    color: black; 
+    font-size: 16px; /* 设置字体大小 */
+    font-weight: 500; /* 设置字体粗细 */
+}
+
+
+.sidebar {
+    width: 250px;
+    float: left;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    min-height: 100vh;
+    position: fixed;
+
+h2 {
+    text-align: center;
+}
+
+}
+  
+  .profile-pic {
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 auto 10px; /* 新增的样式，实现水平居中 */
+    display: block; /* 如果图片是行内元素，需要设置为块级元素 */
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  .contact-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-list li i {
+    margin-right: 8px;
+  }
+  
+  .sidebar-toggle {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  
+  /* 小屏幕下显示按钮，隐藏侧边栏 */
+  @media (max-width: 1408px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .sidebar.show {
+      display: block;
+    }
+  
+    .sidebar-toggle {
+      display: block;
+    }
+  }
+  

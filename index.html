@@ -3,7 +3,7 @@ layout: homepage
 title: Home | 水镜的博客
 ---
 <main>
-        <img src="/images/Background/star_sky.jpeg" alt="星空" class="fit-img">
+        <img src="/images/Background/star_sky.jpeg" alt="星空" class="back_img">
         <section class="articles">
             <h1>Recent Posts</h1>
             {% for post in site.posts %}
@@ -11,7 +11,8 @@ title: Home | 水镜的博客
                     <a href="{{ post.url | relative_url }}" style="display: block; text-decoration: none; color: inherit;">
                         <h2>{{ post.title }}</h2>
                         <p class="post-meta">
-                            <span class="post-date">{{ post.date | date: "%Y年%-m月%-d日" }}</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">{{ post.date | date: "%Y-%-m-%-d" }}</span> |
                             <span class="post-category">{{ post.categories | join: ", " }}</span> |
                             <span class="post-tags">
                                 {% for tag in post.tags %}
@@ -25,9 +26,5 @@ title: Home | 水镜的博客
             {% endfor %}
         </section>
         
-        <section class="about">
-            <h1>About This Blog</h1>
-            <p>文章中使用的浏览器一般是Chrome，操作都在科学环境下进行，小部分操作可能因为环境问题无法进行，请自行解决</p>
-        </section>
 </main>
 

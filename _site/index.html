@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/homepage.css">
     <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
+    <script src="/assets/javascript/homepage.js"></script>
 </head>
 <body>
 
     <header class="header">
-    <nav>
-      <ul>
-        <li><a href="https://www.verumkey.com" target="_self" class="home-link">Home</a></li>
-        <!-- 你可以根据需求添加其他链接 -->
-      </ul>
-    </nav>
+  <button class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="fa fa-bars"></i>
+  </button>
+  <a href="https://www.verumkey.com" target="_self" class="home-link">Home</a>
 </header>
-  
+
+<div class="sidebar">
+  <div class="profile">
+  <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
+  <h2>水镜</h2>
+  </div>
+  <ul class="contact-list">
+      <li><i class="fa-solid fa-globe"></i> 成都</li>    
+      <li><i class="fa-solid fa-envelope"></i> verumkeys@gmail.com</li> 
+      <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></li>    
+  </ul>
+</div>
  
-    
-    <div class="container">
-        <div class="main-content">
+
+    <div class="main-content">
         <main>
-        <img src="/images/Background/star_sky.jpeg" alt="星空" class="fit-img">
+        <img src="/images/Background/star_sky.jpeg" alt="星空" class="back_img">
         <section class="articles">
             <h1>Recent Posts</h1>
             
@@ -32,7 +42,8 @@
                     <a href="/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/2024/12/02/CMake%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>CMake 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年12月2日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-12-2</span> |
                             <span class="post-category">跨平台的构建系统</span> |
                             <span class="post-tags">
                                 
@@ -48,7 +59,8 @@
                     <a href="/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/2024/11/18/Python%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>Python 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年11月18日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-11-18</span> |
                             <span class="post-category">编程语言</span> |
                             <span class="post-tags">
                                 
@@ -64,7 +76,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%B7%A5%E5%85%B7/2024/11/04/Office%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>Office 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年11月4日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-11-4</span> |
                             <span class="post-category">技术，工具</span> |
                             <span class="post-tags">
                                 
@@ -80,7 +93,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/24/Linux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>Linux 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年10月24日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-10-24</span> |
                             <span class="post-category">技术，编程</span> |
                             <span class="post-tags">
                                 
@@ -96,7 +110,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/22/CMD%E4%B8%8EPowershell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>CMD与Powershell 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年10月22日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-10-22</span> |
                             <span class="post-category">技术，编程</span> |
                             <span class="post-tags">
                                 
@@ -114,7 +129,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/19/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>Git 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年10月19日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-10-19</span> |
                             <span class="post-category">技术，编程</span> |
                             <span class="post-tags">
                                 
@@ -130,7 +146,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/VS-Code%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>VS Code 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年10月17日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-10-17</span> |
                             <span class="post-category">技术，编程</span> |
                             <span class="post-tags">
                                 
@@ -146,7 +163,8 @@
                     <a href="/%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%BC%96%E7%A8%8B/2024/10/17/Jekyll%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="display: block; text-decoration: none; color: inherit;">
                         <h2>Jekyll 使用教程</h2>
                         <p class="post-meta">
-                            <span class="post-date">2024年10月17日</span> |
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="post-date">2024-10-17</span> |
                             <span class="post-category">技术，编程</span> |
                             <span class="post-tags">
                                 
@@ -160,25 +178,18 @@
             
         </section>
         
-        <section class="about">
-            <h1>About This Blog</h1>
-            <p>文章中使用的浏览器一般是Chrome，操作都在科学环境下进行，小部分操作可能因为环境问题无法进行，请自行解决</p>
-        </section>
 </main>
 
  <!-- 显示页面内容 -->
-        <div>
-    </div>
+    <div>
+   
 
     <footer class="footer">
     <p>Contact me via email: verumkeys@gmail.com</p >
-    <p>Visit my GitHub: <a href="https://github.com/Verumkey" target="_blank">Verumkey</a></p >
+    <p><i class="fa-brands fa-github"></i><a href="https://github.com/Verumkey" target="_blank"> Verumkey</a></p >
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. </P>
     <p>Stay tuned for interesting insights!</p ></p>
-    
 </footer>
-  
-
 
 </body>
 </html>
