@@ -8,27 +8,21 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/post.css">
     <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
+    <script src="/assets/javascript/post.js" defer></script>
 </head>
 <body>
 
-    <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<header class="header">
-    <nav>
-     <ul>
-      <li><a href="https://verumkey.com" target="_self" class="home-link">Home</a></li>
-     </ul>
-    </nav>
-    <button class="toggle-btn" onclick="toggleToc()">
-        <i class="fas fa-list"></i>
+    <header class="header">
+    <button class="toc-toggle-btn" onclick="toggleSidebar()">
+        <i class="fa fa-bars"></i>
     </button>
-    
+  
+     <a href="https://verumkey.com" target="_self" class="home-link">Home</a>
 </header>
 
-<div class="toc" id="toc">
-    <ul><li><a href="#简介"><strong>简介</strong></a></li><li><a href="#一cmd与powershell的概述"><strong>一.CMD与Powershell的概述</strong></a><ul><li><a href="#1cmd">1.CMD</a><ul><li><a href="#1-文件和目录管理">1. 文件和目录管理</a></li><li><a href="#2-系统诊断和维护">2. 系统诊断和维护</a></li><li><a href="#3-网络操作与诊断">3. 网络操作与诊断</a></li><li><a href="#4-批处理与自动化">4. 批处理与自动化</a></li><li><a href="#5-进程和服务管理">5. 进程和服务管理</a></li><li><a href="#6-用户和权限管理">6. 用户和权限管理</a></li><li><a href="#7-磁盘和分区管理">7. 磁盘和分区管理</a></li><li><a href="#8-计划任务管理">8. 计划任务管理</a></li><li><a href="#9-高级系统设置">9. 高级系统设置</a></li><li><a href="#10-调试与故障排查">10. 调试与故障排查</a></li><li><a href="#cmd-的局限性">CMD 的局限性：</a></li></ul></li><li><a href="#2powershell">2.Powershell</a><ul><li><a href="#1-命令行接口-cli">1. 命令行接口 (CLI)</a></li><li><a href="#2-脚本编写和自动化">2. 脚本编写和自动化</a></li><li><a href="#3-对象导向">3. 对象导向</a></li><li><a href="#4-跨平台支持">4. 跨平台支持</a></li><li><a href="#5-系统管理和配置">5. 系统管理和配置</a></li><li><a href="#6-模块扩展和社区支持">6. 模块扩展和社区支持</a></li><li><a href="#常见用法">常见用法：</a></li></ul></li><li><a href="#3区别">3.区别</a><ul><li><a href="#1-命令集和功能">1. 命令集和功能</a></li><li><a href="#2-基于文本-vs-基于对象">2. 基于文本 vs 基于对象</a></li><li><a href="#3-脚本能力">3. 脚本能力</a></li><li><a href="#4-跨平台支持-1">4. 跨平台支持</a></li><li><a href="#5-模块化和扩展性">5. 模块化和扩展性</a></li><li><a href="#6-管理员权限">6. 管理员权限</a></li><li><a href="#7-命令语法">7. 命令语法</a></li><li><a href="#8-集成-net">8. 集成 .NET</a></li><li><a href="#9-远程管理">9. 远程管理</a></li><li><a href="#什么时候使用-cmd-和-powershell">什么时候使用 CMD 和 PowerShell？</a></li></ul></li><li><a href="#4winr">4.win+R</a></li></ul></li><li><a href="#二cmd使用示例"><strong>二.CMD使用示例</strong></a><ul><li><a href="#1查询信息">1.查询信息</a></li><li><a href="#2使用bat脚本">2.使用bat脚本</a></li><li><a href="#3进行文件间的操作">3.进行文件间的操作</a></li><li><a href="#4核心概念">4.核心概念</a></li></ul></li><li><a href="#三cmd命令大全"><strong>三.CMD命令大全</strong></a><ul><li><a href="#1-文件和目录管理命令">1. 文件和目录管理命令</a></li><li><a href="#2-系统诊断和修复命令">2. 系统诊断和修复命令</a></li><li><a href="#3-网络命令">3. 网络命令</a></li><li><a href="#4-批处理命令">4. 批处理命令</a></li><li><a href="#5-用户和权限管理">5. 用户和权限管理</a></li><li><a href="#6-磁盘管理命令">6. 磁盘管理命令</a></li><li><a href="#7-进程和服务管理">7. 进程和服务管理</a></li><li><a href="#8-时间与计划任务管理">8. 时间与计划任务管理</a></li><li><a href="#9-高级管理命令">9. 高级管理命令</a></li><li><a href="#10总结">10.总结：</a></li></ul></li><li><a href="#四bat文件语法"><strong>四.bat文件语法</strong></a><ul><li><a href="#1基本语法结构">1.基本语法结构</a></li><li><a href="#2流程控制语法">2.流程控制语法</a><ul><li><a href="#条件语句-if">条件语句 (if)</a></li><li><a href="#循环语句-for">循环语句 (for)</a></li></ul></li><li><a href="#3输入输出">3.输入输出</a></li><li><a href="#4子程序与跳转">4.子程序与跳转</a></li><li><a href="#5错误处理">5.错误处理</a></li><li><a href="#6批处理文件常见参数">6.批处理文件常见参数</a></li><li><a href="#7批处理文件常用命令">7.批处理文件常用命令</a></li><li><a href="#8高级功能">8.高级功能</a></li><li><a href="#9批处理文件的应用场景">9.批处理文件的应用场景</a></li><li><a href="#10总结-1">10.总结：</a></li></ul></li><li><a href="#五powershell命令大全"><strong>五.Powershell命令大全</strong></a><ul><li><a href="#1基本命令">1.基本命令</a></li><li><a href="#2文件和目录管理">2.文件和目录管理</a></li><li><a href="#3系统管理">3.系统管理</a></li><li><a href="#4网络管理">4.网络管理</a></li><li><a href="#5用户和权限管理">5.用户和权限管理</a></li><li><a href="#6服务和进程管理">6.服务和进程管理</a></li><li><a href="#7脚本和自动化">7.脚本和自动化</a></li><li><a href="#8对象和管道处理">8.对象和管道处理</a></li><li><a href="#9注册表操作">9.注册表操作</a></li><li><a href="#10获取系统信息">10.获取系统信息</a></li><li><a href="#11环境变量">11.环境变量</a></li><li><a href="#12其他常用命令">12.其他常用命令</a></li><li><a href="#13总结">13.总结</a></li></ul></li><li><a href="#六ps1文件语法"><strong>六.ps1文件语法</strong></a><ul><li><a href="#1基本结构">1.<strong>基本结构</strong></a></li><li><a href="#2变量">2.变量</a></li><li><a href="#3数据类型">3.数据类型</a></li><li><a href="#4流程控制">4.流程控制</a></li><li><a href="#5函数">5.函数</a></li><li><a href="#6错误处理">6.错误处理</a></li><li><a href="#7模块和导入">7.模块和导入</a></li><li><a href="#8输入和输出">8.输入和输出</a></li><li><a href="#9管道">9.管道</a></li><li><a href="#10文件操作">10.文件操作</a></li><li><a href="#11-对象和属性">11 对象和属性</a></li><li><a href="#12自动化和计划任务">12.自动化和计划任务</a></li><li><a href="#13模块的创建与使用">13.模块的创建与使用</a></li><li><a href="#14管道和流">14.管道和流</a></li><li><a href="#15自动完成和参数">15.自动完成和参数</a></li><li><a href="#16总结">16.总结</a></li></ul></li><li><a href="#七powershell使用示例"><strong>七.Powershell使用示例</strong></a><ul><li><a href="#1配置环境">1.配置环境</a><ul><li><a href="#11执行策略介绍">1.1.执行策略介绍</a></li><li><a href="#12运行命令检查执行策略">1.2.运行命令检查执行策略</a></li><li><a href="#13更改执行策略">1.3.更改执行策略</a></li></ul></li><li><a href="#2批量重命名文件名">2.批量重命名文件名</a><ul><li><a href="#21需求">2.1.需求</a></li><li><a href="#22编写代码">2.2.编写代码</a></li><li><a href="#23在终端中运行">2.3.在终端中运行</a></li><li><a href="#24python实现相同操作">2.4.python实现相同操作</a></li></ul></li><li><a href="#3注意事项">3.注意事项</a><ul><li><a href="#1文件名命名最好不要用中文和空格">1.文件名命名最好不要用中文和空格</a></li></ul></li></ul></li><li><a href="#八完结"><strong>八.完结</strong></a></li></ul>
-</div>
+<div id="toc" class="toc-sidebar"></div>
+
 
 
     <div class="container">
@@ -1062,14 +1056,6 @@
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. </P>
     <p>Stay tuned for interesting insights!</p ></p>
 </footer>
-
-    <script>
-        function toggleToc() {
-            const toc = document.getElementById('toc');
-            toc.classList.toggle('open'); // 切换大纲显示状态
-            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
-        }
-    </script>
 
 </body>
 </html>

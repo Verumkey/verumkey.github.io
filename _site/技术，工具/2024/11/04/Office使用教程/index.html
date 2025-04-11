@@ -8,27 +8,21 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/post.css">
     <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
+    <script src="/assets/javascript/post.js" defer></script>
 </head>
 <body>
 
-    <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<header class="header">
-    <nav>
-     <ul>
-      <li><a href="https://verumkey.com" target="_self" class="home-link">Home</a></li>
-     </ul>
-    </nav>
-    <button class="toggle-btn" onclick="toggleToc()">
-        <i class="fas fa-list"></i>
+    <header class="header">
+    <button class="toc-toggle-btn" onclick="toggleSidebar()">
+        <i class="fa fa-bars"></i>
     </button>
-    
+  
+     <a href="https://verumkey.com" target="_self" class="home-link">Home</a>
 </header>
 
-<div class="toc" id="toc">
-    <ul><li><a href="#简介">简介</a></li><li><a href="#一office的概述">一.Office的概述</a></li><li><a href="#二配置office">二.配置Office</a><ul><li><a href="#1office-deployment-tool简介">1.Office Deployment Tool简介</a><ul><li><a href="#主要特点">主要特点</a></li><li><a href="#使用流程">使用流程</a></li><li><a href="#适用场景">适用场景</a></li></ul></li><li><a href="#2office自定义工具简介">2.Office自定义工具简介</a><ul><li><a href="#主要功能">主要功能</a></li><li><a href="#使用流程-1">使用流程</a></li><li><a href="#适用场景-1">适用场景</a></li></ul></li><li><a href="#3产品密钥简介">3.产品密钥简介</a><ul><li><a href="#31kms">3.1.KMS</a><ul><li><a href="#主要特点-1">主要特点</a></li><li><a href="#使用流程-2">使用流程</a></li><li><a href="#适用场景-2">适用场景</a></li></ul></li><li><a href="#32mak">3.2.MAK</a><ul><li><a href="#主要特点-2">主要特点</a></li><li><a href="#使用流程-3">使用流程</a></li><li><a href="#适用场景-3">适用场景</a></li></ul></li><li><a href="#33gvlk">3.3.GVLK</a><ul><li><a href="#主要特点-3">主要特点</a></li><li><a href="#使用流程-4">使用流程</a></li><li><a href="#适用场景-4">适用场景</a></li></ul></li></ul></li><li><a href="#4heu_kms_activator简介">4.HEU_KMS_Activator简介</a><ul><li><a href="#1-功能和目的">1. 功能和目的</a></li><li><a href="#2-工作原理">2. 工作原理</a></li><li><a href="#3-使用方法">3. 使用方法</a></li><li><a href="#4-法律和安全风险">4. 法律和安全风险</a></li><li><a href="#5-社区和支持">5. 社区和支持</a></li><li><a href="#6-总结">6. 总结</a></li></ul></li><li><a href="#4heu_kms_activator被识别为恶意软件原因">4.HEU_KMS_Activator被识别为恶意软件原因</a><ul><li><a href="#1-激活工具的性质">1. 激活工具的性质</a></li><li><a href="#2-行为特征">2. 行为特征</a></li><li><a href="#3-误报">3. 误报</a></li><li><a href="#4-安全风险">4. 安全风险</a></li><li><a href="#5-法律和合规性">5. 法律和合规性</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#5下载office部署工具">5.下载Office部署工具</a></li><li><a href="#6自定义office部署">6.自定义Office部署</a></li><li><a href="#7安装office">7.安装Office</a><ul><li><a href="#71打开cmd">7.1.打开CMD</a></li><li><a href="#72下载office离线安装文件">7.2.下载Office离线安装文件</a><ul><li><a href="#1-读取配置文件">1. 读取配置文件</a></li><li><a href="#2-下载所需文件">2. 下载所需文件</a></li><li><a href="#3-保存离线安装文件">3. 保存离线安装文件</a></li><li><a href="#4-构建完整的安装包">4. 构建完整的安装包</a></li><li><a href="#5-不进行安装">5. 不进行安装</a></li><li><a href="#离线安装文件的组成">离线安装文件的组成</a></li><li><a href="#安装准备">安装准备</a></li><li><a href="#后续操作">后续操作</a></li></ul></li><li><a href="#73安装配置的office">7.3.安装配置的Office</a><ul><li><a href="#1-解析配置文件">1. 解析配置文件</a></li><li><a href="#2-执行安装">2. 执行安装</a></li><li><a href="#3-注册应用程序">3. 注册应用程序</a></li><li><a href="#4-配置选项">4. 配置选项</a></li><li><a href="#5-完成安装">5. 完成安装</a></li></ul></li></ul></li><li><a href="#8激活office使用cmd命令">8.激活Office(使用CMD命令)</a><ul><li><a href="#81cd-cprogram-filesmicrosoft-officeoffice16">8.1.cd C:\Program Files\Microsoft Office\Office16</a><ul><li><a href="#1-office-16中的文件的用途">1. Office 16中的文件的用途</a></li><li><a href="#2office-16文件夹的作用">2.Office 16文件夹的作用</a></li></ul></li><li><a href="#82cscript-osppvbs-sethstkms03korg">8.2.cscript ospp.vbs /sethst:kms.03k.org</a><ul><li><a href="#1-命令组成">1. 命令组成</a></li><li><a href="#2-功能和作用">2. 功能和作用</a></li><li><a href="#3-使用场景">3. 使用场景</a></li><li><a href="#总结-1">总结</a></li></ul></li><li><a href="#83cscript-osppvbs-act">8.3.cscript ospp.vbs /act</a><ul><li><a href="#1-命令组成-1">1. 命令组成</a></li><li><a href="#2-功能和作用-1">2. 功能和作用</a></li><li><a href="#3-使用场景-1">3. 使用场景</a></li><li><a href="#总结-2">总结</a></li></ul></li></ul></li><li><a href="#9激活office使用heu_kms_activator">9.激活Office(使用HEU_KMS_Activator)</a><ul><li><a href="#91下载heu_kms_activator">9.1.下载HEU_KMS_Activator</a></li><li><a href="#92激活office使用模拟-kms-服务器">9.2.激活Office(使用模拟 KMS 服务器)</a><ul><li><a href="#1工作原理">1.工作原理</a></li><li><a href="#2仅勾选激活officde">2.仅勾选激活Officde</a></li><li><a href="#3点击开始">3.点击开始</a></li></ul></li><li><a href="#93激活office使用公共-kms-服务器">9.3.激活Office(使用公共 KMS 服务器)</a><ul><li><a href="#1选择kms服务器">1.选择KMS服务器</a></li><li><a href="#2完成激活">2.完成激活</a></li></ul></li><li><a href="#94查询office激活状态">9.4.查询Office激活状态</a></li><li><a href="#95重置office激活状态">9.5.重置Office激活状态</a></li></ul></li><li><a href="#10验证是否激活">10.验证是否激活</a><ul><li><a href="#101创建快捷方式">10.1.创建快捷方式</a></li></ul></li><li><a href="#11office-16中的命令">11.Office 16中的命令</a><ul><li><a href="#1-激活和状态检查命令">1. 激活和状态检查命令</a></li><li><a href="#2-设置-kms-服务器">2. 设置 KMS 服务器</a></li><li><a href="#3-许可证管理">3. 许可证管理</a></li><li><a href="#4-重置许可证">4. 重置许可证</a></li><li><a href="#5-获取帮助">5. 获取帮助</a></li></ul></li><li><a href="#12最后强调">12.最后强调</a><ul><li><a href="#1-激活周期">1. 激活周期</a></li><li><a href="#2-续期机制">2. 续期机制</a></li><li><a href="#3-注意事项">3. 注意事项</a></li><li><a href="#总结-3">总结</a></li></ul></li></ul></li><li><a href="#三office配置">三.Office配置</a></li></ul>
-</div>
+<div id="toc" class="toc-sidebar"></div>
+
 
 
     <div class="container">
@@ -1111,14 +1105,6 @@ cscript ospp.vbs /dstatus
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. </P>
     <p>Stay tuned for interesting insights!</p ></p>
 </footer>
-
-    <script>
-        function toggleToc() {
-            const toc = document.getElementById('toc');
-            toc.classList.toggle('open'); // 切换大纲显示状态
-            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
-        }
-    </script>
 
 </body>
 </html>

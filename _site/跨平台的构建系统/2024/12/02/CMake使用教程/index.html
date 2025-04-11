@@ -8,27 +8,21 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/post.css">
     <link rel="icon" href="/images/icon/favicon.ico" type="image/x-icon"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
+    <script src="/assets/javascript/post.js" defer></script>
 </head>
 <body>
 
-    <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<header class="header">
-    <nav>
-     <ul>
-      <li><a href="https://verumkey.com" target="_self" class="home-link">Home</a></li>
-     </ul>
-    </nav>
-    <button class="toggle-btn" onclick="toggleToc()">
-        <i class="fas fa-list"></i>
+    <header class="header">
+    <button class="toc-toggle-btn" onclick="toggleSidebar()">
+        <i class="fa fa-bars"></i>
     </button>
-    
+  
+     <a href="https://verumkey.com" target="_self" class="home-link">Home</a>
 </header>
 
-<div class="toc" id="toc">
-    <ul><li><a href="#简介">简介</a></li><li><a href="#一cmake概述">一.CMake概述</a><ul><li><a href="#1什么是-cmake">1.什么是 CMake？</a></li><li><a href="#2cmake-的作用">2.CMake 的作用</a></li><li><a href="#3cmake-的主要特点">3.CMake 的主要特点</a></li><li><a href="#4cmake-基本工作流程">4.CMake 基本工作流程</a></li><li><a href="#5例子cmakeliststxt-文件">5.例子：CMakeLists.txt 文件</a></li><li><a href="#6cmake-常见指令">6.CMake 常见指令</a></li><li><a href="#7cmake-生成的构建文件">7.CMake 生成的构建文件</a></li><li><a href="#8使用-cmake-构建项目">8.使用 CMake 构建项目</a></li><li><a href="#9高级功能">9.高级功能</a></li><li><a href="#10总结">10.总结</a></li></ul></li><li><a href="#二安装mingw-w64工具链">二.安装MinGW-w64工具链</a><ul><li><a href="#1下载msys2">1.下载MSYS2</a></li><li><a href="#2安装后打开并复制网站中的命令输入">2.安装后打开并复制网站中的命令输入</a></li><li><a href="#3复制ucrt64文件中的bin文件地址">3.复制ucrt64文件中的bin文件地址</a></li><li><a href="#4添加到windows环境变量的path路径中">4.添加到Windows环境变量的Path路径中</a><ul><li><a href="#41打开系统环境变量界面">4.1.打开系统环境变量界面</a></li><li><a href="#42-进入path变量编辑界面">4.2. 进入Path变量编辑界面</a></li><li><a href="#43-新建并放入复制的地址">4.3. 新建并放入复制的地址</a></li><li><a href="#44图片演示">4.4.图片演示</a></li></ul></li></ul></li><li><a href="#三安装cmake">三.安装CMake</a></li><li><a href="#四在vscode中使用cmake">四.在VSCode中使用CMake</a><ul><li><a href="#1安装插件">1.安装插件</a><ul><li><a href="#1cmake-tools-插件">1.CMake Tools 插件</a><ul><li><a href="#主要功能">主要功能</a></li><li><a href="#常用功能和快捷方式">常用功能和快捷方式</a></li></ul></li><li><a href="#2卸载捆绑cmake-tools插件的cmake插件">2.卸载捆绑CMake Tools插件的CMake插件</a></li><li><a href="#3cmake-language-support-插件">3.CMake Language Support 插件</a><ul><li><a href="#主要功能-1">主要功能：</a></li></ul></li></ul></li><li><a href="#2安装生成器ninja">2.安装生成器Ninja</a></li><li><a href="#3将生成器ninja所在目录添加到path">3.将生成器ninja所在目录添加到PATH</a></li><li><a href="#4检验是否配置成功">4.检验是否配置成功</a><ul><li><a href="#1-cmake_minimum_requiredversion-3311">1. cmake_minimum_required(VERSION 3.31.1)</a></li><li><a href="#2-projecttest">2. project(test)</a></li><li><a href="#3-add_executabletest-maincpp">3. add_executable(test main.cpp)</a></li></ul></li></ul></li><li><a href="#五cmake语法">五.CMake语法</a><ul><li><a href="#1构建并运行一个项目">1.构建并运行一个项目</a><ul><li><a href="#11编辑cmakeliststxt文件">1.1.编辑CMakeLists.txt文件</a></li><li><a href="#12创建一个文件夹">1.2.创建一个文件夹</a></li><li><a href="#13选择生成器">1.3.选择生成器</a></li><li><a href="#14生成构建系统的文件并编译">1.4.生成构建系统的文件并编译</a></li></ul></li><li><a href="#2cmakeliststxt中的语法">2.CMakeLists.txt中的语法</a></li></ul></li></ul>
-</div>
+<div id="toc" class="toc-sidebar"></div>
+
 
 
     <div class="container">
@@ -519,14 +513,6 @@ CMake 3.31.1 or higher is required. You are running version 3.20.0
     <p>This website is a personal blog where I share my thoughts on technology, programming, and more. </P>
     <p>Stay tuned for interesting insights!</p ></p>
 </footer>
-
-    <script>
-        function toggleToc() {
-            const toc = document.getElementById('toc');
-            toc.classList.toggle('open'); // 切换大纲显示状态
-            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
-        }
-    </script>
 
 </body>
 </html>

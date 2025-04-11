@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
     <link rel="icon" href="{{ site.favicon }}" type="image/x-icon"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> 
+    <script src="/assets/javascript/post.js" defer></script>
 </head>
 <body>
 
@@ -20,14 +22,6 @@
     </div>
 
     {% include footer.html %}
-
-    <script>
-        function toggleToc() {
-            const toc = document.getElementById('toc');
-            toc.classList.toggle('open'); // 切换大纲显示状态
-            document.body.style.overflow = toc.classList.contains('open') ? 'hidden' : ''; // 防止文章滚动
-        }
-    </script>
 
 </body>
 </html>

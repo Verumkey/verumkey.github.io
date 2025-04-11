@@ -163,9 +163,7 @@ h2 {
     display: none; /* 默认隐藏 */
     position: fixed;
     top: 10px;
-  
     z-index: 1100;
-    
     border: none;
     padding: 10px 15px;
     border-radius: 4px;
@@ -174,18 +172,42 @@ h2 {
     font-size: 20px;
   }
   
-  /* 小屏幕下显示按钮，隐藏侧边栏 */
-  @media (max-width: 1408px) {
-    .sidebar {
-      display: none;
-    }
-  
-    .sidebar.show {
-      display: block;
-    }
-  
-    .sidebar-toggle {
-      display: block;
-    }
+/* 默认情况下，大屏幕下目录显示，按钮可以控制显示/隐藏 */
+@media (min-width: 769px) {
+  #toc {
+      transform: translateX(0); /* 默认显示目录 */
   }
-  
+
+  .toc-toggle-btn {
+      display: block; /* 大屏幕下也显示按钮 */
+  }
+
+  #toc-overlay {
+      display: none !important; /* 大屏幕下不需要遮罩层 */
+  }
+}
+
+/* 小屏幕下的样式 */
+@media (max-width: 768px) {
+  #toc {
+      transform: translateX(-100%); /* 默认隐藏目录 */
+  }
+
+  .toc-toggle-btn {
+      display: block; /* 显示按钮 */
+  }
+
+  #toc-overlay {
+      display: none !important; /* 小屏幕下也不需要遮罩层 */
+  }
+
+  /* 目录显示时 */
+  #toc.show {
+      transform: translateX(0);
+  }
+
+  /* 遮罩层显示时 */
+  #toc-overlay.show {
+      display: block;
+  }
+}

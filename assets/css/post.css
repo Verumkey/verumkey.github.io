@@ -1,3 +1,38 @@
+/* 页眉样式 */
+.header {
+    width: 100%; /* 使页眉宽度占满整个视口 */
+    height: 60px; /* 设置固定高度 */
+    position: fixed; /* 固定页眉在顶部 */
+    top: 0; /* 让页眉固定在视口顶部 */
+    left: 0; /* 确保没有左右偏移 */
+    background-color: white; /* 设置背景色 */
+    z-index: 1000; /* 确保页眉位于最上层 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background-color: #f8f9fa;
+}
+
+
+.home-link {
+  text-decoration: none;
+  color: #333; /* 深灰色，比纯黑更有层次感 */
+  margin-left: 40px; /* 适当减少左边距，让布局更紧凑美观，可按需调整 */
+  font-family: Arial, sans-serif; /* 选用简洁通用的无衬线字体 */
+  font-weight: 500; /* 稍加重字体粗细，突出显示 */
+  font-size: 16px; /* 设置合适的字体大小 */
+  padding: 10px 10px; /* 内边距，让链接有一定的点击区域 */
+  border-radius: 5px; /* 圆角，让外观更柔和 */
+  transition: all 0.3s ease; /* 过渡效果，使交互更流畅美观 */
+}
+
+.home-link:hover {
+  background-color: #f0f0f0; /* 鼠标悬停时背景变色 */
+  color: #007bff; /* 鼠标悬停时文字变色 */
+  transform: translateY(-2px); /* 鼠标悬停时轻微上移，增加交互感 */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -11,28 +46,7 @@ body {
     margin-top: 60px; /* 留出页眉的空间 */
     position: relative; /* 确保绝对定位的元素相对于容器 */
 }
-.toc {
-    width: 100%; /* 侧边栏宽度为100% */
-    position: fixed; /* 固定位置 */
-    top: 60px; /* 距离顶部的距离 */
-    left: 0; /* 默认隐藏 */
-    transition: transform 0.3s; /* 动画效果 */
-    background: #f9f9f9; /* 背景色 */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 阴影 */
-    max-height: 80vh; /* 设置最大高度 */
-    overflow-y: auto; /* 允许纵向滚动 */
-    z-index: 1000; /* 确保在上层 */
-    transform: translateX(-100%); /* 初始隐藏 */
-}
 
-.toc.open {
-    transform: translateX(0); /* 打开时显示 */
-}
-
-.toggle-btn {
-    cursor: pointer; /* 鼠标指针样式 */
-    z-index: 1001; /* 确保在上层 */
-}
 
 .content {
     width: 100%; /* 内容占满宽度 */
@@ -69,5 +83,82 @@ img {
         width: 100%; /* 使图片占满容器宽度 */
         height: auto; /* 保持图片比例 */
         margin: 20px 0; /* 图片上下边距，左右不留空 */
+    }
+}
+
+/* TOC 按钮样式（移动端显示） */
+/* 默认按钮样式 */
+.toc-toggle-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1100;
+    background-color: transparent;
+
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+   
+}
+
+/* 默认目录样式 */
+#toc {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100% - 60px);
+    background-color: #ffffff;
+    overflow-y: auto;
+    padding: 20px 20px 60px 20px;
+    transform: translateX(0); /* 大屏幕时默认显示 */
+    transition: transform 0.3s ease;
+    z-index: 1101;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+/* 显示目录 */
+#toc.show {
+    transform: translateX(-100%);
+}
+
+/* 遮罩层 */
+#toc-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+#toc-overlay.show {
+    display: block;
+}
+
+/* h2/h3 层级缩进 */
+#toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#toc li.h2 { padding-left: 10px; }
+#toc li.h3 { padding-left: 20px; }
+#toc a.active {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 小屏幕下的样式 */
+@media (max-width: 768px) {
+    #toc {
+        transform: translateX(-100%); /* 默认隐藏目录 */
     }
 }
