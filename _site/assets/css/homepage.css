@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 a {
     text-decoration: none; /* 去掉链接下划线 */
 }
@@ -45,7 +51,7 @@ h2 {
     width: 100%; /* 设置宽度为100% */
     display: block; /* 确保是块级元素 */
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-top: 1px solid #e7e7e7;
     margin-top: 10px;
@@ -67,11 +73,23 @@ h2 {
     background-color: #f8f9fa;
 }
 
-/* 调整页眉内的链接和按钮样式 */
+
 .home-link {
-    text-decoration: none;
-    color: black;
-    margin-left: 130px;
+  text-decoration: none;
+  color: #333; /* 深灰色，比纯黑更有层次感 */
+  margin-left: 40px; /* 适当减少左边距，让布局更紧凑美观，可按需调整 */
+  font-family: Arial, sans-serif; /* 选用简洁通用的无衬线字体 */
+  font-weight: 500; /* 稍加重字体粗细，突出显示 */
+  font-size: 16px; /* 设置合适的字体大小 */
+  padding: 5px 10px; /* 内边距，让链接有一定的点击区域 */
+  border-radius: 5px; /* 圆角，让外观更柔和 */
+  transition: all 0.3s ease; /* 过渡效果，使交互更流畅美观 */
+}
+
+.home-link:hover {
+  background-color: #f0f0f0; /* 鼠标悬停时背景变色 */
+  color: #007bff; /* 鼠标悬停时文字变色 */
+  transform: translateY(-2px); /* 鼠标悬停时轻微上移，增加交互感 */
 }
 
 .log-link {
@@ -145,7 +163,7 @@ h2 {
     display: none; /* 默认隐藏 */
     position: fixed;
     top: 10px;
-    left: 10px;
+  
     z-index: 1100;
     
     border: none;
