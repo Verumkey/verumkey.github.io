@@ -1,4 +1,6 @@
-
+h1, h2, h3 {
+  scroll-margin-top: 80px; /* 改成你 header 的高度 */
+}
 /*页尾样式*/
 footer {
   background-color: #f1f1f1;

@@ -18,7 +18,7 @@
 .home-link {
   text-decoration: none;
   color: #333; /* 深灰色，比纯黑更有层次感 */
-  margin-left: 40px; /* 适当减少左边距，让布局更紧凑美观，可按需调整 */
+  margin-left: 15px; /* 适当减少左边距，让布局更紧凑美观，可按需调整 */
   font-family: Arial, sans-serif; /* 选用简洁通用的无衬线字体 */
   font-weight: 500; /* 稍加重字体粗细，突出显示 */
   font-size: 16px; /* 设置合适的字体大小 */
@@ -91,12 +91,11 @@ img {
 .toc-toggle-btn {
     display: block;
     position: fixed;
-    top: 15px;
     right: 15px;
     z-index: 1100;
     background-color: transparent;
 
-    padding: 10px 15px;
+    padding: 10px 10px;
     border: none;
     border-radius: 4px;
     font-size: 20px;
@@ -115,7 +114,7 @@ img {
     background-color: #ffffff;
     overflow-y: auto;
     padding: 20px 20px 60px 20px;
-    transform: translateX(0); /* 大屏幕时默认显示 */
+    transform: translateX(-100%); /* 大屏幕时默认显示 */
     transition: transform 0.3s ease;
     z-index: 1101;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
@@ -123,7 +122,7 @@ img {
 
 /* 显示目录 */
 #toc.show {
-    transform: translateX(-100%);
+    transform: translateX(0);
 }
 
 /* 遮罩层 */

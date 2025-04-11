@@ -2,16 +2,8 @@
 function toggleSidebar() {
     const toc = document.getElementById("toc");
     const overlay = document.getElementById("toc-overlay");
-
-    // 检查当前屏幕宽度
-    if (window.innerWidth > 768) {
-        // 大屏幕下，按钮切换目录显示/隐藏
-        toc.classList.toggle("show");  // 切换目录的显示与隐藏
-    } else {
-        // 小屏幕下，按钮切换目录显示/隐藏，并显示/隐藏遮罩层
-        toc.classList.toggle("show");
-        overlay.classList.toggle("show");
-    }
+    toc.classList.toggle("show");
+  
 }
 
 
@@ -63,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             current.classList.add("active");
             current.scrollIntoView({
                 behavior: "smooth",
-                block: "nearest",
+                block: "start",
                 inline: "nearest"
             });
         }
