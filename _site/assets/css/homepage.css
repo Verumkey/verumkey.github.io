@@ -167,58 +167,22 @@ h2 {
       display: block;
     }
   }
-  .header a {
-    /* 相对定位 */
-    position: relative;
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: #fff;
-    /* 圆角属性 */
-    border-radius: 50px;
-    /* 背景渐变色 */
-    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
-    /* 背景渐变色大小 */
-    background-size: 400%;
-    z-index: 1;
-    margin-left:100px;
-}
-
-/* 下面设计 发光效果 */
-.header a::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    left: -5px;
-    right: -5px;
-    border-radius: 50px;
-    /* 背景渐变色 */
-    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
-    /* 背景渐变色大小 */
-    background-size: 400%;
-    /* 元素的位置 底层或者顶层  -值表示底层 + 值表示顶层 */
-    z-index: -1;
-    /* 设置模糊度 显示发光效果 */
-    filter: blur(20px);
-}
-
-.header a:hover {
-    /* 动画 名称 时间 infinite 是无限次播放 */
-    animation: sun 8s infinite;
-}
-
-.header a:hover::before {
-    animation: sun 8s infinite;
-}
-
-@keyframes sun {
-    100% {
-        /* 背景位置 */
-        background-position: -400% 0;
-    }
-}
+  .logo-button {
+    display: inline-block;
+    padding: 0.5rem;
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+  
+  .logo-img {
+    height: 50px; /* 或你需要的大小 */
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.05);
+  }
+  
+  
