@@ -7,31 +7,17 @@
     left: 0; /* 确保没有左右偏移 */
     background-color: white; /* 设置背景色 */
     z-index: 1000; /* 确保页眉位于最上层 */
+   
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* 保持左右分布 */
+    align-items: center; /* 垂直居中 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
     background-color: #f8f9fa;
 }
 
-
-.home-link {
-  text-decoration: none;
-  color: #333; /* 深灰色，比纯黑更有层次感 */
-  margin-left: 15px; /* 适当减少左边距，让布局更紧凑美观，可按需调整 */
-  font-family: Arial, sans-serif; /* 选用简洁通用的无衬线字体 */
-  font-weight: 500; /* 稍加重字体粗细，突出显示 */
-  font-size: 16px; /* 设置合适的字体大小 */
-  padding: 10px 10px; /* 内边距，让链接有一定的点击区域 */
-  border-radius: 5px; /* 圆角，让外观更柔和 */
-  transition: all 0.3s ease; /* 过渡效果，使交互更流畅美观 */
-}
-
-.home-link:hover {
-  background-color: #f0f0f0; /* 鼠标悬停时背景变色 */
-  color: #007bff; /* 鼠标悬停时文字变色 */
-  transform: translateY(-2px); /* 鼠标悬停时轻微上移，增加交互感 */
-}
+.header.hide {
+    transform: translateY(-100%);
+  }
 
 body {
     font-family: Arial, sans-serif;
@@ -114,7 +100,7 @@ img {
     background-color: #ffffff;
     overflow-y: auto;
     padding: 20px 20px 60px 20px;
-    transform: translateX(-100%); /* 大屏幕时默认显示 */
+    transform: translateX(-100%); /* 默认不显示 */
     transition: transform 0.3s ease;
     z-index: 1101;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
@@ -155,9 +141,65 @@ img {
     text-decoration: underline;
 }
 
+
 /* 小屏幕下的样式 */
 @media (max-width: 768px) {
     #toc {
         transform: translateX(-100%); /* 默认隐藏目录 */
+    }
+}
+.header a {
+    /* 相对定位 */
+    position: relative;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    /* 圆角属性 */
+    border-radius: 50px;
+    /* 背景渐变色 */
+    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
+    /* 背景渐变色大小 */
+    background-size: 400%;
+    z-index: 1;
+    margin-left:15px;
+}
+
+/* 下面设计 发光效果 */
+.header a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 50px;
+    /* 背景渐变色 */
+    background-image: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #09a8f4);
+    /* 背景渐变色大小 */
+    background-size: 400%;
+    /* 元素的位置 底层或者顶层  -值表示底层 + 值表示顶层 */
+    z-index: -1;
+    /* 设置模糊度 显示发光效果 */
+    filter: blur(20px);
+}
+
+.header a:hover {
+    /* 动画 名称 时间 infinite 是无限次播放 */
+    animation: sun 8s infinite;
+}
+
+.header a:hover::before {
+    animation: sun 8s infinite;
+}
+
+@keyframes sun {
+    100% {
+        /* 背景位置 */
+        background-position: -400% 0;
     }
 }
