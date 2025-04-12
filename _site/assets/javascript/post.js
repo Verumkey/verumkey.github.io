@@ -5,12 +5,11 @@ function toggleSidebar() {
     toc.classList.toggle("show");
     overlay.classList.toggle("show");
 
-    // ? 仅在小屏幕时禁止滚动
+    // 仅在小屏幕时禁止滚动
     if (window.innerWidth <= 768) {
         document.body.classList.toggle("no-scroll");
     }
 }
-
 
 // DOM加载后执行
 document.addEventListener("DOMContentLoaded", function () {
@@ -21,30 +20,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 生成 TOC 结构
     headings.forEach(heading => {
-    if (!heading.id) {
-        heading.id = heading.textContent.trim().replace(/\s+/g, '-').toLowerCase();
-    }
-
-    const li = document.createElement("li");
-    li.className = heading.tagName.toLowerCase();
-
-    const a = document.createElement("a");
-    a.href = `#${heading.id}`;
-    a.textContent = heading.textContent;
-
-    // ? 在创建 a 的时候就绑定事件
-    a.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-            toc.classList.remove("show");
-            overlay.classList.remove("show");
-            document.body.classList.remove("no-scroll");
+        if (!heading.id) {
+            heading.id = heading.textContent.trim().replace(/\s+/g, '-').toLowerCase();
         }
+
+        const li = document.createElement("li");
+        li.className = heading.tagName.toLowerCase();
+
+        const a = document.createElement("a");
+        a.href = `#${heading.id}`;
+        a.textContent = heading.textContent;
+
+        // 在创建 a 的时候就绑定事件
+        a.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+                toc.classList.remove("show");
+                overlay.classList.remove("show");
+                document.body.classList.remove("no-scroll");
+            }
+        });
+
+        li.appendChild(a);
+        tocList.appendChild(li);
     });
-
-    li.appendChild(a);
-    tocList.appendChild(li);
-});
-
 
     toc.appendChild(tocList);
 
@@ -81,8 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // 点击遮罩层关闭目录
     const overlay = document.getElementById('toc-overlay');
     overlay.addEventListener('click', toggleSidebar);
-
-    
 });
 
 //向上滑隐藏页眉，反之显示
