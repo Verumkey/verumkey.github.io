@@ -6,7 +6,7 @@ a {
 
 .main-content {
     width: 100%;
-    margin-top: 65px;
+    margin-top: 60px;
     text-align: center; /* 让行内元素（如图片）水平居中 */
    
 }
@@ -61,7 +61,7 @@ h2 {
   top: 0; /* 让页眉固定在视口顶部 */
   left: 0; /* 确保没有左右偏移 */
   background-color: white; /* 设置背景色 */
-  z-index: 1000; /* 确保页眉位于最上层 */
+  z-index: 1001; /* 确保页眉位于最上层 */
  
   display: flex;
   justify-content: space-between; /* 保持左右分布 */
@@ -87,18 +87,6 @@ h2 {
     padding-bottom: 130px;
 }
 
-.home-link-submit {
-    display: inline - block;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #F4F4F4; 
-    color: black; 
-    font-size: 16px; /* 设置字体大小 */
-    font-weight: 500; /* 设置字体粗细 */
-}
-
-
 .sidebar {
     width: 300px;
     float: left;
@@ -107,7 +95,7 @@ h2 {
     border-right: 1px solid #ddd;
     min-height: 100vh;
     position: fixed;
-
+    z-index: 1001;
 h2 {
     text-align: center;
 }
@@ -166,6 +154,9 @@ h2 {
     .sidebar-toggle {
       display: block;
     }
+    .no-scroll {
+      overflow: hidden;
+  }
   }
   .logo-button {
     display: inline-block;
@@ -185,4 +176,19 @@ h2 {
     transform: scale(1.05);
   }
   
-  
+ /* 涂层样式 */
+ .sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* 涂层显示状态 */
+.sidebar-overlay.show {
+  display: block;
+}
